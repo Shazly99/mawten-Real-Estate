@@ -64,6 +64,9 @@ margin-top: 122px;
 
             .stat {
                 text-align: center;
+                width: 100%;
+                @media screen and (width < 900px) {
+                }
             }
 
             .stat h2 {
@@ -72,7 +75,7 @@ margin-top: 122px;
                 font-family: TheSansArabic;
                 font-size: 40px;
                 font-style: normal;
-                font-weight: 600;
+                font-weight: 900;
             }
 
             .stat p {

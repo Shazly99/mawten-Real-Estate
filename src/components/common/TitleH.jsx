@@ -1,9 +1,8 @@
 import Icon from '@constants/icon'
-import React from 'react'
 
 const TitleH = ({ title, highlight }) => {
     return (
-        <div className="title-container   ">
+        <div className="title-container"  >
             <div className="icon">
                 <Icon.title />
             </div>

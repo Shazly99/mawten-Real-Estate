@@ -6,6 +6,13 @@
   font-size: 14px;
   color: #333;
 
+  .ant-row {
+    @media screen and (width < 900px) {
+      gap: 0 !important;
+
+    }
+  }
+
   .container {
     width: 90%;
     margin: 0 auto;
@@ -44,7 +51,7 @@
 
 
   .footer__logo {
-    
+
 
     img {
       width: 100px;
@@ -127,6 +134,7 @@
     }
   }
 }
+
 .footer__social {
   display: flex;
   gap: 18px !important;
@@ -151,12 +159,12 @@
   }
 }
 
-.social_title{
+.social_title {
   color: #3C3C3B;
-font-family: TheSansArabic;
-font-size: 16px;
-font-style: normal;
-font-weight: 530;
-line-height: normal;
-text-transform: capitalize;
+  font-family: TheSansArabic;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 530;
+  line-height: normal;
+  text-transform: capitalize;
 }

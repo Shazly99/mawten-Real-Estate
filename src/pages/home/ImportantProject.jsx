@@ -1,9 +1,8 @@
-import React from "react";
-import { Row, Col, Button, Card } from "antd";
-import { LeftOutlined } from "@ant-design/icons";
-import img from "@constants/img"; // Adjust import according to your file structure
 import CustomButton from "@components/common/CustomButton";
 import CustomTitle from "@components/common/CustomTitle";
+import img from "@constants/img"; // Adjust import according to your file structure
+import { Col, Row } from "antd";
+import { useTranslation } from "react-i18next";
 
 const projects = [
     {
@@ -21,11 +20,13 @@ const projects = [
 ];
 
 const ImportantProject = () => {
+    let { t } = useTranslation()
+
     return (
         <div className="important-projects container_main_80">
             {/* Section Title */}
-            <div className="section-header">
-                <CustomTitle />
+            <div className="section-header"> 
+                <CustomTitle title={t('Major')} title2={t('Projects')} />
                 <CustomButton />
             </div>
 

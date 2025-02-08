@@ -67,19 +67,23 @@
 .title-container {
     display: flex;
     align-items: center;
-
     gap: 10px;
+    text-wrap: unset;
+    width: 100%;
 
-    text-wrap:unset;
+    @media screen and (width < 767px) {
+        justify-content: center;
+    }
+
     .title {
         font-size: 28px;
         font-weight: bold;
         color: #333;
-        text-wrap:unset;
+        text-wrap: unset;
     }
 
     strong {
-        text-wrap:unset;
+        text-wrap: unset;
         color: #A61517;
         text-align: right;
         font-family: TheSansArabic;
@@ -87,6 +91,10 @@
         font-style: normal;
         font-weight: 530;
         line-height: normal;
+
+        @media screen and (width < 767px) {
+            font-size: 30px;
+        }
     }
 
     .highlight {
@@ -96,16 +104,40 @@
         font-style: normal;
         font-weight: 300;
         line-height: normal;
+
+        @media screen and (width < 767px) {
+            font-size: 30px;
+        }
     }
+
+
 
     .icon {
         display: flex;
         align-items: center;
         justify-content: center;
         margin-top: 10px;
-        svg{
+
+        svg {
             width: 29.461px;
-            height: 39.12px; 
+            height: 39.12px;
+
+            @media screen and (width < 767px) {
+                width: 25px;
+                height: 25px;
+            }
+
+            &:lang(en) {
+                width: 30px;
+                height: auto;
+                margin-bottom: 10px;
+                transform: scale(-1);
+
+                @media screen and (width < 767px) {
+                    width: 25px;
+                    height: 25px;
+                }
+            }
         }
 
     }
@@ -144,28 +176,33 @@ strong,
     font-family: $fontArabic !important;
 }
 
-.container_main_80{
+.container_main_80 {
     width: 80%;
     margin: auto;
+
     @media screen and (width < 767px) {
         width: 90%;
     }
 }
 
-.container_main_85{
+.container_main_85 {
     width: 85%;
     margin: auto;
+
     @media screen and (width < 767px) {
         width: 90%;
     }
 }
-.container_main_90{
+
+.container_main_90 {
     width: 90%;
     margin: auto;
+
     @media screen and (width < 767px) {
         width: 90%;
     }
 }
-.mt_main{
+
+.mt_main {
     margin-top: 125px;
 }

@@ -5,6 +5,7 @@ import CompanyOverview from "@assets/images/home/CompanyOverview.png";
 import projectBg from "@assets/images/home/projectBg.png";
 import mawten_bg2 from "@assets/images/home/mawten_bg2.png";
 import contact2 from "@assets/images/home/contact2.png";
+import aboutCover from "@assets/images/about/cover.png";
 import map from "@assets/images/home/map.png";
 import gallery1 from "@assets/images/gallery/1.png";
 import gallery2 from "@assets/images/gallery/2.png";
@@ -12,11 +13,23 @@ import Projects1 from "@assets/images/Projects/1.png";
 import Projects2 from "@assets/images/Projects/2.png";
 import Projects3 from "@assets/images/Projects/3.png";
 
+import value1 from "@assets/images/about/value1.gif";
+import value2 from "@assets/images/about/value2.gif";
+import value3 from "@assets/images/about/value3.gif";
+import value4 from "@assets/images/about/value4.gif";
+import value5 from "@assets/images/about/value5.gif";
+
 import blog1 from "@assets/images/HomeMediaCenter/1.png";
 import blog2 from "@assets/images/HomeMediaCenter/2.png";
 import blog3 from "@assets/images/HomeMediaCenter/3.png";
 
 const img = {
+    value1,
+    value2,
+    value3,
+    value4,
+    value5,
+    aboutCover,
     logo,
     contact2,
     mawten_bg2,

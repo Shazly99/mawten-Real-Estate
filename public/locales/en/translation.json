@@ -4,12 +4,31 @@
   "lang": "عربيه",
   "nav_home": "Home",
   "nav_service": "Services ",
-  "nav_Products": "Products",
+  "nav_Products": "Media Center",
   "nav_Projects": "Projects",
   "OUR_CLIENTS": "OUR CLIENTS",
   "nav_about": "About  ",
   "nav_contact": "Contacts Us",
   "btn_nav": "Get A Quote",
   "slider_h": "Innovating Solutions, Empowering Success",
-  "btn_contact": "Contacts Us"
+  "btn_contact": "Contacts Us",
+  "mawten": "Mawten",
+  "RealEstate": "Real Estate",
+  "more": "Find more",
+  "Projects": "Projects",
+  "Major": "Our Major",
+  "Investor": "Investor",
+  "Relations": " Relations",
+  "CompanyProfile": " Company Profile",
+  "Media": "Media ",
+  "Center": " Center",
+  "RealEstateDeveloper": "Leading Real Estate Developer",
+  "MultiAsset": " Multi-Asset in the Kingdom",
+
+  "statistics": {
+    "investment_value": "Investment Value",
+    "real_estate_units": "Real Estate Units",
+    "developed_area": "m² Developed Areas",
+    "hotel_units": "Hotel Units"
+  }
 }

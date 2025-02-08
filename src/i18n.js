@@ -9,8 +9,8 @@ i18next.use(HttpApi)
   .init({
     supportedLngs: ['en', 'ar'],
     fallbackLng: 'ar',
-    // lng: 'ar', 
-    // debug: false,
+    lng: 'ar', 
+    debug: false,
     detection: {
       order: ['cookie', 'localStorage', 'sessionStorage', 'navigator', 'htmlTag', 'path', 'subdomain'],
       caches: ['cookie', 'localStorage'],

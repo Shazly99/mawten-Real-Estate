@@ -1,0 +1,126 @@
+@import '../../style/varibale';
+
+.company-overview_about {
+    margin-top: 20px;
+    margin-bottom: 0 !important;
+
+    .ant-col {
+        display: flex;
+        justify-content: center;
+        /* align-items: center; */
+        flex-direction: column;
+
+    }
+
+    .section_last_about {
+        margin-top: -50px;
+    }
+}
+
+
+.app_value {
+
+    margin-bottom: 200px !important;
+
+    header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        border-radius: 13px;
+        background-color: $mainColor;
+        padding: 20px;
+        margin-bottom: 30px;
+
+        .title-container {
+            width: 100% !important;
+            display: contents;
+        }
+
+        strong {
+            color: #FFF;
+            text-align: center;
+            font-family: TheSansArabic;
+            font-size: 36px;
+            font-weight: 530;
+        }
+
+        svg path {
+            fill: #fff;
+
+        }
+
+        svg {
+            margin-top: 0px !important;
+
+        }
+    }
+
+    .values-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+
+    .value-card {
+        border-radius: 22px;
+        background: #FFF;
+        box-shadow: 1px 4px 83px 0px rgba(0, 0, 0, 0.07);
+        transition: transform 0.3s ease;
+
+        margin: auto;
+        padding: 40px 50px !important;
+
+        @media screen and (width < 767px) {
+            padding: 10px 5px !important; 
+        }
+
+        &:hover {
+            transform: translateY(-5px);
+        }
+
+        .icon-container {
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        img {
+            width: 80px;
+            height: 80px;
+        }
+
+        .value-title {
+            color: #000; 
+            font-family: TheSansArabic;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            
+        @media screen and (width < 767px) {
+            padding: 10px 5px !important;
+            text-align: center;
+        }
+        }
+
+        .value-description {
+            color: #000;
+            text-align: justify;
+            font-family: TheSansArabic;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+            margin-top: 17px;
+            
+        @media screen and (width < 767px) {
+            padding: 10px 5px !important;
+            text-align: center;
+        }
+        }
+    }
+}

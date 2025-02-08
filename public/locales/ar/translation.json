@@ -4,10 +4,29 @@
   "lang": "عربية",
   "nav_home": "الرئيسية",
   "nav_service": "الخدمات",
-  "nav_Products": "المنتجات",
+  "nav_Products": "المركز الاعلامي",
   "nav_Projects": "المشاريع",
   "nav_about": "من نحن",
   "OUR_CLIENTS": "عملاؤنا",
   "nav_contact": "اتصل بنا",
-  "btn_nav": "احصل على عرض"
+  "btn_nav": "احصل على عرض",
+  "mawten": "موطن",
+  "RealEstate": "العقارية",
+  "more": "اكتشف المزيد ",
+  "Projects": "  مشاريعنا",
+  "Major": "أهــم",
+  "Investor": "علاقات  ",
+  "Relations": "   المستثمرين",
+  "CompanyProfile": "الملف التعريفي ",
+  "Media": "الإعلامي ",
+  "Center": " المركز",
+  "RealEstateDeveloper": "المطور العقاري الرائد",
+  "MultiAsset": "متعدد الأصول في المملكة",
+
+  "statistics": {
+    "investment_value": "قيمة الاستثمارات",
+    "real_estate_units": "وحدة عقارية",
+    "developed_area": "م² مساحات مطورة",
+    "hotel_units": "وحدة فندقية"
+  }
 }

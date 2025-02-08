@@ -66,7 +66,7 @@ const Navbar = () => {
             <motion.div
                 className={`navbar-main ${isScrolled ? 'fixed-navbar' : 'navbar-main-scroll'}`}
                 initial={{ backgroundColor: "rgba(0, 0, 0, 0.58)" }}
-                animate={isScrolled ? { backgroundColor: "#fff", padding: "10px 80px" } : { backgroundColor: "rgba(0, 0, 0, 0.58)", padding: "5px 80px" }}
+                animate={isScrolled ? { backgroundColor: "#fff", padding: "5px 80px" } : { backgroundColor: "rgba(0, 0, 0, 0.58)", padding: "5px 80px" }}
                 transition={{ duration: 0.6, ease: "easeInOut" }}
             >
                 <div className="navbar_main_responsive">
@@ -82,6 +82,14 @@ const Navbar = () => {
                         <HomeOutlined className='icon_res_sm' />
                         {t('nav_home')}
                     </NavLink>
+                    <NavLink to='/about'>
+                        <InfoCircleOutlined className='icon_res_sm' />
+                        {t('nav_about')}
+                    </NavLink>
+                    <NavLink to='/projects'>
+                        <ProjectOutlined className='icon_res_sm' />
+                        {t('nav_Projects')}
+                    </NavLink>
                     <NavLink to='/services'>
                         <SettingOutlined className='icon_res_sm' />
                         {t('nav_service')}
@@ -90,14 +98,6 @@ const Navbar = () => {
                         <ShoppingOutlined className='icon_res_sm' />
                         {t('nav_Products')}
                     </NavLink>
-                    <NavLink to='/projects'>
-                        <ProjectOutlined className='icon_res_sm' />
-                        {t('nav_Projects')}
-                    </NavLink>
-                    <NavLink to='/about'>
-                        <InfoCircleOutlined className='icon_res_sm' />
-                        {t('nav_about')}
-                    </NavLink>
                     <div className="path_sm">
                         <NavLink to='/contact'>
                             <PhoneOutlined className='icon_res_sm' />
@@ -105,7 +105,7 @@ const Navbar = () => {
                         </NavLink>
                     </div>
 
-                    <div className="contact_us_dot flex justify-content-center align-items-center gap-2">
+                    <div className=" contact_us_dot flex justify-content-center align-items-center gap-2">
                         <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11" fill="none">
                             <circle cx="5.5" cy="5.5" r="5.5" fill="white" fill-opacity="0.25" />
                             <circle cx="5.5" cy="5.5" r="2.5" fill="white" />
@@ -117,19 +117,39 @@ const Navbar = () => {
                     </div>
 
 
+                    <div className="language-switcher sm_lang">
+                        {
+                            i18n.language == "ar" ?
+                                <div className="text-container " onClick={() => changeLanguage('en')}>
+                                    <span className="language-text">English</span>
+                                    <Icon.lang />
+                                </div> :
+                                <div className="text-container" onClick={() => changeLanguage('ar')}>
+                                    <span className="language-text">عربي</span>
+                                    <Icon.lang />
+                                </div>
+                        }
+                   
+                    </div>
                 </nav>
 
-                <div className="language-switcher">
-                    <div className="text-container">
-                        <span className="language-text">English</span>
-                        <Icon.lang />
-                    </div>
+
+                <div className="language-switcher lg_lang">
+                    {
+                        i18n.language == "ar" ?
+                            <div className="text-container " onClick={() => changeLanguage('en')}>
+                                <span className="language-text">English</span>
+                                <Icon.lang />
+                            </div> :
+                            <div className="text-container" onClick={() => changeLanguage('ar')}>
+                                <span className="language-text">عربي</span>
+                                <Icon.lang />
+                            </div>
+                    }
                     <div className="circle-icon">
                         <Icon.langC />
                     </div>
                 </div>
-
-
             </motion.div>
         </div>
     );

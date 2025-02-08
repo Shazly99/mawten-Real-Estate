@@ -65,6 +65,10 @@
       font-style: normal;
       font-weight: 530;
       line-height: normal;
+
+      @media screen and (width < 767px) {
+        font-size: 28px !important;
+      }
     }
 
     p {
@@ -75,16 +79,26 @@
       font-style: normal;
       font-weight: 300;
       line-height: 35px;
-      /* 175% */
+
+      @media screen and (width < 767px) {
+        font-size: 15px;
+
+      }
+    }
+
+    .sm_none {
+      @media screen and (width < 900px) {
+        display: none;
+      }
     }
   }
 }
 
 
 .image-gallery {
-  width: 95%;
+  width: 80%;
   margin-left: auto;
-
+  overflow: hidden;
 
   img {
 
@@ -103,28 +117,54 @@
 }
 
 .company-overview {
-  margin-top: 150px;
+  margin-top: 100px;
+
+  @media screen and (width < 900px) {
+    margin-top: 0;
+  }
 
   .content {
+
+    @media screen and (width < 900px) {
+      margin-top: 100px;
+    }
 
     .section {
       margin-bottom: 2rem;
 
+      @media screen and (width < 900px) {
+
+        .title-container {
+          display: flex;
+          justify-content: flex-start !important;
+          align-items: flex-start !important;
+        }
+      }
+
       .title span {
         color: #3C3C3B;
-
         font-family: $fontBase;
         font-size: 36px;
         font-style: normal;
         font-weight: 500;
         line-height: normal;
         user-select: none;
+
+        @media screen and (width < 900px) {
+          font-size: 30px;
+        }
       }
 
       .title-container svg {
         width: 20.461px;
         height: 39.12px;
         flex-shrink: 0;
+
+        @media screen and (width < 900px) {
+          width: 18px;
+          height: 39px;
+          margin-top: -5px;
+        }
       }
 
       h2 {
@@ -139,6 +179,7 @@
           margin-left: 10px;
           width: 20px;
           height: 20px;
+
         }
       }
 
@@ -150,7 +191,11 @@
         font-style: normal;
         font-weight: 300;
         line-height: 35px;
-        /* 175% */
+
+        @media screen and (width < 900px) {
+          font-size: 16px;
+          margin-top: 8px;
+        }
       }
     }
   }
@@ -161,9 +206,18 @@
     background-size: contain;
     background-position: left top;
 
+    @media screen and (width < 900px) {
+      order: 1;
+    }
+
     img {
       margin-right: -80px;
       width: 100%;
+
+      &:lang(en) {
+        margin-left: -80px;
+        transform: scaleX(-1) !important;
+      }
     }
   }
 
@@ -182,7 +236,7 @@
     }
 
     .image-container {
-      max-width: 80%;
+      max-width: 100%;
       margin-top: 2rem;
     }
   }
@@ -193,8 +247,12 @@
 
   background: #fff;
 
-  .text-section {
+  @media screen and (width < 900px) {
 
+    margin: 50px auto !important;
+  }
+
+  .text-section {
 
     .title {
       color: #3C3C3B;
@@ -204,6 +262,11 @@
       font-style: normal;
       font-weight: 530;
       line-height: normal;
+
+      @media screen and (width < 900px) {
+        font-size: 25px;
+
+      }
     }
 
     .description {
@@ -215,6 +278,10 @@
       font-weight: 300;
       line-height: normal;
       margin-top: 20px;
+
+      @media screen and (width < 900px) {
+        font-size: 16px;
+      }
     }
 
     .custom-button {
@@ -234,8 +301,6 @@
   }
 
   .image-section {
-
-
     width: 300px;
     height: 250px;
     background-image: url('../../assets/svg/comBg.svg');
@@ -249,6 +314,10 @@
         font-family: $fontBase;
         font-size: 50px;
         font-weight: 100 !important;
+
+        @media screen and (width < 900px) {
+          font-size: 40px;
+        }
       }
 
       strong {
@@ -259,6 +328,10 @@
         font-style: normal;
         font-weight: 530;
         line-height: normal;
+
+        @media screen and (width < 900px) {
+          font-size: 40px;
+        }
       }
 
       svg {
@@ -297,12 +370,15 @@ hr {
 
     h3 {
       color: #181818;
-
       font-family: $fontBase;
       font-size: 30px;
       font-style: normal;
       font-weight: 900;
       line-height: normal;
+
+      @media screen and (width < 900px) {
+        font-size: 28px;
+      }
     }
 
     p {
@@ -313,6 +389,11 @@ hr {
       font-weight: 100;
       line-height: normal;
       margin-top: 10px;
+
+      @media screen and (width < 900px) {
+        font-size: 12px;
+
+      }
     }
   }
 }
@@ -329,10 +410,20 @@ hr {
     align-items: center;
     margin-bottom: 30px;
 
+    .title-black,
+    .title-gray {
+      @media screen and (width < 900px) {
+        font-size: 30px;
+      }
+    }
+
     h2 {
       font-size: 28px;
       font-weight: bold;
       color: #333;
+
+
+
 
       .highlight {
         color: #a00;
@@ -347,6 +438,10 @@ hr {
       font-size: 16px;
       transition: all 0.3s ease;
 
+      @media screen and (width < 900px) {
+        display: none;
+      }
+
       &:hover {
         background: #a00;
         color: #fff;
@@ -360,6 +455,11 @@ hr {
     img {
       width: 100%;
       object-fit: cover;
+
+      @media screen and (width < 900px) {
+        height: auto;
+      }
+
       transition: transform 0.3s ease-in-out;
     }
 
@@ -375,22 +475,41 @@ hr {
       padding: 12px 30px;
       background: rgba(166, 21, 23, 0.56) !important;
       color: white;
-      text-align: right;
+
       display: flex;
       justify-content: space-between;
       align-items: center;
       margin-top: -130px;
       z-index: 5;
 
+      @media screen and (width < 900px) {
+        width: 90%;
+        height: 130px;
+        padding: 10px 20px;
+
+        svg {
+          display: none;
+        }
+      }
+
+      :lang(en) svg {
+        transform: scale(-1);
+      }
+
       .title {
+
         color: #FFF;
-        text-align: right;
+
         font-family: TheSansArabic;
         font-size: 25px;
         font-style: normal;
         font-weight: 600;
         line-height: normal;
         text-transform: capitalize;
+
+        @media screen and (width < 900px) {
+          font-size: 18px;
+        }
       }
 
 
@@ -406,9 +525,19 @@ hr {
 // start Investor Relations
 
 .investor-relations {
+  .ant-row {
+    @media screen and (width < 900px) {
+      gap: 0 !important;
+    }
+  }
+
   .text-section {
     width: 80%;
     margin: auto;
+
+    @media screen and (width < 990px) {
+      width: 90%
+    }
   }
 
   .title-container {
@@ -421,6 +550,11 @@ hr {
       line-height: normal;
       text-transform: capitalize;
       user-select: none;
+
+      @media screen and (width < 990px) {
+        font-size: 30px;
+
+      }
     }
 
     strong {
@@ -433,6 +567,9 @@ hr {
       text-transform: capitalize;
       user-select: none;
 
+      @media screen and (width < 990px) {
+        font-size: 30px;
+      }
     }
   }
 
@@ -446,6 +583,9 @@ hr {
     line-height: normal;
     margin-top: 20px;
 
+    @media screen and (width < 990px) {
+      font-size: 16px;
+    }
   }
 
   button {
@@ -469,6 +609,16 @@ hr {
   }
 
   .decorative-section {
+    user-select: none;
+
+    @media screen and (width < 990px) {
+      order: 1;
+    }
+
+    :lang(en) svg {
+      transform: scale(-1);
+    }
+
     svg {
       width: 100%;
     }
@@ -480,20 +630,9 @@ hr {
   display: flex;
   justify-content: center;
   align-items: center;
-
   height: 300px;
   position: relative;
-
-  .icons_contact-us {
-    svg {
-      width: 100%;
-
-    }
-  }
-
-  .content_contact-us {
-    width: 100%;
-  }
+  padding: 20px;
 
   .home-contact {
     display: flex;
@@ -501,13 +640,26 @@ hr {
     justify-content: space-between;
     width: 100%;
     position: relative;
+    flex-wrap: wrap;
   }
 
+  .icons_contact-us {
+    svg {
+      width: 100%;
+      transform: scale(1.2);
 
-  .home-contact__title {
-    color: #FFF;
-    text-align: right;
-    font-family: TheSansArabic;
+      @media screen and (width < 900px) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  .content_contact-us {
+    width: 100%;
+  }
+
+  .home-contact__title,
+  .home-contact__subtitle {
     font-size: 30px;
     font-style: normal;
     font-weight: 600;
@@ -515,49 +667,128 @@ hr {
     padding: 0;
     margin: 0;
     margin-top: 20px;
+
+    @media screen and (width < 900px) {
+      font-size: 24px !important;
+    }
+
+    &:lang(en) {
+      text-align: left;
+    }
+  }
+
+  .home-contact__title {
+    color: #FFF;
+    font-family: TheSansArabic;
   }
 
   .home-contact__subtitle {
     color: #FFF;
-    text-align: right;
-    font-family: TheSansArabic;
-    font-size: 30px;
-    font-style: normal;
     font-weight: 530;
-    line-height: normal;
   }
 
   .home-contact__image {
     position: absolute;
-    left: 120px; // لضبط تموضع الصورة أكثر
+    left: 120px;
     bottom: -110px;
     width: 30%;
     max-width: 350px;
     object-fit: contain;
     z-index: 99999 !important;
 
+
+
     img {
       width: 100%;
       height: auto;
       object-fit: contain;
+
+      @media screen and (width < 900px) {
+        display: none;
+      }
     }
   }
 
   .home-contact__decoration {
     position: absolute;
-    right: 10px;
     top: 0%;
     transform: translateY(-50%);
     font-size: 80px;
     -webkit-text-stroke: 1px #ffffff4c;
-    color: #ffffff0f;
-    line-height: normal;
     color: rgba(255, 255, 255, 0.06);
-    text-align: center; 
-    -webkit-text-stroke-color: rgba(255, 255, 255, 0.30);
+    text-align: center;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
 
+    &:lang(en) {
+      left: 0;
+    }
+  }
+
+  /* تعديل عند استخدام اللغة الإنجليزية */
+  &.ltr {
+
+    .home-contact__title,
+    .home-contact__subtitle {
+      text-align: left;
+    }
+
+    .home-contact__decoration {
+      left: 10px;
+      right: auto;
+    }
+
+    .home-contact__image {
+      left: auto;
+      right: 120px;
+    }
+  }
+
+  /* جعل التصميم متجاوبًا */
+  @media (max-width: 768px) {
+    .home-contact {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .home-contact__title {
+      font-size: 22px;
+    }
+
+    .home-contact__subtitle {
+      font-size: 18px;
+    }
+
+    .home-contact__image {
+      width: 70%;
+    }
+
+    .home-contact__decoration {
+      font-size: 40px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .home-contact {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .home-contact__title {
+      font-size: 18px;
+    }
+
+    .home-contact__subtitle {
+      font-size: 16px;
+    }
+
+    .home-contact__image {
+      width: 90%;
+    }
+
+    .home-contact__decoration {
+      font-size: 30px;
+    }
   }
 }

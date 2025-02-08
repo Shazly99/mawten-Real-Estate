@@ -3,8 +3,10 @@ import React from 'react'
 import { Row, Col, Button } from "antd";
 import CustomButton from '@components/common/CustomButton';
 import TitleH from '@components/common/TitleH';
+import { useTranslation } from 'react-i18next';
 
 const NumberCompany = () => {
+    let { t } = useTranslation()
     return (
         <div>
             <img src={img.mawten_bg2} alt="mawten bg" className="w-full" />
@@ -13,7 +15,7 @@ const NumberCompany = () => {
                 <Row gutter={[32, 32]} align="middle" justify="space-between">
                     {/* Right Section */}
                     <Col xs={24} lg={12} className="image-section flex justify-content-center align-items-center">
-                        <TitleH title={"موطن "} highlight={"العقارية"} />
+                        <TitleH title={t('mawten')} highlight={t("RealEstate")} />
                     </Col>
                     {/* Left Section */}
                     <Col xs={24} lg={12} className="text-section">
@@ -29,24 +31,25 @@ const NumberCompany = () => {
             {/* Statistics Section */}
             <div className="statistics-section">
                 <Row gutter={[32, 32]} justify="center">
-                    <Col xs={24} sm={12} md={6} className="stat-item">
+                    <Col xs={12} sm={12} md={6} className="stat-item">
                         <h3 >+5 مليار  </h3>
-                        <p>قيمة الاستثمارات</p>
+                        <p>{t("statistics.investment_value")}</p>
                     </Col>
-                    <Col xs={24} sm={12} md={6} className="stat-item">
+                    <Col xs={12} sm={12} md={6} className="stat-item">
                         <h3  >+ 3,600  </h3>
-                        <p>وحدة عقارية</p>
+                        <p>{t("statistics.real_estate_units")}</p>
                     </Col>
-                    <Col xs={24} sm={12} md={6} className="stat-item">
+                    <Col xs={12} sm={12} md={6} className="stat-item">
                         <h3>+10 مليون </h3>
-                        <p>م² مساحات مطورة</p>
+                        <p>{t("statistics.developed_area")}</p>
                     </Col>
-                    <Col xs={24} sm={12} md={6} className="stat-item">
+                    <Col xs={12} sm={12} md={6} className="stat-item">
                         <h3> + 1,100</h3>
-                        <p>وحدة فندقية</p>
+                        <p>{t("statistics.hotel_units")}</p>
                     </Col>
                 </Row>
             </div>
+
         </div>
     )
 }

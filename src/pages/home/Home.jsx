@@ -29,7 +29,7 @@ const Home = () => {
       <HomeProjects />
       <InvestorRelations />
       <HomeMediaCenter />
-      <HomeContactUs/>
+      <HomeContactUs />
     </>
 
   );

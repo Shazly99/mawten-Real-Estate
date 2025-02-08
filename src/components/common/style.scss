@@ -350,7 +350,18 @@
         .title-accent {
             position: absolute;
             top: -15px;
-            right: -0px; 
+            right: -0px;
+
+            :lang(en) {
+                position: absolute;
+                top: 15px;
+                left: -180px;
+            }
+
+        }
+
+        :lang(en) svg {
+            transform: scaleX(-1);
         }
     }
 

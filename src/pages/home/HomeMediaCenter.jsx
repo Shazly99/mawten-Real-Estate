@@ -7,6 +7,7 @@ import "swiper/css/effect-fade";
 import { Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "./slider.scss";
+import { useTranslation } from "react-i18next";
 
 const newsData = [
     {
@@ -56,25 +57,33 @@ const newsData = [
 ];
 
 const HomeMediaCenter = () => {
+    let {t} = useTranslation()
     return (
         <section className="media-center mt_main">
             <div className="header">
-                <TitleH title={'المركز'} highlight={'الإعلامي'} />
+                <TitleH title={t('Center')} highlight={t('Media')} />
             </div>
             <div className="container">
                 <Swiper
                     modules={[Navigation]}
                     spaceBetween={20} // مسافة بين الشرائح
-                    slidesPerView={2.5}
-                    navigation
                     loop={true}  // تمكين التكرار للتمرير السلس
                     speed={800}  // سرعة الانتقال بين الشرائح
                     autoplay={{
                         delay: 2500, // تأخير بين الشرائح
                         disableOnInteraction: true, // لا توقف التشغيل التلقائي عند التفاعل
                     }}
+                    navigation
+                    breakpoints={{
+                        320: { slidesPerView: 1 },  // شاشة الموبايل الصغيرة
+                        480: { slidesPerView: 1.2 }, // موبايل متوسط
+                        768: { slidesPerView: 2 },  // تابلت
+                        1024: { slidesPerView: 2.5 }, // لابتوب
+                        1280: { slidesPerView: 2.5 }, // شاشات كبيرة
+                    }}
                     className="custom-swiper"
                 >
+
 
                     {newsData.map((news, index) => (
                         <SwiperSlide key={news.id}>
@@ -95,7 +104,7 @@ const HomeMediaCenter = () => {
                 </Swiper>
             </div>
 
-        </section>
+        </section >
     );
 };
 

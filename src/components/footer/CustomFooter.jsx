@@ -13,7 +13,7 @@ const Footer = () => {
       <div className="container">
         <Row gutter={[32, 32]}>
           {/* العمود: عن الشركة */}
-          <Col lg={5} xl={5} xxl={5} xs={5} sm={12} md={12} className=" footer__logo">
+          <Col lg={5} xl={5} xxl={5} xs={24} sm={24} md={12} className=" footer__logo">
             <img src={img.logo_dark} alt="موطن" className="footer__logo-img" />
             <p>
               شركة موطن العقارية شركة مساهمة مغلقة، برأس مال مدفوع 1.9 مليار ريال سعودي

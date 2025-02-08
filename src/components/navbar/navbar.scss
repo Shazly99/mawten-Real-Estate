@@ -14,10 +14,10 @@
 
 
     .navbar-top {
-        padding: 10px 80px;
+        padding: 5px 80px;
 
         @media screen and (width <767px) {
-            padding: 10px 20px !important;
+            padding: 5px 20px !important;
 
             .social-icons {
                 display: none !important;
@@ -26,10 +26,10 @@
     }
 
     .navbar-main {
-        padding: 20px 80px;
+        padding: 5px 80px;
 
         @media screen and (width <767px) {
-            padding: 20px 40px;
+            padding: 5px 40px;
         }
     }
 
@@ -109,17 +109,19 @@
                 color: #fff;
                 text-decoration: none;
                 font-size: 16px;
-                color: #FFF;
+                opacity: 0.7;
                 font-family: TheSansArabic;
                 font-size: 18px;
                 font-style: normal;
-                font-weight: 300;
+                font-weight: 100;
                 line-height: normal;
                 text-transform: capitalize;
                 @include flex();
                 user-select: none;
+
                 &:hover {
-                    color: $mainColor;
+                    opacity: 0.8;
+
                 }
             }
         }
@@ -191,7 +193,8 @@
 
 .navbar-links {
     .active {
-        color: $secondColor !important;
+        color: #FFF !important;
+        opacity: 1 !important;
     }
 }
 
@@ -224,7 +227,8 @@
 
         .show-links {
             display: flex;
-
+            justify-content: flex-start;
+            align-items: flex-start;
         }
 
         .quote-button {
@@ -249,7 +253,6 @@
 
 @media (max-width: 768px) {
     .icon_res_sm {
-
         font-size: 14px;
         display: inline-block;
         margin-right: 16px;
@@ -313,7 +316,7 @@
     }
 
     @media screen and (width < 900px) {
-        padding: 20px 40px !important;
+        padding: 10px 26px  !important;
     }
 }
 
@@ -373,7 +376,7 @@
     ::after {
         content: '';
         position: absolute;
-        bottom: -0px;
+        bottom: -2px;
         left: -2.5px;
         background-color: #fff;
         width: 105%;
@@ -391,16 +394,16 @@
 }
 
 .contact_us_dot {
-
-    width: 130px;
-    height: 46px;
-    flex-shrink: 0;
+    min-width: 130px;
+    height: 43px;
     background-color: $mainColor;
     border-radius: 74px;
 
+
     a {
-        color: #FFF;
+        color: #FFF !important;
         font-family: TheSansArabic;
+        opacity: 1 !important;
         font-size: 20px;
         font-style: normal;
         font-weight: 300;
@@ -408,4 +411,41 @@
         text-transform: capitalize;
     }
 
+}
+
+:lang(en) .contact_us_dot {
+    min-width: 140px;
+    height: 43px;
+
+    @media screen and (width < 900px) {
+        display: none !important;
+    }
+}
+
+:lang(ar) .contact_us_dot,
+:lang(en) .contact_us_dot {
+
+    @media screen and (width < 900px) {
+        display: none !important;
+    }
+}
+
+.sm_lang {
+    display: none;
+
+    @media screen and (width < 900px) {
+        display: flex;
+        padding-bottom: 20px;
+        padding-right: 15px;
+        transition: all 5s ease-in-out;
+    }
+}
+
+.lg_lang {
+    display: flex;
+
+    @media screen and (width < 900px) {
+        display: none !important;
+
+    }
 }

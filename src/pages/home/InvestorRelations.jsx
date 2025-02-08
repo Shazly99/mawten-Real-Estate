@@ -3,7 +3,9 @@ import { Button, Col, Row } from "antd";
 import Icon from "@constants/icon";
 import TitleH from "@components/common/TitleH";
 import CustomButton from "@components/common/CustomButton";
+import { useTranslation } from "react-i18next";
 const InvestorRelations = () => {
+  let {t}=useTranslation()
   return (
     <div className="investor-relations mt_main">
       <Row gutter={[50, 50]} className="content-container">
@@ -12,13 +14,13 @@ const InvestorRelations = () => {
         </Col>
         <Col xl={10} md={10} offset={2} className="text-section">
 
-          <TitleH title={'علاقات '} highlight={'المستثمرين'} />
+          <TitleH title={t('Investor')} highlight={t('Relations')} />
           <p className="description">
             تطلع تحقيق الاستدامة المالية والاستفادة من التوازن بين مساهمة قطاع
             العقار والقطاعات الأخرى وتعظيم المراكز التجارية، كما تسعى لتقديم
             العائد الأمثل للمستثمرين من خلال المكاسب الرأسمالية.
           </p>
-          <CustomButton title={'الملف التعريفي '} />
+          <CustomButton title={ t('CompanyProfile') } />
         </Col>
         <Col xl={1} md={1} offset={1} className="text-section"></Col>
 
