@@ -1,0 +1,563 @@
+@import '../../style/varibale';
+
+.app__slider {
+  img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+  }
+}
+
+.home-container {
+  width: 100%;
+  margin: auto;
+  padding: 50px 0;
+  color: #333;
+
+  .top-section {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .vector {
+      svg {
+        width: 100%;
+        margin-right: -40px;
+        margin-top: 10px;
+      }
+    }
+
+    p {
+      color: #3C3C3B;
+      text-align: justify;
+      font-family: $fontBase;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 35px;
+    }
+  }
+
+  .content {
+    text-align: center;
+
+    .title {
+      color: #3C3C3B;
+      font-family: TheSansArabic;
+      font-size: 44px !important;
+      font-style: normal;
+      font-weight: 500 !important;
+      line-height: normal;
+      text-align: start;
+    }
+  }
+
+  .title_container {
+    width: 90%;
+    margin: auto;
+
+    .content .title {
+      color: #3C3C3B;
+
+      font-family: $fontBase;
+      font-size: 43px;
+      font-style: normal;
+      font-weight: 530;
+      line-height: normal;
+    }
+
+    p {
+      color: #3C3C3B;
+      text-align: justify;
+      font-family: $fontBase;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 35px;
+      /* 175% */
+    }
+  }
+}
+
+
+.image-gallery {
+  width: 95%;
+  margin-left: auto;
+
+
+  img {
+
+    border-radius: 8px; // زوايا دائرية أنيقة
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); // ظل خفيف
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+    width: 100%;
+    height: 100%;
+    margin-right: -120px;
+
+    &:hover {
+      transform: scale(1.05); // تكبير عند تمرير الماوس
+    }
+  }
+}
+
+.company-overview {
+  margin-top: 150px;
+
+  .content {
+
+    .section {
+      margin-bottom: 2rem;
+
+      .title span {
+        color: #3C3C3B;
+
+        font-family: $fontBase;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        user-select: none;
+      }
+
+      .title-container svg {
+        width: 20.461px;
+        height: 39.12px;
+        flex-shrink: 0;
+      }
+
+      h2 {
+        font-size: 1.8rem;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        color: #333;
+
+
+        img {
+          margin-left: 10px;
+          width: 20px;
+          height: 20px;
+        }
+      }
+
+      p {
+        color: #3C3C3B;
+        text-align: justify;
+        font-family: $fontBase;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 35px;
+        /* 175% */
+      }
+    }
+  }
+
+  .image-container {
+    background-image: url('../../assets/images/home/CompanyOverview.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left top;
+
+    img {
+      margin-right: -80px;
+      width: 100%;
+    }
+  }
+
+
+}
+
+// جعل الصفحة متجاوبة مع الأجهزة الصغيرة
+@media (max-width: 1024px) {
+  .company-overview {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    .content {
+      max-width: 100%;
+    }
+
+    .image-container {
+      max-width: 80%;
+      margin-top: 2rem;
+    }
+  }
+}
+
+//  Start design Number Company
+.dnumber-company {
+
+  background: #fff;
+
+  .text-section {
+
+
+    .title {
+      color: #3C3C3B;
+
+      font-family: $fontBase;
+      font-size: 35px;
+      font-style: normal;
+      font-weight: 530;
+      line-height: normal;
+    }
+
+    .description {
+      color: #3C3C3B;
+      text-align: justify;
+      font-family: $fontBase;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: normal;
+      margin-top: 20px;
+    }
+
+    .custom-button {
+      margin-top: 20px;
+      border: 1px solid #a00;
+      color: #a00;
+      font-size: 16px;
+      padding: 10px 20px;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background: #a00;
+        color: #fff;
+      }
+    }
+  }
+
+  .image-section {
+
+
+    width: 300px;
+    height: 250px;
+    background-image: url('../../assets/svg/comBg.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    .title-container {
+      span {
+        color: #3C3C3B;
+        font-family: $fontBase;
+        font-size: 50px;
+        font-weight: 100 !important;
+      }
+
+      strong {
+        color: #A61517;
+
+        font-family: $fontBase;
+        font-size: 50px;
+        font-style: normal;
+        font-weight: 530;
+        line-height: normal;
+      }
+
+      svg {
+        width: 26px;
+      }
+    }
+
+  }
+
+
+}
+
+hr {
+  display: none;
+}
+
+//  End design Number Company 
+
+
+//  Start Statistics Number Company 
+.statistics-section {
+  margin-top: 70px;
+  padding: 30px 0;
+  background-color: #f8f8f8;
+  text-align: center;
+  border-top: .1px solid #000;
+
+  .stat-item {
+    text-align: center;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+
+    &:last-child {
+      border-right: none;
+    }
+
+    h3 {
+      color: #181818;
+
+      font-family: $fontBase;
+      font-size: 30px;
+      font-style: normal;
+      font-weight: 900;
+      line-height: normal;
+    }
+
+    p {
+      color: #000;
+      font-family: $fontBase;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 100;
+      line-height: normal;
+      margin-top: 10px;
+    }
+  }
+}
+
+//  End Statistics Number Company 
+
+//  Start Important Project Company 
+.important-projects {
+  margin-top: 50px !important;
+
+  .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+
+    h2 {
+      font-size: 28px;
+      font-weight: bold;
+      color: #333;
+
+      .highlight {
+        color: #a00;
+      }
+    }
+
+    .custom-button {
+      border: 1px solid #a00;
+      color: #a00;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-size: 16px;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background: #a00;
+        color: #fff;
+      }
+    }
+  }
+
+  .project-card {
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    &:hover img {
+      transform: scale(1.1);
+    }
+
+    .overlay {
+      position: relative;
+      width: 85%;
+      margin: auto;
+      height: 140px;
+      padding: 12px 30px;
+      background: rgba(166, 21, 23, 0.56) !important;
+      color: white;
+      text-align: right;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: -130px;
+      z-index: 5;
+
+      .title {
+        color: #FFF;
+        text-align: right;
+        font-family: TheSansArabic;
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        text-transform: capitalize;
+      }
+
+
+    }
+
+
+  }
+}
+
+//  End Important Project Company 
+
+
+// start Investor Relations
+
+.investor-relations {
+  .text-section {
+    width: 80%;
+    margin: auto;
+  }
+
+  .title-container {
+    span {
+      color: #A61517;
+      font-family: TheSansArabic;
+      font-size: 48px;
+      font-style: normal;
+      font-weight: 530;
+      line-height: normal;
+      text-transform: capitalize;
+      user-select: none;
+    }
+
+    strong {
+      color: #181820;
+      font-family: TheSansArabic;
+      font-size: 48px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: normal;
+      text-transform: capitalize;
+      user-select: none;
+
+    }
+  }
+
+  .description {
+    color: #3C3C3B;
+    text-align: justify;
+    font-family: TheSansArabic;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    margin-top: 20px;
+
+  }
+
+  button {
+    margin-top: 53px;
+    background-color: $mainColor;
+    color: #fff;
+    width: 190px;
+
+    svg path {
+      fill: #fff;
+    }
+
+    &:hover {
+      background-color: #fff !important;
+      color: $mainColor !important;
+
+      svg path {
+        fill: $mainColor !important;
+      }
+    }
+  }
+
+  .decorative-section {
+    svg {
+      width: 100%;
+    }
+  }
+}
+
+.app_contact_us {
+  background-color: #a01c1c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 300px;
+  position: relative;
+
+  .icons_contact-us {
+    svg {
+      width: 100%;
+
+    }
+  }
+
+  .content_contact-us {
+    width: 100%;
+  }
+
+  .home-contact {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+  }
+
+
+  .home-contact__title {
+    color: #FFF;
+    text-align: right;
+    font-family: TheSansArabic;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    padding: 0;
+    margin: 0;
+    margin-top: 20px;
+  }
+
+  .home-contact__subtitle {
+    color: #FFF;
+    text-align: right;
+    font-family: TheSansArabic;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 530;
+    line-height: normal;
+  }
+
+  .home-contact__image {
+    position: absolute;
+    left: 120px; // لضبط تموضع الصورة أكثر
+    bottom: -110px;
+    width: 30%;
+    max-width: 350px;
+    object-fit: contain;
+    z-index: 99999 !important;
+
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+  }
+
+  .home-contact__decoration {
+    position: absolute;
+    right: 10px;
+    top: 0%;
+    transform: translateY(-50%);
+    font-size: 80px;
+    -webkit-text-stroke: 1px #ffffff4c;
+    color: #ffffff0f;
+    line-height: normal;
+    color: rgba(255, 255, 255, 0.06);
+    text-align: center; 
+    -webkit-text-stroke-color: rgba(255, 255, 255, 0.30);
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+
+  }
+}

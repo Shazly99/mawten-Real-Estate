@@ -1,0 +1,162 @@
+@import '../../style/varibale';
+
+.footer {
+  background-color: #f8f8f8;
+  padding-top: 20px;
+  font-size: 14px;
+  color: #333;
+
+  .container {
+    width: 90%;
+    margin: 0 auto;
+    // padding: 0 15px;
+  }
+
+  .ant-typography {
+    color: #333;
+  }
+
+  .footer__grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    text-align: right;
+  }
+
+  .app_link {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px !important;
+
+    a {
+      color: #3C3C3B;
+      font-family: TheSansArabic;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: normal;
+      text-transform: capitalize;
+    }
+  }
+
+
+
+  .footer__logo {
+    
+
+    img {
+      width: 100px;
+      height: 151px;
+      object-fit: contain;
+    }
+
+    p {
+      color: #3C3C3B;
+      text-align: right;
+      font-family: TheSansArabic;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 100;
+      line-height: normal;
+      margin-top: 7px !important;
+    }
+
+    .footer__social {
+      display: flex;
+      gap: 10px;
+      margin-top: 10px;
+
+      a {
+        font-size: 18px;
+        color: #333;
+        transition: color 0.3s;
+        margin-top: 10px;
+
+        &:hover {
+          color: #d32f2f;
+        }
+      }
+    }
+  }
+
+  h4 {
+    color: #3C3C3B;
+    font-family: TheSansArabic;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: capitalize;
+  }
+
+  .footer__bottom {
+    text-align: center;
+    padding-top: 18px;
+    border-top: 1px solid #ddd;
+    font-size: 12px;
+    color: #666;
+    margin-top: 20px;
+  }
+
+  a {
+    display: block;
+    color: #333;
+    text-decoration: none;
+    margin-bottom: 5px;
+    transition: color 0.3s;
+
+    &:hover {
+      color: #d32f2f;
+    }
+  }
+
+  p {
+    margin: 5px 0;
+  }
+
+  @media (max-width: 768px) {
+    .footer__grid {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .footer__logo {
+      margin: 0 auto;
+    }
+  }
+}
+.footer__social {
+  display: flex;
+  gap: 18px !important;
+  margin-top: 5px !important;
+
+  a {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #900; // لون الإطار
+    border-radius: 50%;
+    color: #900 !important; // لون الأيقونات
+    font-size: 14px !important;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      background: #900;
+      color: #fff !important;
+    }
+  }
+}
+
+.social_title{
+  color: #3C3C3B;
+font-family: TheSansArabic;
+font-size: 16px;
+font-style: normal;
+font-weight: 530;
+line-height: normal;
+text-transform: capitalize;
+}

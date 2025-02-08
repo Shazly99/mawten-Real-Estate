@@ -1,0 +1,59 @@
+@import '../style/varibale';
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $light;
+  color: #000;
+}
+
+[lang="ar"] body {
+  font-family: 'Cairo', sans-serif;
+}
+
+[lang="en"] body {
+  font-family: $fontBase;
+}
+a{
+  text-decoration: none;
+}
+::selection {
+  background: rgba($color: $secondColor, $alpha: 0.3);
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba($color: $mainColor, $alpha: 0.8);
+
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $mainColor;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba($color: $mainColor, $alpha: 0.8);
+}
+
+::-webkit-scrollbar-corner {
+  background-color: transparent;
+} 
+
+.rtl p,
+.rtl h1,
+.rtl h2,
+.rtl h3,
+.rtl h4,
+.rtl span,
+.rtl strong {
+  font-family: 'Cairo', sans-serif !important;
+  direction: rtl;
+}

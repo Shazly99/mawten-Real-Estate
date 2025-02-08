@@ -1,0 +1,171 @@
+@import './varibale';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,500&family=Roboto+Mono:wght@200;300;400;500;600;700&family=Roboto:wght@700;900&family=Tajawal:wght@300;400;500;700;800;900&display=swap');
+
+// slider
+.slick-dots li button:before,
+.slick-dots li.slick-active button:before {
+    color: transparent !important;
+}
+
+// Override slick dots color
+.ant-carousel .slick-dots li button {
+    background-color: $light !important;
+}
+
+// Override slick dots active button color
+.ant-carousel .slick-dots li.slick-active button {
+    background-color: $light !important;
+}
+
+.container_master {
+    width: 80%;
+    margin: auto;
+
+    @media screen and (width < 1286px) {
+        width: 90% !important;
+    }
+
+    @media screen and (width < 767px) {
+        width: 95%;
+    }
+}
+
+
+.pulse-animation {
+    z-index: 999999999999;
+}
+
+.ant-float-btn-icon {
+    svg {
+        width: 100%;
+    }
+}
+
+.ant-float-btn .ant-float-btn-body .ant-float-btn-content .ant-float-btn-icon {
+    width: 25px;
+}
+
+/* App.css */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.pulse-animation {
+    animation: pulse 1.5s infinite;
+}
+
+.title-container {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    text-wrap:unset;
+    .title {
+        font-size: 28px;
+        font-weight: bold;
+        color: #333;
+        text-wrap:unset;
+    }
+
+    strong {
+        text-wrap:unset;
+        color: #A61517;
+        text-align: right;
+        font-family: TheSansArabic;
+        font-size: 54px;
+        font-style: normal;
+        font-weight: 530;
+        line-height: normal;
+    }
+
+    .highlight {
+        color: #3C3C3B;
+        font-family: TheSansArabic;
+        font-size: 54px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+    }
+
+    .icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 10px;
+        svg{
+            width: 29.461px;
+            height: 39.12px; 
+        }
+
+    }
+}
+
+
+[dir="rtl"] .ant-btn {
+    svg {
+        transform: rotate(-180deg);
+        margin-top: 2px !important;
+    }
+}
+
+[dir="rtl"] .app_title {
+    svg {
+        transform: rotate(-180deg);
+    }
+}
+
+[dir="rtl"] .ant-btn {
+    svg {
+        margin-top: 4px !important;
+    }
+}
+
+[dir="rtl"] h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+p,
+strong,
+* {
+    font-family: $fontArabic !important;
+}
+
+.container_main_80{
+    width: 80%;
+    margin: auto;
+    @media screen and (width < 767px) {
+        width: 90%;
+    }
+}
+
+.container_main_85{
+    width: 85%;
+    margin: auto;
+    @media screen and (width < 767px) {
+        width: 90%;
+    }
+}
+.container_main_90{
+    width: 90%;
+    margin: auto;
+    @media screen and (width < 767px) {
+        width: 90%;
+    }
+}
+.mt_main{
+    margin-top: 125px;
+}

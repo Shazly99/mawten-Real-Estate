@@ -1,0 +1,83 @@
+@font-face {
+    font-family: 'Bahij TheSansArabic Plain';
+    src: url('../assets/TheSansArabic/Bahij_TheSansArabic-Plain.ttf') format('truetype');
+}
+
+
+
+$fontBase: "Bahij TheSansArabic Plain";
+$mainColor: #A61517;
+$secondColor: #A61517; 
+$textColor : rgba(68, 83, 117, 1);
+
+$textBg: -webkit-linear-gradient(90.93deg, #F13737 27.65%, #5EC8E4 45.8%, #55B9D3 61.33%, #F13737 81.04%);
+$dark: #0D0715;
+$white: white;
+$footerColor: #24282C;
+$colorGrey-0: #404040;
+$colorGrey-1: #999999;
+$colorDark: #000;
+$colorLight: #F9F9F9;
+$light: #fff;
+$colorLight-1: #F7F9FB;
+$m_navbar: 100px;
+
+// font size
+$fontSize-16: 16px;
+$fontSize-17: 17px;
+$fontSize-18: 18px;
+$fontSize-20: 20px;
+$fontSize-21: 21px;
+$fontSize-22: 22px;
+$fontSize-23: 23px;
+$fontSize-24: 24px;
+$fontSize-25: 25px;
+$fontPlus: "Bahij TheSansArabic Plain";
+$fontArabic: "Bahij TheSansArabic Plain";
+$fontBase: "Bahij TheSansArabic Plain"; 
+
+
+// Responsive Variables
+$xxl: "only screen and (min-width: 1601px) and (max-width: 1900px)";
+$xl: "only screen and (min-width: 1601px) and (max-width: 1800px)";
+$laptop: "only screen and (min-width: 1200px) and (max-width: 1600px)";
+$lg: "only screen and (min-width: 992px) and (max-width: 1200px)";
+$md: "only screen and (min-width: 768px) and (max-width: 991px)";
+$xs: "(max-width: 767px)";
+$sm: "only screen and (min-width: 576px) and (max-width: 767px)";
+
+//Landscape-responsive
+$xs-landscape: "only screen and (min-width: 540px) and (max-width: 767px) and (orientation: landscape)";
+
+// shadow
+$shadow: 0px 6px 7px rgba(188, 188, 188, 0.16);
+
+$shadow-navbar: 0px 4px 4px rgba(183, 183, 183, 0.47);
+
+// border radius
+$radius-sm: 5px;
+$radius-lg: 10px;
+
+
+@mixin flex() {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+@mixin size($w, $h) {
+    width: $w;
+    height: $h;
+}
+
+@mixin textBg() {
+    background: $textBg;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@mixin textBgTitle() {
+    background: linear-gradient(90.93deg, #F13737 27.65%, #5EC8E4 45.8%, #55B9D3 61.33%, #F13737 81.04%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
