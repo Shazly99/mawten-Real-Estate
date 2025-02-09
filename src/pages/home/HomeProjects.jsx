@@ -4,6 +4,7 @@ import "./homeProjects.scss";
 import { Col, Row } from "antd";
 import img from "@constants/img";
 import Marquee from "react-fast-marquee";
+import Icon from "@constants/icon";
 
 const tabs = [
     { id: 0, label: "القطاع السكني" },
@@ -51,6 +52,7 @@ const projects = [
 ];
 const HomeProjects = () => {
     const [activeTab, setActiveTab] = useState(0);
+    const [timerKey, setTimerKey] = useState(0); // مفتاح لإعادة تشغيل الـ Timer
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -60,10 +62,30 @@ const HomeProjects = () => {
         return () => clearInterval(interval);
     }, []);
 
+    const nextTab = () => {
+        setActiveTab((prevTab) => {
+            const newTab = (prevTab + 1) % tabs.length;
+            setTimerKey(newTab); // تغيير المفتاح عند تغيير التبويب
+            return newTab;
+        });
+    };
+
+    const prevTab = () => {
+        setActiveTab((prevTab) => {
+            const newTab = (prevTab - 1 + tabs.length) % tabs.length;
+            setTimerKey(newTab); // تغيير المفتاح عند تغيير التبويب
+            return newTab;
+        });
+    };
+
+    useEffect(() => {
+        const interval = setInterval(nextTab, 5000); // تغيير التبويب كل 5 ثوانٍ
+        return () => clearInterval(interval);
+    }, []);
     return (
         <div className="app_projects">
 
-            <div className="tabs">
+            <div className="tabs tabs_web_page ">
                 {tabs.map((tab, index) => (
                     <div key={tab.id} className={`tab ${activeTab === index ? "active" : ""}`}>
                         <span className="active_label">{tab.label}</span>
@@ -80,6 +102,31 @@ const HomeProjects = () => {
                         </div>
                     </div>
                 ))}
+            </div>
+            <div className="tabs_small_page">
+                <div className="cursor-pointer  prevTab" onClick={prevTab}>
+                    <Icon.right />
+                </div>
+
+                <div className="slider-container">
+                    <div className="tab_small active">
+                        <span className="active_label">{tabs[activeTab].label}</span>
+                        <div className="progress-bar-container">
+                            <div className="base-line"></div> {/* الخط الرمادي الثابت */}
+                            <motion.div
+                                key={timerKey} // هذا المفتاح يجبر React على إعادة تشغيل الحركة
+                                className="progress-bar"
+                                initial={{ width: "0%" }}
+                                animate={{ width: "100%" }}
+                                transition={{ duration: 5, ease: "linear" }}
+                            />
+                        </div>
+                    </div>
+                </div>
+
+                <div className="cursor-pointer nextTab" onClick={nextTab}>
+                    <Icon.left />
+                </div>
             </div>
             {/* قسم المحتوى بناءً على الـ Tab المحددة */}
             <main className="main-content">
@@ -213,7 +260,7 @@ const HomeProjects = () => {
                         </Col>
                     </Row>
                 )}
-                
+
                 {activeTab === 2 && (
                     <Row
                         className="content-wrapper"

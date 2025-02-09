@@ -10,10 +10,17 @@
     align-items: center;
     justify-content: flex-start; // وضع القائمة على اليمين
     padding: 20px;
-margin-top: 122px;
+    margin-top: 122px;
+
+    @media screen and (width < 900px) {
+        flex-direction: column;
+        height: auto;
+
+    }
+
     main {
         height: 100%;
-        width: 90%;
+        width: 100%;
         display: flex;
         justify-content: center;
         align-items: flex-end;
@@ -23,7 +30,17 @@ margin-top: 122px;
 
             img {
                 width: 80%;
-                margin-top: 100px;
+
+                @media screen and (width < 900px) {
+                    width: 100%;
+                    margin-top: 10px;
+                }
+            }
+
+            .header {
+                @media screen and (width < 900px) {
+                    margin-top: 20px;
+                }
             }
 
             h1 {
@@ -38,6 +55,13 @@ margin-top: 122px;
                 position: relative;
                 z-index: 0;
 
+                @media screen and (width < 900px) {
+                    font-size: 30px;
+                    margin: 0 !important;
+                    line-height: 70px;
+                    padding: 0 !important;
+                }
+
                 &::before {
                     position: absolute;
                     content: '';
@@ -47,6 +71,13 @@ margin-top: 122px;
                     top: 50%;
                     transform: translateY(-50%);
                     z-index: -1;
+
+                    @media screen and (width < 900px) {
+                        height: 34px;
+                        transform: translateY(-45%);
+                        right: -10px !important;
+
+                    }
                 }
             }
         }
@@ -60,13 +91,18 @@ margin-top: 122px;
                 justify-content: center;
                 gap: 40px;
                 margin-bottom: 20px;
+
+                @media screen and (width < 900px) {
+                    gap: 20px;
+                    margin-top: 50px;
+                }
             }
 
             .stat {
                 text-align: center;
                 width: 100%;
-                @media screen and (width < 900px) {
-                }
+
+
             }
 
             .stat h2 {
@@ -86,6 +122,11 @@ margin-top: 122px;
                 font-style: normal;
                 font-weight: 300 !important;
                 margin-top: 30px;
+
+                @media screen and (width < 900px) {
+                    margin-top: 10px;
+
+                }
             }
 
             .divider {
@@ -104,6 +145,12 @@ margin-top: 122px;
                 font-weight: 100 !important;
                 line-height: normal;
                 margin-top: 70px;
+
+                @media screen and (width < 900px) {
+                    font-size: 18px;
+                    margin-top: 50px;
+                    opacity: 0.9;
+                }
             }
         }
 
@@ -144,7 +191,7 @@ margin-top: 122px;
             font-size: 16px;
             font-style: normal;
             font-weight: 530;
-            padding: 10px ;
+            padding: 10px;
             line-height: normal;
             text-transform: capitalize;
             display: flex;
@@ -221,4 +268,83 @@ margin-top: 122px;
             line-height: normal;
         }
     }
+}
+
+.tabs_web_page {
+    @media screen and (width < 900px) {
+        display: none;
+    }
+}
+
+.tabs_small_page {
+    // align-items: center;
+    display: none;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    margin-top: 15px;
+    position: relative;
+
+    @media screen and (width < 900px) {
+        display: flex;
+    }
+
+    .active_label {
+        font-size: 18px;
+        margin-top: -5px;
+    }
+
+    .nextTab {
+        position: absolute;
+        top: 2px;
+        left: 0;
+    }
+
+    .prevTab {
+        position: absolute;
+        top: 2px;
+        right: 0;
+    }
+}
+
+.slider-container {
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+    position: relative;
+}
+
+.tab_small {
+    font-size: 24px;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.progress-bar-container {
+    width: 200px;
+    height: 4px;
+    background: rgba(233, 233, 233, 0.5);
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.base-line {
+    width: 100%;
+    height: 100%;
+    background: rgba(233, 233, 233, 0.5);
+    position: absolute;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    border-radius: 5px;
 }
