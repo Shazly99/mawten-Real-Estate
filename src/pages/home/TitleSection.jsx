@@ -1,9 +1,8 @@
-import React from 'react'
 import TitleH from "@components/common/TitleH";
 import Icon from '@constants/icon';
 import { Col, Row } from "antd";
-import TitleScrion from "./TitleSection";
 import { useTranslation } from 'react-i18next';
+
 const TitleSection = () => {
     let { t } = useTranslation()
     return (

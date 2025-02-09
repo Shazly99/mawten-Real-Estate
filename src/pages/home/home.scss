@@ -251,6 +251,9 @@
 
     margin: 50px auto !important;
   }
+  .title-container{
+    justify-content: center;
+  }
 
   .text-section {
 
@@ -641,12 +644,14 @@ hr {
     width: 100%;
     position: relative;
     flex-wrap: wrap;
+
   }
 
   .icons_contact-us {
     svg {
       width: 100%;
       transform: scale(1.2);
+      margin-right: -20px;
 
       @media screen and (width < 900px) {
         margin-bottom: 20px;
@@ -664,8 +669,7 @@ hr {
     font-style: normal;
     font-weight: 600;
     line-height: normal;
-    padding: 0;
-    margin: 0;
+    font-family: $fontBase;
     margin-top: 20px;
 
     @media screen and (width < 900px) {
@@ -716,10 +720,16 @@ hr {
     font-size: 80px;
     -webkit-text-stroke: 1px #ffffff4c;
     color: rgba(255, 255, 255, 0.06);
-    text-align: center;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
+ 
+    
+    text-align: right;
+-webkit-text-stroke-width: 1;
+-webkit-text-stroke-color: rgba(255, 255, 255, 0.30);
+font-family: TheSansArabic;
+font-size: 78px;
+font-style: normal;
+font-weight: 530;
+line-height: normal;
 
     &:lang(en) {
       left: 0;
