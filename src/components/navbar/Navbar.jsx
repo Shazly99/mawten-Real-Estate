@@ -1,15 +1,32 @@
-import React, { useContext, useEffect, useState } from 'react';
-import { Link, NavLink } from 'react-router-dom';
-import { DownOutlined, FacebookFilled, HomeOutlined, InfoCircleOutlined, InstagramFilled, InstagramOutlined, LinkedinFilled, MenuOutlined, PhoneOutlined, ProjectOutlined, ReloadOutlined, SettingOutlined, ShoppingOutlined, TikTokFilled, TikTokOutlined, XOutlined, YoutubeFilled } from '@ant-design/icons';
-import { Button, Dropdown, Menu } from 'antd';
-import { useTranslation } from 'react-i18next';
-import { motion } from 'framer-motion';
+import { HomeOutlined, InfoCircleOutlined, MenuOutlined, PhoneOutlined, ProjectOutlined, SettingOutlined, ShoppingOutlined } from '@ant-design/icons';
 import Icon from '@constants/icon';
-import img from '@constants/img';
-import { GeneralData } from '@context/General';
-import './navbar.scss';
 import Logo from '@constants/Logo';
+import { GeneralData } from '@context/General';
+import { Button, Menu, Dropdown } from 'antd';
+import { motion } from 'framer-motion';
+import { useContext, useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import { Link, NavLink } from 'react-router-dom';
+import './navbar.scss';
 
+const menu = (
+    <Menu>
+        <Menu.Item key="1">
+            <NavLink to="/about/team">عن موطن</NavLink>
+        </Menu.Item>
+        <Menu.Item key="2">
+            <NavLink to="/about/mission">تاريخنا</NavLink>
+        </Menu.Item>
+
+        <Menu.Item key="3">
+            <NavLink to="/about/mission">أعضاء مجلس الإدارة</NavLink>
+        </Menu.Item>
+
+        <Menu.Item key="4">
+            <NavLink to="/about/mission">الإدارة التنفيذية</NavLink>
+        </Menu.Item>
+    </Menu>
+);
 const Navbar = () => {
     const { i18n, t } = useTranslation();
     const { isLang, setIsLang } = useContext(GeneralData);
@@ -82,10 +99,14 @@ const Navbar = () => {
                         <HomeOutlined className='icon_res_sm' />
                         {t('nav_home')}
                     </NavLink>
-                    <NavLink to='/about'>
-                        <InfoCircleOutlined className='icon_res_sm' />
-                        {t('nav_about')}
-                    </NavLink>
+
+
+                    <Dropdown overlay={menu}  trigger={['hover']} className='dropdown_link' >
+                        <NavLink to='/about'>
+                            <InfoCircleOutlined className='icon_res_sm' />
+                            {t('nav_about')}
+                        </NavLink>
+                    </Dropdown>
                     <NavLink to='/projects'>
                         <ProjectOutlined className='icon_res_sm' />
                         {t('nav_Projects')}
@@ -129,7 +150,7 @@ const Navbar = () => {
                                     <Icon.lang />
                                 </div>
                         }
-                   
+
                     </div>
                 </nav>
 

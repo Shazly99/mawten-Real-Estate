@@ -15,12 +15,11 @@
     @media screen and (width < 900px) {
         flex-direction: column;
         height: auto;
-
     }
 
     main {
         height: 100%;
-        width: 100%;
+        width: 90%;
         display: flex;
         justify-content: center;
         align-items: flex-end;
