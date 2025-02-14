@@ -1,0 +1,144 @@
+@import '../../style/varibale';
+
+.app_services {
+    
+    header {
+        width: 100%;
+        min-height: 150vh;
+        display: flex;
+        justify-content: flex-start;
+        padding-top: 148px;
+        align-items: center;
+        flex-direction: column;
+        background: linear-gradient(114deg, rgba(17, 3, 29, 0.86) 17.66%, rgba(68, 0, 0, 0.86) 65.33%);
+        position: relative;
+        user-select: none;
+
+        .headerImg {
+            width: 150px;
+            width: 1056px;
+            height: 1010px;
+            flex-shrink: 0;
+            margin-top: 0px;
+            padding: 40px
+        }
+
+        .content {
+
+            .title-container {
+                @include flex;
+
+                strong {
+
+                    color: #fff !important;
+                }
+
+                svg path {
+                    fill: #fff;
+                }
+            }
+
+            width: 55%;
+
+            p {
+                color: #FFF;
+                text-align: center;
+                font-family: TheSansArabic;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 300;
+                opacity: 0.8;
+                line-height: normal;
+                margin-top: 0px;
+            }
+        }
+
+        .left,
+        .right {
+            position: absolute;
+
+            img {
+                width: 300px;
+                height: 205px;
+                opacity: 0.1;
+            }
+
+        }
+
+        .left {
+            left: 30px;
+            top: 50px;
+        }
+
+        .right {
+            right: 0px;
+            top: 0px;
+        }
+    }
+
+    main {
+        width: 85%;
+        margin: auto;
+
+        img {
+            width: 100%;
+            // padding: 20px;
+            object-fit: contain;
+        }
+
+        .title-container {
+
+
+
+            span {
+                color: #181820;
+                font-family: TheSansArabic;
+                font-size: 40px;
+                font-style: normal;
+                font-weight: 300;
+                line-height: normal;
+            }
+
+            strong {
+                color: #A61517;
+                text-align: right;
+                font-family: TheSansArabic;
+                font-size: 40px;
+                font-style: normal;
+                font-weight: 530;
+                line-height: normal;
+            }
+
+            svg {
+                width: 30px;
+                height: 30px;
+            }
+        }
+
+        p {
+            color: #181820;
+            text-align: justify;
+            font-family: TheSansArabic;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+            margin-top: 20px;
+        }
+    }
+}
+
+.h_services {
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+} 
+
+.h_services_2 {
+    height:400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

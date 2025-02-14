@@ -13,6 +13,14 @@ import Projects1 from "@assets/images/Projects/1.png";
 import Projects2 from "@assets/images/Projects/2.png";
 import Projects3 from "@assets/images/Projects/3.png";
 
+import left from "@assets/images/services/left.png";
+import right from "@assets/images/services/right.png";
+import services1 from "@assets/images/services/1.png";
+import services2 from "@assets/images/services/2.png";
+import services3 from "@assets/images/services/3.png";
+import services4 from "@assets/images/services/4.png";
+import headerImg from "@assets/images/services/headerImg.png";
+
 import value1 from "@assets/images/about/value1.gif";
 import value2 from "@assets/images/about/value2.gif";
 import value3 from "@assets/images/about/value3.gif";
@@ -25,6 +33,7 @@ import blog3 from "@assets/images/HomeMediaCenter/3.png";
 
 const img = {
     value1,
+    headerImg,
     value2,
     value3,
     value4,
@@ -45,6 +54,12 @@ const img = {
     blog2,
     blog3,
     logo_dark,
+    left,
+    right,
+    services1,
+    services2,
+    services3,
+    services4,
     gallery2
 }
 

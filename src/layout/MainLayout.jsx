@@ -1,13 +1,16 @@
 import CustomFooter from '@components/footer/CustomFooter';
 import Navbar from '@components/navbar/Navbar';
-import { Outlet } from 'react-router-dom';
+import { Outlet, useLocation } from 'react-router-dom';
 import '../components/style.scss';
 
 
-const MainLayout = () => { 
+const MainLayout = () => {
+  let location = useLocation()
   return (
-    <div  className='overflow-hidden'>
-      <Navbar />
+    <div className='overflow-hidden'>
+      <div className={location.pathname === '/' ? 'home' : 'other'}>
+        <Navbar />
+      </div>
       <Outlet />
       <CustomFooter />
     </div>

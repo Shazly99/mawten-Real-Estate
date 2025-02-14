@@ -15,10 +15,7 @@ const About = () => {
             <GalleryTitle />
             <AboutCompanyOverview />
             <Value />
-            <div className="mt_main ">
-                <HomeContactUs />
-            </div>
-
+         
         </div>
     )
 }

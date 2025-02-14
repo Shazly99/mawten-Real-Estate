@@ -15,6 +15,10 @@ const router = createBrowserRouter([
         path:'/about',
         element: <Comp.About />,
       },
+      {
+        path:'/services',
+        element: <Comp.Services />,
+      },
      
     ],
   },

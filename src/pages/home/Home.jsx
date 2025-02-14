@@ -28,8 +28,7 @@ const Home = () => {
       <ImportantProject />
       <HomeProjects />
       <InvestorRelations />
-      <HomeMediaCenter />
-      <HomeContactUs />
+      <HomeMediaCenter /> 
     </>
 
   );

@@ -4,6 +4,7 @@ import MainLayout from '@layout/MainLayout';
 import About from '@pages/about/About';
 import Home from '@pages/home/Home';
 import SliderHome from '@pages/home/SliderHome';
+import Services from '@pages/services/Services';
 
 const Comp = {
     MainLayout, 
@@ -11,6 +12,7 @@ const Comp = {
     Loader,   
     SliderHome,
     About,
+    Services,
     Home
 }
 
