@@ -24,7 +24,7 @@ const Services = () => {
             </header>
 
 
-            <main>
+            <main className='mb-8'>
                 <Row gutter={[16, 16]} className='h-full mt-8'>
                     <Col xl={12} lg={12} xxl={12} md={24} xs={24} sm={24} className='h_services' >
                         <img src={img.services1} className='w-full p-6' alt="" srcset="" />

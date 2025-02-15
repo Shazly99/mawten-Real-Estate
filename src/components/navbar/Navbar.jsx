@@ -115,7 +115,7 @@ const Navbar = () => {
                         <SettingOutlined className='icon_res_sm' />
                         {t('nav_service')}
                     </NavLink>
-                    <NavLink to='/products'>
+                    <NavLink to='/media-center'>
                         <ShoppingOutlined className='icon_res_sm' />
                         {t('nav_Products')}
                     </NavLink>

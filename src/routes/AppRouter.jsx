@@ -19,6 +19,11 @@ const router = createBrowserRouter([
         path:'/services',
         element: <Comp.Services />,
       },
+
+      {
+        path:'/media-center',
+        element: <Comp.Blogs />,
+      },
      
     ],
   },

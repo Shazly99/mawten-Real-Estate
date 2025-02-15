@@ -10,6 +10,7 @@ import map from "@assets/images/home/map.png";
 import gallery1 from "@assets/images/gallery/1.png";
 import gallery2 from "@assets/images/gallery/2.png";
 import Projects1 from "@assets/images/Projects/1.png";
+import blogsCover from "@assets/images/blogs/1.png";
 import Projects2 from "@assets/images/Projects/2.png";
 import Projects3 from "@assets/images/Projects/3.png";
 
@@ -30,6 +31,8 @@ import value5 from "@assets/images/about/value5.gif";
 import blog1 from "@assets/images/HomeMediaCenter/1.png";
 import blog2 from "@assets/images/HomeMediaCenter/2.png";
 import blog3 from "@assets/images/HomeMediaCenter/3.png";
+import blog4 from "@assets/images/blogs/2.png";
+import blog5 from "@assets/images/blogs/3.png";
 
 const img = {
     value1,
@@ -60,7 +63,10 @@ const img = {
     services2,
     services3,
     services4,
-    gallery2
+    blogsCover,
+    gallery2,
+    blog4,
+    blog5
 }
 
 export default img;

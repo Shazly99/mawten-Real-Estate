@@ -8,7 +8,7 @@ const MainLayout = () => {
   let location = useLocation()
   return (
     <div className='overflow-hidden'>
-      <div className={location.pathname === '/' ? 'home' : 'other'}>
+      <div className={location.pathname == '/services' ? 'other' :location.pathname == '/media-center' ? 'blogs_navbar' : ''}>
         <Navbar />
       </div>
       <Outlet />
