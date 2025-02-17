@@ -1,9 +1,9 @@
 import General from '@context/General';
 import AppRouter from '@routes/AppRouter';
-import { ConfigProvider } from 'antd';
+import { ConfigProvider, Slider } from 'antd';
 import { useEffect } from 'react';
 import './style/App.scss';
- 
+
 
 function App() {
 
@@ -13,27 +13,30 @@ function App() {
       colorActiveText: 'red'
     },
     components: {
-     
+      Slider: {
+        colorPrimary: '#A61517',
+        colorActiveText: '#A61517'
+      }
     },
   };
   useEffect(() => {
     const scrollStep = -window.pageYOffset / 50; // سرعة التمرير
     const scrollInterval = setInterval(() => {
-        if (window.pageYOffset !== 0) {
-            window.scrollBy(0, scrollStep);
-        } else {
-            clearInterval(scrollInterval);
-        }
+      if (window.pageYOffset !== 0) {
+        window.scrollBy(0, scrollStep);
+      } else {
+        clearInterval(scrollInterval);
+      }
     }, 10); // التحكم في السلاسة
 
     return () => clearInterval(scrollInterval); // تنظيف التايمر
-}, []);
+  }, []);
   return (
     <>
-   
+
       <ConfigProvider theme={theme} >
         <General>
-          <AppRouter /> 
+          <AppRouter />
         </General>
       </ConfigProvider>
     </>

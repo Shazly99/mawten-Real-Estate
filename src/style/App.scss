@@ -206,16 +206,61 @@ strong,
 .mt_main {
     margin-top: 125px;
 }
-.other{
-    .navbar-main{
+
+.other {
+    .navbar-main {
 
         background-color: transparent !important;
     }
 }
 
-.blogs_navbar{
-    .navbar-main{
+.blogs_navbar {
+    .navbar-main {
 
         background-color: #000 !important;
+    }
+}
+
+.header_overlay {
+    position: relative;
+    height: 548px;
+    overflow: hidden;
+
+    .overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.46);
+
+        img {
+            height: 100%;
+        }
+
+        h3 {
+            color: #FFF;
+            font-family: TheSansArabic;
+            font-size: 56px;
+            font-style: normal;
+            font-weight: 530;
+            line-height: normal;
+            text-transform: capitalize;
+            user-select: none;
+            margin-bottom: 15px !important;
+        }
+
+        .content {
+            margin-bottom: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            span{
+                color: #fff !important;
+            }
+        }
+
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+
     }
 }

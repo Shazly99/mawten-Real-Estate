@@ -2,7 +2,7 @@ import { HomeOutlined, InfoCircleOutlined, MenuOutlined, PhoneOutlined, ProjectO
 import Icon from '@constants/icon';
 import Logo from '@constants/Logo';
 import { GeneralData } from '@context/General';
-import { Button, Menu, Dropdown } from 'antd';
+import { Button, Dropdown, Menu } from 'antd';
 import { motion } from 'framer-motion';
 import { useContext, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -12,7 +12,7 @@ import './navbar.scss';
 const menu = (
     <Menu>
         <Menu.Item key="1">
-            <NavLink to="/about/team">عن موطن</NavLink>
+            <NavLink to="/about">عن موطن</NavLink>
         </Menu.Item>
         <Menu.Item key="2">
             <NavLink to="/about/mission">تاريخنا</NavLink>

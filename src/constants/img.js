@@ -22,6 +22,7 @@ import services3 from "@assets/images/services/3.png";
 import services4 from "@assets/images/services/4.png";
 import headerImg from "@assets/images/services/headerImg.png";
 
+import mission2017 from "@assets/images/about/mission.png";
 import value1 from "@assets/images/about/value1.gif";
 import value2 from "@assets/images/about/value2.gif";
 import value3 from "@assets/images/about/value3.gif";
@@ -35,6 +36,7 @@ import blog4 from "@assets/images/blogs/2.png";
 import blog5 from "@assets/images/blogs/3.png";
 
 const img = {
+    mission2017,
     value1,
     headerImg,
     value2,

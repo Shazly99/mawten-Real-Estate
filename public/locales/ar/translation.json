@@ -22,7 +22,10 @@
   "Center": " المركز",
   "RealEstateDeveloper": "المطور العقاري الرائد",
   "MultiAsset": "متعدد الأصول في المملكة",
-
+  "history": "تاريخ ", 
+  "AboutMawten": "عــن مــوطن",
+  "AboutMawten1": " الإدارة التنفيذية",
+  "AboutMawten2": "أعضاء مجلس الإدارة",
   "statistics": {
     "investment_value": "قيمة الاستثمارات",
     "real_estate_units": "وحدة عقارية",

@@ -12,19 +12,29 @@ const router = createBrowserRouter([
         element: <Comp.Home />,
       },
       {
-        path:'/about',
-        element: <Comp.About />,
+        path: '/about',
+        children: [
+          {
+            index: true,
+            element: <Comp.About />,
+          },
+          {
+            path: 'mission',
+            element: <Comp.Mission />,
+          },
+
+        ]
       },
       {
-        path:'/services',
+        path: '/services',
         element: <Comp.Services />,
       },
 
       {
-        path:'/media-center',
+        path: '/media-center',
         element: <Comp.Blogs />,
       },
-     
+
     ],
   },
 ]);

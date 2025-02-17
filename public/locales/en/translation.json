@@ -7,7 +7,7 @@
   "nav_Products": "Media Center",
   "nav_Projects": "Projects",
   "OUR_CLIENTS": "OUR CLIENTS",
-  "nav_about": "About  ",
+  "nav_about": "About   ",
   "nav_contact": "Contacts Us",
   "btn_nav": "Get A Quote",
   "slider_h": "Innovating Solutions, Empowering Success",
@@ -21,9 +21,12 @@
   "Relations": " Relations",
   "CompanyProfile": " Company Profile",
   "Media": "Media ",
+  "history": "History ", 
   "Center": " Center",
   "RealEstateDeveloper": "Leading Real Estate Developer",
   "MultiAsset": " Multi-Asset in the Kingdom",
+  "AboutMawten": "About Mawten",
+
 
   "statistics": {
     "investment_value": "Investment Value",

@@ -1,0 +1,286 @@
+@import '../../../style/varibale';
+
+
+.app__mission {
+    header {
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+
+        .title-container {
+            width: 100% !important;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+            strong {
+                color: #181820;
+                text-align: right;
+                font-family: TheSansArabic;
+                font-size: 48px;
+                font-style: normal;
+                font-weight: 300;
+                line-height: normal;
+            }
+
+            span {
+                color: #A61517;
+                font-family: TheSansArabic;
+                font-size: 48px;
+                font-style: normal;
+                font-weight: 530;
+                line-height: normal;
+            }
+        }
+
+        p {
+            width: 50%;
+            color: #3C3C3B;
+            text-align: center;
+            font-family: TheSansArabic;
+            font-size: 17px;
+            font-style: normal;
+            font-weight: 100;
+            line-height: normal;
+
+            @media screen and (width < 900px) {
+                width: 80%;
+            }
+        }
+
+
+    }
+
+
+
+}
+
+.timeline__history {
+    width: 85%;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.ant-slider .ant-slider-dot-active {
+    color: #A61517 !important;
+    background-color: $mainColor !important;
+    border-color: $mainColor !important;
+
+}
+
+.ant-slider-dot {
+    background-color: $mainColor;
+}
+
+
+
+.ant-slider .ant-slider-mark-text {
+    color: #D2D2D2;
+    text-align: right;
+    font-family: TheSansArabic;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 530;
+    line-height: normal;
+    margin-top: 15px;
+
+}
+
+.ant-slider .ant-slider-mark-text-active {
+    color: #A61517;
+    text-align: right;
+    font-family: TheSansArabic;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 530;
+    line-height: normal;
+    margin-top: 15px;
+
+}
+
+.ant-slider-dot-active {
+    color: #A61517 !important;
+    background-color: $mainColor !important;
+    border-color: $mainColor !important;
+}
+
+.ant-slider .ant-slider-handle::after {
+    color: #A61517 !important;
+    background-color: $mainColor !important;
+    border-color: $mainColor !important;
+    box-shadow: 0 0 0 2px #A61517;
+}
+
+.ant-slider .ant-slider-track {
+    background-color: rgba($color: $mainColor, $alpha: 0.7) !important;
+    border-radius: 2px;
+}
+
+.ant-slider-tooltip {
+    display: none;
+}
+
+// ==================================================================================================
+.timeline-nav {
+    display: flex;
+    justify-content: space-between;
+
+    gap: 30px;
+
+    .ant-slider {
+        width: 100%;
+    }
+
+    .timeline-nav-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .timeline_next_btn {
+        button {
+            width: 34px;
+            height: 32px;
+            background-color: $mainColor;
+
+            .ant-btn-icon {
+                @include flex();
+                margin-top: 5px;
+                transform: scale(-1);
+            }
+        }
+    }
+
+    .timeline_prev_btn {
+        button {
+            width: 34px;
+            height: 32px;
+            background-color: #D9D9D9;
+
+            .ant-btn-icon {
+                @include flex();
+                margin-top: 5px;
+                transform: scale(-1);
+            }
+        }
+    }
+}
+
+.mission_bg {
+    background: #F6F6F6;
+}
+
+/* timeline-section */
+.timeline-section {
+    background-color: #fff;
+    margin-top: 60px;
+    padding: 80px 20px;
+    
+    display: flex;
+    align-items: center; 
+}
+
+.timeline_auto{
+    margin: auto;
+    width: 85%;
+
+}
+
+/* Timeline Text */
+.timeline-text {
+    padding: 20px;
+    color: #000;
+}
+
+.timeline-text .text-xl {
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+.timeline-text .text-base {
+    color: #000;
+ 
+    font-family: TheSansArabic;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 530;
+    display: block;
+    line-height: normal; 
+    text-align: justify !important;
+}
+
+.timeline-image img {
+    width: 100%;
+    height: 383px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 768px) {
+    .timeline-section {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.timeline_year {
+    display: flex;
+    justify-content: start;
+    margin-bottom: 20px;
+
+    /* Timeline Year */
+    .timeline-year {
+        font-size: 24px;
+        font-weight: bold;
+        color: $mainColor;
+        /* Red color */
+        margin: 0 10px;
+    }
+
+    /* Timeline Line with circles */
+    .timeline-line {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+
+    .circle {
+        width: 9px;
+        height: 9px;
+        flex-shrink: 0;
+        background-color: $mainColor;
+        border-radius: 50%;
+        position: absolute;
+
+    }
+
+
+    .circle1 {
+        left: 0;
+    }
+
+    .circle2 {
+        right: 0;
+    }
+
+    /* Horizontal line between the circles */
+    .line {
+        width: 100px;
+        height: 1.5px;
+        background-color: $mainColor;
+
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .timeline-year {
+            font-size: 20px;
+        }
+    }
+}
