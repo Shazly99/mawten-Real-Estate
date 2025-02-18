@@ -1,4 +1,5 @@
 import logo from "@assets/images/logo.png";
+import contact from "@assets/images/contact.png";
 import logo_dark from "@assets/images/logo2.png";
 import slider from "@assets/images/slider/slider.png";
 import CompanyOverview from "@assets/images/home/CompanyOverview.png";
@@ -68,6 +69,7 @@ const img = {
     blogsCover,
     gallery2,
     blog4,
+    contact,
     blog5
 }
 

@@ -29,6 +29,10 @@ const router = createBrowserRouter([
         path: '/services',
         element: <Comp.Services />,
       },
+      {
+        path: '/contact',
+        element: <Comp.Contact />,
+      },
 
       {
         path: '/media-center',
