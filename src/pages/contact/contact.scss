@@ -93,6 +93,9 @@
         line-height: normal;
         text-transform: capitalize;
         margin-top: 10px;
+        &:lang(en){
+            text-align: left;
+        }
     }
 
     .social {
@@ -245,9 +248,9 @@
 }
 
 
-.address-section { 
+.address-section {
     background: #181820;
-    padding: 70px  20px 190px 20px;
+    padding: 70px 20px 190px 20px;
     color: white;
     text-align: right;
     margin-bottom: -125px;
@@ -270,12 +273,23 @@
         .title {
             position: relative;
             user-select: none;
-            svg{
-                position: absolute;
-                top: -10px;
-                right: -10px;
+
+            .custom-title .title-main .title-gray {
+                color: #FFF;
+                font-family: TheSansArabic;
+                font-size: 48px;
+                font-style: normal;
+                font-weight: 530;
+                line-height: 66px;
+                /* 137.5% */
+                letter-spacing: -2px;
             }
 
+            .custom-title .title-main .title-accent :lang(en) {
+                position: absolute;
+                top: 15px;
+                left: -255px;
+            } 
         }
     }
 
@@ -286,6 +300,7 @@
         font-style: normal;
         font-weight: 530;
         line-height: 66px;
+
     }
 
 
@@ -298,6 +313,9 @@
         font-weight: 530;
         line-height: normal;
         margin-top: 30px;
+        &:lang(en){
+            text-align: left;
+        }
     }
 
     .copy-button {

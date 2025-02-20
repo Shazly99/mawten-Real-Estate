@@ -4,20 +4,22 @@ import './blogs.scss';
 import img from '@constants/img';
 import TitleH from '@components/common/TitleH';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const Blogs = () => {
+    let { t } = useTranslation()
     return (
         <div className="app_media blogs-container">
-            <header className=" mt-8 pt-2">
+            <header className="mt-8 pt-2">
                 <img src={img.blogsCover} alt="Cover" className="cover-img" />
                 <div className="content">
-                    <TitleH title="المركز" highlight="الاعلامي" />
+                    <TitleH title={t('Center')} highlight={t('Media')} />
                 </div>
             </header>
 
             <main className="blogs-main">
-                <Row gutter={[50, 50]} className="h-full mt-8">
-                    <Col xl={12} lg={12} xxl={12} md={24} xs={24} sm={24} className='h_services' >
+                <Row gutter={[30, 30]} className="h-full mt-8">
+                    <Col xs={24} sm={12} md={12} lg={12} xl={12} xxl={8} className='h_services mt-5'>
                         <div className="blog-card">
                             <div className="card-header">
                                 <img src={img.blog4} alt="Image 1" />
@@ -28,13 +30,13 @@ const Blogs = () => {
                                     </p>
                                 </div>
                             </div>
-                            <Link to={'/media-center/5'} >
-                                <Button type="primary" shape='round' className="read-more-btn">اكتشف المزيد</Button>
+                            <Link to={'/media-center/5'} className='btn mx-2' >
+                                <Button type="primary" shape='round' className="read-more-btn">  {t('more')} </Button>
                             </Link>
                         </div>
                     </Col>
 
-                    <Col xl={12} lg={12} xxl={12} md={24} xs={24} sm={24} className='h_services' >
+                    <Col xs={24} sm={12} md={12} lg={12} xl={12} xxl={8} className='h_services mt-5'>
                         <div className="blog-card">
                             <div className="card-header">
                                 <img src={img.blog5} alt="Image 1" />
@@ -45,8 +47,8 @@ const Blogs = () => {
                                     </p>
                                 </div>
                             </div>
-                            <Link to={'/media-center/5'} >
-                                <Button type="primary" shape='round' className="read-more-btn">اكتشف المزيد</Button>
+                            <Link to={'/media-center/5'} className='btn mx-2' >
+                                <Button type="primary" shape='round' className="read-more-btn">   {t('more')} </Button>
                             </Link>
                         </div>
                     </Col>

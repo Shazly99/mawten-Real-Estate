@@ -33,5 +33,34 @@
     "real_estate_units": "Real Estate Units",
     "developed_area": "m² Developed Areas",
     "hotel_units": "Hotel Units"
+  },
+  "Ourlocation1": "Our Location",
+  "Ourlocation2": "Saudi Arabia\nJeddah, Haramain Road, Riyadh",
+  "ContactUsVia1": "Contact us via",
+  "ContactUsVia2": "We are ready to receive your requests",
+  "ContactUsVia3": "Contact us anytime within 24 hours",
+  "ContactUs": "Contact",
+  "ContactUsP": "For inquiries about our services or products, please fill out the following form:",
+  "Follow": "Follow us on",
+  "ContactUs2": "Us",
+  "form": {
+    "name": "Your Name",
+    "phone": "Phone Number",
+    "email": "Email Address",
+    "company": "Company Name",
+    "message": "Your Message",
+    "submit": "Submit"
+  },
+  "validation": {
+    "nameRequired": "Please enter your name",
+    "phoneRequired": "Please enter your phone number",
+    "emailRequired": "Please enter your email address",
+    "messageRequired": "Please enter your message"
+  },
+  "address": {
+    "title": "Our Address",
+    "copyButton": "Copy Link",
+    "line1": "3758 Southern Northern Road - Al Nafal District, Riyadh",
+    "line2": "Kingdom of Saudi Arabia 6525 - 13312"
   }
 }

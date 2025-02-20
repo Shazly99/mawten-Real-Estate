@@ -98,9 +98,7 @@ const Navbar = () => {
                     <NavLink to='/'>
                         <HomeOutlined className='icon_res_sm' />
                         {t('nav_home')}
-                    </NavLink>
-
-
+                    </NavLink> 
                     <Dropdown overlay={menu}  trigger={['hover']} className='dropdown_link' >
                         <NavLink to='/about'>
                             <InfoCircleOutlined className='icon_res_sm' />
@@ -126,8 +124,8 @@ const Navbar = () => {
                         </NavLink>
                     </div>
 
-                    <div className=" contact_us_dot flex justify-content-center align-items-center gap-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11" fill="none">
+                    <NavLink to='/contact' className=" contact_us_dot flex justify-content-center align-items-center gap-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 11 11" fill="none">
                             <circle cx="5.5" cy="5.5" r="5.5" fill="white" fill-opacity="0.25" />
                             <circle cx="5.5" cy="5.5" r="2.5" fill="white" />
                         </svg>
@@ -135,7 +133,7 @@ const Navbar = () => {
                             <PhoneOutlined className='icon_res_sm' />
                             {t('nav_contact')}
                         </NavLink>
-                    </div>
+                    </NavLink>
 
 
                     <div className="language-switcher sm_lang">
