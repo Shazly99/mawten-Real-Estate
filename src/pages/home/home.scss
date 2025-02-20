@@ -96,19 +96,17 @@
 
 
 .image-gallery {
-  width: 80%;
-  margin-left: auto;
-  overflow: hidden;
+  width: 95%;
+  margin-left: auto; 
+  overflow: hidden; 
 
-  img {
-
+  img { 
     border-radius: 8px; // زوايا دائرية أنيقة
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); // ظل خفيف
     object-fit: cover;
     transition: transform 0.3s ease-in-out;
     width: 100%;
-    height: 100%;
-    margin-right: -120px;
+    height: 100%; 
 
     &:hover {
       transform: scale(1.05); // تكبير عند تمرير الماوس

@@ -35,9 +35,11 @@ const router = createBrowserRouter([
       },
 
       {
-        path: '/media-center',
-        element: <Comp.Blogs />,
-      },
+        path: '/media-center', children: [
+          { index: true, element: <Comp.Blogs /> },
+          { path: ':id', element: <Comp.BlogDetails /> }
+        ]
+      }, 
 
     ],
   },

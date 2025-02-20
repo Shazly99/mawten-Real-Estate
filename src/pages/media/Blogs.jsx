@@ -3,6 +3,7 @@ import { Button, Col, Row } from 'antd';
 import './blogs.scss';
 import img from '@constants/img';
 import TitleH from '@components/common/TitleH';
+import { Link } from 'react-router-dom';
 
 const Blogs = () => {
     return (
@@ -27,7 +28,9 @@ const Blogs = () => {
                                     </p>
                                 </div>
                             </div>
-                            <Button type="primary" shape='round' className="read-more-btn">اكتشف المزيد</Button>
+                            <Link to={'/media-center/5'} >
+                                <Button type="primary" shape='round' className="read-more-btn">اكتشف المزيد</Button>
+                            </Link>
                         </div>
                     </Col>
 
@@ -42,7 +45,9 @@ const Blogs = () => {
                                     </p>
                                 </div>
                             </div>
-                            <Button type="primary" shape='round' className="read-more-btn">اكتشف المزيد</Button>
+                            <Link to={'/media-center/5'} >
+                                <Button type="primary" shape='round' className="read-more-btn">اكتشف المزيد</Button>
+                            </Link>
                         </div>
                     </Col>
                 </Row>

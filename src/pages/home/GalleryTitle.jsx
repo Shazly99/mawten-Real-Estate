@@ -1,9 +1,8 @@
-import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper/modules";
+import img from "@constants/img";
 import "swiper/css";
 import "swiper/css/autoplay";
-import img from "@constants/img";
+import { Autoplay } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 import "./home.scss";
 
 const GalleryTitle = () => {
@@ -14,7 +13,7 @@ const GalleryTitle = () => {
                 autoplay={{ delay: 1500 }}
                 loop={true}
                 slidesPerView={1.5} // عرض صورة واحدة في كل مرة
-                spaceBetween={10} // المسافة بين الصور
+                spaceBetween={40} // المسافة بين الصور
                 speed={1000} // سرعة الانتقال
                 breakpoints={{
                     1500: { slidesPerView: 1.5 },

@@ -74,7 +74,7 @@
         padding: 40px 50px !important;
 
         @media screen and (width < 767px) {
-            padding: 10px 5px !important; 
+            padding: 10px 5px !important;
         }
 
         &:hover {
@@ -94,17 +94,17 @@
         }
 
         .value-title {
-            color: #000; 
+            color: #000;
             font-family: TheSansArabic;
             font-size: 24px;
             font-style: normal;
             font-weight: 600;
             line-height: normal;
-            
-        @media screen and (width < 767px) {
-            padding: 10px 5px !important;
-            text-align: center;
-        }
+
+            @media screen and (width < 767px) {
+                padding: 10px 5px !important;
+                text-align: center;
+            }
         }
 
         .value-description {
@@ -116,11 +116,43 @@
             font-weight: 300;
             line-height: normal;
             margin-top: 17px;
-            
-        @media screen and (width < 767px) {
-            padding: 10px 5px !important;
-            text-align: center;
+
+            @media screen and (width < 767px) {
+                padding: 10px 5px !important;
+                text-align: center;
+            }
         }
+    }
+}
+
+.app__about {
+    .home-container {
+        width: 90%;
+        margin: auto;
+    }
+
+    .title_ { 
+        h2 {
+            color: #3C3C3B;
+            text-align: right;
+            font-family: TheSansArabic;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            margin-top: 20px;
         }
+        p {
+            color: #3C3C3B;
+            font-family: TheSansArabic;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 100;
+            line-height: 35px;  
+            text-align: justify;
+            // margin-top: 15px;
+        }
+
+        width: 100% !important;
     }
 }

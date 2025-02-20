@@ -6,6 +6,7 @@ import Mission from '@pages/about/mission/Mission';
 import Contact from '@pages/contact/Contact';
 import Home from '@pages/home/Home';
 import SliderHome from '@pages/home/SliderHome';
+import BlogDetails from '@pages/media/BlogDetails';
 import Blogs from '@pages/media/Blogs';
 import Services from '@pages/services/Services';
 
@@ -19,6 +20,7 @@ const Comp = {
     Blogs,
     Mission,
     Contact,
+    BlogDetails,
     Home
 }
 
