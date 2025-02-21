@@ -2,6 +2,7 @@ import React from "react";
 import { Typography, Row, Col } from "antd";
 import { MailOutlined, PhoneOutlined, EnvironmentOutlined, TwitterOutlined, FacebookFilled, InstagramFilled, LinkedinFilled, XOutlined } from "@ant-design/icons";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import "./footer.scss";
 import img from "@constants/img";
 import HomeContactUs from "@pages/home/HomeContactUs";
@@ -9,6 +10,8 @@ import HomeContactUs from "@pages/home/HomeContactUs";
 const { Title, Paragraph } = Typography;
 
 const Footer = () => {
+  const { t } = useTranslation(); // استخدام الترجمة
+
   return (
     <>
       <div className="mt_main ">
@@ -18,14 +21,11 @@ const Footer = () => {
       <footer className="footer">
         <div className="container">
           <Row gutter={[32, 32]}>
-            {/* العمود: عن الشركة */}
             <Col lg={5} xl={5} xxl={5} xs={24} sm={24} md={12} className=" footer__logo">
               <img src={img.logo_dark} alt="موطن" className="footer__logo-img" />
-              <p>
-                شركة موطن العقارية شركة مساهمة مغلقة، برأس مال مدفوع 1.9 مليار ريال سعودي
-              </p>
+              <p>{t("company")}</p>
               <div className="mt-4 social_title">
-                <strong>  تابعنا علي</strong>
+                <strong>{t("follow_us")}</strong>
               </div>
 
               <div className="footer__social">
@@ -36,71 +36,65 @@ const Footer = () => {
               </div>
             </Col>
 
-            {/* العمود: روابط سريعة */}
             <Col lg={3} xs={24} sm={12} md={8} className="mt-5">
-              <Title level={4}>روابط سريعة</Title>
+              <Title level={4}>{t("quick_links")}</Title>
               <div className="app_link">
-
-
-                <Link to="/">الرئيسية</Link>
-                <Link to="/investors">علاقات المستثمرين</Link>
-                <Link to="/services">خدمات الشركة</Link>
-                <Link to="/projects">مشاريعنا</Link>
-                <Link to="/privacy-policy">سياسة الخصوصية</Link>
-                <Link to="/terms">الشروط والأحكام</Link>
+                <Link to="/">{t("home")}</Link>
+                <Link to="/investors">{t("investors")}</Link>
+                <Link to="/services">{t("services")}</Link>
+                <Link to="/projects">{t("projects")}</Link>
+                <Link to="/privacy-policy">{t("privacy_policy")}</Link>
+                <Link to="/terms">{t("terms_conditions")}</Link>
               </div>
             </Col>
 
-            {/* العمود: عن الشركة */}
             <Col lg={3} xs={24} sm={12} md={8} className="mt-5 ">
-              <Title level={4}>عن الشركة</Title>
+              <Title level={4}>{t("about_company")}</Title>
               <div className="app_link">
-                <Link to="/about">عن موطن</Link>
-                <Link to="/about/history">تاريخ الشركة</Link>
-                <Link to="/about/board">مجالس الإدارة</Link>
-                <Link to="/executive">الإدارة التنفيذية</Link>
+                <Link to="/about">{t("about_company")}</Link>
+                <Link to="/about/history">{t("company_history")}</Link>
+                <Link to="/about/board">{t("board_of_directors")}</Link>
+                <Link to="/executive">{t("executive_management")}</Link>
               </div>
             </Col>
 
-            {/* العمود: مشاريع الشركة */}
             <Col lg={4} xs={24} sm={12} md={8} className="mt-5">
-              <Title level={4}>مشاريع الشركة</Title>
+              <Title level={4}>{t("projects")}</Title>
               <div className="app_link">
-
-                <Link to="/residential">القطاع السكني</Link>
-                <Link to="/industrial">القطاع الصناعي واللوجستي</Link>
-                <Link to="/board">مجالس الإدارة</Link>
-                <Link to="/care">قطاع الرعاية</Link>
+                <Link to="/residential">{t("residential_sector")}</Link>
+                <Link to="/industrial">{t("industrial_sector")}</Link>
+                <Link to="/board">{t("board_of_directors")}</Link>
+                <Link to="/care">{t("care_sector")}</Link>
               </div>
             </Col>
-            {/* العمود: المركز الإعلامي */}
+
             <Col lg={4} xs={24} sm={12} md={8} className="mt-5">
-              <Title level={4}>المركز الإعلامي</Title>
+              <Title level={4}>{t("news")}</Title>
               <div className="app_link">
-                <Link to="/news">أخبار موطن</Link>
-                <Link to="/gallery">معرض الصور</Link>
-                <Link to="/videos">معرض الفيديو</Link>
-                <Link to="/interactive-visits">الزيارات التفاعلية</Link>
+                <Link to="/news">{t("news")}</Link>
+                <Link to="/gallery">{t("gallery")}</Link>
+                <Link to="/videos">{t("videos")}</Link>
+                <Link to="/interactive-visits">{t("interactive_visits")}</Link>
               </div>
             </Col>
 
-            {/* العمود: تواصل معنا */}
             <Col lg={5} xs={24} sm={12} md={8} className="mt-5">
-              <Title level={4}>تواصل معنا</Title>
-              <p><PhoneOutlined /> 92000598</p>
-              <p className="flex flex-row gap-2 align-items-center " ><MailOutlined /> <a href="mailto:Info@mawten.com.sa" target="_blank" className="mt-2" >Info@mawten.com.sa</a></p>
-              <p className="mt-2 "><EnvironmentOutlined /> 3758 الطريق الدائري الشمالي - حي الازدهار، الرياض، المملكة العربية السعودية</p>
+              <Title level={4}>{t("contact_us")}</Title>
+              <div className="app_link gap-1">
+
+              <p><PhoneOutlined /> {t("phone")}</p>
+              <p className="flex flex-row gap-2 align-items-center "><MailOutlined /> <a href="mailto:Info@mawten.com.sa" target="_blank" className="mt-2" >{t("email")}</a></p>
+              <p className="mt-2 "><EnvironmentOutlined /> {t("address_footer")}</p>
+              </div>
             </Col>
           </Row>
         </div>
 
-        {/* حقوق النشر */}
         <div className="footer__bottom">
-          <Paragraph>© 2025 موطن - جميع الحقوق محفوظة</Paragraph>
+          <Paragraph>{t("copyright")}</Paragraph>
         </div>
       </footer>
     </>
-
   );
 };
 

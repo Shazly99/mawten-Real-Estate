@@ -54,8 +54,7 @@
     .board-members {
         .conetnt {
             h4 {
-                color: #3C3C3B;
-                text-align: right;
+                color: #3C3C3B; 
                 font-family: TheSansArabic;
                 font-size: 28px;
                 font-style: normal;
@@ -96,8 +95,9 @@
             &:hover {
                 background-color: #A08E8E;
                 box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-
+          
                 .svg-icon {
+                    
                     svg path {
                         stroke: $mainColor !important;
 
@@ -105,10 +105,9 @@
 
                 }
 
-                transition: transform 1s ease;
+         
 
-                img {
-                    transition: transform 1s ease;
+                img { 
                     transform: scale(1.1);
                 }
             }
@@ -124,6 +123,7 @@
                 top: 0;
                 transform: translate(-50%);
                 z-index: 0;
+                transition: all 1s;
 
                 svg {
                     width: 100%;
@@ -140,6 +140,7 @@
                 position: relative;
                 z-index: 9 !important; 
                 margin-bottom: -12px;
+                transition: all 1s;
 
             }
 

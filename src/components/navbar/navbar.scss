@@ -488,13 +488,14 @@
 .ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-title-content>a {
     color: #FFF;
     font-family: TheSansArabic;
-    font-size: 16px;
+    font-size: 14px;
     font-style: normal;
     line-height: normal;
     text-transform: capitalize;
+    padding:4px 16px;
 
     &:hover {
-        color: $mainColor;
+        color:red;
     }
 
     margin-top: 10px;
