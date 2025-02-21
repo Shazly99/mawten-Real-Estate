@@ -1,4 +1,4 @@
-import { HomeOutlined, InfoCircleOutlined, MenuOutlined, PhoneOutlined, ProjectOutlined, SettingOutlined, ShoppingOutlined } from '@ant-design/icons';
+import { CaretDownFilled, DownOutlined, HomeOutlined, InfoCircleOutlined, MenuOutlined, PhoneOutlined, ProjectOutlined, SettingOutlined, ShoppingOutlined } from '@ant-design/icons';
 import Icon from '@constants/icon';
 import Logo from '@constants/Logo';
 import { GeneralData } from '@context/General';
@@ -100,15 +100,21 @@ const Navbar = () => {
                         <HomeOutlined className='icon_res_sm' />
                         {t('nav_home')}
                     </NavLink>
-                    <Dropdown overlay={menu} trigger={['hover']} className='dropdown_link' >
-                        <NavLink to='/about'>
+                    <Dropdown overlay={menu} placement={i18n.language == 'en' ? 'topLeft' : 'topRight'} trigger={['hover']} className='dropdown_link' >
+                        <NavLink to='/about' className={'dropdown_trigger'}>
                             <InfoCircleOutlined className='icon_res_sm' />
-                            {t('nav_about')}
+                            <div className="drop_icon flex justify-content-center align-items-center gap-2 ">
+                                {t('nav_about')}
+                                <CaretDownFilled size={'small'} style={{ fontSize: '12px', marginTop: '2px', color: '#fff' }} /> {/* Make sure color is white */}
+                            </div>
                         </NavLink>
                     </Dropdown>
                     <NavLink to='/projects'>
                         <ProjectOutlined className='icon_res_sm' />
-                        {t('nav_Projects')}
+                        <div className="drop_icon flex justify-content-center align-items-center gap-2 ">
+                            {t('nav_Projects')}
+                            <CaretDownFilled size={'small'} style={{ fontSize: '12px', marginTop: '2px', color: '#fff' }} /> {/* Make sure color is white */}
+                        </div>
                     </NavLink>
                     <NavLink to='/services'>
                         <SettingOutlined className='icon_res_sm' />
@@ -116,7 +122,10 @@ const Navbar = () => {
                     </NavLink>
                     <NavLink to='/media-center'>
                         <ShoppingOutlined className='icon_res_sm' />
-                        {t('nav_Products')}
+                        <div className="drop_icon flex justify-content-center align-items-center gap-2 ">
+                            {t('nav_Products')}
+                            <CaretDownFilled size={'small'} style={{ fontSize: '12px', marginTop: '2px', color: '#fff' }} /> {/* Make sure color is white */}
+                        </div>
                     </NavLink>
                     <div className="path_sm">
                         <NavLink to='/contact'>
