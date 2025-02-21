@@ -142,7 +142,7 @@ const HomeProjects = () => {
                                 <h1>القطاع السكني </h1>
                                 <h1>ومتعدد الاستعمال</h1>
                             </div>
-                            <img src={img.map} alt="" srcset="" />
+                            <img src={img.map} alt=""  />
                         </Col>
                         <Col xl={12} lg={12} className="wrapper_details" >
 
@@ -185,7 +185,7 @@ const HomeProjects = () => {
                                 <h1>قطاع الضيافة </h1>
                                 <h1>ومتعدد الاستخدام</h1>
                             </div>
-                            <img src={img.map} alt="" srcset="" />
+                            <img src={img.map} alt=""  />
                         </Col>
                         <Col xl={12} lg={12} className="wrapper_details" >
 
@@ -227,7 +227,7 @@ const HomeProjects = () => {
                             <div className="header">
                                 <h1>قطاع التجاري </h1>
                             </div>
-                            <img src={img.map} alt="" srcset="" />
+                            <img src={img.map} alt=""  />
                         </Col>
                         <Col xl={12} lg={12} className="wrapper_details" >
 
@@ -270,7 +270,7 @@ const HomeProjects = () => {
                                 <h1>قطاع الصناعي </h1>
                                 <h1>و القاطع اللوجستي</h1>
                             </div>
-                            <img src={img.map} alt="" srcset="" />
+                            <img src={img.map} alt=""  />
                         </Col>
                         <Col xl={12} lg={12} className="wrapper_details" >
 

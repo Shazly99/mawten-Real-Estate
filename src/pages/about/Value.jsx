@@ -45,7 +45,7 @@ const Value = () => {
                             <Row  className='value-card flex justify-content-center align-items-center'>
                                 <Col xl={2}  >
                                     <div className='icon-container'>
-                                        <img src={value.img} alt="" srcset="" />
+                                        <img src={value.img} alt=""  />
                                     </div>
                                 </Col> 
 
