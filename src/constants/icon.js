@@ -24,8 +24,10 @@ import contactus from "@assets/svg/contactus.svg?react";
 import left from "@assets/svg/left.svg?react";
 import right from "@assets/svg/right.svg?react";
 import InvestorRelations from "@assets/images/home/InvestorRelations";
+import IconEmp from "@assets/svg/iconEmp.svg?react";
 
 const Icon = {
+    IconEmp,
     left,
     right,
     title,

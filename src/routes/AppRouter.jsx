@@ -22,6 +22,16 @@ const router = createBrowserRouter([
             path: 'mission',
             element: <Comp.Mission />,
           },
+          {
+            path: 'board',
+            element: <Comp.Board />,
+          },
+
+
+          {
+            path: 'executive-management',
+            element: <Comp.Board />,
+          },
 
         ]
       },

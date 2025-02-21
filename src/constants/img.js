@@ -35,8 +35,18 @@ import blog2 from "@assets/images/HomeMediaCenter/2.png";
 import blog3 from "@assets/images/HomeMediaCenter/3.png";
 import blog4 from "@assets/images/blogs/2.png";
 import blog5 from "@assets/images/blogs/3.png";
+import emp1 from "@assets/images/emp/1.png";
+import emp2 from "@assets/images/emp/2.png";
+import emp3 from "@assets/images/emp/3.png";
+import emp4 from "@assets/images/emp/4.png";
+import emp5 from "@assets/images/emp/5.png";
 
 const img = {
+    emp2,
+emp3,
+emp4,
+emp5,
+    emp1,
     mission2017,
     value1,
     headerImg,

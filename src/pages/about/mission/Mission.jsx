@@ -33,7 +33,7 @@ const Mission = () => {
             link: '/about',
         },
         {
-            label: t('AboutMawten1'),
+            label: t('history'),
             link: '/about/mission',
             isBold: true,
         },
@@ -45,12 +45,9 @@ const Mission = () => {
 
             <div className="app__mission">
                 <div className="app__mission">
-                    <div className="header_overlay">
-                        <img src={img.aboutCover} alt="Cover" className="w-full" />
-                        <div className="overlay">
-                            <OverlayHeader header={t('AboutMawten')} breadcrumbItems={breadcrumbItems} />
-                        </div>
-                    </div>
+
+                    <OverlayHeader img={img.aboutCover} header={t('AboutMawten')} breadcrumbItems={breadcrumbItems} />
+
                     <header className="flex justify-center align-items-center">
                         <TitleH title={t('history')} highlight={t('mawten')} />
                         <p>
@@ -111,10 +108,10 @@ const Mission = () => {
 
                 {/*          {
                 selectedYearIndex == 0 && */}
-                <Row gutter={[50, 50]}   className="timeline-section">
+                <Row gutter={[50, 50]} className="timeline-section">
                     {/* Right Column with Image */}
                     <Col span={24} xs={24} sm={24} md={16} lg={12} xl={12}
-                    className='flex justify-content-end align-items-end'
+                        className='flex justify-content-end align-items-end'
                     >
                         <div className="timeline-image">
                             <img src={img.mission2017} alt="Timeline" className="w-full rounded-lg shadow-lg" />
@@ -122,7 +119,7 @@ const Mission = () => {
                     </Col>
 
                     {/* Left Column with Text */}
-                    <Col span={24}  xs={24} sm={24} md={16} lg={12} xl={12}>
+                    <Col span={24} xs={24} sm={24} md={16} lg={12} xl={12}>
                         <div className="timeline-text">
                             <Row className="timeline_year">
                                 {/* Year 2008 */}

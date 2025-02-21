@@ -2,6 +2,7 @@ import CustomFooter from '@components/footer/CustomFooter';
 import Loader from '@components/Loader/Loader';
 import MainLayout from '@layout/MainLayout';
 import About from '@pages/about/About';
+import Board from '@pages/about/board/Board';
 import Mission from '@pages/about/mission/Mission';
 import Contact from '@pages/contact/Contact';
 import Home from '@pages/home/Home';
@@ -21,6 +22,7 @@ const Comp = {
     Mission,
     Contact,
     BlogDetails,
+    Board,
     Home
 }
 

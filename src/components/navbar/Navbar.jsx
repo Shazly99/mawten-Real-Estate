@@ -9,26 +9,27 @@ import { useTranslation } from 'react-i18next';
 import { Link, NavLink } from 'react-router-dom';
 import './navbar.scss';
 
-const menu = (
-    <Menu>
-        <Menu.Item key="1">
-            <NavLink to="/about">عن موطن</NavLink>
-        </Menu.Item>
-        <Menu.Item key="2">
-            <NavLink to="/about/mission">تاريخنا</NavLink>
-        </Menu.Item>
-
-        <Menu.Item key="3">
-            <NavLink to="/about/mission">أعضاء مجلس الإدارة</NavLink>
-        </Menu.Item>
-
-        <Menu.Item key="4">
-            <NavLink to="/about/mission">الإدارة التنفيذية</NavLink>
-        </Menu.Item>
-    </Menu>
-);
 const Navbar = () => {
+
     const { i18n, t } = useTranslation();
+    const menu = (
+        <Menu>
+            <Menu.Item key="1">
+                <NavLink to="/about"> {t('AboutMawten')}  </NavLink>
+            </Menu.Item>
+            <Menu.Item key="2">
+                <NavLink to="/about/mission">{t('history')}</NavLink>
+            </Menu.Item>
+
+            <Menu.Item key="3">
+                <NavLink to="/about/board">   {t('AboutMawten2')}  </NavLink>
+            </Menu.Item>
+
+            <Menu.Item key="4">
+                <NavLink to="/about/executive-management">  {t('AboutMawten1')} </NavLink>
+            </Menu.Item>
+        </Menu>
+    );
     const { isLang, setIsLang } = useContext(GeneralData);
     const [placement, setPlacement] = useState('left');
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -98,8 +99,8 @@ const Navbar = () => {
                     <NavLink to='/'>
                         <HomeOutlined className='icon_res_sm' />
                         {t('nav_home')}
-                    </NavLink> 
-                    <Dropdown overlay={menu}  trigger={['hover']} className='dropdown_link' >
+                    </NavLink>
+                    <Dropdown overlay={menu} trigger={['hover']} className='dropdown_link' >
                         <NavLink to='/about'>
                             <InfoCircleOutlined className='icon_res_sm' />
                             {t('nav_about')}

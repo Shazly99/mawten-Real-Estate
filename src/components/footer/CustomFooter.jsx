@@ -56,8 +56,8 @@ const Footer = () => {
               <Title level={4}>عن الشركة</Title>
               <div className="app_link">
                 <Link to="/about">عن موطن</Link>
-                <Link to="/history">تاريخ الشركة</Link>
-                <Link to="/board">مجالس الإدارة</Link>
+                <Link to="/about/history">تاريخ الشركة</Link>
+                <Link to="/about/board">مجالس الإدارة</Link>
                 <Link to="/executive">الإدارة التنفيذية</Link>
               </div>
             </Col>
