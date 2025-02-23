@@ -10,7 +10,7 @@ const MainLayout = () => {
     <div className='overflow-hidden'>
       <div className={
         (location.pathname == '/services' ||   location.pathname.includes('about') || location.pathname == '/about/mission') ? 'other' :
-          (location.pathname == '/media-center' || location.pathname == '/contact') ? 'blogs_navbar' :
+          (location.pathname == '/media-center' || location.pathname.includes('projects')|| location.pathname == '/contact') ? 'blogs_navbar' :
             ''}>
         <Navbar />
       </div>

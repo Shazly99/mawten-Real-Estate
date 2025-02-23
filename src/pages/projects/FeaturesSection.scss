@@ -1,0 +1,155 @@
+@import '../../style/varibale';
+
+.app_features {
+    background-color: #fff;
+    padding-top: 150px;
+}
+
+.features-section {
+    width: 85%;
+    margin: auto;
+    text-align: right; // Ensure right alignment for Arabic
+
+    .section-header {
+        margin-bottom: 50px;
+
+        h2 {
+            font-size: 22px;
+            font-weight: bold;
+            color: #333;
+
+            .highlight {
+                color: #a61517; // Red color for "مميزات"
+            }
+        }
+    }
+
+    .features-list {
+
+        .ant-col {
+            @include flex()
+        }
+
+        .feature-item {
+
+
+            .feature-number {
+
+                @include flex();
+                color: rgba(217, 217, 217, 0.32);
+                font-family: $fontBase;
+                -webkit-text-stroke-width: 1px;
+                -webkit-text-stroke-color: rgba(0, 0, 0, 0.30);
+                font-family: TheSansArabic;
+                font-size: 180px;
+                font-style: normal;
+                font-weight: 100;
+                line-height: 250px;
+
+                &.bold {
+                    opacity: 1;
+                }
+
+                &.faded {
+                    opacity: 0.4;
+                }
+            }
+
+            .feature-content {
+                max-width: 700px;
+
+                h3 {
+                    color: #181820;
+                    text-align: right;
+                    font-family: TheSansArabic;
+                    font-size: 38px;
+                    font-style: normal;
+                    font-weight: 300;
+                    line-height: normal;
+                    margin-bottom: 20px;
+
+                    &.bold {
+                        opacity: 1;
+                    }
+
+                    &.faded {
+                        opacity: 0.4;
+                    }
+                }
+
+                .feature-description {
+                    color: #181820;
+                    text-align: justify;
+                    font-family: TheSansArabic;
+                    font-size: 17px;
+                    font-style: normal;
+                    font-weight: lighter;
+                    line-height: normal;
+
+                    &.bold {
+                        opacity: 1;
+                    }
+
+                    &.faded {
+                        opacity: 0.4;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Responsive Design
+@media (max-width: 1024px) {
+    .features-section {
+        padding: 40px;
+
+        .features-list {
+            gap: 60px;
+        }
+
+        .feature-item {
+            .feature-number {
+                font-size: 100px;
+            }
+
+            .feature-content {
+                h3 {
+                    font-size: 24px;
+                }
+
+                .feature-description {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .features-section {
+        padding: 30px;
+
+        .features-list {
+            gap: 40px;
+        }
+
+        .feature-item {
+            .feature-number {
+                font-size: 80px;
+            }
+
+            .feature-content {
+                max-width: 100%;
+
+                h3 {
+                    font-size: 22px;
+                }
+
+                .feature-description {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}

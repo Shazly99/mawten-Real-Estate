@@ -45,11 +45,25 @@ const router = createBrowserRouter([
       },
 
       {
+        path: '/projects',
+        children: [
+          {
+            index: true,
+            element: <Comp.Projects />,
+          },
+
+          {
+            path: 'sector/:id',
+            element: <Comp.Sector />,
+          },
+        ]
+      },
+      {
         path: '/media-center', children: [
           { index: true, element: <Comp.Blogs /> },
           { path: ':id', element: <Comp.BlogDetails /> }
         ]
-      }, 
+      },
 
     ],
   },

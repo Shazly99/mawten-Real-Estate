@@ -1,0 +1,147 @@
+@import '../../style/varibale';
+
+.statistics_section {
+    width: 100%;
+    background-color: #fff;
+    text-align: center;
+    margin-top: 50px;
+
+    
+    .title-container {
+        @include flex();
+        margin-bottom: 50px;
+
+        span {
+            font-size: 30px;
+        }
+
+        strong {
+            font-size: 30px;
+        }
+
+        svg {
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    .section-header {
+        margin-bottom: 50px;
+
+        h2 {
+            font-size: 22px;
+            font-weight: bold;
+            color: #333;
+
+            .highlight {
+                color: $mainColor; // Red color for "أرقام"
+            }
+        }
+    }
+
+    .statistics-grid {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .stat-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: flex-start;
+
+            svg {
+                margin-top: 20px; 
+            }
+
+            .icon {
+                text-align: right;
+                width: 50%;
+            }
+
+            .stat-number {
+                color: #181820;
+                text-align: right;
+                font-family: TheSansArabic;
+                font-size: 25px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+                margin-bottom: 5px; 
+                text-align: right;
+                width: 50%;
+            }
+
+            .stat-label {
+                width: 50%; 
+                text-align: right;
+                color: #181820; 
+                font-family: TheSansArabic;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 300;
+                line-height: normal;
+            }
+        }
+    }
+}
+
+// Responsive Design
+@media (max-width: 1024px) {
+    .statistics-section {
+        padding: 40px;
+    }
+
+    .statistics-grid {
+        gap: 20px;
+
+        .stat-item {
+            .stat-icon {
+                font-size: 36px;
+            }
+
+            .stat-number {
+                font-size: 22px;
+            }
+
+            .stat-label {
+                font-size: 13px;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .statistics-section {
+        padding: 30px;
+    }
+
+    .statistics-grid {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+
+        .stat-item {
+            .stat-icon {
+                font-size: 34px;
+            }
+
+            .stat-number {
+                font-size: 20px;
+            }
+
+            .stat-label {
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+.vertical-line {
+    position: absolute;
+    top: 10%;
+    right: 0;
+    height: 80%;
+    width: 1px;
+    background-color: #ddd;
+}

@@ -9,9 +9,12 @@ import Home from '@pages/home/Home';
 import SliderHome from '@pages/home/SliderHome';
 import BlogDetails from '@pages/media/BlogDetails';
 import Blogs from '@pages/media/Blogs';
+import Projects from '@pages/projects/Projects';
+import Sector from '@pages/projects/Sector/Sector';
 import Services from '@pages/services/Services';
 
 const Comp = {
+    Sector,
     MainLayout, 
     CustomFooter,  
     Loader,   
@@ -23,6 +26,7 @@ const Comp = {
     Contact,
     BlogDetails,
     Board,
+    Projects,
     Home
 }
 

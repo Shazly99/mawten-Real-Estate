@@ -22,7 +22,17 @@ import arrowR from "@assets/svg/Symbol.svg?react";
 import title from "@assets/svg/title.svg?react";
 import youtube from "@assets/svg/youtube.svg?react";
 
+import projects from "@assets/svg/projects/projects.svg?react";
+import investment from "@assets/svg/projects/investment.svg?react";
+import HotelUnit from "@assets/svg/projects/HotelUnit.svg?react";
+import space from "@assets/svg/projects/space.svg?react";
+
+
 const Icon = {
+    projects,
+    HotelUnit,
+    space,
+    investment,
     IconEmp,
     left,
     right,
