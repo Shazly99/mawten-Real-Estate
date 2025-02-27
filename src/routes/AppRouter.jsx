@@ -51,7 +51,10 @@ const router = createBrowserRouter([
             index: true,
             element: <Comp.Projects />,
           },
-
+          {
+            path: ':id',
+            element: <Comp.ProjectDetails />,
+          },
           {
             path: 'sector/:id',
             element: <Comp.Sector />,

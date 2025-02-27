@@ -9,6 +9,7 @@ import Home from '@pages/home/Home';
 import SliderHome from '@pages/home/SliderHome';
 import BlogDetails from '@pages/media/BlogDetails';
 import Blogs from '@pages/media/Blogs';
+import ProjectDetails from '@pages/projects/ProjectDetails/ProjectDetails';
 import Projects from '@pages/projects/Projects';
 import Sector from '@pages/projects/Sector/Sector';
 import Services from '@pages/services/Services';
@@ -18,6 +19,7 @@ const Comp = {
     MainLayout, 
     CustomFooter,  
     Loader,   
+    ProjectDetails,
     SliderHome,
     About,
     Services,

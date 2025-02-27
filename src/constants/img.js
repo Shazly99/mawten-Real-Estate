@@ -16,6 +16,8 @@ import blogsCover from "@assets/images/blogs/1.png";
 import Projects2 from "@assets/images/Projects/2.png";
 import Projects3 from "@assets/images/Projects/3.png";
 import Projects4 from "@assets/images/Projects/4.png";
+import Projectscover from "@assets/images/Projects/cover.png";
+import sector from "@assets/images/Projects/sector.png";
 import ProjectsSlider from "@assets/images/Projects/slider.png";
 
 import left from "@assets/images/services/left.png";
@@ -46,6 +48,7 @@ import emp5 from "@assets/images/emp/5.png";
 import emp6 from "@assets/images/emp/6.png";
 
 const img = {
+    Projectscover,
     emp2,
     emp3,
     emp4,
@@ -88,6 +91,7 @@ const img = {
     ProjectsSlider,
     ProjectsBg,
     Projects4,
+    sector,
     blog5
 }
 
