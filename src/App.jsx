@@ -44,3 +44,42 @@ function App() {
 }
 
 export default App
+
+
+
+// import React from 'react';
+// import './style.scss';
+// import r from './Frame.png';
+// import img from '@constants/img';
+// import html2canvas from 'html2canvas';
+
+// const MainLayout = () => {
+//   const handleDownloadImage = () => {
+//     const contentElement = document.querySelector(".bg"); 
+
+//     if (contentElement) {
+//       html2canvas(contentElement, {
+//         scale: 3, 
+//         useCORS: true,
+//         logging: true, 
+//         backgroundColor: null, 
+//       }).then((canvas) => {
+//         const imgData = canvas.toDataURL('image/png');
+//         const link = document.createElement('a');
+//         link.href = imgData;
+//         link.download = 'page_image.png';
+//         link.click();
+//       });
+//     } else {
+//       console.error('Element not found: .content');
+//     }
+//   };
+
+//   return (
+//     <div className="bg">
+//       <button onClick={handleDownloadImage}>تحميل الصورة</button>
+//     </div>
+//   );
+// };
+
+// export default MainLayout;

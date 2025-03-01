@@ -13,12 +13,15 @@ import gallery2 from "@assets/images/gallery/2.png";
 import Projects1 from "@assets/images/Projects/1.png";
 import ProjectsBg from "@assets/images/Projects/bg.png";
 import blogsCover from "@assets/images/blogs/1.png";
+import blogsCover1 from "@assets/images/blogs/cover.png";
 import Projects2 from "@assets/images/Projects/2.png";
 import Projects3 from "@assets/images/Projects/3.png";
 import Projects4 from "@assets/images/Projects/4.png";
+import ProjectsV from "@assets/images/Projects/v.png";
 import Projectscover from "@assets/images/Projects/cover.png";
 import sector from "@assets/images/Projects/sector.png";
 import ProjectsSlider from "@assets/images/Projects/slider.png";
+import share from "@assets/gif/share.gif";
 
 import left from "@assets/images/services/left.png";
 import right from "@assets/images/services/right.png";
@@ -92,6 +95,9 @@ const img = {
     ProjectsBg,
     Projects4,
     sector,
+    share,
+    ProjectsV,
+    blogsCover1,
     blog5
 }
 

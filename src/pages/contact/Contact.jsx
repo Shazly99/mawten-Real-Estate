@@ -166,9 +166,9 @@ const Contact = () => {
                                 <CustomTitle title={t('address.title')} />
                             </div>
                             <p>
-                            {t('address.line1')}
-        <br />
-        {t('address.line2')}
+                                {t('address.line1')}
+                                <br />
+                                {t('address.line2')}
                             </p>
 
                             <Button

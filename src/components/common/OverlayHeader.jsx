@@ -14,23 +14,26 @@ const OverlayHeader = ({ breadcrumbItems, header, img }) => {
             <div className="overlay">
                 <div className="content">
                     <h3>{header}</h3>
-                    <Breadcrumb separator={separator} className="mb-2 text-lg text-gray-300">
-                        {breadcrumbItems.map((item, index) => (
-                            <Breadcrumb.Item key={index}>
-                                {item.link ? (
-                                    <Link to={item.link}>
+                    {
+                        breadcrumbItems &&
+                        <Breadcrumb separator={separator} className="mb-2 text-lg text-gray-300">
+                            {breadcrumbItems.map((item, index) => (
+                                <Breadcrumb.Item key={index}>
+                                    {item.link ? (
+                                        <Link to={item.link}>
+                                            <span className={item.isBold ? 'font-bold' : ''}>
+                                                {item.label}
+                                            </span>
+                                        </Link>
+                                    ) : (
                                         <span className={item.isBold ? 'font-bold' : ''}>
                                             {item.label}
                                         </span>
-                                    </Link>
-                                ) : (
-                                    <span className={item.isBold ? 'font-bold' : ''}>
-                                        {item.label}
-                                    </span>
-                                )}
-                            </Breadcrumb.Item>
-                        ))}
-                    </Breadcrumb>
+                                    )}
+                                </Breadcrumb.Item>
+                            ))}
+                        </Breadcrumb>
+                    }
                 </div>
             </div>
         </div>

@@ -58,7 +58,7 @@ const Sector = () => {
                       <strong>(القــطاع السكنى)</strong>
                       <h2>موطن مسار تاورز </h2>
                     </div>
-                    <Link to='/projects/1' className="more flex justify-content-center align-items-center gap-4">
+                    <Link to='/project/1' className="more flex justify-content-center align-items-center gap-4">
                       <span>اكتشف المزيد</span>
                       <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="11.4095" cy="11.4095" r="11.1595" transform="matrix(-0.707107 0.707107 0.707107 0.707107 16.1367 0)" fill="white" stroke="#171E1C" stroke-width="0.5" />
@@ -83,7 +83,7 @@ const Sector = () => {
                       <strong>(القــطاع السكنى)</strong>
                       <h2>موطن مسار تاورز </h2>
                     </div>
-                    <Link to='/projects/1' className="more flex justify-content-center align-items-center gap-4">
+                    <Link to='/project/1' className="more flex justify-content-center align-items-center gap-4">
                       <span>اكتشف المزيد</span>
                       <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="11.4095" cy="11.4095" r="11.1595" transform="matrix(-0.707107 0.707107 0.707107 0.707107 16.1367 0)" fill="white" stroke="#171E1C" stroke-width="0.5" />
@@ -108,7 +108,7 @@ const Sector = () => {
                       <strong>(القــطاع السكنى)</strong>
                       <h2>موطن مسار تاورز </h2>
                     </div>
-                    <Link to='/projects/1' className="more flex justify-content-center align-items-center gap-4">
+                    <Link to='/project/1' className="more flex justify-content-center align-items-center gap-4">
                       <span>اكتشف المزيد</span>
                       <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="11.4095" cy="11.4095" r="11.1595" transform="matrix(-0.707107 0.707107 0.707107 0.707107 16.1367 0)" fill="white" stroke="#171E1C" stroke-width="0.5" />
@@ -133,7 +133,7 @@ const Sector = () => {
                       <strong>(القــطاع السكنى)</strong>
                       <h2>موطن مسار تاورز </h2>
                     </div>
-                    <Link to='/projects/1' className="more flex justify-content-center align-items-center gap-4">
+                    <Link to='/project/1' className="more flex justify-content-center align-items-center gap-4">
                       <span>اكتشف المزيد</span>
                       <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="11.4095" cy="11.4095" r="11.1595" transform="matrix(-0.707107 0.707107 0.707107 0.707107 16.1367 0)" fill="white" stroke="#171E1C" stroke-width="0.5" />
