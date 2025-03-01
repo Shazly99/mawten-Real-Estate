@@ -6,7 +6,7 @@
     text-align: center;
     margin-top: 50px;
 
-    
+
     .title-container {
         @include flex();
         margin-bottom: 50px;
@@ -34,7 +34,7 @@
             color: #333;
 
             .highlight {
-                color: $mainColor; 
+                color: $mainColor;
             }
         }
     }
@@ -51,36 +51,47 @@
             text-align: flex-start;
 
             svg {
-                margin-top: 20px; 
+                margin-top: 20px;
             }
 
             .icon {
                 text-align: right;
                 width: 50%;
+
+                &:lang(en) {
+                    text-align: left;
+                }
             }
 
             .stat-number {
                 color: #181820;
-                text-align: right;
                 font-family: TheSansArabic;
                 font-size: 25px;
                 font-style: normal;
                 font-weight: 600;
                 line-height: normal;
-                margin-bottom: 5px; 
+                margin-bottom: 5px;
                 text-align: right;
                 width: 50%;
+
+                &:lang(en) {
+                    text-align: left;
+                }
             }
 
             .stat-label {
-                width: 50%; 
+                width: 50%;
                 text-align: right;
-                color: #181820; 
+                color: #181820;
                 font-family: TheSansArabic;
                 font-size: 16px;
                 font-style: normal;
                 font-weight: 300;
                 line-height: normal;
+
+                &:lang(en) {
+                    text-align: left;
+                }
             }
         }
     }

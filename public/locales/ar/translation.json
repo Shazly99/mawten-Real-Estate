@@ -32,6 +32,8 @@
     "developed_area": "م² مساحات مطورة",
     "hotel_units": "وحدة فندقية"
   },
+  "Numbers": "أرقــام ",
+
   "Ourlocation1": " موقعنا",
   "Ourlocation2": " المملكة العربية السعودية\nجدة، شارع طريق الحرمين، الرياض",
   "ContactUsVia1": "راسلنا عبر",
@@ -74,7 +76,9 @@
   "home": "الرئيسية",
   "investors": "علاقات المستثمرين",
   "services": "خدمات الشركة",
-  "projects": "مشاريعنا",
+  "projects": "مشاريعــنا",
+  "project": "مشاريعــنا",
+  "features": "مميزات ",
   "privacy_policy": "سياسة الخصوصية",
   "terms_conditions": "الشروط والأحكام",
   "about_company": "عن موطن",

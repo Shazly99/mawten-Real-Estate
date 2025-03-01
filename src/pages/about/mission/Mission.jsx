@@ -59,7 +59,7 @@ const Mission = () => {
 
                 <div className="timeline__history">
                     <Row justify="center" align="middle" className="timeline-row">
-                        <Col span={24} className="timeline-col">
+                        <Col span={24} className="timeline-col" dir='rtl'>
                             <div className="timeline-nav">
                                 <div className="timeline_next_btn">
                                     <Button

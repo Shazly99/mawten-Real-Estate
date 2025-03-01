@@ -131,24 +131,32 @@
         margin: auto;
     }
 
-    .title_ { 
+    .title_ {
         h2 {
-            color: #3C3C3B;
-            text-align: right;
+            color: #3C3C3B; 
             font-family: TheSansArabic;
             font-size: 32px;
             font-style: normal;
             font-weight: 400;
             line-height: normal;
             margin-top: 20px;
+
+
+            @media screen and (width < 900px) {
+                font-size: 20px;
+                font-weight: 600;
+                margin-bottom: 15px;
+
+            }
         }
+
         p {
             color: #3C3C3B;
             font-family: TheSansArabic;
             font-size: 16px;
             font-style: normal;
             font-weight: 100;
-            line-height: 35px;  
+            line-height: 35px;
             text-align: justify;
             // margin-top: 15px;
         }

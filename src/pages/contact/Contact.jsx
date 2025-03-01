@@ -73,7 +73,7 @@ const Contact = () => {
                         <div className="contact-info-container mt-5">
                             <Row gutter={[16, 16]} justify="center">
                                 {contactDetails.map((item, index) => (
-                                    <Col xs={24} sm={12} md={8} key={index}>
+                                    <Col xs={24} sm={12} md={8} key={index} className='contact_info_container_card'>
                                         <Card bordered className="contact-card">
                                             <div className="icon-container">{item.icon}</div>
                                             <h3>{item.title}</h3>
@@ -103,7 +103,7 @@ const Contact = () => {
                             </Form.Item>
 
                             <Row gutter={[20, 20]}>
-                                <Col span={12}>
+                                <Col span={12} xs={24}>
                                     <Form.Item
                                         label={t('form.phone')}
                                         name="phone"
@@ -112,7 +112,7 @@ const Contact = () => {
                                         <Input size='large' />
                                     </Form.Item>
                                 </Col>
-                                <Col span={12}>
+                                <Col span={12} xs={24}>
                                     <Form.Item
                                         label={t('form.email')}
                                         name="email"

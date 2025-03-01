@@ -3,6 +3,7 @@ import { Carousel, Col, Row } from 'antd';
 import { InfoCircleOutlined } from '@ant-design/icons';
 import img from '@constants/img'; // تأكد من استبدال مسار الصور حسب مشروعك
 import TitleH from '@components/common/TitleH';
+import { useTranslation } from 'react-i18next';
 
 const projects = [
     {
@@ -23,9 +24,10 @@ const projects = [
 ];
 
 const OurProjects = () => {
+    let { t } = useTranslation()
     return (
         <div className="app_projects_carousel">
-            <TitleH  title={'مشاريعــنا'} />
+            <TitleH title={t('projects')} />
             <Carousel
                 autoplay
                 dots={false}

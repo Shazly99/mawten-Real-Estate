@@ -1,12 +1,12 @@
 import OverlayHeader from '@components/common/OverlayHeader';
 import TitleH from '@components/common/TitleH';
-import img from '@constants/img';
-import { useTranslation } from 'react-i18next';
-import './board.scss';
 import Icon from '@constants/icon';
+import img from '@constants/img';
 import { Col, Row } from 'antd';
-import { useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
+import { useLocation } from 'react-router-dom';
+import './board.scss';
 
 const Board = () => {
     const { t } = useTranslation();
@@ -57,9 +57,8 @@ const Board = () => {
                     }
                 </header>
                 <main className="board-members mt-5">
-                    <Row gutter={[30, 30]} >
-
-
+                    <Row gutter={[30, 30]} > 
+                        
                         <Col xl={8} lg={8} md={12} sm={24} xs={24} >
                             <div className="member-card" >
                                 <div className="svg-icon">

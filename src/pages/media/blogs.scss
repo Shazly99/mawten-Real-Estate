@@ -25,7 +25,7 @@
                     font-size: 45px;
 
                     @media screen and (width < 900px) {
-                        font-size: 20px;
+                        font-size: 20px !important;
 
                     }
                 }
@@ -36,7 +36,7 @@
                     font-size: 45px;
 
                     @media screen and (width < 900px) {
-                        font-size: 20px;
+                        font-size: 20px !important;
 
                     }
                 }
@@ -111,7 +111,7 @@
 
 .title {
     color: #383838;
-    text-align: right;
+
     font-family: TheSansArabic;
     font-size: 22px;
     font-weight: 530;
@@ -121,7 +121,7 @@
 
 .description {
     color: #383838;
-    text-align: right;
+
     font-family: TheSansArabic;
     font-size: 16px;
     font-weight: 300;
@@ -237,15 +237,22 @@
     margin: auto;
     margin-top: 80px;
     background-color: #fff;
+    @media screen and (width < 900px) {
+        width: 90%;
 
+    }
     .blog-title {
         color: #000;
-        text-align: right;
+
         font-family: TheSansArabic;
         font-size: 30px;
         font-style: normal;
         font-weight: 600;
         line-height: normal;
+
+        @media screen and (width < 900px) {
+            font-size: 18px; 
+        }
     }
 
     .blog-meta span {
@@ -261,6 +268,9 @@
         line-height: normal;
         letter-spacing: 0.1px;
         text-transform: capitalize;
+        @media screen and (width < 900px) {
+            font-size: 16px; 
+        }
     }
 
     .blog-text {
@@ -270,9 +280,13 @@
         font-size: 18px;
         font-style: normal;
         font-weight: 300;
-        line-height: 35px; /* 175% */
+        line-height: 35px;
+        /* 175% */
         text-transform: capitalize;
         margin-top: 20px;
+        @media screen and (width < 900px) {
+            font-size: 14px; 
+        }
     }
 
 

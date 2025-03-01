@@ -60,6 +60,10 @@
             font-style: normal;
             font-weight: 100;
             line-height: normal;
+
+            @media screen and (width < 900px) {
+                font-size: 14px;
+            }
         }
 
         input {
@@ -78,6 +82,10 @@
 .contact-image {
     width: 100%;
     height: auto;
+
+    @media screen and (width < 900px) {
+        display: none;
+    }
 }
 
 .contact-right {
@@ -93,8 +101,13 @@
         line-height: normal;
         text-transform: capitalize;
         margin-top: 10px;
-        &:lang(en){
+
+        &:lang(en) {
             text-align: left;
+        }
+
+        @media screen and (width < 900px) {
+            text-align: center !important;
         }
     }
 
@@ -114,6 +127,11 @@
             cursor: pointer;
             user-select: none;
 
+            @media screen and (width < 900px) {
+                width: 120px;
+                height: 30px;
+            }
+
             span {
                 color: #FFF;
                 text-align: center;
@@ -122,6 +140,10 @@
                 font-style: normal;
                 font-weight: 530;
                 line-height: normal;
+
+                @media screen and (width < 900px) {
+                    font-size: 14px;
+                }
             }
         }
 
@@ -133,6 +155,10 @@
                 font-size: 20px;
                 color: #c02e2e;
                 transition: color 0.3s;
+
+                @media screen and (width < 900px) {
+                    font-size: 14px;
+                }
             }
 
             .social-icon:hover {
@@ -237,6 +263,11 @@
         &:hover {
             background-color: #a82828;
         }
+
+        @media screen and (width < 900px) {
+            left: 50%;
+            transform: translate(-50%);
+        }
     }
 
     /* Responsive Design */
@@ -258,6 +289,10 @@
     .container {
         width: 85%;
         margin: auto;
+
+        @media screen and (width < 900px) {
+            width: 90%;
+        }
     }
 
     .map-iframe {
@@ -283,13 +318,17 @@
                 line-height: 66px;
                 /* 137.5% */
                 letter-spacing: -2px;
+
+                @media screen and (width < 900px) {
+                    font-size: 38px;
+                }
             }
 
             .custom-title .title-main .title-accent :lang(en) {
                 position: absolute;
                 top: 15px;
                 left: -255px;
-            } 
+            }
         }
     }
 
@@ -313,8 +352,14 @@
         font-weight: 530;
         line-height: normal;
         margin-top: 30px;
-        &:lang(en){
+
+        &:lang(en) {
             text-align: left;
+        }
+
+        @media screen and (width < 900px) {
+            font-size: 20px;
+            font-weight: 100;
         }
     }
 
@@ -339,6 +384,10 @@
         width: 100%;
         height: 300px;
         border-radius: 20px;
+
+        @media screen and (width < 900px) {
+            margin-top: 50px;
+        }
     }
 
     /* Responsive Design */
@@ -350,5 +399,11 @@
         .address-content {
             text-align: center;
         }
+    }
+}
+
+.contact_info_container_card {
+    @media screen and (width < 900px) {
+        margin-top: 20px;
     }
 }

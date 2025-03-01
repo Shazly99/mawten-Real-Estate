@@ -12,7 +12,7 @@ const BlogDetails = () => {
         <h1 className="blog-title">  "موطن العقارية" تطلق مشروع برج متعدد الاستخدامات في مكة المكرمة باستثمار يتجاوز 827 مليون ريال
         </h1>
         <div className="blog-meta">
-          <span className="date">2 ابريل , 2024</span>
+          <span className="date" dir='rtl' >2 ابريل , 2024</span>
         </div>
         <div className="blog-text">
           <p>

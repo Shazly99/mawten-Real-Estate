@@ -66,9 +66,7 @@ const Projects = () => {
                                 </div>
                             </div>
                         </div>
-                    </Col>
-
-
+                    </Col> 
                 </Row>
 
             </div>

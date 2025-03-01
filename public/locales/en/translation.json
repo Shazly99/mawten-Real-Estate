@@ -16,6 +16,8 @@
   "RealEstate": "Real Estate",
   "more": "Find more",
   "Projects": "Projects",
+  "project": "Projects",
+
   "Major": "Our Major",
   "Investor": "Investor",
   "Relations": " Relations",
@@ -84,6 +86,9 @@
   "care_sector": "Care Sector",
   "news": "Mawten News",
   "gallery": "Photo Gallery",
+  "features": "Features ",
+  "Numbers": "Numbers ",
+
   "videos": "Video Gallery",
   "interactive_visits": "Interactive Visits",
   "contact_us": "Contact Us",

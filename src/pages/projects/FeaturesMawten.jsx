@@ -3,8 +3,10 @@ import "./FeaturesSection.scss"; // Import SCSS styles
 import { Col, Row } from "antd";
 import TitleH from "@components/common/TitleH";
 import StatisticsSection from "./StatisticsMawten";
+import { useTranslation } from "react-i18next";
 
 const FeaturesMawten = () => {
+    let { t } = useTranslation()
     const features = [
         {
             id: "01",
@@ -27,7 +29,7 @@ const FeaturesMawten = () => {
             <div className="features-section">
                 {/* Header Section */}
 
-                <TitleH title={'مميزات'} highlight={'موطن'} />
+                <TitleH title={t('features')} highlight={t('mawten')} />
 
                 {/* Features List */}
                 <div className="features-list">
@@ -55,7 +57,7 @@ const FeaturesMawten = () => {
                 <div className="mt-5">
                     <hr />
                 </div>
-                <StatisticsSection/>
+                <StatisticsSection />
 
 
             </div>

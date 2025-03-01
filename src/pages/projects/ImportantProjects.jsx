@@ -3,6 +3,7 @@ import CustomTitle from '@components/common/CustomTitle';
 import img from '@constants/img'; // استبدل بالمسار الفعلي للصور
 import { Button, Carousel, Col, Row } from 'antd';
 import { useRef } from 'react';
+import { useTranslation } from 'react-i18next';
 
 const projects = [
     {
@@ -45,6 +46,7 @@ const projects = [
 
 const ImportantProjects = () => {
     const carouselRef = useRef(null);
+    let { t } = useTranslation()
 
     const goToNext = () => {
         if (carouselRef.current) {
@@ -61,7 +63,7 @@ const ImportantProjects = () => {
     return (
         <div className="important-projects-container">
             <header className="projects-header">
-                <CustomTitle title={'أهــم'} title2={'مشاريــعنا'} />
+                <CustomTitle title={t('Major')} title2={t('project')} />
                 <div className="carousel-arrows">
                     <Button
                         size='large'
@@ -80,7 +82,7 @@ const ImportantProjects = () => {
             </header>
 
             <Carousel
-                ref={carouselRef}  
+                ref={carouselRef}
                 dots={false}
                 autoplay={true}
                 infinite={true}

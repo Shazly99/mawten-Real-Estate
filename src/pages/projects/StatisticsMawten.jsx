@@ -4,6 +4,7 @@ import { BankOutlined, HomeOutlined, BuildOutlined, ShopOutlined } from "@ant-de
 import "./StatisticsSection.scss"; // Import SCSS styles
 import Icon from "@constants/icon";
 import TitleH from "@components/common/TitleH";
+import { useTranslation } from "react-i18next";
 
 const statistics = [
     {
@@ -33,10 +34,12 @@ const statistics = [
 ];
 
 const StatisticsSection = () => {
+    let { t } = useTranslation()
+
     return (
         <div className="statistics_section mb-8 pb-8">
 
-            <TitleH title={'أرقام'} highlight={'موطن'} />
+            <TitleH title={t('Numbers')} highlight={t('mawten')} />
             {/* Statistics Grid */}
             <Row gutter={[32, 32]} justify="center" className="statistics-grid mt-8">
                 {statistics.map((stat, index) => (

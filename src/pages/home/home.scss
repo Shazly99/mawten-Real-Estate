@@ -5,6 +5,18 @@
     width: 100%;
     height: 100vh;
     object-fit: cover;
+
+    @media screen and (width < 900px) {
+      height: auto;
+      object-fit: contain;
+      margin-top: 100px;
+    }
+  }
+}
+ 
+.navbar-main {
+  @media screen and (width < 900px) {
+    background-color: #181818 !important;
   }
 }
 
@@ -97,16 +109,16 @@
 
 .image-gallery {
   width: 95%;
-  margin-left: auto; 
-  overflow: hidden; 
+  margin-left: auto;
+  overflow: hidden;
 
-  img { 
+  img {
     border-radius: 8px; // زوايا دائرية أنيقة
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); // ظل خفيف
     object-fit: cover;
     transition: transform 0.3s ease-in-out;
     width: 100%;
-    height: 100%; 
+    height: 100%;
 
     &:hover {
       transform: scale(1.05); // تكبير عند تمرير الماوس
@@ -249,7 +261,8 @@
 
     margin: 50px auto !important;
   }
-  .title-container{
+
+  .title-container {
     justify-content: center;
   }
 
@@ -718,16 +731,16 @@
     font-size: 80px;
     -webkit-text-stroke: 1px #ffffff4c;
     color: rgba(255, 255, 255, 0.06);
- 
-    
+
+
     text-align: right;
--webkit-text-stroke-width: 1;
--webkit-text-stroke-color: rgba(255, 255, 255, 0.30);
-font-family: TheSansArabic;
-font-size: 78px;
-font-style: normal;
-font-weight: 530;
-line-height: normal;
+    -webkit-text-stroke-width: 1;
+    -webkit-text-stroke-color: rgba(255, 255, 255, 0.30);
+    font-family: TheSansArabic;
+    font-size: 78px;
+    font-style: normal;
+    font-weight: 530;
+    line-height: normal;
 
     &:lang(en) {
       left: 0;

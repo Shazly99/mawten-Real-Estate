@@ -6,6 +6,7 @@ import TitleH from '@components/common/TitleH';
 import Icon from '@constants/icon';
 import CustomButton from '@components/common/CustomButton';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const tabItems = [
     { key: '1', label: 'القطاع السكني', title: 'القطاع السكني ومتعدد الاستخدام', description: 'مشروع فريد بموقعه في مكة مكرمة ملاصق لوجهة مسار ويبعد عن الحرم المكي الشريف قرابة 3600 متر، تطوره شركة موطن العقارية كبرج سكني بارتفاع 27 طابق على مساحة تبلغ 6,580 متر مربع وبمسطحات بناء حوالي 114 ألف متر مربع في منطقة الرصيفة بمكة المكرمة بإطلالة كاملة على الدائري الثالث وبجوار محطة قطار الحرمين ليشكل معلماً بارزاً للقادمين من مدينة جدة. ', investment: '2 مليار', projectsCount: '6', image1: img.Projects1, image2: img.Projects2 },
@@ -57,6 +58,7 @@ const ProjectsDep = () => {
 
 // ✅ مكون يعرض تفاصيل كل قطاع
 const ProjectDetails = ({ title, description, investment, projectsCount, image1, image2 }) => {
+    let { t } = useTranslation()
     return (
         <Row gutter={[32, 32]} className="project-details mt-8 "  >
             <Col xs={24} lg={11} >
@@ -92,7 +94,7 @@ const ProjectDetails = ({ title, description, investment, projectsCount, image1,
                 <div className="image-wrapper">
                     <div className="btn_image relative">
                         <Link to={'/projects/sector/1'} className="discover-button ">
-                            <CustomButton title={'اكتشف المزيد'} />
+                            <CustomButton title={t('more')} />
                         </Link>
 
                         <img src={image1} alt="Project 1" className="main-image" />

@@ -91,6 +91,10 @@
             justify-content: center;
             align-items: end;
 
+            @media screen and (width < 900px) {
+                height: 350px ;
+            }
+
             /* Hover effect to change the background SVG color */
             &:hover {
                 background-color: #A08E8E;
