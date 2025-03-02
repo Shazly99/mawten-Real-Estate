@@ -54,7 +54,7 @@
 
             @media screen and (width < 900px) {
                 width: 90%;
-            font-size: 15px;
+                font-size: 15px;
 
             }
         }
@@ -320,16 +320,58 @@
     }
 
     .timeline-nav-btn {
-        padding:  0px;
+        padding: 0px;
     }
-} 
+}
+
 @media (max-width: 900px) {
     .timeline-nav {
-        flex-direction: column; 
+        flex-direction: column;
         align-items: center;
 
-        .ant-slider .ant-slider-mark-text{
+        .ant-slider .ant-slider-mark-text {
             font-size: 10px;
+        }
+    }
+}
+
+.list_misson {
+    ul {
+        list-style-type: none;
+        padding: 10px;
+
+        li {
+            position: relative;
+            padding: 0 25px;
+            margin-bottom: 10px;
+            color: #000;
+            text-align: justify;
+            font-family: TheSansArabic;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            text-transform: capitalize;
+
+            @media screen and (width < 900px) {
+                font-size: 14px;
+                font-weight: 400;
+                margin-top: 20px;
+            }
+
+            &::before {
+                content: '';
+                color: rgba($color: $mainColor, $alpha: 0.7);
+                position: absolute;
+                right: 0;
+                top: 8px;
+                font-size: 20px;
+                width: 12px;
+                height: 12px;
+                background-image: url('../../../assets/svg/pointlist.svg');
+                background-size: cover;
+                background-position: center;
+            }
         }
     }
 }

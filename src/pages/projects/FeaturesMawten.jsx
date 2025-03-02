@@ -37,16 +37,16 @@ const FeaturesMawten = () => {
                         <Row gutter={[80, 80]} key={feature.id} className="feature-item">
                             {/* Background Number */}
                             <Col xl={4} xs={24} className="flex justify-content-center align-item-center" >
-                                <span className={`feature-number ${feature.highlight ? "bold" : "faded"}`}>{feature.id}</span>
+                                <span className={`feature-number ${feature.highlight ? "bold" : " "}`}>{feature.id}</span>
                             </Col>
 
                             {/* Feature Content */}
                             <Col xl={20} xs={24} className=""  >
                                 <div className="feature-content ">
-                                    <h3 className={`feature-title ${feature.highlight ? "bold" : "faded"}`}>
+                                    <h3 className={`feature-title ${feature.highlight ? "bold" : " "}`}>
                                         {feature.title}
                                     </h3>
-                                    <p className={`feature-description ${feature.highlight ? "bold" : "faded"}`}>
+                                    <p className={`feature-description ${feature.highlight ? "bold" : " "}`}>
                                         {feature.description}
                                     </p>
                                 </div>

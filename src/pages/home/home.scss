@@ -141,7 +141,9 @@
 
     .section {
       margin-bottom: 2rem;
-
+&::after{
+  display: none;
+}
       @media screen and (width < 900px) {
 
         .title-container {

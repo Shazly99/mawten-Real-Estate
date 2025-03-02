@@ -31,7 +31,7 @@ const OurProjects = () => {
             <Carousel
                 autoplay
                 dots={false}
-                slidesToShow={1.5}
+                slidesToShow={2.5}
                 slidesToScroll={1}
                 responsive={[
                     {

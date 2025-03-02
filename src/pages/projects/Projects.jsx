@@ -36,7 +36,7 @@ const Projects = () => {
     let { t } = useTranslation()
     return (
         <div className='app_project' >
-            <img src={img.ProjectsSlider} className='w-full' alt="" />
+            <img src={img.ProjectsSlider} className='w-full app_project_image' alt="" />
             <div className="app_project_master">
                 <Row gutter={[50, 50]} >
                     <Col xl={11} lg={11} md={11} sm={24} xs={24} className='mt-8  ' >
