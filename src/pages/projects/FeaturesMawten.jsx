@@ -36,12 +36,12 @@ const FeaturesMawten = () => {
                     {features.map((feature, index) => (
                         <Row gutter={[80, 80]} key={feature.id} className="feature-item">
                             {/* Background Number */}
-                            <Col span={4} className="flex justify-content-center align-item-center" >
+                            <Col xl={4} xs={24} className="flex justify-content-center align-item-center" >
                                 <span className={`feature-number ${feature.highlight ? "bold" : "faded"}`}>{feature.id}</span>
                             </Col>
 
                             {/* Feature Content */}
-                            <Col span={20} className=""  >
+                            <Col xl={20} xs={24} className=""  >
                                 <div className="feature-content ">
                                     <h3 className={`feature-title ${feature.highlight ? "bold" : "faded"}`}>
                                         {feature.title}

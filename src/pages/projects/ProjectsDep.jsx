@@ -1,12 +1,11 @@
-import React, { useState } from 'react';
-import { Button, Row, Col } from 'antd';
-import { HomeOutlined, ShopOutlined } from '@ant-design/icons';
-import img from '@constants/img';
+import CustomButton from '@components/common/CustomButton';
 import TitleH from '@components/common/TitleH';
 import Icon from '@constants/icon';
-import CustomButton from '@components/common/CustomButton';
-import { Link } from 'react-router-dom';
+import img from '@constants/img';
+import { Button, Col, Row } from 'antd';
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 
 const tabItems = [
     { key: '1', label: 'القطاع السكني', title: 'القطاع السكني ومتعدد الاستخدام', description: 'مشروع فريد بموقعه في مكة مكرمة ملاصق لوجهة مسار ويبعد عن الحرم المكي الشريف قرابة 3600 متر، تطوره شركة موطن العقارية كبرج سكني بارتفاع 27 طابق على مساحة تبلغ 6,580 متر مربع وبمسطحات بناء حوالي 114 ألف متر مربع في منطقة الرصيفة بمكة المكرمة بإطلالة كاملة على الدائري الثالث وبجوار محطة قطار الحرمين ليشكل معلماً بارزاً للقادمين من مدينة جدة. ', investment: '2 مليار', projectsCount: '6', image1: img.Projects1, image2: img.Projects2 },

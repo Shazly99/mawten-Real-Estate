@@ -112,7 +112,7 @@ const ImportantProjects = () => {
                     <div className="project_card" key={index}>
                         <div className="card">
                             <Row gutter={[16, 16]} className="project-title">
-                                <Col span={6} className="flex justify-content-center align-items-center">
+                                <Col span={6}  xs={3} className="flex justify-content-end align-items-center">
                                     <svg
                                         width="30"
                                         height="30"
@@ -135,10 +135,10 @@ const ImportantProjects = () => {
                                         />
                                     </svg>
                                 </Col>
-                                <Col span={9}>
+                                <Col span={9} xs={12}>
                                     <h3>{item.title}</h3>
                                 </Col>
-                                <Col span={7} className="flex justify-content-center align-items-center">
+                                <Col span={7} xs={7} className="flex justify-content-end align-items-center">
                                     <span>(القطاع التجاري)</span>
                                 </Col>
                             </Row>

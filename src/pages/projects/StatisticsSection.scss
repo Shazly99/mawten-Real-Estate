@@ -40,16 +40,23 @@
     }
 
     .statistics-grid {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
+        @include flex();
+        
         .stat-item {
             display: flex;
             flex-direction: column;
             align-items: center;
-            text-align: flex-start;
+            text-align: flex-start; 
+            .items{
+                @media screen and (width < 900px) { 
+                    border-radius: 10px;
+                    width: 100%;
+                    padding: 20px 15px;
+                    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Slight shadow effect */
 
+                }
+            }
+            
             svg {
                 margin-top: 20px;
             }
@@ -60,6 +67,10 @@
 
                 &:lang(en) {
                     text-align: left;
+                }
+                @media screen and (width < 900px) {
+                    width: 100%;
+                    
                 }
             }
 
@@ -73,7 +84,10 @@
                 margin-bottom: 5px;
                 text-align: right;
                 width: 50%;
+                @media screen and (width < 900px) {
+                    width: 100%;
 
+                }
                 &:lang(en) {
                     text-align: left;
                 }
@@ -88,7 +102,13 @@
                 font-style: normal;
                 font-weight: 300;
                 line-height: normal;
+                @media screen and (width < 900px) {
+                    width: 100%;
+                    display: block;
+                font-size: 14px;
 
+                    
+                }
                 &:lang(en) {
                     text-align: left;
                 }
@@ -96,57 +116,9 @@
         }
     }
 }
+ 
 
-// Responsive Design
-@media (max-width: 1024px) {
-    .statistics-section {
-        padding: 40px;
-    }
-
-    .statistics-grid {
-        gap: 20px;
-
-        .stat-item {
-            .stat-icon {
-                font-size: 36px;
-            }
-
-            .stat-number {
-                font-size: 22px;
-            }
-
-            .stat-label {
-                font-size: 13px;
-            }
-        }
-    }
-}
-
-@media (max-width: 768px) {
-    .statistics-section {
-        padding: 30px;
-    }
-
-    .statistics-grid {
-        flex-direction: column;
-        align-items: center;
-        gap: 30px;
-
-        .stat-item {
-            .stat-icon {
-                font-size: 34px;
-            }
-
-            .stat-number {
-                font-size: 20px;
-            }
-
-            .stat-label {
-                font-size: 12px;
-            }
-        }
-    }
-}
+ 
 
 .vertical-line {
     position: absolute;
@@ -155,4 +127,8 @@
     height: 80%;
     width: 1px;
     background-color: #ddd;
+
+    @media screen and (width < 900px) {
+        display: none;
+    }
 }

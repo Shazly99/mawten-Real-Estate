@@ -3,6 +3,13 @@
 .app_project {
     background: #F5F5FF;
 
+    @media screen and (width < 900px) {
+
+        img {
+            margin-top: 00px;
+        }
+    }
+
     .app_project_master {
         width: 85%;
         margin: auto;
@@ -10,12 +17,15 @@
 
         @media screen and (width < 900px) {
             width: 90%;
+            margin-top: 0px;
         }
 
         .content {
             .title-container {
                 span {
                     font-size: 30px;
+
+
                 }
 
                 strong {
@@ -40,6 +50,8 @@
 
                 @media screen and (width < 900px) {
                     width: 100%;
+                    font-size: 20px;
+
                 }
             }
 
@@ -52,6 +64,10 @@
                 font-weight: 100;
                 line-height: normal;
                 margin-top: 20px;
+
+                @media screen and (width < 900px) {
+                    font-size: 16px;
+                }
             }
         }
 
@@ -73,6 +89,8 @@
                     position: absolute;
                     top: 37px;
                     right: 30px;
+
+
                 }
 
                 img {
@@ -98,21 +116,34 @@
                     justify-content: flex-start;
                     align-items: center;
 
+                    @media screen and (width < 900px) {
+                        bottom: -0px !important;
+                        z-index: 999 !important;
+
+                    }
+
                     .project-item {
                         display: inline-block;
                         width: 156px;
                         margin-right: 16px;
                         text-align: center;
                         color: white;
+
                     }
 
                     .project-item img {
                         height: 156px;
                         width: 100%;
-                        flex-shrink: 0;
                         object-fit: cover;
                         border-radius: 5px;
                         border: 4px solid #FFF;
+
+                        @media screen and (width < 900px) {
+                            width: 130px;
+                            height: 140px;
+                            object-fit: cover;
+
+                        }
                     }
 
                     .project-image {
@@ -132,10 +163,17 @@
         text-align: center;
         margin-top: 120px;
 
+        @media screen and (width < 900px) {
+            padding: 0px;
+            margin-top: 90px;
+
+        }
+
         header {
             width: 95%;
             margin: auto;
             margin-bottom: 40px;
+
         }
 
         .custom-carousel {
@@ -155,20 +193,27 @@
         .project_card {
             padding: 0 20px;
 
+            @media screen and (width < 900px) {
+                padding: 0 0px;
+            }
+
             .card {
                 background: #FFF;
                 border-radius: 16px;
                 padding: 10px;
 
+                @media screen and (width < 900px) {
+                    padding: 5px;
+                }
             }
         }
 
         .project-title {
-
             margin: auto;
             padding: 10px 0;
 
             h3 {
+
                 color: #181820;
                 font-family: TheSansArabic;
                 font-size: 20px;
@@ -177,6 +222,10 @@
                 line-height: 30px;
                 text-transform: capitalize;
                 text-align: end;
+
+                @media screen and (width < 900px) {
+                    font-size: 16px;
+                }
             }
 
             span {
@@ -188,6 +237,10 @@
                 font-weight: 500;
                 line-height: normal;
                 text-transform: capitalize;
+
+                @media screen and (width < 900px) {
+                    font-size: 14px;
+                }
             }
         }
 
@@ -207,6 +260,12 @@
         align-items: center;
         position: relative;
         padding: 20px;
+
+        @media screen and (width < 900px) {
+            padding: 0px;
+            flex-direction: column;
+            gap: 50px;
+        }
     }
 
     .prev-arrow,
@@ -219,6 +278,10 @@
         cursor: pointer;
         border-radius: 50%;
         margin: 0 10px;
+
+        @media screen and (width < 900px) {
+            font-size: 16px;
+        }
 
     }
 
@@ -279,6 +342,10 @@
         font-size: 32px;
         font-weight: bold;
         color: #333;
+
+        @media screen and (width < 900px) {
+            font-size: 20px;
+        }
     }
 
     .highlighted-text {
@@ -320,22 +387,23 @@
 
     /* ✅ المعلومات */
     .project-info {
-
         width: 90%;
         margin: auto;
-
-
     }
+
 
     .project-title {
         color: #181820;
-
         font-family: TheSansArabic;
         font-size: 30px;
         font-style: normal;
         font-weight: 900;
         line-height: 84px;
         margin-bottom: 15px;
+
+        @media screen and (width < 900px) {
+            font-size: 20px;
+        }
     }
 
     .project-description {
@@ -347,6 +415,10 @@
         font-weight: 300;
         line-height: normal;
         margin-bottom: 25px;
+
+        @media screen and (width < 900px) {
+            font-size: 14px;
+        }
     }
 
     /* ✅ الإحصائيات */
@@ -395,12 +467,21 @@
         left: 10px;
         background: transparent;
 
+        @media screen and (width < 900px) {
+            top: -0px;
+
+        }
+
     }
 
     .image-wrapper {
         display: flex;
         gap: 15px;
         align-items: flex-end;
+
+        @media screen and (width < 900px) {
+            flex-direction: column;
+        }
     }
 
     .secondary-image {
@@ -418,6 +499,11 @@
         height: 437px;
         flex-shrink: 0;
 
+        @media screen and (width < 900px) {
+            width: 100%;
+
+        }
+
     }
 
     .main-image {
@@ -434,12 +520,23 @@
         width: 575px;
         height: 323px;
         flex-shrink: 0;
+
+        @media screen and (width < 900px) {
+            width: 100%;
+            margin-top: 80px;
+        }
     }
 
     // *****************Start - Our Projects
     .app_projects_carousel {
         padding: 20px;
         margin-top: 80px;
+
+        @media screen and (width < 900px) {
+            padding: 0;
+            margin-top: 80px;
+
+        }
 
         .title-container {
             margin-bottom: 50px;
@@ -448,11 +545,19 @@
             span {
                 font-size: 40px;
                 user-select: none;
+
+                @media screen and (width < 900px) {
+                    font-size: 30px;
+                }
             }
 
             strong {
                 font-size: 40px;
                 user-select: none;
+
+                @media screen and (width < 900px) {
+                    font-size: 30px;
+                }
             }
 
             svg {
@@ -479,6 +584,9 @@
             object-fit: cover;
             border-radius: 12px;
 
+            @media screen and (width < 900px) {
+                height: 300px;
+            }
         }
 
         .project-info {
@@ -493,6 +601,9 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
+            @media screen and (width < 900px) {
+                width: 80%;
+            }
         }
 
         .project_card:hover .project-info {
@@ -504,6 +615,10 @@
             font-size: 16px;
             font-weight: bold;
             margin: 0;
+
+            @media screen and (width < 900px) {
+                font-size: 14px;
+            }
         }
 
         .project-category {
@@ -517,6 +632,10 @@
             color: white;
             opacity: 0.7;
             transition: 0.3s;
+
+            @media screen and (width < 900px) {
+                font-size: 16px;
+            }
         }
 
         .info-icon:hover {

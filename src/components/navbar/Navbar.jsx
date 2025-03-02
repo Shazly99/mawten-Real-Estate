@@ -72,19 +72,7 @@ const Navbar = () => {
         localStorage.setItem('i18nextLng', lang);
     };
 
-    const languageMenu = (
-        <Menu>
-            <Menu.Item key="en" onClick={() => changeLanguage('en')}>
-                <img src="https://flagcdn.com/16x12/gb.png" alt="English" />
-                English
-            </Menu.Item>
-            <Menu.Item key="ar" onClick={() => changeLanguage('ar')}>
-                <img src="https://flagcdn.com/16x12/eg.png" alt="Arabic" />
-                Arabic
-            </Menu.Item>
-        </Menu>
-    );
-
+    
     useEffect(() => {
         const lang = localStorage.getItem('i18nextLng') || i18n.language;
         document.documentElement.lang = lang;

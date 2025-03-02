@@ -14,6 +14,10 @@
             font-weight: 600;
             line-height: normal;
             text-transform: capitalize;
+
+            @media screen and (width < 900px) {
+                font-size: 30px;
+            }
         }
 
         .points {
@@ -42,6 +46,15 @@
 }
 
 .item_share_btn {
+    justify-content: flex-end;
+
+    @media screen and (width < 900px) {
+        margin-top: 50px;
+        display: flex !important;
+        justify-content: space-between !important;
+        width: 100%;
+
+    }
 
     .ant-btn {
         display: flex;
@@ -67,6 +80,10 @@
             font-weight: 530;
             line-height: normal;
             text-transform: capitalize;
+
+            @media screen and (width < 900px) {
+                font-size: 20px;
+            }
         }
     }
 
@@ -141,6 +158,11 @@
         width: 1px;
         height: 100%;
         background-color: rgba(0, 0, 0, 0.1);
+
+
+        @media screen and (width < 900px) {
+            display: none;
+        }
     }
 
 }
@@ -158,6 +180,10 @@
         line-height: normal;
         text-transform: capitalize;
         margin-top: 50px;
+
+        @media screen and (width < 900px) {
+            font-size: 16px;
+        }
     }
 }
 
@@ -185,7 +211,11 @@
             font-weight: 600;
             line-height: normal;
             text-transform: capitalize;
-
+            @media screen and (width < 900px) {
+                font-size: 14px;
+                font-weight: 400;
+                margin-top: 20px;
+            }
             &::before {
                 content: '';
                 /* Unicode for bullet symbol */

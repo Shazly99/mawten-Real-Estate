@@ -32,7 +32,7 @@ const ProjectDetails = () => {
             <OverlayHeader img={img.Projectscover} header={t('مجمع موطن هيلز السكني')} breadcrumbItems={breadcrumbItems} />
             <div className="app__project_destails mb-4">
                 <Row>
-                    <Col xl={14}  >
+                    <Col xl={14} xs={24}  >
                         <div className="project_summery">
                             <h1>هيلتون جاردن ان الرياض المركز المالي</h1>
                             <div className="points flex gap-4">
@@ -53,8 +53,8 @@ const ProjectDetails = () => {
                             </div>
                         </div>
                     </Col>
-                    <Col xl={10}  >
-                        <div className="item_share_btn flex justify-content-end gap-4 align-items-center">
+                    <Col xl={10} xs={24}  >
+                        <div className="item_share_btn flex  gap-4 align-items-center">
                             <Button size='large' iconPosition='left' className="custom-btn" icon={<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                                 <path d="M11.5074 0.33609L3.85698 2.87859C-1.28566 4.59901 -1.28566 7.40424 3.85698 9.11619L6.12754 9.87046L6.88157 12.1418C8.59296 17.2861 11.4057 17.2861 13.1171 12.1418L15.6673 4.49731C16.8025 1.06494 14.9387 -0.808035 11.5074 0.33609ZM11.7785 4.89564L8.55907 8.13309C8.43198 8.26021 8.27101 8.31954 8.11004 8.31954C7.94907 8.31954 7.78809 8.26021 7.66101 8.13309C7.41532 7.88731 7.41532 7.48051 7.66101 7.23474L10.8805 3.99729C11.1262 3.75151 11.5328 3.75151 11.7785 3.99729C12.0242 4.24306 12.0242 4.64986 11.7785 4.89564Z" fill="white" />
                             </svg>} type="primary">{t('سجل اهتمامك')}</Button>
@@ -76,7 +76,7 @@ const ProjectDetails = () => {
 
                             <div className="project-container">
                                 <Row gutter={[16, 16]}>
-                                    <Col span={8}  >
+                                    <Col lg={8} xs={24} >
                                         <div className="section">
                                             <div className="icon-text">
                                                 <div className="content">
@@ -89,7 +89,8 @@ const ProjectDetails = () => {
                                             </div>
                                         </div>
                                     </Col>
-                                    <Col span={8}>
+                                    <Col lg={8} xs={24} >
+                                    
                                         <div className="section">
                                             <div className="icon-text">
                                                 <div className="content">
@@ -103,7 +104,8 @@ const ProjectDetails = () => {
                                             </div>
                                         </div>
                                     </Col>
-                                    <Col span={8}>
+                                    <Col lg={8} xs={24} >
+                                    
                                         <div className="section">
                                             <div className="icon-text">
                                                 <div className="content">

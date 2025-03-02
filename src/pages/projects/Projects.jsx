@@ -39,7 +39,7 @@ const Projects = () => {
             <img src={img.ProjectsSlider} className='w-full' alt="" />
             <div className="app_project_master">
                 <Row gutter={[50, 50]} >
-                    <Col xl={11} lg={11} md={11} sm={24} xs={24} className='mt-8 pt-6' >
+                    <Col xl={11} lg={11} md={11} sm={24} xs={24} className='mt-8  ' >
                         <div className="content">
                             <TitleH title={t('mawten')} highlight={t('RealEstate')} className="text-4xl font-bold text-gray-900" />
                             <h1>الريادة في صناعة الحلول العقارية المبتكرة </h1>
@@ -66,14 +66,14 @@ const Projects = () => {
                                 </div>
                             </div>
                         </div>
-                    </Col> 
+                    </Col>
                 </Row>
 
             </div>
             <ImportantProjects />
             <ProjectsDep />
-            <OurProjects/>
-            <FeaturesMawten/>
+            <OurProjects />
+            <FeaturesMawten />
         </div>
     )
 }

@@ -3,12 +3,19 @@
 .app_features {
     background-color: #fff;
     padding-top: 150px;
+
+    @media screen and (width < 900px) {
+        margin-top: 180px;
+    }
 }
 
 .features-section {
     width: 85%;
     margin: auto;
-     // Ensure right alignment for Arabic
+
+    @media screen and (width < 900px) {
+        width: 95%;
+    }
 
     .section-header {
         margin-bottom: 50px;
@@ -44,7 +51,7 @@
                 font-size: 180px;
                 font-style: normal;
                 font-weight: 100;
-                line-height: 250px;
+                line-height: 250px; 
 
                 &.bold {
                     opacity: 1;
@@ -58,9 +65,13 @@
             .feature-content {
                 max-width: 700px;
 
+                @media screen and (width < 900px) {
+                    max-width: 95%;
+                }
+
                 h3 {
                     color: #181820;
-                    
+
                     font-family: TheSansArabic;
                     font-size: 38px;
                     font-style: normal;
