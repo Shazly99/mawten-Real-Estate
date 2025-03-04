@@ -9,38 +9,55 @@ const projects = [
     {
         image: img.Projects1,
         title: "هيلتون جاردن ان الرياض المركز المالي",
+        desc:'مشروع فريد بموقعه في مكة مكرمة ملاصق لوجهة مسار ويبعد عن الحرم المكي الشريف قرابة 3600 متر، تطوره شركة موطن العقارية كبرج سكني بارتفاع 27 طابق على مساحة تبلغ 6,580 متر مربع وبمسطحات بناء حوالي 114 ألف متر مرب'
     },
     {
         image: img.Projects2,
         title: "هيلتون جاردن ان الرياض المركز المالي",
+        desc:'مشروع فريد بموقعه في مكة مكرمة ملاصق لوجهة مسار ويبعد عن الحرم المكي الشريف قرابة 3600 متر، تطوره شركة موطن العقارية كبرج سكني بارتفاع 27 طابق على مساحة تبلغ 6,580 متر مربع وبمسطحات بناء حوالي 114 ألف متر مرب'
+
     },
     {
         image: img.Projects3,
         title: "هيلتون جاردن ان الرياض المركز المالي",
+        desc:'مشروع فريد بموقعه في مكة مكرمة ملاصق لوجهة مسار ويبعد عن الحرم المكي الشريف قرابة 3600 متر، تطوره شركة موطن العقارية كبرج سكني بارتفاع 27 طابق على مساحة تبلغ 6,580 متر مربع وبمسطحات بناء حوالي 114 ألف متر مرب'
+
     },
     {
         image: img.Projects1,
         title: "هيلتون جاردن ان الرياض المركز المالي",
+        desc:'مشروع فريد بموقعه في مكة مكرمة ملاصق لوجهة مسار ويبعد عن الحرم المكي الشريف قرابة 3600 متر، تطوره شركة موطن العقارية كبرج سكني بارتفاع 27 طابق على مساحة تبلغ 6,580 متر مربع وبمسطحات بناء حوالي 114 ألف متر مرب'
+
     },
     {
         image: img.Projects2,
         title: "هيلتون جاردن ان الرياض المركز المالي",
+        desc:'مشروع فريد بموقعه في مكة مكرمة ملاصق لوجهة مسار ويبعد عن الحرم المكي الشريف قرابة 3600 متر، تطوره شركة موطن العقارية كبرج سكني بارتفاع 27 طابق على مساحة تبلغ 6,580 متر مربع وبمسطحات بناء حوالي 114 ألف متر مرب'
+
     },
     {
         image: img.Projects3,
         title: "هيلتون جاردن ان الرياض المركز المالي",
+        desc:'مشروع فريد بموقعه في مكة مكرمة ملاصق لوجهة مسار ويبعد عن الحرم المكي الشريف قرابة 3600 متر، تطوره شركة موطن العقارية كبرج سكني بارتفاع 27 طابق على مساحة تبلغ 6,580 متر مربع وبمسطحات بناء حوالي 114 ألف متر مرب'
+
     },
     {
         image: img.Projects1,
         title: "هيلتون جاردن ان الرياض المركز المالي",
+        desc:'مشروع فريد بموقعه في مكة مكرمة ملاصق لوجهة مسار ويبعد عن الحرم المكي الشريف قرابة 3600 متر، تطوره شركة موطن العقارية كبرج سكني بارتفاع 27 طابق على مساحة تبلغ 6,580 متر مربع وبمسطحات بناء حوالي 114 ألف متر مرب'
+
     },
     {
         image: img.Projects2,
         title: "هيلتون جاردن ان الرياض المركز المالي",
+        desc:'مشروع فريد بموقعه في مكة مكرمة ملاصق لوجهة مسار ويبعد عن الحرم المكي الشريف قرابة 3600 متر، تطوره شركة موطن العقارية كبرج سكني بارتفاع 27 طابق على مساحة تبلغ 6,580 متر مربع وبمسطحات بناء حوالي 114 ألف متر مرب'
+
     },
     {
         image: img.Projects3,
         title: "هيلتون جاردن ان الرياض المركز المالي",
+        desc:'مشروع فريد بموقعه في مكة مكرمة ملاصق لوجهة مسار ويبعد عن الحرم المكي الشريف قرابة 3600 متر، تطوره شركة موطن العقارية كبرج سكني بارتفاع 27 طابق على مساحة تبلغ 6,580 متر مربع وبمسطحات بناء حوالي 114 ألف متر مرب'
+
     },
 ];
 
@@ -84,9 +101,9 @@ const ImportantProjects = () => {
             <Carousel
                 ref={carouselRef}
                 dots={false}
-                autoplay={true}
-                infinite={true}
-                slidesToShow={2.5}
+                autoplay={true }
+                infinite={true }
+                slidesToShow={3.5}
                 slidesToScroll={1}
                 responsive={[
                     {
@@ -111,8 +128,15 @@ const ImportantProjects = () => {
                 {projects?.map((item, index) => (
                     <div className="project_card" key={index}>
                         <div className="card">
+                            <div className="card_import_project">
+                                <img src={item.image} alt={item.title} className="project-image" />
+                                <div className="overlay">
+                                    <span>(القطاع التجاري)</span>
+                                </div>
+
+                            </div>
                             <Row gutter={[16, 16]} className="project-title">
-                                <Col span={6}  xs={3} className="flex justify-content-end align-items-center">
+                                <Col span={9} className="flex justify-content-start align-items-start">
                                     <svg
                                         width="30"
                                         height="30"
@@ -135,14 +159,13 @@ const ImportantProjects = () => {
                                         />
                                     </svg>
                                 </Col>
-                                <Col span={9} xs={12}>
+                                <Col span={15} className='flex justify-content-center flex-column'>
                                     <h3>{item.title}</h3>
                                 </Col>
-                                <Col span={7} xs={7} className="flex justify-content-end align-items-center">
-                                    <span>(القطاع التجاري)</span>
+                                <Col span={24} className='flex justify-content-start'>
+                                    <p className='title_desc'>{item.desc}</p>
                                 </Col>
                             </Row>
-                            <img src={item.image} alt={item.title} className="project-image" />
                         </div>
                     </div>
                 ))}

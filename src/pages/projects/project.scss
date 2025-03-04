@@ -198,7 +198,7 @@
             }
 
             .card {
-                background: #FFF;
+                // background: #FFF;
                 border-radius: 16px;
                 padding: 10px;
 
@@ -210,7 +210,8 @@
 
         .project-title {
             margin: auto;
-            padding: 10px 0;
+            // padding: 10px 0;
+            margin-top: 20px;
 
             h3 {
 
@@ -223,8 +224,24 @@
                 text-transform: capitalize;
                 text-align: end;
 
+
                 @media screen and (width < 900px) {
                     font-size: 16px;
+                }
+            }
+
+            .title_desc {
+                direction: rtl;
+                color: #181820;
+                text-align: justify;
+                font-family: TheSansArabic;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 300;
+                line-height: normal;
+
+                &:lang(en){
+                    direction: ltr;
                 }
             }
 
@@ -249,7 +266,7 @@
             height: 350px;
             flex-shrink: 0;
             object-fit: cover;
-            border-radius: 20px;
+            // border-radius: 20px 0 20px 0;
 
         }
     }
@@ -685,8 +702,8 @@
                 font-style: normal;
                 font-weight: 600;
                 line-height: normal;
-                text-transform: capitalize; 
-                text-align: right; 
+                text-transform: capitalize;
+                text-align: right;
                 height: 100%;
 
                 @media screen and (width < 900px) {
@@ -697,4 +714,43 @@
     }
 
     // *****************End - Our Projects
+}
+
+.card_import_project {
+    position: relative;
+
+    .overlay {
+        position: absolute;
+        inset: 0;
+
+        span {
+            background: rgba(166, 21, 23, 0.42);
+            backdrop-filter: blur(7.5px);
+            color: #FFF;
+            text-align: right;
+            font-family: TheSansArabic;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 530;
+            line-height: normal;
+            text-transform: capitalize;
+            padding: 11px 15px;
+            position: absolute;
+            
+            &:lang(ar) {
+                top: 20px;
+                right: 20px; 
+
+            }
+
+            
+            &:lang(en) {
+                top: 20px;
+                left: 20px;
+
+            }
+        }
+
+
+    }
 }
