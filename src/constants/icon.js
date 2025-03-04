@@ -21,6 +21,7 @@ import right from "@assets/svg/right.svg?react";
 import arrowR from "@assets/svg/Symbol.svg?react";
 import title from "@assets/svg/title.svg?react";
 import youtube from "@assets/svg/youtube.svg?react";
+import blog from "@assets/svg/blog.svg?react";
 
 import projects from "@assets/svg/projects/projects.svg?react";
 import size from "@assets/svg/projects/size.svg?react";
@@ -57,7 +58,7 @@ const Icon = {
     youtube,
     ArrowLeft,
     ArrowRight,
-
+    blog
 
 }
 

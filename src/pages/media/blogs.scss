@@ -90,6 +90,37 @@
 .card-header {
     display: flex;
     flex-direction: column;
+    .card_blog_image{
+        position: relative;
+
+        .overlay{
+            position: absolute;
+            inset: 0; 
+            display: flex;
+            align-items: flex-end;
+            svg{
+                margin-bottom: 10px;
+                transform: rotate(0);
+            }
+            button{
+                position: absolute;
+                top: 20px;
+                left: 20px;
+                box-shadow: none;
+                @include flex();
+                background-color: $mainColor;
+                span{
+                    margin-top: 5px;
+                }
+                svg{
+                    margin: auto !important;
+                    transform: rotate(0);
+                    margin-top: -5px !important;
+
+                }
+            }
+        }
+    }
 }
 
 .card-header img {
@@ -99,6 +130,9 @@
 
 .card-info {
     padding: 1rem;
+    h3{
+        font-weight: 600;
+    }
 }
 
 :lang(en) .card-info .title {
@@ -237,10 +271,12 @@
     margin: auto;
     margin-top: 80px;
     background-color: #fff;
+
     @media screen and (width < 900px) {
         width: 90%;
 
     }
+
     .blog-title {
         color: #000;
 
@@ -251,7 +287,7 @@
         line-height: normal;
 
         @media screen and (width < 900px) {
-            font-size: 18px; 
+            font-size: 18px;
         }
     }
 
@@ -268,8 +304,9 @@
         line-height: normal;
         letter-spacing: 0.1px;
         text-transform: capitalize;
+
         @media screen and (width < 900px) {
-            font-size: 16px; 
+            font-size: 16px;
         }
     }
 
@@ -284,8 +321,9 @@
         /* 175% */
         text-transform: capitalize;
         margin-top: 20px;
+
         @media screen and (width < 900px) {
-            font-size: 14px; 
+            font-size: 14px;
         }
     }
 
