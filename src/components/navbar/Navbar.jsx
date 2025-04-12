@@ -8,9 +8,10 @@ import { useContext, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link, NavLink } from 'react-router-dom';
 import './navbar.scss';
+import axios from "axios";
 
 const Navbar = () => {
-
+    const [sectors, setSectors] = useState([]);
     const { i18n, t } = useTranslation();
     const menu = (
         <Menu>
@@ -33,20 +34,15 @@ const Navbar = () => {
 
     const menuProjects = (
         <Menu>
-            <Menu.Item key="1">
-                <NavLink to="/about"> {t('project1')}  </NavLink>
+          {sectors.map((sector) => (
+            <Menu.Item key={sector.id}>
+              <NavLink to={`/projects/sector/${sector.id}`}>
+                {sector.title } 
+              </NavLink>
             </Menu.Item>
-            <Menu.Item key="2">
-                <NavLink to="/about"> {t('project2')}  </NavLink>
-            </Menu.Item>
-            <Menu.Item key="3">
-                <NavLink to="/about"> {t('project3')}  </NavLink>
-            </Menu.Item>
-            <Menu.Item key="4">
-                <NavLink to="/about"> {t('project4')}  </NavLink>
-            </Menu.Item>
+          ))}
         </Menu>
-    );
+      );
     const { isLang, setIsLang } = useContext(GeneralData);
     const [placement, setPlacement] = useState('left');
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -81,6 +77,16 @@ const Navbar = () => {
         setIsLang(lang);
     }, [i18n.language]);
 
+
+    useEffect(() => {
+      axios.get("https://mawtan.rightclicksa.com/api/home/sectors").then((res) => {
+        if (res.data.status === 200) {
+          setSectors(res.data.data);
+          console.log(res.data.data);
+          
+        }
+      });
+    }, []);
     return (
         <div className={`navbar-container ${i18n.language === 'ar' ? 'rtl' : 'ltr'}`}>
 

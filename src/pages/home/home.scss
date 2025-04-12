@@ -118,7 +118,11 @@
     object-fit: cover;
     transition: transform 0.3s ease-in-out;
     width: 100%;
-    height: 100%;
+    height: 600px !important;
+
+    @media screen and (width < 900px) {
+      height: 100% !important;
+    }
 
     &:hover {
       transform: scale(1.05); // تكبير عند تمرير الماوس
@@ -668,23 +672,27 @@
 }
 
 .app_contact_us {
-  background-color: #a01c1c;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 300px;
+  height: 390px;
   position: relative;
   padding: 20px;
+  background-image: url('../../assets/images/contactBg.png');
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat; 
 
   .home-contact {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+
     width: 100%;
     position: relative;
     flex-wrap: wrap;
 
   }
+
 
   .icons_contact-us {
     svg {
@@ -700,16 +708,25 @@
 
   .content_contact-us {
     width: 100%;
+    margin-top: 90px;
+   
+  
+
+    @media screen and (width < 900px) {
+      margin-top: 0;
+      text-align: center;
+    }
   }
 
   .home-contact__title,
   .home-contact__subtitle {
-    font-size: 30px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    font-family: $fontBase;
     margin-top: 20px;
+    font-family: TheSansArabic;
+    font-weight: 530;
+    font-size: 50px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: right;
 
     @media screen and (width < 900px) {
       font-size: 24px !important;
@@ -756,20 +773,12 @@
     position: absolute;
     top: 0%;
     transform: translateY(-50%);
-    font-size: 80px;
-    -webkit-text-stroke: 1px #ffffff4c;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
     color: rgba(255, 255, 255, 0.06);
-
-
-    text-align: right;
-    -webkit-text-stroke-width: 1;
-    -webkit-text-stroke-color: rgba(255, 255, 255, 0.30);
     font-family: TheSansArabic;
-    font-size: 78px;
-    font-style: normal;
     font-weight: 530;
-    line-height: normal;
-
+    font-size: 100px;
+    text-align: right;
     &:lang(en) {
       left: 0;
     }

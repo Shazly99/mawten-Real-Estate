@@ -15,6 +15,8 @@ import lang from "@assets/svg/lang.svg?react";
 import langC from "@assets/svg/langC.svg?react";
 import left from "@assets/svg/left.svg?react";
 import lineTitle from "@assets/svg/lineTitle.svg?react";
+import location2 from "@assets/svg/projects/lcoation.svg?react";
+import type2 from "@assets/svg/projects/type.svg?react";
 import location from "@assets/svg/Location.svg?react";
 import phone from "@assets/svg/phone.svg?react";
 import right from "@assets/svg/right.svg?react";
@@ -24,6 +26,7 @@ import youtube from "@assets/svg/youtube.svg?react";
 import blog from "@assets/svg/blog.svg?react";
 
 import projects from "@assets/svg/projects/projects.svg?react";
+import share from "@assets/svg/projects/share.svg?react";
 import size from "@assets/svg/projects/size.svg?react";
 import investment from "@assets/svg/projects/investment.svg?react";
 import HotelUnit from "@assets/svg/projects/HotelUnit.svg?react";
@@ -31,6 +34,9 @@ import space from "@assets/svg/projects/space.svg?react";
 
 
 const Icon = {
+    location2,
+    type2,
+    share,
     projects,
     size,
     HotelUnit,

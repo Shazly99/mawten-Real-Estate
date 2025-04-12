@@ -1,14 +1,13 @@
+import TitleH from '@components/common/TitleH'
 import img from '@constants/img'
 import { Col, Row } from 'antd'
-import React from 'react'
-import './project.scss'
-import TitleH from '@components/common/TitleH'
-import { useTranslation } from 'react-i18next'
 import Marquee from 'react-fast-marquee'
-import ImportantProjects from './ImportantProjects'
-import ProjectsDep from './ProjectsDep'
-import OurProjects from './OurProjects'
+import { useTranslation } from 'react-i18next'
 import FeaturesMawten from './FeaturesMawten'
+import ImportantProjects from './ImportantProjects'
+import './project.scss'
+import ProjectsDep from './ProjectsDep'
+
 const projects = [
     {
         image: img.Projects1,

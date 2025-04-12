@@ -1,10 +1,7 @@
-import React, { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
-import { Col, Row } from "antd";
 import img from "@constants/img";
-import Marquee from "react-fast-marquee";
-import Icon from "@constants/icon";
+import { Col, Row } from "antd";
 
 const tabs = [
     { id: 0, label: "القطاع السكني" },
@@ -50,7 +47,7 @@ const projects = [
         title: "مجمع توق الدار السكني",
     },
 ];
-const SectorHeader = () => {
+const SectorHeader = ({ data }) => {
     const [activeTab, setActiveTab] = useState(0);
     const [timerKey, setTimerKey] = useState(0); // مفتاح لإعادة تشغيل الـ Timer
 
@@ -93,28 +90,27 @@ const SectorHeader = () => {
                 >
                     <Col xl={12} lg={12} className="wrapper_master"  >
                         <div className="header">
-                            <h1>القطاع السكني </h1>
-                            <h1>ومتعدد الاستعمال</h1>
+                            <h1>{data?.title}</h1>
+                            <h1>{data?.sub_title}</h1>
                         </div>
 
                     </Col>
                     <Col xl={12} lg={12} className="wrapper_details" >
 
-                        <div className="stats-container">
+           {/*              <div className="stats-container">
                             <div className="stat">
-                                <h2>6</h2>
+                                <h2>{data?.projects.length || 0}</h2>
                                 <p>المشاريع</p>
                             </div>
                             <div className="divider"></div>
                             <div className="stat">
-                                <h2>2 مليار</h2>
+                                <h2>{data?.investments} مليار</h2>
                                 <p>الاستثمارات</p>
                             </div>
-                        </div>
+                        </div> */}
                     </Col>
                     <Col xl={24} lg={24} className="wrapper_details mt-8 " >
-                        <p className="description">
-                        مشروع فريد بموقعه في مكة مكرمة ملاصق لوجهة مسار ويبعد عن الحرم المكي الشريف قرابة 3600 متر، تطوره شركة موطن العقارية كبرج سكني بارتفاع 27 طابق على مساحة تبلغ 6,580 متر مربع وبمسطحات بناء حوالي 114 ألف متر مربع في منطقة الرصيفة بمكة المكرمة بإطلالة كاملة على الدائري الثالث وبجوار محطة قطار الحرمين ليشكل معلماً بارزاً للقادمين من مدينة جدة.                         </p>
+                        <p className="description">{data?.description}</p>
                     </Col>
                 </Row>
 
