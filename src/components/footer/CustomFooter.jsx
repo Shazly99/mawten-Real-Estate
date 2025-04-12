@@ -1,7 +1,7 @@
 import React from "react";
 import { Typography, Row, Col } from "antd";
 import { MailOutlined, PhoneOutlined, EnvironmentOutlined, TwitterOutlined, FacebookFilled, InstagramFilled, LinkedinFilled, XOutlined } from "@ant-design/icons";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import "./footer.scss";
 import img from "@constants/img";
@@ -11,11 +11,14 @@ const { Title, Paragraph } = Typography;
 
 const Footer = () => {
   const { t } = useTranslation(); // استخدام الترجمة
-
+  let location = useLocation()
   return (
     <>
       <div className="mt_main ">
-        <HomeContactUs />
+        {
+          (location.pathname == '/' || location.pathname.includes('projects')) &&
+          <HomeContactUs />
+        }
       </div>
 
       <footer className="footer">
@@ -82,9 +85,9 @@ const Footer = () => {
               <Title level={4}>{t("contact_us")}</Title>
               <div className="app_link gap-1">
 
-              <p><PhoneOutlined /> {t("phone")}</p>
-              <p className="flex flex-row gap-2 align-items-center "><MailOutlined /> <a href="mailto:Info@mawten.com.sa" target="_blank" className="mt-2" >{t("email")}</a></p>
-              <p className="mt-2 "><EnvironmentOutlined /> {t("address_footer")}</p>
+                <p><PhoneOutlined /> {t("phone")}</p>
+                <p className="flex flex-row gap-2 align-items-center "><MailOutlined /> <a href="mailto:Info@mawten.com.sa" target="_blank" className="mt-2" >{t("email")}</a></p>
+                <p className="mt-2 "><EnvironmentOutlined /> {t("address_footer")}</p>
               </div>
             </Col>
           </Row>

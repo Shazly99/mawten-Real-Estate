@@ -1,5 +1,3 @@
-import AOS from "aos";
-import "aos/dist/aos.css";
 import React from "react";
 import CompanyOverview from "./CompanyOverview";
 import GalleryTitle from "./GalleryTitle";
@@ -14,20 +12,18 @@ import TitleSection from "./TitleSection";
 import HomeContactUs from "./HomeContactUs";
 
 const Home = () => {
-  React.useEffect(() => {
-    AOS.init({ duration: 1000 });
-  }, []);
+ 
 
   return (
     <>
       <SliderHome />
       <TitleSection />
       <GalleryTitle />
-      <CompanyOverview />
+      {/* <CompanyOverview /> */}
       <NumberCompany />
       <ImportantProject />
       <HomeProjects />
-      <InvestorRelations />
+      {/* <InvestorRelations /> */}
       <HomeMediaCenter /> 
     </>
 

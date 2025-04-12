@@ -36,35 +36,8 @@
     .navbar-top {
         display: flex;
         justify-content: space-between;
-        padding: 10px 80px;
-
-        background-color: #f8f9fa;
-
-        .contact-info {
-            font-size: 14px;
-
-            a {
-                color: #333;
-                text-decoration: none;
-                margin: 0 5px;
-
-                @media screen and (width <767px) {
-                    margin: 0px;
-                }
-            }
-
-            span {
-                font-family: $fontBase;
-                font-size: 14px;
-                font-weight: 600;
-                line-height: 26px;
-                color: $mainColor;
-
-                @media screen and (width <767px) {
-                    font-size: 10px;
-                }
-            }
-        }
+        padding: 10px 80px; 
+        background-color: #f8f9fa; 
 
         .language-social {
             display: flex;

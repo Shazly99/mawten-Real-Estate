@@ -5,6 +5,6 @@ import './i18n';
 
 import './style/index.scss'
 import 'primeflex/primeflex.css';
-import 'aos/dist/aos.css';
+ 
 
 ReactDOM.createRoot(document.getElementById('root')).render(<App />)

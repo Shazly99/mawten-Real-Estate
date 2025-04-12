@@ -7,6 +7,7 @@ import './ProjectDetails.scss';
 import Icon from '@constants/icon';
 import GalleryTitle from '@pages/home/GalleryTitle';
 import CustomTitle from '@components/common/CustomTitle';
+import TitleH from '@components/common/TitleH';
 const ProjectDetails = () => {
     const { t } = useTranslation();
 
@@ -69,33 +70,33 @@ const ProjectDetails = () => {
                 <div className="details">
 
                     <Row gutter={[20, 20]} >
-                        <Col xl={6} className='title' >
-                            <h2>تفاصيل المشروع</h2>
+                        <Col xl={24} className='title flex flex-column gap-2' >
+                            <TitleH highlight={'تفاصيل المشروع'} />
+                            <p>مشروع فريد بموقعه في مكة مكرمة ملاصق لوجهة مسار ويبعد عن الحرم المكي الشريف قرابة 3600 متر، تطوره شركة موطن العقارية كبرج سكني بارتفاع 27 طابق على مساحة تبلغ 6,580 متر مربع وبمسطحات بناء حوالي 114 ألف متر مربع في منطقة الرصيفة بمكة المكرمة بإطلالة كاملة على الدائري الثالث وبجوار محطة قطار الحرمين ليشكل معلماً بارزاً للقادمين من مدينة جدة. يضم البرج 950 وحدة سكنية بنماذج ستوديو وغرفة وغرفتين وبمساحات مختلفة تتراوح بين 47 إلى 128 متر مربع بتصاميم عصرية فاخرة بالإضافة إلى ثلاث مستويات من المناطق التجارية في البرج. ويشمل البرج ما يلي</p>
                         </Col>
-                        <Col xl={18} >
+                        <Col xl={24} >
 
                             <div className="project-container">
                                 <Row gutter={[16, 16]}>
                                     <Col lg={8} xs={24} >
                                         <div className="section">
                                             <div className="icon-text">
-                                                <div className="content">
-                                                    <p className="label1">الوحدات السكنية</p>
-                                                    <div className="icon">
-                                                        <Icon.projects />
-                                                        <p className="value">950</p>
+                                                <div className="content flex flex-row gap-3 align-items-center justify-content-center">
+                                                    <p className="label1">عدد الطوابق</p>
+                                                    <div className="icon flex flex-row gap-3 ">
+                                                        <Icon.HotelUnit />
+                                                        <p className="value">27</p>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </Col>
                                     <Col lg={8} xs={24} >
-                                    
                                         <div className="section">
                                             <div className="icon-text">
-                                                <div className="content">
+                                                <div className="content flex flex-row gap-3 align-items-center justify-content-center">
                                                     <p className="label1">المساحة</p>
-                                                    <div className="icon">
+                                                    <div className="icon flex flex-row gap-3 ">
 
                                                         <Icon.size />
                                                         <p className="value">114 ألف</p>
@@ -105,27 +106,24 @@ const ProjectDetails = () => {
                                         </div>
                                     </Col>
                                     <Col lg={8} xs={24} >
-                                    
                                         <div className="section">
                                             <div className="icon-text">
-                                                <div className="content">
-                                                    <p className="label1">عدد الطوابق</p>
-                                                    <div className="icon">
-                                                        <Icon.HotelUnit />
-                                                        <p className="value">27</p>
+                                                <div className="content flex flex-row gap-3 align-items-center justify-content-center">
+                                                    <p className="label1 ">الوحدات السكنية</p>
+                                                    <div className="icon flex flex-row gap-3 ">
+                                                        <Icon.projects />
+                                                        <p className="value">950</p>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </Col>
+
+
                                 </Row>
                             </div>
                         </Col>
                     </Row>
-                </div>
-                <div className="mt-5  video_project">
-                    <img src={img.ProjectsV} className='w-full' alt="" srcset="" />
-                    <p>مشروع فريد بموقعه في مكة مكرمة ملاصق لوجهة مسار ويبعد عن الحرم المكي الشريف قرابة 3600 متر، تطوره شركة موطن العقارية كبرج سكني بارتفاع 27 طابق على مساحة تبلغ 6,580 متر مربع وبمسطحات بناء حوالي 114 ألف متر مربع في منطقة الرصيفة بمكة المكرمة بإطلالة كاملة على الدائري الثالث وبجوار محطة قطار الحرمين ليشكل معلماً بارزاً للقادمين من مدينة جدة. يضم البرج 950 وحدة سكنية بنماذج ستوديو وغرفة وغرفتين وبمساحات مختلفة تتراوح بين 47 إلى 128 متر مربع بتصاميم عصرية فاخرة بالإضافة إلى ثلاث مستويات من المناطق التجارية في البرج. ويشمل البرج ما يلي</p>
                 </div>
                 <div className="details-list">
                     <ul>
@@ -137,16 +135,25 @@ const ProjectDetails = () => {
                     </ul>
                 </div>
 
+                <div className="mt-5  video_project">
+                    <Col xl={24} className='title flex flex-column gap-2 ' >
+                        <div className="flex justify-content-center">
+                            <TitleH highlight={'فيديو توضيحي للمشروع'} />
+                        </div>
+                    </Col>
+                    <img src={img.ProjectsV} className='w-full mt-3' alt="" srcset="" />
+                    <p className='text-center'>مشروع فريد بموقعه في مكة مكرمة ملاصق لوجهة مسار ويبعد عن الحرم المكي الشريف قرابة 3600 متر، تطوره شركة موطن العقارية كبرج سكني بارتفاع 27 طابق على مساحة تبلغ 6,580 متر مربع وبمسطحات بناء حوالي 114 ألف متر مربع في منطقة الرصيفة بمكة المكرمة بإطلالة كاملة على الدائري الثالث وبجوار محطة قطار الحرمين ليشكل معلماً بارزاً للقادمين من مدينة جدة. يضم البرج 950 وحدة سكنية بنماذج ستوديو وغرفة وغرفتين وبمساحات مختلفة تتراوح بين 47 إلى 128 متر مربع بتصاميم عصرية فاخرة بالإضافة إلى ثلاث مستويات من المناطق التجارية في البرج. ويشمل البرج ما يلي</p>
+                </div>
             </div>
-            <GalleryTitle />
-            <div className="app__project_destails mt-0 mb-4">
-
-                <div className=" video_project"> 
-                    <p>وينفرد برج موطن المسار بقربه من محطة قطار الحرمين ما يمنح ساكنيه ميزة الوصول السهل للمحطة خاصة في المواسم المزدحمة، وكذلك سهولة الوصول إلى طريق وجهة مسار المؤدي مباشرة إلى الحرم المكي الشريف والاستفادة من خدمات المترو ومحطة الحافلات الترددية للوصول للحرم المكي في زمن قياسي، إضافة إلى مسارات المشاة والاستمتاع بالخدمات المتوفرة في الطريق.</p>
+            <div className="gallery_">
+                <TitleH highlight={'صور المشروع'} />
+                <div className="mt-4">
+                <GalleryTitle />
                 </div>
             </div>
 
-            
+
+
             <div className="address-section mt-8">
                 <div className='container'>
                     <Row gutter={[16, 16]} align="middle" >

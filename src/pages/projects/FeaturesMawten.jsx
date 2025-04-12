@@ -1,9 +1,7 @@
-import React from "react";
-import "./FeaturesSection.scss"; // Import SCSS styles
-import { Col, Row } from "antd";
 import TitleH from "@components/common/TitleH";
-import StatisticsSection from "./StatisticsMawten";
+import { Col, Row } from "antd";
 import { useTranslation } from "react-i18next";
+import "./FeaturesSection.scss"; // Import SCSS styles
 
 const FeaturesMawten = () => {
     let { t } = useTranslation()
@@ -34,14 +32,14 @@ const FeaturesMawten = () => {
                 {/* Features List */}
                 <div className="features-list">
                     {features.map((feature, index) => (
-                        <Row gutter={[80, 80]} key={feature.id} className="feature-item">
+                        <Row gutter={[80, 80]} key={feature.id} className={`${index % 2==0 ?'feature-item feature_item_left':'feature-item feature_item_right'}`}>
                             {/* Background Number */}
                             <Col xl={4} xs={24} className="flex justify-content-center align-item-center" >
                                 <span className={`feature-number ${feature.highlight ? "bold" : " "}`}>{feature.id}</span>
                             </Col>
 
                             {/* Feature Content */}
-                            <Col xl={20} xs={24} className=""  >
+                            <Col xl={20} xs={24} className="red"  >
                                 <div className="feature-content ">
                                     <h3 className={`feature-title ${feature.highlight ? "bold" : " "}`}>
                                         {feature.title}
@@ -57,7 +55,7 @@ const FeaturesMawten = () => {
                 <div className="mt-5">
                     <hr />
                 </div>
-                <StatisticsSection />
+                {/* <StatisticsSection /> */}
 
 
             </div>

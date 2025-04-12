@@ -6,47 +6,20 @@ import Icon from '@constants/icon'
 import TitleH from '@components/common/TitleH'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
+import HomeProjects from '@pages/home/HomeProjects'
+import SectorHeader from './SectorHeader'
 const Sector = () => {
   let { t } = useTranslation()
 
   return (
     <>
-      <div className="app_sector">
-        <header>
-          <div className="wrapper_master" >
-            <div className="header">
-              <h1>القطاع السكني </h1>
-              <h1>ومتعدد الاستعمال</h1>
-            </div>
-          </div>
-          <img src={img.sector} alt="" />
-        </header>
-        <main>
-          <div className="sector__num">
-            <div className="icons">
-              <Icon.projects />
-              <div className="content">
-                <p> المشاريع</p>
-                <h3>6</h3>
-              </div>
-            </div>
+   <div className="app_sector">
 
-            <div className="icons">
-              <Icon.investment />
-              <div className="content">
-                <p> الاستثمارات</p>
-                <h3>2 مليار</h3>
-              </div>
-            </div>
-          </div>
-          <p>مشروع فريد بموقعه في مكة مكرمة ملاصق لوجهة مسار ويبعد عن الحرم المكي الشريف قرابة 3600 متر، تطوره شركة موطن العقارية كبرج سكني بارتفاع 27 طابق على مساحة تبلغ 6,580 متر مربع وبمسطحات بناء حوالي 114 ألف متر مربع في منطقة الرصيفة بمكة المكرمة بإطلالة كاملة على الدائري الثالث وبجوار محطة قطار الحرمين ليشكل معلماً بارزاً للقادمين من مدينة جدة. ي</p>
-        </main>
+   <SectorHeader />
 
-
-
-      </div>
+   </div>
       <div className="sector_projects">
-        <TitleH title={'مشاريع'} highlight={'القطاع السكني'} />
+        <TitleH title={'الـمشــاريـــع'} highlight={''} />
         <div className="projects">
           <Row gutter={[50,50]} >
             <Col xl={12} md={12} xs={24} sm={24} >

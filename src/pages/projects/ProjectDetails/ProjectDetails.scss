@@ -65,11 +65,54 @@
         transform: rotate(-90deg) !important;
     }
 }
+.gallery_{
 
+    .title-container {
+        justify-content: center;
+        svg {
+            margin-top: -10px;
+            width: 20px;
+            height: 20px;
+        }
+
+        .highlight {
+            color: #181820;
+            font-family: TheSansArabic;
+            font-size: 30px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            text-transform: capitalize;
+        }
+    }
+}
 .app__project_destails {
     .title {
         display: flex;
         align-items: center;
+        p{
+            text-align: justify;
+            font-size: 20px;
+            margin-top: 15px;
+        }
+
+        .title-container {
+            svg {
+                margin-top: -10px;
+                width: 20px;
+                height: 20px;
+            }
+
+            .highlight {
+                color: #181820;
+                font-family: TheSansArabic;
+                font-size: 30px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+                text-transform: capitalize;
+            }
+        }
 
         h2 {
             color: #000;
@@ -92,64 +135,12 @@
         margin-top: 70px;
 
 
-        .project-container {
-            border-radius: 20px;
-            border: 1px solid rgba(0, 0, 0, 0.30);
-            padding: 15px
-        }
-
-        .section {
-            @include flex();
-
-            .icon,
-            .content {
-                @include flex();
-                flex-direction: column;
-            }
-
-            .content .label1 {
-                color: #000;
-                text-align: right;
-                font-family: TheSansArabic;
-                font-size: 16px;
-                font-style: normal;
-                font-weight: 300;
-                line-height: normal;
-                text-transform: capitalize;
-            }
-
-            .icon {
-                display: flex;
-                flex-direction: row;
-                gap: 15px;
-                margin-top: 20px;
-
-                p {
-                    color: #000;
-                    text-align: right;
-                    font-family: TheSansArabic;
-                    font-size: 30px;
-                    font-style: normal;
-                    font-weight: 530;
-                    line-height: normal;
-                    text-transform: capitalize;
-                }
-
-                svg {
-                    width: 35px;
-                    height: 35px;
-                }
-            }
-        }
-
-
     }
 }
 
 .section {
     position: relative;
 
-    /* Add the vertical divider line */
     &::after {
         content: "";
         position: absolute;
@@ -196,12 +187,10 @@
 
     ul {
         list-style-type: none;
-        /* Remove default bullets */
         padding: 10px;
 
         li {
             position: relative;
-            /* For custom bullet positioning */
             padding: 0 25px;
             margin-bottom: 20px;
             color: #000;
@@ -221,22 +210,100 @@
 
             &::before {
                 content: '';
-                /* Unicode for bullet symbol */
                 color: #ff4d4f;
-                /* Red bullet color */
                 position: absolute;
                 right: 0;
                 top: 8px;
                 font-size: 20px;
                 width: 12px;
-                /* Width of the image */
                 height: 12px;
-                /* Height of the image */
                 background-image: url('../../../assets/svg/pointlist.svg');
-                /* Path to your image */
                 background-size: cover;
-                /* Ensure the image fits inside the defined size */
                 background-position: center;
+            }
+        }
+    }
+}
+
+.project-container {
+    background-color: #fdfdfd;
+    padding: 2rem 0;
+
+    .section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        height: 100%;
+
+        .icon-text {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .content {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                gap: 8px;
+
+                .label1 {
+                    font-size: 16px;
+                    color: #727272;
+                    font-weight: 800;
+                    margin: 0;
+                    white-space: nowrap;
+                }
+
+                .icon {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 4px;
+
+                    svg {
+                        width: 30px;
+                        height: 30px;
+                        color: #b91c1c; // نفس لون الأيقونات الأحمر
+                    }
+
+                    .value {
+                        font-size: 24px;
+                        font-weight: 700;
+                        color: #000;
+                        margin: 0;
+                        direction: rtl;
+                    }
+                }
+            }
+        }
+
+        // الخط الفاصل بين الأعمدة
+        &::after {
+            content: "";
+            position: absolute;
+            right: 0;
+            top: 25%;
+            height: 50%;
+            width: 1px;
+            background-color: #000;
+        }
+
+        // نخفي الفاصل عن آخر عنصر
+        &:last-child::after {
+            display: none;
+        }
+    }
+
+    // شاشة الجوال
+    @media (max-width: 768px) {
+        .section {
+            flex-direction: column;
+            padding-bottom: 1.5rem;
+
+            &::after {
+                display: none;
             }
         }
     }

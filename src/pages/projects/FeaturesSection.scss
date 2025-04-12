@@ -48,7 +48,7 @@
                 -webkit-text-stroke-width: 1px;
                 -webkit-text-stroke-color: rgba(0, 0, 0, 0.30);
                 font-family: TheSansArabic;
-                font-size: 180px;
+                font-size: 100px;
                 font-style: normal;
                 font-weight: 100;
                 line-height: 250px; 
@@ -162,5 +162,22 @@
                 }
             }
         }
+    }
+}
+.feature_item_right{
+    .ant-col {
+        display: flex   ;
+        justify-content: flex-end !important;
+        align-items: center;
+    }
+}
+
+.feature_item_left{
+    display: flex;
+    flex-direction: row-reverse;
+    .ant-col {
+        display: flex   ;
+        justify-content: flex-start !important;
+        align-items: center;
     }
 }

@@ -5,6 +5,8 @@ import { Col, Row } from "antd";
 import img from "@constants/img";
 import Marquee from "react-fast-marquee";
 import Icon from "@constants/icon";
+import TitleH from "@components/common/TitleH";
+import { useTranslation } from "react-i18next";
 
 const tabs = [
     { id: 0, label: "القطاع السكني" },
@@ -51,6 +53,7 @@ const projects = [
     },
 ];
 const HomeProjects = () => {
+    let { t } = useTranslation()
     const [activeTab, setActiveTab] = useState(0);
     const [timerKey, setTimerKey] = useState(0); // مفتاح لإعادة تشغيل الـ Timer
 
@@ -130,7 +133,45 @@ const HomeProjects = () => {
             </div>
             {/* قسم المحتوى بناءً على الـ Tab المحددة */}
             <main className="main-content">
-                {activeTab === 0 && (
+                <Row
+                    className="content-wrapper"
+                    initial={{ opacity: 0, y: 50 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8 }}
+                >
+                    <Col xl={12} lg={12} className="wrapper_master"  >
+                        <div className="header">
+                            <h1>القطاع السكني </h1>
+                            <h1>ومتعدد الاستعمال</h1>
+                        </div>
+
+                    </Col>
+                    <Col xl={12} lg={12} className="wrapper_details" >
+                        <p className="description">
+                            مشروع فريد بموقعه في مكة مكرمة ملاصق لوجهة مسار ويبعد عن الحرم المكي الشريف قرابة 3600 متر، تطوره شركة موطن العقارية كبرج سكني بارتفاع 27 طابق على مساحة تبلغ 6,580 متر مربع وبمسطحات بناء حوالي 114 ألف متر مربع في منطقة الرصيفة بمكة المكرمة بإطلالة كاملة على الدائري الثالث وبجوار محطة قطار الحرمين ليشكل معلماً بارزاً للقادمين من مدينة جدة.
+                        </p>
+
+
+                    </Col>
+
+                    <Col span={24}>
+                        <div className="project-slider" dir="ltr" >
+
+
+                            <TitleH title={t('مشاريع')} highlight={t('القــسم')} />
+
+                            <Marquee pauseOnHover={true} speed={50} gradient={false}>
+                                {projects.map((project, index) => (
+                                    <div key={index} className="project-item">
+                                        <img src={project.image} alt={project.title} className="project-image" />
+                                        <div className="project-title">{project.title}</div>
+                                    </div>
+                                ))}
+                            </Marquee>
+                        </div>
+                    </Col>
+                </Row>
+                {/* {activeTab === 0 && (
                     <Row
                         className="content-wrapper"
                         initial={{ opacity: 0, y: 50 }}
@@ -146,17 +187,7 @@ const HomeProjects = () => {
                         </Col>
                         <Col xl={12} lg={12} className="wrapper_details" >
 
-                            <div className="stats-container">
-                                <div className="stat">
-                                    <h2>6</h2>
-                                    <p>المشاريع</p>
-                                </div>
-                                <div className="divider"></div>
-                                <div className="stat">
-                                    <h2>2 مليار</h2>
-                                    <p>الاستثمارات</p>
-                                </div>
-                            </div>
+              
 
                             <p className="description">
                                 مشروع فريد بموقعه في مكة مكرمة ملاصق لوجهة مسار ويبعد عن الحرم المكي الشريف قرابة 3600 متر، تطوره شركة موطن العقارية كبرج سكني بارتفاع 27 طابق على مساحة تبلغ 6,580 متر مربع وبمسطحات بناء حوالي 114 ألف متر مربع في منطقة الرصيفة بمكة المكرمة بإطلالة كاملة على الدائري الثالث وبجوار محطة قطار الحرمين ليشكل معلماً بارزاً للقادمين من مدينة جدة. 
@@ -189,17 +220,7 @@ const HomeProjects = () => {
                         </Col>
                         <Col xl={12} lg={12} className="wrapper_details" >
 
-                            <div className="stats-container">
-                                <div className="stat">
-                                    <h2>3</h2>
-                                    <p>المشاريع</p>
-                                </div>
-                                <div className="divider"></div>
-                                <div className="stat">
-                                    <h2>2 مليار</h2>
-                                    <p>الاستثمارات</p>
-                                </div>
-                            </div>
+                          
 
                             <p className="description">
                                 مشروع فريد بموقعه في مكة مكرمة ملاصق لوجهة مسار ويبعد عن الحرم المكي الشريف قرابة 3600 متر، تطوره شركة موطن العقارية كبرج سكني بارتفاع 27 طابق على مساحة تبلغ 6,580 متر مربع وبمسطحات بناء حوالي 114 ألف متر مربع في منطقة الرصيفة بمكة المكرمة بإطلالة كاملة على الدائري الثالث وبجوار محطة قطار الحرمين ليشكل معلماً بارزاً للقادمين من مدينة جدة. 
@@ -231,17 +252,7 @@ const HomeProjects = () => {
                         </Col>
                         <Col xl={12} lg={12} className="wrapper_details" >
 
-                            <div className="stats-container">
-                                <div className="stat">
-                                    <h2>3</h2>
-                                    <p>المشاريع</p>
-                                </div>
-                                <div className="divider"></div>
-                                <div className="stat">
-                                    <h2>2 مليار</h2>
-                                    <p>الاستثمارات</p>
-                                </div>
-                            </div>
+                            
 
                             <p className="description">
                                 مشروع فريد بموقعه في مكة مكرمة ملاصق لوجهة مسار ويبعد عن الحرم المكي الشريف قرابة 3600 متر، تطوره شركة موطن العقارية كبرج سكني بارتفاع 27 طابق على مساحة تبلغ 6,580 متر مربع وبمسطحات بناء حوالي 114 ألف متر مربع في منطقة الرصيفة بمكة المكرمة بإطلالة كاملة على الدائري الثالث وبجوار محطة قطار الحرمين ليشكل معلماً بارزاً للقادمين من مدينة جدة. 
@@ -274,17 +285,7 @@ const HomeProjects = () => {
                         </Col>
                         <Col xl={12} lg={12} className="wrapper_details" >
 
-                            <div className="stats-container">
-                                <div className="stat">
-                                    <h2>6</h2>
-                                    <p>المشاريع</p>
-                                </div>
-                                <div className="divider"></div>
-                                <div className="stat">
-                                    <h2>2 مليار</h2>
-                                    <p>الاستثمارات</p>
-                                </div>
-                            </div>
+               
 
                             <p className="description">
                                 مشروع فريد بموقعه في مكة مكرمة ملاصق لوجهة مسار ويبعد عن الحرم المكي الشريف قرابة 3600 متر، تطوره شركة موطن العقارية كبرج سكني بارتفاع 27 طابق على مساحة تبلغ 6,580 متر مربع وبمسطحات بناء حوالي 114 ألف متر مربع في منطقة الرصيفة بمكة المكرمة بإطلالة كاملة على الدائري الثالث وبجوار محطة قطار الحرمين ليشكل معلماً بارزاً للقادمين من مدينة جدة. 
@@ -302,7 +303,7 @@ const HomeProjects = () => {
                             </div>
                         </Col>
                     </Row>
-                )}
+                )} */}
             </main>
         </div>
     );

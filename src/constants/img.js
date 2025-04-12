@@ -1,7 +1,8 @@
 import logo from "@assets/images/logo.png";
 import contact from "@assets/images/contact.png";
+import contentLeft from "@assets/images/contentLeft.png";
 import logo_dark from "@assets/images/logo2.png";
-import slider from "@assets/images/slider/slider.png";
+import slider from "@assets/images/Projects/slider.mp4";
 import CompanyOverview from "@assets/images/home/CompanyOverview.png";
 import projectBg from "@assets/images/home/projectBg.png";
 import mawten_bg2 from "@assets/images/home/mawten_bg2.png";
@@ -22,6 +23,16 @@ import Projectscover from "@assets/images/Projects/cover.png";
 import sector from "@assets/images/Projects/sector.png";
 import ProjectsSlider from "@assets/images/Projects/slider.png";
 import share from "@assets/gif/share.gif";
+
+import clients1 from "@assets/images/clients/1.png";
+import clients2 from "@assets/images/clients/2.png";
+import clients3 from "@assets/images/clients/3.png";
+import clients4 from "@assets/images/clients/4.png";
+import clients5 from "@assets/images/clients/5.png";
+import clients6 from "@assets/images/clients/6.png";
+import clients7 from "@assets/images/clients/7.png";
+import clients8 from "@assets/images/clients/8.png";
+import clients9 from "@assets/images/clients/9.png";
 
 import left from "@assets/images/services/left.png";
 import right from "@assets/images/services/right.png";
@@ -98,7 +109,17 @@ const img = {
     share,
     ProjectsV,
     blogsCover1,
-    blog5
+    blog5,
+    clients1,
+    clients2,
+    clients3,
+    clients4,
+    clients5,
+    clients6,
+    clients7,
+    clients8,
+    clients9,
+    contentLeft
 }
 
 export default img;

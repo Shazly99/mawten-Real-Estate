@@ -15,7 +15,7 @@ const NumberCompany = () => {
                 <Row gutter={[32, 32]} align="middle" justify="space-between">
                     {/* Right Section */}
                     <Col xs={24} lg={12} className="image-section flex justify-content-center align-items-center">
-                        <TitleH title={t('mawten')} highlight={t("RealEstate")} />
+                        <TitleH title={t('Projects')}   />
                     </Col>
                     {/* Left Section */}
                     <Col xs={24} lg={12} className="text-section">

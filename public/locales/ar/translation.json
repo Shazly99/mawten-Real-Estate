@@ -9,6 +9,7 @@
   "nav_about": "من نحن",
   "OUR_CLIENTS": "عملاؤنا",
   "nav_contact": "اتصل بنا",
+  "_contact": "تواصل معنا الان",
   "btn_nav": "احصل على عرض",
   "mawten": "موطن",
   "RealEstate": "العقارية",
@@ -20,7 +21,7 @@
   "CompanyProfile": "الملف التعريفي ",
   "Media": "الإعلامي ",
   "Center": " المركز",
-  "RealEstateDeveloper": "المطور العقاري الرائد",
+  "RealEstateDeveloper": "نطــور لينمـو الـوطـن",
   "MultiAsset": "متعدد الأصول في المملكة",
   "history": "تاريخنا ",
   "AboutMawten": "عــن مــوطن",
@@ -47,11 +48,11 @@
   "Executive": "التنفيذية",
   "DirectorsMembers": "اعضاء مجلس ", 
   "form": {
-    "name": "اسمك",
-    "phone": "رقم الهاتف",
+    "name": "الاسم بالكامل *",
+    "phone": "رقم الجوال",
     "email": "البريد الإلكتروني",
-    "company": "اسم الشركة",
-    "message": "رسالتك",
+    "company": "اسم الجهة ( اختياري )",
+    "message": "الرسالة",
     "submit": "إرسال"
   },
   "validation": {

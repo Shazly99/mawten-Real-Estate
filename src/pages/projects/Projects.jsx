@@ -49,7 +49,7 @@ const Projects = () => {
 
                     <Col xl={13} lg={13} md={13} sm={24} xs={24}>
                         <div className="projects_images overflow-hidden" dir="ltr">
-                            <img src={img.ProjectsBg} className="w-full" alt="" />
+                            <img src={img.ProjectsBg} className="w-full projects_images_o_0" alt="" />
                             <div className="overlay" dir="ltr">
                                 <div className="overlay_img">
                                     <img src={img.Projects4} className="w-full" alt="" />
@@ -72,7 +72,7 @@ const Projects = () => {
             </div>
             <ImportantProjects />
             <ProjectsDep />
-            <OurProjects />
+            {/* <OurProjects /> */}
             <FeaturesMawten />
         </div>
     )
