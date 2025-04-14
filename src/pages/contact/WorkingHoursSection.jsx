@@ -47,9 +47,9 @@ const WorkingHoursSection = () => {
                     <div className="flex justify-content-between aline-items-center  w-full">
 
                         <span className="email-title flex justify-content-center align-items-center">اتصل بنا</span>
-                        <div className="contact">
-                            <Button className="phone-box" dir="ltr" >(05)52213324</Button>
-                        </div>
+                        <a href="tel:+966920000598" className="contact">
+                            <Button className="phone-box" dir="ltr" >+966 9200 00598</Button>
+                        </a> 
                     </div>
                 </div>
                 {contactData.map((item, idx) => (
@@ -57,7 +57,7 @@ const WorkingHoursSection = () => {
                         <span className="red-dot" />
                         <div className="email-info">
                             <span className="label_">{item.label}</span>
-                            <span className="email">{item.email}</span>
+                            <a className="email" href={`mailto:${item.email}`} >{item.email}</a> 
                         </div>
                     </div>
                 ))}

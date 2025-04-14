@@ -37,7 +37,7 @@ const Contact = () => {
     };
     return (
         <div className="app_contact">
-            <OverlayHeader img={img.contact} header={t('nav_contact')} breadcrumbItems={breadcrumbItems} />
+            <OverlayHeader img={img.aboutCover} header={t('nav_contact')} breadcrumbItems={breadcrumbItems} />
 
             <div className="contact-wrapper">
                 <header>

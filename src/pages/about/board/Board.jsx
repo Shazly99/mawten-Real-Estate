@@ -27,7 +27,7 @@ const Board = () => {
     }, []);
 
     const members2 = [
-        { name: 'حسين حسن مختار', position: 'رئيس تطوير الأعمال', img: img.emp6 },          // رقم 6
+        { name: 'حسين المختار', position: 'رئيس تطوير الأعمال', img: img.emp6 },          // رقم 6
         { name: 'إبراهيم بن عبد العزيز المغيصيب', position: 'رئيس المالية', img: img.emp4 }, // رقم 4
         { name: 'د. رائد بن منصور الدخيل', position: 'رئيس التنفيذي', img: img.emp5 },       // رقم 5
 

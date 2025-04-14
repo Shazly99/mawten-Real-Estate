@@ -24,70 +24,50 @@ const Footer = () => {
       <footer className="footer">
         <div className="container">
           <Row gutter={[32, 32]}>
-            <Col lg={5} xl={5} xxl={5} xs={24} sm={24} md={12} className=" footer__logo">
+            <Col lg={6} xl={6} xxl={6} xs={24} sm={24} md={12} className=" footer__logo">
               <img src={img.logo_dark} alt="موطن" className="footer__logo-img" />
-              <p>{t("company")}</p>
-              <div className="mt-4 social_title">
-                <strong>{t("follow_us")}</strong>
-              </div>
+              <Title level={5}>{t("company")}</Title>
+              <Title level={5} className="mb-4">{t("location")}</Title>
 
-              <div className="footer__social">
-                <a href="#"><XOutlined /></a>
-                <a href="#"><FacebookFilled /></a>
-                <a href="#"><InstagramFilled /></a>
-                <a href="#"><LinkedinFilled /></a>
+            </Col>
+
+
+            <Col lg={5} xs={24} sm={12} md={8}   className="mt-5">
+              <div className="app_link  ">
+                <Link to="/"> <Title level={5}>{t("home")}</Title> </Link>
+                <Link to="/about"> <Title level={5}>{t("about_company")}</Title> </Link>
+                <Link to="/projects"> <Title level={5}>{t("project")}</Title> </Link>
+                <Link to="/about"> <Title level={5}>{t("investors")}</Title> </Link>
+                <Link to="/about"> <Title level={5}>{t("التوظيف")}</Title> </Link>
               </div>
             </Col>
 
-            <Col lg={3} xs={24} sm={12} md={8} className="mt-5">
-              <Title level={4}>{t("quick_links")}</Title>
-              <div className="app_link">
-                <Link to="/">{t("home")}</Link>
-                <Link to="/investors">{t("investors")}</Link>
-                <Link to="/services">{t("services")}</Link>
-                <Link to="/projects">{t("projects")}</Link>
-                <Link to="/privacy-policy">{t("privacy_policy")}</Link>
-                <Link to="/terms">{t("terms_conditions")}</Link>
+            <Col lg={5} xs={24} sm={12} md={8}   className="mt-5">
+              <div className="app_link  ">
+                <Link to="/"> <Title level={5}>{t("الاخبار")}</Title> </Link>
+                <Link to="/blogs"> <Title level={5}>{t("المدونة")}</Title> </Link>
+                <Link to="/projects"> <Title level={5}>{t("nav_contact")}</Title> </Link>
+                <Link to="/"> <Title level={5}>{t("سياسة الخصوصية")}</Title> </Link>
+                <Link to="/"> <Title level={5}>{t("الشروط والاحكام")}</Title> </Link>
               </div>
             </Col>
+            <Col lg={2}  className="mt-5"></Col>
+            <Col lg={6} xs={24} sm={12} md={8}  className="mt-5">
+              <div className="app_link gap-0"> 
+                <strong  className="flex gap-1" ><PhoneOutlined /> <a dir="ltr" className="mt-1" href="tel:+966920000598">{t("phone")}</a></strong>
+                <strong className=" mail flex flex-row gap-2 align-items-center "><MailOutlined />  <a href="mailto:Info@mawten.com.sa" target="_blank" className="mt-2" >{t("email")}</a></strong>
 
-            <Col lg={3} xs={24} sm={12} md={8} className="mt-5 ">
-              <Title level={4}>{t("about_company")}</Title>
-              <div className="app_link">
-                <Link to="/about">{t("about_company")}</Link>
-                <Link to="/about/history">{t("company_history")}</Link>
-                <Link to="/about/board">{t("board_of_directors")}</Link>
-                <Link to="/executive">{t("executive_management")}</Link>
-              </div>
-            </Col>
+                <span className="mt-3" >الموقع تحت الإطلاق التجريبي</span>
+                <div className="mt-5 social_title">
+                  <strong>{t("follow_us")}</strong>
+                </div>
 
-            <Col lg={4} xs={24} sm={12} md={8} className="mt-5">
-              <Title level={4}>{t("projects")}</Title>
-              <div className="app_link">
-                <Link to="/residential">{t("residential_sector")}</Link>
-                <Link to="/industrial">{t("industrial_sector")}</Link>
-                <Link to="/board">{t("board_of_directors")}</Link>
-                <Link to="/care">{t("care_sector")}</Link>
-              </div>
-            </Col>
-
-            <Col lg={4} xs={24} sm={12} md={8} className="mt-5">
-              <Title level={4}>{t("news")}</Title>
-              <div className="app_link">
-                <Link to="/news">{t("news")}</Link>
-                <Link to="/gallery">{t("gallery")}</Link>
-                <Link to="/videos">{t("videos")}</Link>
-                <Link to="/interactive-visits">{t("interactive_visits")}</Link>
-              </div>
-            </Col>
-
-            <Col lg={5} xs={24} sm={12} md={8} className="mt-5">
-              <Title level={4}>{t("contact_us")}</Title>
-              <div className="app_link gap-1">
-
-                <p><PhoneOutlined /> {t("phone")}</p>
-                <p className="flex flex-row gap-2 align-items-center "><MailOutlined /> <a href="mailto:Info@mawten.com.sa" target="_blank" className="mt-2" >{t("email")}</a></p>
-                <p className="mt-2 "><EnvironmentOutlined /> {t("address_footer")}</p>
+                <div className="footer__social mt-2">
+                  <a href="#"><XOutlined /></a>
+                  <a href="#"><FacebookFilled /></a>
+                  <a href="#"><InstagramFilled /></a>
+                  <a href="#"><LinkedinFilled /></a>
+                </div>
               </div>
             </Col>
           </Row>

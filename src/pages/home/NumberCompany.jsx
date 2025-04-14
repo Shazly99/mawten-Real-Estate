@@ -10,7 +10,7 @@ const NumberCompany = () => {
     let { t } = useTranslation()
     return (
         <div>
-            <img src={img.mawten_bg2} alt="mawten bg" className="w-full" />
+            <img src={img.mawten_bg2} alt="mawten bg" className="w-full mt-5" />
 
             <div className="dnumber-company container_main_85 mt_main">
                 <Row gutter={[32, 32]} align="middle" justify="space-between">

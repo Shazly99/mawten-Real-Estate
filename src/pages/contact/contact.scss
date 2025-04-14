@@ -300,7 +300,7 @@
         height: 46px;
         border-radius: 55px;
         border-width: 1px;
-        border: 1px solid rgba(166, 21, 23, 1);
+        // border: 1px solid rgba(166, 21, 23, 1);
 
         .time {
             font-weight: bold;
@@ -366,13 +366,15 @@
                 justify-content: space-between;
 
                 .email {
-                    font-weight: bold;
                     direction: ltr;
+                    color: #181820;
                 }
-
+                
                 .label_ {
                     font-size: 0.9rem;
+                    font-weight: bold;
                     color: #444;
+                    
                 }
             }
         }
