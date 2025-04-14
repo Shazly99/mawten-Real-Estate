@@ -12,6 +12,8 @@ const partners = [
     { name: 'وزارة الاتصالات وتقنية المعلومات', logo: img.clients7 },
     { name: 'تقدير', logo: img.clients8 },
     { name: 'جامعة الملك خالد', logo: img.clients9 },
+    { name: 'جامعة الملك خالد', logo: img.clients10 },
+    { name: 'جامعة الملك خالد', logo: img.clients11},
 ];
 
 const SuccessPartnersSection = () => {

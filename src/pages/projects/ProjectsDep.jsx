@@ -1,44 +1,17 @@
 import CustomButton from '@components/common/CustomButton';
 import TitleH from '@components/common/TitleH';
-import Icon from '@constants/icon';
-import img from '@constants/img';
 import { Button, Col, Row } from 'antd';
-import axios from 'axios';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 
-const ProjectsDep = () => {
+const ProjectsDep = ({ tabItems }) => {
     const [activeTab, setActiveTab] = useState('1');
-    const [tabItems, setTabItems] = useState([]);
     const { t } = useTranslation();
-
-    useEffect(() => {
-        axios.get(`https://mawtan.rightclicksa.com/api/home`)
-            .then(response => {
-                const sectors = response.data?.data?.sectors?.data || [];
-
-                const formatted = sectors.map((sector, index) => ({
-                    key: String(sector.id),
-                    label: sector.title?.trim() || `قطاع ${index + 1}`,
-                    title: sector.title?.trim() || '',
-                    description: sector.description?.trim() || '',
-                    investment: sector.investments ? `${sector.investments} مليون` : 'غير متوفر',
-                    projectsCount: sector.projects?.length?.toString() || '0',
-                    image1: img.Projects1, // يمكن تخصيص الصورة لاحقاً حسب البيانات
-                    image2: img.Projects2,
-                }));
-
-                setTabItems(formatted);
-            })
-            .catch(err => {
-                console.error('فشل جلب بيانات القطاعات:', err);
-            });
-    }, []);
 
     return (
         <div className="projects-container">
-            <TitleH title={'أقسام'} highlight={'المشاريع'} />
+            <TitleH title={''} highlight={'القطــاعــات'} />
             <div className="flex justify-content-center align-items-center">
                 <div className="custom-tab-buttons">
                     {tabItems.map(tab => (
@@ -48,7 +21,7 @@ const ProjectsDep = () => {
                             onClick={() => setActiveTab(tab.key)}
                             shape='round'
                         >
-                            {tab.label}
+                            {tab.label + ' ' + tab.label2}
                         </Button>
                     ))}
                 </div>
@@ -59,7 +32,7 @@ const ProjectsDep = () => {
                     <ProjectDetails
                         key={tab.key}
                         sectorId={tab.key}
-                        title={tab.title}
+                        title={tab.title + ' ' + tab.label2}
                         description={tab.description}
                         investment={tab.investment}
                         projectsCount={tab.projectsCount}
@@ -82,7 +55,7 @@ const ProjectDetails = ({ title, description, investment, projectsCount, image1,
                     <h3 className="project-title">{title}</h3>
                     <p className="project-description">{description}</p>
                     <Row gutter={[16, 16]} className="project-stats mt-5">
-             {/*            <Col span={12}>
+                        {/*            <Col span={12}>
                             <div className="stat-item flex gap-4">
                                 <Icon.projects />
                                 <div className="flex flex-column align-items-center gap-2">

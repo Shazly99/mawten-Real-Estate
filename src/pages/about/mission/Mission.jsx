@@ -49,7 +49,7 @@ const Mission = () => {
                     <OverlayHeader img={img.aboutCover} header={t('AboutMawten')} breadcrumbItems={breadcrumbItems} />
 
                     <header className="flex justify-center align-items-center">
-                        <TitleH title={t('history')} highlight={t('mawten')} />
+                        <TitleH title={t('history')} highlight={t('')} />
                         <p>
                             منذ العام 2007م تمكنت موطن العقارية من بناء سجل حافل بالإنجازات وامدت السوق العقارية
                             بمشاريع نوعية مكنتها أن تصبح واحدة من كبرى شركات التطوير العقاري في المملكة العربية السعودية

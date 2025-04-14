@@ -1,123 +1,74 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import "./homeProjects.scss";
 import { Col, Row } from "antd";
-import img from "@constants/img";
 import Marquee from "react-fast-marquee";
 import Icon from "@constants/icon";
 import TitleH from "@components/common/TitleH";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
-const tabs = [
-    { id: 0, label: "القطاع السكني" },
-    { id: 1, label: "قطاع الضيافة" },
-    { id: 2, label: "القطاع الصناعي واللوجستي" },
-    { id: 3, label: "القطاع التجاري" },
-];
-const projects = [
-    {
-        image: img.Projects1,
-        title: "برج موطن تاورز الرياض",
-    },
-    {
-        image: img.Projects2,
-        title: "هيلتون جاردن ان الرياض المركز المالي",
-    },
-    {
-        image: img.Projects3,
-        title: "مجمع توق الدار السكني",
-    },
-    {
-        image: img.Projects1,
-        title: "برج موطن تاورز الرياض",
-    },
-    {
-        image: img.Projects2,
-        title: "هيلتون جاردن ان الرياض المركز المالي",
-    },
-    {
-        image: img.Projects3,
-        title: "مجمع توق الدار السكني",
-    },
-    {
-        image: img.Projects1,
-        title: "برج موطن تاورز الرياض",
-    },
-    {
-        image: img.Projects2,
-        title: "هيلتون جاردن ان الرياض المركز المالي",
-    },
-    {
-        image: img.Projects3,
-        title: "مجمع توق الدار السكني",
-    },
-];
-const HomeProjects = () => {
-    let { t } = useTranslation()
+const HomeProjects = ({ data }) => {
+    const { t } = useTranslation();
     const [activeTab, setActiveTab] = useState(0);
-    const [timerKey, setTimerKey] = useState(0); // مفتاح لإعادة تشغيل الـ Timer
-
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setActiveTab((prevTab) => (prevTab + 1) % tabs.length);
-        }, 5000); // تغيير التبويب كل 5 ثوانٍ
-
-        return () => clearInterval(interval);
-    }, []);
+    const [timerKey, setTimerKey] = useState(0);
+    const tabRef = useRef(0); // ❗️ لحفظ قيمة الـ tab الحالي خارج الـ re-render
 
     const nextTab = () => {
-        setActiveTab((prevTab) => {
-            const newTab = (prevTab + 1) % tabs.length;
-            setTimerKey(newTab); // تغيير المفتاح عند تغيير التبويب
-            return newTab;
-        });
+        tabRef.current = (tabRef.current + 1) % data.length;
+        setActiveTab(tabRef.current);
+        setTimerKey(Date.now()); // ❗️إعادة تشغيل الانيميشن
     };
 
     const prevTab = () => {
-        setActiveTab((prevTab) => {
-            const newTab = (prevTab - 1 + tabs.length) % tabs.length;
-            setTimerKey(newTab); // تغيير المفتاح عند تغيير التبويب
-            return newTab;
-        });
+        tabRef.current = (tabRef.current - 1 + data.length) % data.length;
+        setActiveTab(tabRef.current);
+        setTimerKey(Date.now());
     };
 
     useEffect(() => {
-        const interval = setInterval(nextTab, 5000); // تغيير التبويب كل 5 ثوانٍ
+        const interval = setInterval(() => {
+            nextTab();
+        }, 5000);
         return () => clearInterval(interval);
-    }, []);
+    }, [data]); // ❗️ نضيف data علشان نضمن إنها موجودة
+
     return (
         <div className="app_projects">
-
             <div className="tabs tabs_web_page ">
-                {tabs.map((tab, index) => (
-                    <div key={tab.id} className={`tab ${activeTab === index ? "active" : ""}`}>
-                        <span className="active_label">{tab.label}</span>
+                {data.map((tab, index) => (
+                    <div
+                        key={index}
+                        className={`tab ${activeTab === index ? "active" : ""}`}
+                    >
+                        <span className="active_label">{tab.title}</span>
                         <div className="line-container">
-                            <div className="base-line"></div> {/* الخط الرمادي */}
+                            <div className="base-line"></div>
                             {activeTab === index && (
                                 <motion.div
                                     className="active-line"
-                                    initial={{ height: "0%", top: "0%" }} // يبدأ من الأعلى
-                                    animate={{ height: "100%" }} // يتحرك للأسفل تدريجيًا
-                                    transition={{ duration: 5 }} // يستغرق 5 ثوانٍ لإكمال الحركة
+                                    initial={{ height: "0%", top: "0%" }}
+                                    animate={{ height: "100%" }}
+                                    transition={{ duration: 5 }}
                                 />
                             )}
                         </div>
                     </div>
                 ))}
             </div>
+
             <div className="tabs_small_page">
-                <div className="cursor-pointer  prevTab" onClick={prevTab}>
+                <div className="cursor-pointer prevTab" onClick={prevTab}>
                     <Icon.right />
                 </div>
 
                 <div className="slider-container">
                     <div className="tab_small active">
-                        <span className="active_label">{tabs[activeTab].label}</span>
+                        <span className="active_label">{data[activeTab]?.title}</span>
                         <div className="progress-bar-container">
-                            <div className="base-line"></div> {/* الخط الرمادي الثابت */}
+                            <div className="base-line"></div>
                             <motion.div
-                                key={timerKey} // هذا المفتاح يجبر React على إعادة تشغيل الحركة
+                                key={timerKey}
                                 className="progress-bar"
                                 initial={{ width: "0%" }}
                                 animate={{ width: "100%" }}
@@ -131,179 +82,41 @@ const HomeProjects = () => {
                     <Icon.left />
                 </div>
             </div>
-            {/* قسم المحتوى بناءً على الـ Tab المحددة */}
+
             <main className="main-content">
-                <Row
-                    className="content-wrapper"
-                    initial={{ opacity: 0, y: 50 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8 }}
-                >
-                    <Col xl={12} lg={12} className="wrapper_master"  >
+                <Row className="content-wrapper">
+                    <Col xl={12} lg={12} className="wrapper_master">
                         <div className="header">
-                            <h1>القطاع السكني </h1>
-                            <h1>ومتعدد الاستعمال</h1>
+                            <h1>{data[activeTab]?.title}</h1>
+                            <h1>{data[activeTab]?.sub_title}</h1>
                         </div>
-
                     </Col>
-                    <Col xl={12} lg={12} className="wrapper_details" >
-                        <p className="description">
-                            مشروع فريد بموقعه في مكة مكرمة ملاصق لوجهة مسار ويبعد عن الحرم المكي الشريف قرابة 3600 متر، تطوره شركة موطن العقارية كبرج سكني بارتفاع 27 طابق على مساحة تبلغ 6,580 متر مربع وبمسطحات بناء حوالي 114 ألف متر مربع في منطقة الرصيفة بمكة المكرمة بإطلالة كاملة على الدائري الثالث وبجوار محطة قطار الحرمين ليشكل معلماً بارزاً للقادمين من مدينة جدة.
-                        </p>
 
-
+                    <Col xl={12} lg={12} className="wrapper_details">
+                        <p className="description">{data[activeTab]?.description}</p>
                     </Col>
 
                     <Col span={24}>
-                        <div className="project-slider" dir="ltr" >
-
-
-                            <TitleH title={t('مشاريع')} highlight={t('القــسم')} />
-
+                        <div className="project-slider" dir="ltr">
+                            {
+                                data[activeTab]?.projects?.length > 0 &&
+                                <TitleH title={t("مشاريع")} highlight={t("")} />
+                            }
                             <Marquee pauseOnHover={true} speed={50} gradient={false}>
-                                {projects.map((project, index) => (
-                                    <div key={index} className="project-item">
-                                        <img src={project.image} alt={project.title} className="project-image" />
+                                {data[activeTab]?.projects?.map((project, index) => (
+                                    <Link to={`/project/${project.id}`} key={index} className="project-item">
+                                        <img
+                                            src={project.image}
+                                            alt={project.title}
+                                            className="project-image"
+                                        />
                                         <div className="project-title">{project.title}</div>
-                                    </div>
+                                    </Link>
                                 ))}
                             </Marquee>
                         </div>
                     </Col>
                 </Row>
-                {/* {activeTab === 0 && (
-                    <Row
-                        className="content-wrapper"
-                        initial={{ opacity: 0, y: 50 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8 }}
-                    >
-                        <Col xl={12} lg={12} className="wrapper_master"  >
-                            <div className="header">
-                                <h1>القطاع السكني </h1>
-                                <h1>ومتعدد الاستعمال</h1>
-                            </div>
-                            <img src={img.map} alt=""  />
-                        </Col>
-                        <Col xl={12} lg={12} className="wrapper_details" >
-
-              
-
-                            <p className="description">
-                                مشروع فريد بموقعه في مكة مكرمة ملاصق لوجهة مسار ويبعد عن الحرم المكي الشريف قرابة 3600 متر، تطوره شركة موطن العقارية كبرج سكني بارتفاع 27 طابق على مساحة تبلغ 6,580 متر مربع وبمسطحات بناء حوالي 114 ألف متر مربع في منطقة الرصيفة بمكة المكرمة بإطلالة كاملة على الدائري الثالث وبجوار محطة قطار الحرمين ليشكل معلماً بارزاً للقادمين من مدينة جدة. 
-                            </p>
-
-                                <div className="project-slider" dir="ltr" >
-                                    <Marquee pauseOnHover={true} speed={50} gradient={false}>
-                                        {projects.map((project, index) => (
-                                            <div key={index} className="project-item">
-                                                <img src={project.image} alt={project.title} className="project-image" />
-                                                <div className="project-title">{project.title}</div>
-                                            </div>
-                                        ))}
-                                    </Marquee>
-                                </div>
-                        </Col>
-                    </Row>
-                )}
-
-                {activeTab === 1 && (
-                    <Row
-                        className="content-wrapper"
-                    >
-                        <Col xl={12} lg={12} className="wrapper_master"  >
-                            <div className="header">
-                                <h1>قطاع الضيافة </h1>
-                                <h1>ومتعدد الاستخدام</h1>
-                            </div>
-                            <img src={img.map} alt=""  />
-                        </Col>
-                        <Col xl={12} lg={12} className="wrapper_details" >
-
-                          
-
-                            <p className="description">
-                                مشروع فريد بموقعه في مكة مكرمة ملاصق لوجهة مسار ويبعد عن الحرم المكي الشريف قرابة 3600 متر، تطوره شركة موطن العقارية كبرج سكني بارتفاع 27 طابق على مساحة تبلغ 6,580 متر مربع وبمسطحات بناء حوالي 114 ألف متر مربع في منطقة الرصيفة بمكة المكرمة بإطلالة كاملة على الدائري الثالث وبجوار محطة قطار الحرمين ليشكل معلماً بارزاً للقادمين من مدينة جدة. 
-                            </p>
-
-                            <div className="project-slider" dir="ltr" >
-                                <Marquee pauseOnHover={true} speed={50} gradient={false}>
-                                    {projects.map((project, index) => (
-                                        <div key={index} className="project-item">
-                                            <img src={project.image} alt={project.title} className="project-image" />
-                                            <div className="project-title">{project.title}</div>
-                                        </div>
-                                    ))}
-                                </Marquee>
-                            </div>
-                        </Col>
-                    </Row>
-                )}
-
-                {activeTab === 3 && (
-                    <Row
-                        className="content-wrapper"
-                    >
-                        <Col xl={12} lg={12} className="wrapper_master"  >
-                            <div className="header">
-                                <h1>قطاع التجاري </h1>
-                            </div>
-                            <img src={img.map} alt=""  />
-                        </Col>
-                        <Col xl={12} lg={12} className="wrapper_details" >
-
-                            
-
-                            <p className="description">
-                                مشروع فريد بموقعه في مكة مكرمة ملاصق لوجهة مسار ويبعد عن الحرم المكي الشريف قرابة 3600 متر، تطوره شركة موطن العقارية كبرج سكني بارتفاع 27 طابق على مساحة تبلغ 6,580 متر مربع وبمسطحات بناء حوالي 114 ألف متر مربع في منطقة الرصيفة بمكة المكرمة بإطلالة كاملة على الدائري الثالث وبجوار محطة قطار الحرمين ليشكل معلماً بارزاً للقادمين من مدينة جدة. 
-                            </p>
-
-                            <div className="project-slider" dir="ltr" >
-                                <Marquee pauseOnHover={true} speed={50} gradient={false}>
-                                    {projects.map((project, index) => (
-                                        <div key={index} className="project-item">
-                                            <img src={project.image} alt={project.title} className="project-image" />
-                                            <div className="project-title">{project.title}</div>
-                                        </div>
-                                    ))}
-                                </Marquee>
-                            </div>
-                        </Col>
-                    </Row>
-                )}
-
-                {activeTab === 2 && (
-                    <Row
-                        className="content-wrapper"
-                    >
-                        <Col xl={12} lg={12} className="wrapper_master"  >
-                            <div className="header">
-                                <h1>قطاع الصناعي </h1>
-                                <h1>و القاطع اللوجستي</h1>
-                            </div>
-                            <img src={img.map} alt=""  />
-                        </Col>
-                        <Col xl={12} lg={12} className="wrapper_details" >
-
-               
-
-                            <p className="description">
-                                مشروع فريد بموقعه في مكة مكرمة ملاصق لوجهة مسار ويبعد عن الحرم المكي الشريف قرابة 3600 متر، تطوره شركة موطن العقارية كبرج سكني بارتفاع 27 طابق على مساحة تبلغ 6,580 متر مربع وبمسطحات بناء حوالي 114 ألف متر مربع في منطقة الرصيفة بمكة المكرمة بإطلالة كاملة على الدائري الثالث وبجوار محطة قطار الحرمين ليشكل معلماً بارزاً للقادمين من مدينة جدة. 
-                            </p>
-
-                            <div className="project-slider" dir="ltr" >
-                                <Marquee pauseOnHover={true} speed={50} gradient={false}>
-                                    {projects.map((project, index) => (
-                                        <div key={index} className="project-item">
-                                            <img src={project.image} alt={project.title} className="project-image" />
-                                            <div className="project-title">{project.title}</div>
-                                        </div>
-                                    ))}
-                                </Marquee>
-                            </div>
-                        </Col>
-                    </Row>
-                )} */}
             </main>
         </div>
     );

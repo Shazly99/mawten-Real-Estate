@@ -1,29 +1,44 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import OverlayHeader from '@components/common/OverlayHeader';
-import img from '@constants/img'; 
-import './blogs.scss'
+import img from '@constants/img';
+import axios from 'axios';
+import { useParams } from 'react-router-dom';
+import './blogs.scss';
+
 const BlogDetails = () => {
+  const { id } = useParams(); // assuming route is like /blogs/:id
+  const [blog, setBlog] = useState(null);
+
+  useEffect(() => {
+    axios.get(`https://mawtan.rightclicksa.com/api/home/blogs/${id}`)
+      .then(res => {
+        setBlog(res.data.data);
+      })
+      .catch(err => {
+        console.error('Error loading blog details:', err);
+      });
+  }, [id]);
+
+  if (!blog) return <div className="loading">...جاري التحميل</div>;
+
   return (
     <div>
-      <OverlayHeader img={img.blogsCover1} />
-      
-      {/* Content below OverlayHeader */}
-      <div className="blog-details-content">
-        <h1 className="blog-title">  "موطن العقارية" تطلق مشروع برج متعدد الاستخدامات في مكة المكرمة باستثمار يتجاوز 827 مليون ريال
-        </h1>
-        <div className="blog-meta">
-          <span className="date" dir='rtl' >2 ابريل , 2024</span>
-        </div>
-        <div className="blog-text">
-          <p>
-          شارفت شركة "موطن العقارية" على استكمال تطوير مشروع المصانع الجاهزة الأحدث في سلسلة مشاريعها العقارية الصناعية الواقع ضمن مدينة البوابة الصناعية بالعاصمة الرياض، والذي يتضمن تطوير 56 مصنعاً جاهزاً على أرض مساحتها 53 ألف متر مربع تستهدف دعم المنشآت الصغيرة والمتوسطة بمساحات بناء تتراوح بين 400 إلى 500 متر مربع تم تخصيصها للصناعات الخفيفة ومشاريع رواد الأعمال المدعومة من وزارة الصناعة وصندوق التنمية الصناعية، وفق أعلى المعايير المطابقة لمواصفات الهيئة السعودية للمدن الصناعية ومناطق التقنية "مدن". وتشهد الإنشاءات تقدماً ملحوظاً وتتسارع الأعمال وفق الجدول الزمني المحدد للمشروع، حيث اكتملت الأعمال بنسبة 85%، وتم بحمد الله انجاز وتأجير المرحلة الأولى والتي تتضمن 24 مصنعاً، ويتوقع انجاز المرحلة الثانية التي تضم 32 مصنعاً واكتمال المشروع في منتصف شهر أغسطس 2024م بمشيئة الله تعالى. ويحتوي كل مصنع على صالة للإنتاج مع ميزانين للمكاتب ومواقف للسيارات وأماكن للتخزين مع جميع الخدمات اللازمة من كهرباء ومياه، وأنظمة السلامة، والحريق، وغيرها، ويقع ضمن مخطط مدينة البوابة الصناعية التي تتميز ببنية تحتية شاملة وخدمات ومرافق متكاملة، وهو ما يمثل إضافة نوعية للمستثمرين الصناعيين تساعدهم في دعم وتسريع استثماراتهم من خلال اختصار الوقت والتكاليف اللازمة لبدء نشاطهم التجاري ضمن بيئة صناعية متكاملة، وعدم الحاجة للدخول في عملية بناء وتطوير مصانع تستغرق وقتاً طويلاً وتتطلب جهداً كبيراً وأموالاً طائلة. وتعتبر شركة "موطن العقارية" رائدة في تطوير مشاريع العقارات الصناعية واللوجستية التي تسهم في دعم القطاع الصناعي واللوجستي، حيث خاضت تجارب ناجحة تمثلت في تطوير مشروع مدينة البوبة الصناعية بمدينة الرياض والتي تصنف أكبر مدينة صناعية في المنطقة يُطورها القطاع الخاص في الشرق الأوسط على مساحة 6,5 مليون متر مربع وباستثمارات بلغت 1,3 مليار ريال، بالإضافة إلى نجاحها في إنشاء 72 مصنعاً جاهزاً في مدينة البوابة الصناعية بالرياض وفق أعلى المواصفات المطابقة لهيئة "مدن" وتأجيرها بالكامل في غضون فترة قصيرة جداً، إضافة إلى مشاريع إسكان القوى العاملة في الرياض ومشاريع للخدمات اللوجستية في مدينة جدة.          </p>
-          {/* Add the rest of the content here */}
-        </div>
-        <div className="mt-5">
+      <OverlayHeader img={blog.image} />
 
-      <hr />
+      <div className="blog-details-content">
+        <h1 className="blog-title">{blog.title}</h1>
+        <div className="blog-meta">
+          <span className="date" dir='rtl'>
+            {new Date(blog.date).toLocaleDateString('ar-EG', { year: 'numeric', month: 'long', day: 'numeric' })}
+          </span>
         </div>
-      </div>
+
+        <div className="blog-text" dangerouslySetInnerHTML={{ __html: blog.description }} />
+
+        <div className="mt-5">
+          <hr />
+        </div>
+      </div> 
     </div>
   );
 };

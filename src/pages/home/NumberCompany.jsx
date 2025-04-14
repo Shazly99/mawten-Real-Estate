@@ -4,6 +4,7 @@ import { Row, Col, Button } from "antd";
 import CustomButton from '@components/common/CustomButton';
 import TitleH from '@components/common/TitleH';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 
 const NumberCompany = () => {
     let { t } = useTranslation()
@@ -15,7 +16,7 @@ const NumberCompany = () => {
                 <Row gutter={[32, 32]} align="middle" justify="space-between">
                     {/* Right Section */}
                     <Col xs={24} lg={12} className="image-section flex justify-content-center align-items-center">
-                        <TitleH title={t('Projects')}   />
+                        <TitleH title={t('Projects')} />
                     </Col>
                     {/* Left Section */}
                     <Col xs={24} lg={12} className="text-section">
@@ -23,7 +24,9 @@ const NumberCompany = () => {
                             الريادة في صناعة الحلول العقارية المبتكرة
                         </h2>
                         <p className="description mb-6">  اكتشف مشاريع موطن العقارية النوعية، حيث العقارات السكنية، والتجارية، والصناعية واللوجستية، والضيافة التي تنفرد بنوعيتها وموقعها الاستراتيجية وجودتها العالية في التصميم والتنفيذ لتلبى احتياجات وتطلعات العملاء المستهدفين وتثري السوق العقارية في المملكة العربية السعودية.                        </p>
-                        <CustomButton />
+                        <Link to="/projects">
+                            <CustomButton />
+                        </Link>
                     </Col>
                 </Row>
             </div>
@@ -32,11 +35,12 @@ const NumberCompany = () => {
             <div className="statistics-section">
                 <Row gutter={[32, 32]} justify="center">
                     <Col xs={12} sm={12} md={6} className="stat-item">
-                        <h3 >+5 مليار  </h3>
+                        <h3 >+10 مليار  </h3>
                         <p>{t("statistics.investment_value")}</p>
                     </Col>
                     <Col xs={12} sm={12} md={6} className="stat-item">
-                        <h3  >+ 3,600  </h3>
+                    <h3 >+1,1 مليار  </h3>
+
                         <p>{t("statistics.real_estate_units")}</p>
                     </Col>
                     <Col xs={12} sm={12} md={6} className="stat-item">

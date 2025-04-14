@@ -44,7 +44,7 @@ const Sector = () => {
                   <div className="card_content">
                     <div className="flex justify-content-between">
                       <div className="header">
-                        <strong>({project.sector})</strong>
+                        {/* <strong>({project.sector})</strong> */}
                         <h2>{project.title}</h2>
                       </div>
                       <Link to={`/project/${project.id}`} className="more flex justify-content-center align-items-center gap-4">

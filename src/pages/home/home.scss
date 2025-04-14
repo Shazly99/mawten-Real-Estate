@@ -501,6 +501,7 @@
     img {
       width: 100%;
       object-fit: cover;
+      height: 490px;
 
       @media screen and (width < 900px) {
         height: auto;
@@ -849,4 +850,30 @@
       font-size: 30px;
     }
   }
+}
+.swiper-navigation {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  z-index: 20;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.custom-arrow {
+  pointer-events: all;
+  cursor: pointer;
+  font-size: 2rem;
+  color: #fff;
+  background: #000;
+  padding: 0.4rem 0.8rem;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.custom-arrow:hover {
+  background: #333;
 }

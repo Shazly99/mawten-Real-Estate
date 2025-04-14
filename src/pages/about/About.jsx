@@ -6,6 +6,8 @@ import { useTranslation } from 'react-i18next'
 import AboutCompanyOverview from './AboutCompanyOverview'
 import Value from './Value'
 import SuccessPartnersSection from './SuccessPartnersSection'
+import { useEffect, useState } from 'react'
+import axios from 'axios'
 
 const About = () => {
     const { t } = useTranslation();
@@ -33,7 +35,21 @@ const About = () => {
             link: '/about',
             isBold: true,
         },
-    ];
+    ]; 
+    const [data, setData] = useState([]);
+  
+    useEffect(() => {
+      axios.get(`https://mawtan.rightclicksa.com/api/home`)
+        .then(response => {
+          const sectors = response.data?.data?.sectors?.data || [];
+          const projects = response.data?.data?.projects?.data || [];
+          setData(projects) 
+          setTabItems(sectors);
+        })
+        .catch(err => {
+          console.error('فشل جلب بيانات القطاعات:', err);
+        });
+    }, []);
 
     return (
         <div className='app__about' >
@@ -54,7 +70,7 @@ const About = () => {
                     <span>نساهم في ازدهار القطاعات</span>
                 </div>
                 <div className="category-buttons">
-                    {categories.map((category, index) => (
+                    {categories?.map((category, index) => (
                         <div key={index} className={`category-box ${category.className}`}>
                             <span>{category.label}</span>
                         </div>
@@ -62,7 +78,7 @@ const About = () => {
                 </div>
                 <p className='app_category_' >ركزت موطن العقارية على تطوير المشاريع العقارية المتخصصة ورفد السوق بمنتجات عقارية نوعية ذات جودة عالية في مختلف القطاعات، كتطوير المشاريع العقارية الصناعية واللوجستية وإنشاء المصانع الجاهزة لاحتضان الصناعات الناشئة وتطوير البيئات المناسبة للخدمات اللوجستية المتخصصة. بالإضافة إلى تطوير المشاريع متعددة الاستخدامات والمشاريع السكنية النوعية المناسبة التي تتلاءم مع احتياجات وتطلعات السوق والعملاء وتبلور مفهوم المجمعات السكنية المتكاملة المخدومة، فضلاً عن الاستثمار في تطوير المشاريع الفندقية ذات الجودة العالية وتشغيلها بواسطة مشغلين عالميين</p>
             </div>
-            <GalleryTitle />
+            <GalleryTitle data={data} />
             <AboutCompanyOverview />
             <Value />
             <SuccessPartnersSection />

@@ -31,9 +31,15 @@ import size from "@assets/svg/projects/size.svg?react";
 import investment from "@assets/svg/projects/investment.svg?react";
 import HotelUnit from "@assets/svg/projects/HotelUnit.svg?react";
 import space from "@assets/svg/projects/space.svg?react";
+import arrowFill from "@assets/svg/arrowFill.svg?react";
+import arrowLight from "@assets/svg/arrowLight.svg?react";
+import DATE from "@assets/svg/date.svg?react";
 
 
 const Icon = {
+    DATE,
+    arrowLight,
+    arrowFill,
     location2,
     type2,
     share,

@@ -7,6 +7,8 @@ import FeaturesMawten from './FeaturesMawten'
 import ImportantProjects from './ImportantProjects'
 import './project.scss'
 import ProjectsDep from './ProjectsDep'
+import { useEffect, useState } from 'react'
+import axios from 'axios'
 
 const projects = [
     {
@@ -33,6 +35,34 @@ const projects = [
 ];
 const Projects = () => {
     let { t } = useTranslation()
+    const [tabItems, setTabItems] = useState([]);
+    const [data, setData] = useState([]);
+
+    useEffect(() => {
+        axios.get(`https://mawtan.rightclicksa.com/api/home`)
+            .then(response => {
+                const sectors = response.data?.data?.sectors?.data || [];
+                const projects = response.data?.data?.projects?.data || [];
+                setData(projects)
+                const formatted = sectors.map((sector, index) => ({
+                    key: String(sector.id),
+                    label: sector.title?.trim() || ` `,
+                    label2: sector.sub_title?.trim() || ` `,
+                    title: sector.title?.trim() || '',
+                    description: sector.description?.trim() || '',
+                    investment: sector.investments ? `${sector.investments} مليون` : 'غير متوفر',
+                    projectsCount: sector.projects?.length?.toString() || '0',
+                    image1: img.Projects1, // يمكن تخصيص الصورة لاحقاً حسب البيانات
+                    image2: img.Projects2,
+                }));
+
+                setTabItems(formatted);
+            })
+            .catch(err => {
+                console.error('فشل جلب بيانات القطاعات:', err);
+            });
+    }, []);
+
     return (
         <div className='app_project' >
             <img src={img.ProjectsSlider} className='w-full app_project_image' alt="" />
@@ -56,9 +86,13 @@ const Projects = () => {
 
                                 <div className="project-slider" dir="ltr">
                                     <Marquee pauseOnHover={true} speed={20} gradient={false} style={{ overflow: 'hidden' }}>
-                                        {projects.map((project, index) => (
-                                            <div key={index} className="project-item">
-                                                <img src={project.image} alt={project.title} className="project-image" />
+                                        {data.map((item, index) => (
+                                            <div key={index} className="mx-4">
+                                                <img
+                                                    src={item.image}
+                                                    alt={item.title}
+                                                    style={{ width: '200px', height: '150px', border: '1px solid #000' }}
+                                                />
                                             </div>
                                         ))}
                                     </Marquee>
@@ -67,12 +101,11 @@ const Projects = () => {
                         </div>
                     </Col>
                 </Row>
-
             </div>
-            <ImportantProjects />
-            <ProjectsDep />
+            <ImportantProjects data={data} />
+            <ProjectsDep tabItems={tabItems} />
             {/* <OurProjects /> */}
-            <FeaturesMawten />
+            {/* <FeaturesMawten /> */}
         </div>
     )
 }

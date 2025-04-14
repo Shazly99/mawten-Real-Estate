@@ -25,14 +25,16 @@ import ProjectsSlider from "@assets/images/Projects/slider.png";
 import share from "@assets/gif/share.gif";
 
 import clients1 from "@assets/images/clients/1.png";
-import clients2 from "@assets/images/clients/2.png";
-import clients3 from "@assets/images/clients/3.png";
-import clients4 from "@assets/images/clients/4.png";
+import clients2 from "@assets/images/clients/2.jpg";
+import clients3 from "@assets/images/clients/3.jpg";
+import clients4 from "@assets/images/clients/4.jpg";
 import clients5 from "@assets/images/clients/5.png";
 import clients6 from "@assets/images/clients/6.png";
 import clients7 from "@assets/images/clients/7.png";
 import clients8 from "@assets/images/clients/8.png";
 import clients9 from "@assets/images/clients/9.png";
+import clients10 from "@assets/images/clients/10.png";
+import clients11 from "@assets/images/clients/11.png";
 
 import left from "@assets/images/services/left.png";
 import right from "@assets/images/services/right.png";
@@ -61,7 +63,26 @@ import emp4 from "@assets/images/emp/4.png";
 import emp5 from "@assets/images/emp/5.png";
 import emp6 from "@assets/images/emp/6.png";
 
+import emp7 from "@assets/images/emp/7.png";
+import emp8 from "@assets/images/emp/8.png";
+import emp9 from "@assets/images/emp/9.png";
+import emp10 from "@assets/images/emp/10.png";
+import emp11 from "@assets/images/emp/11.png";
+import emp12 from "@assets/images/emp/12.png";
+import emp13 from "@assets/images/emp/13.png";
+import emp14 from "@assets/images/emp/14.png";
+import emp15 from "@assets/images/emp/15.png";
+
 const img = {
+    emp7,
+    emp8,
+    emp9,
+    emp10,
+    emp11,
+    emp12,
+    emp13,
+    emp14,
+    emp15,
     Projectscover,
     emp2,
     emp3,
@@ -119,6 +140,8 @@ const img = {
     clients7,
     clients8,
     clients9,
+    clients10,
+    clients11,
     contentLeft
 }
 

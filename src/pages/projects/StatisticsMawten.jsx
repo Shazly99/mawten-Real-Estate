@@ -10,7 +10,7 @@ const statistics = [
     {
         id: 1,
         icon: <Icon.investment />,
-        number: "5+ مليار",
+        number: "10+ مليار",
         label: "قيمة الاستثمارات",
     },
     {

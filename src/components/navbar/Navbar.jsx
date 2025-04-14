@@ -81,9 +81,7 @@ const Navbar = () => {
     useEffect(() => {
       axios.get("https://mawtan.rightclicksa.com/api/home/sectors").then((res) => {
         if (res.data.status === 200) {
-          setSectors(res.data.data);
-          console.log(res.data.data);
-          
+          setSectors(res.data.data);  
         }
       });
     }, []);

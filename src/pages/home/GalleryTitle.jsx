@@ -1,11 +1,10 @@
-import img from "@constants/img";
 import "swiper/css";
 import "swiper/css/autoplay";
 import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "./home.scss";
 
-const GalleryTitle = () => {
+const GalleryTitle = ({ data }) => {
     return (
         <div className="image-gallery">
             <Swiper
@@ -22,24 +21,12 @@ const GalleryTitle = () => {
                 }}
                 dir="ltr"
             >
-                <SwiperSlide className="overflow-hidden">
-                    <img src={img.gallery2} alt="City View" />
-                </SwiperSlide>
-                <SwiperSlide className="overflow-hidden">
-                    <img src={img.gallery1} alt="Skyline" />
-                </SwiperSlide>
-                <SwiperSlide className="overflow-hidden">
-                    <img src={img.gallery2} alt="City View" />
-                </SwiperSlide>
-                <SwiperSlide className="overflow-hidden">
-                    <img src={img.gallery1} alt="Skyline" />
-                </SwiperSlide>
-                <SwiperSlide className="overflow-hidden">
-                    <img src={img.gallery2} alt="City View" />
-                </SwiperSlide>
-                <SwiperSlide className="overflow-hidden">
-                    <img src={img.gallery1} alt="Skyline" />
-                </SwiperSlide>
+                {data.map((item, index) => (
+                    <SwiperSlide key={index} className="overflow-hidden">
+                        <img src={item.image} alt="City View" />
+                    </SwiperSlide>
+                ))}
+
 
             </Swiper>
         </div>

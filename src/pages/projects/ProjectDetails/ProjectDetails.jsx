@@ -10,7 +10,7 @@ import Icon from '@constants/icon';
 import GalleryTitle from '@pages/home/GalleryTitle';
 import CustomTitle from '@components/common/CustomTitle';
 import TitleH from '@components/common/TitleH';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import GalleryProjects from './GalleryProjects';
 
 const ProjectDetails = () => {
@@ -83,9 +83,11 @@ const ProjectDetails = () => {
                     </Col>
                     <Col xl={10} xs={24}>
                         <div className="item_share_btn flex gap-4 align-items-center">
-                            <Button size='large' iconPosition='left' className="custom-btn" icon={<Icon.share />} type="primary">
-                                {t('سجل اهتمامك')}
-                            </Button>
+                            <Link to={'/contact'} >
+                                <Button size='large' iconPosition='left' className="custom-btn" icon={<Icon.share />} type="primary">
+                                    {t('سجل اهتمامك')}
+                                </Button>
+                            </Link>
                             <div className="item_share flex flex-column cursor-pointer">
                                 <img src={img.share} width={50} alt="" />
                                 <span>مشاركة</span>
@@ -104,7 +106,56 @@ const ProjectDetails = () => {
                             <div className="project-container">
                                 <Row gutter={[16, 16]}>
                                     {
-                                        projectData?.floors > 0 &&
+                                        projectData?.type1 &&
+                                        <Col lg={8} xs={24}>
+                                            <div className="section">
+                                                <div className="icon-text">
+                                                    <div className="content flex flex-row gap-3 align-items-center justify-content-center">
+                                                        <p className="label1">عدد الاراضي</p>
+                                                        <div className="icon flex flex-row gap-3">
+                                                            <Icon.HotelUnit />
+                                                            <p className="value">{projectData.type1}</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </Col>
+                                    }
+
+                                    {
+                                        projectData?.type2 &&
+                                        <Col lg={8} xs={24}>
+                                            <div className="section">
+                                                <div className="icon-text">
+                                                    <div className="content flex flex-row gap-3 align-items-center justify-content-center">
+                                                        <p className="label1">عدد المصانع</p>
+                                                        <div className="icon flex flex-row gap-3">
+                                                            <Icon.HotelUnit />
+                                                            <p className="value">{projectData.type2}</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </Col>
+                                    }
+                                    {
+                                        projectData?.type3 &&
+                                        <Col lg={8} xs={24}>
+                                            <div className="section">
+                                                <div className="icon-text">
+                                                    <div className="content flex flex-row gap-3 align-items-center justify-content-center">
+                                                        <p className="label1">عدد الطوابق</p>
+                                                        <div className="icon flex flex-row gap-3">
+                                                            <Icon.HotelUnit />
+                                                            <p className="value">{projectData.type3}</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </Col>
+                                    }
+                                    {
+                                        projectData?.floors &&
                                         <Col lg={8} xs={24}>
                                             <div className="section">
                                                 <div className="icon-text">
@@ -120,7 +171,7 @@ const ProjectDetails = () => {
                                         </Col>
                                     }
                                     {
-                                        projectData?.area > 0 &&
+                                        projectData?.area &&
                                         <Col lg={8} xs={24}>
                                             <div className="section">
                                                 <div className="icon-text">
@@ -136,7 +187,7 @@ const ProjectDetails = () => {
                                         </Col>
                                     }
                                     {
-                                        projectData?.units > 0 &&
+                                        projectData?.units &&
                                         <Col lg={8} xs={24}>
                                             <div className="section">
                                                 <div className="icon-text">
@@ -168,7 +219,7 @@ const ProjectDetails = () => {
                 <div className="mt-5 video_project">
                     {
                         projectData?.video &&
-                        <> 
+                        <>
                             <Col xl={24} className='title flex flex-column gap-2'>
                                 <div className="flex justify-content-center">
                                     <TitleH highlight={'فيديو توضيحي للمشروع'} />
