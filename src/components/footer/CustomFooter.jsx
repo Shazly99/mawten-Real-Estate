@@ -44,9 +44,9 @@ const Footer = () => {
 
             <Col lg={5} xs={24} sm={12} md={8}   className="mt-5">
               <div className="app_link  ">
-                <Link to="/"> <Title level={5}>{t("الاخبار")}</Title> </Link>
-                <Link to="/blogs"> <Title level={5}>{t("المدونة")}</Title> </Link>
-                <Link to="/projects"> <Title level={5}>{t("nav_contact")}</Title> </Link>
+                <Link to="/media-center"> <Title level={5}>{t("الاخبار")}</Title> </Link>
+                <Link to="/media-center"> <Title level={5}>{t("المدونة")}</Title> </Link>
+                <Link to="/contact"> <Title level={5}>{t("nav_contact")}</Title> </Link>
                 <Link to="/"> <Title level={5}>{t("سياسة الخصوصية")}</Title> </Link>
                 <Link to="/"> <Title level={5}>{t("الشروط والاحكام")}</Title> </Link>
               </div>
@@ -63,10 +63,10 @@ const Footer = () => {
                 </div>
 
                 <div className="footer__social mt-2">
-                  <a href="#"><XOutlined /></a>
-                  <a href="#"><FacebookFilled /></a>
-                  <a href="#"><InstagramFilled /></a>
-                  <a href="#"><LinkedinFilled /></a>
+                  <a href="https://x.com/Mawtenksa" target="_blank" ><XOutlined /></a>
+                  <a href="https://www.instagram.com/mawtenksa/?locale=en_GB%2Cen_GB" target="_blank" ><InstagramFilled /></a>
+                  <a href="https://www.linkedin.com/company/mawten-real-estate-co-/?viewAsMember=true" target="_blank" ><LinkedinFilled /></a>
+                  <a href="https://www.facebook.com/profile.php?id=100054232670287" target="_blank" ><FacebookFilled /></a>
                 </div>
               </div>
             </Col>

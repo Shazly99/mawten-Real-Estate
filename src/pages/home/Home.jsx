@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Modal } from "antd"; // ✅ إضافة الـ Modal
 import GalleryTitle from "./GalleryTitle";
 import "./home.scss";
 import HomeMediaCenter from "./HomeMediaCenter";
@@ -8,41 +9,64 @@ import NumberCompany from "./NumberCompany";
 import SliderHome from "./SliderHome";
 import TitleSection from "./TitleSection";
 import axios from "axios";
-
+import bg from './bg.jpeg'
 const Home = () => {
   const [tabItems, setTabItems] = useState([]);
   const [data, setData] = useState([]);
   const [blog, setBlog] = useState([]);
+  const [isModalVisible, setIsModalVisible] = useState(false); // ✅ State للتحكم في المودال
 
   useEffect(() => {
+    // إظهار المودال عند أول تحميل
+    setIsModalVisible(true);
+
+    // جلب البيانات
     axios.get(`https://mawtan.rightclicksa.com/api/home`)
       .then(response => {
         const sectors = response.data?.data?.sectors?.data || [];
         const projects = response.data?.data?.projects?.data || [];
         const blogs = response.data?.data?.blogs?.data || [];
-        setData(projects) 
+        setData(projects);
         setTabItems(sectors);
         setBlog(blogs);
-
       })
       .catch(err => {
         console.error('فشل جلب بيانات القطاعات:', err);
       });
   }, []);
 
+  const handleOk = () => {
+    setIsModalVisible(false);
+  };
+
+  const handleCancel = () => {
+    setIsModalVisible(false);
+  };
+
   return (
-    <>
+    <> 
+      <Modal
+        visible={isModalVisible}
+        onOk={handleOk}
+        onCancel={handleCancel}
+        footer={null}
+        centered
+      > 
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScX_GoMk05p0EU2ORGhDGlE5D6WHCBZapfHnR19Co7-BMUgCA/viewform" target="_blank" rel="noopener noreferrer"  >
+          <img src={bg} alt="" className="w-full h-full" srcset="" />
+        </a>
+      </Modal>
+
       <SliderHome />
       <TitleSection />
       <GalleryTitle data={data} />
       {/* <CompanyOverview /> */}
       <NumberCompany />
-      <ImportantProject data={data}  />
+      <ImportantProject data={data} />
       <HomeProjects data={tabItems} />
       {/* <InvestorRelations /> */}
       <HomeMediaCenter blog={blog} />
     </>
-
   );
 };
 

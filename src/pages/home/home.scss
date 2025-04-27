@@ -877,3 +877,10 @@
 .custom-arrow:hover {
   background: #333;
 }
+.ant-modal-content {
+  .ant-modal-body{
+    display: flex;
+  }
+  padding: 0 !important;
+  overflow: hidden;
+}

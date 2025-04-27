@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import './contact.scss';
 
 import {
-    TwitterOutlined,
+    XOutlined,
     FacebookFilled,
     InstagramOutlined,
     LinkedinFilled,
@@ -55,10 +55,18 @@ const Contact = () => {
                                 <p>نسعد بتواصلكم واستفساراتكم عبر القنوات التالية</p>
                                 <Button className="follow-btn">تابعونا على</Button>
                                 <div className="icons">
-                                    <span className="icon-box twitter"><TwitterOutlined /></span>
-                                    <span className="icon-box facebook"><FacebookFilled /></span>
-                                    <span className="icon-box instagram"><InstagramOutlined /></span>
-                                    <span className="icon-box linkedin"><LinkedinFilled /></span>
+                                    <a href="https://x.com/Mawtenksa" target="_blank" rel="noopener noreferrer">
+                                        <span className="icon-box twitter"><XOutlined /></span>
+                                    </a>
+                                    <a href="https://www.facebook.com/profile.php?id=100054232670287" target="_blank" rel="noopener noreferrer">
+                                        <span className="icon-box facebook"><FacebookFilled /></span>
+                                    </a>
+                                    <a href="https://www.instagram.com/mawtenksa" target="_blank" rel="noopener noreferrer">
+                                        <span className="icon-box instagram"><InstagramOutlined /></span>
+                                    </a>
+                                    <a href="https://www.linkedin.com/company/mawten-real-estate-co-" target="_blank" rel="noopener noreferrer">
+                                        <span className="icon-box linkedin"><LinkedinFilled /></span>
+                                    </a>
                                 </div>
                             </div>
                         </div>

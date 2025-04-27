@@ -140,14 +140,22 @@ const Navbar = () => {
                             <CaretDownFilled size={'small'} style={{ fontSize: '12px', marginTop: '2px', color: '#fff' }} /> {/* Make sure color is white */}
                         </div>
                     </NavLink>
-                    <div className="path_sm">
+
+                    <NavLink to='/contact'>
+                        <ShoppingOutlined className='icon_res_sm' />
+                        <div className="drop_icon flex justify-content-center align-items-center gap-2 ">
+                            {t('nav_contact')}
+                            {/* <PhoneOutlined size={'small'} style={{ fontSize: '12px', marginTop: '2px', color: '#fff' }} /> */}
+                        </div>
+                    </NavLink>
+          {/*           <div className="path_sm">
                         <NavLink to='/contact'>
                             <PhoneOutlined className='icon_res_sm' />
                             {t('nav_contact')}
                         </NavLink>
-                    </div>
+                    </div> */}
 
-                    <NavLink to='/contact' className=" contact_us_dot flex justify-content-center align-items-center gap-2">
+                    {/* <NavLink to='/contact' className=" contact_us_dot flex justify-content-center align-items-center gap-2">
                         <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 11 11" fill="none">
                             <circle cx="5.5" cy="5.5" r="5.5" fill="white" fill-opacity="0.25" />
                             <circle cx="5.5" cy="5.5" r="2.5" fill="white" />
@@ -156,7 +164,7 @@ const Navbar = () => {
                             <PhoneOutlined className='icon_res_sm' />
                             {t('nav_contact')}
                         </NavLink>
-                    </NavLink>
+                    </NavLink> */}
 
 
                     <div className="language-switcher sm_lang">

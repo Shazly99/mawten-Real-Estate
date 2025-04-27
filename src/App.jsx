@@ -32,14 +32,16 @@ function App() {
     return () => clearInterval(scrollInterval); // تنظيف التايمر
   }, []);
   return (
-    <>
-
+    <div className='trial__version'>
+      <div className="trial__version__text">
+        <span>  إطلاق تجريبي</span>
+      </div>
       <ConfigProvider theme={theme} >
         <General>
           <AppRouter />
         </General>
       </ConfigProvider>
-    </>
+    </div>
   )
 }
 

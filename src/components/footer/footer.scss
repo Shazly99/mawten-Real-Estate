@@ -40,7 +40,7 @@
 
     a {
       text-align: center;
-      
+
       &:hover {
         color: $mainColor !important;
       }
@@ -86,22 +86,7 @@
       margin-top: 7px !important;
     }
 
-    .footer__social {
-      display: flex;
-      gap: 10px;
-      margin-top: 10px;
-
-      a {
-        font-size: 18px;
-        color: #333;
-        transition: color 0.3s;
-        margin-top: 10px;
-
-        &:hover {
-          color: #d32f2f;
-        }
-      }
-    }
+   
   }
 
   h4 {
@@ -183,4 +168,25 @@
   font-weight: 530;
   line-height: normal;
   text-transform: capitalize;
+}
+
+.footer__social {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+
+  a {
+    font-size: 18px;
+    color: #333;
+    transition: color 0.3s;
+    margin-top: 10px;
+
+    &:hover {
+      color: #d32f2f; 
+    }
+
+    &:hover svg {
+      color: #fff !important; 
+    }
+  }
 }
