@@ -1,17 +1,16 @@
-import { useEffect, useState } from 'react';
-import axios from 'axios';
-import { AreaChartOutlined, CopyOutlined, FileTextOutlined, HomeOutlined } from '@ant-design/icons';
-import OverlayHeader from '@components/common/OverlayHeader';
-import img from '@constants/img';
-import { Button, Col, Row } from 'antd';
-import { useTranslation } from 'react-i18next';
-import './ProjectDetails.scss';
-import Icon from '@constants/icon';
-import GalleryTitle from '@pages/home/GalleryTitle';
+import { CopyOutlined, FacebookFilled, ShareAltOutlined, XOutlined, WhatsAppOutlined } from '@ant-design/icons';
 import CustomTitle from '@components/common/CustomTitle';
+import OverlayHeader from '@components/common/OverlayHeader';
 import TitleH from '@components/common/TitleH';
+import Icon from '@constants/icon';
+import img from '@constants/img';
+import { Button, Col, FloatButton, Row } from 'antd';
+import axios from 'axios';
+import { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Link, useParams } from 'react-router-dom';
 import GalleryProjects from './GalleryProjects';
+import './ProjectDetails.scss';
 
 const ProjectDetails = () => {
     const { t } = useTranslation();
@@ -58,6 +57,22 @@ const ProjectDetails = () => {
     const handlePlay = () => {
         setIsPlaying(true);
     };
+
+    const [showOptions, setShowOptions] = useState(false);
+
+    const currentUrl = window.location.href;
+
+    const shareTo = (platform) => {
+        let shareUrl = '';
+        if (platform === 'facebook') {
+            shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(currentUrl)}`;
+        } else if (platform === 'whatsapp') {
+            shareUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(currentUrl)}`;
+        } else if (platform === 'twitter') {
+            shareUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(currentUrl)}`;
+        }
+        window.open(shareUrl, '_blank', 'noopener,noreferrer');
+    };
     if (loading) return <p>جاري تحميل البيانات...</p>;
     if (!projectData) return <p>لم يتم العثور على بيانات المشروع.</p>;
 
@@ -89,7 +104,41 @@ const ProjectDetails = () => {
                                 </Button>
                             </Link>
                             <div className="item_share flex flex-column cursor-pointer">
-                                <img src={img.share} width={50} alt="" />
+
+                                {/* زر الصورة */}
+                                <img
+                                    src={img.share}
+                                    width={50}
+                                    alt="مشاركة"
+                                    style={{ cursor: 'pointer' }}
+                                    onClick={() => setShowOptions(!showOptions)}
+                                />
+
+                                {/* قائمة الأزرار تظهر فوق الصورة */}
+                                {showOptions && (
+                                    <div className='app_image_social' style={{ position: 'absolute', bottom: 120, left: 5, display: 'flex', flexDirection: 'column', gap: '10px', alignItems: 'center' }}>
+                                        <button
+                                            style={{ backgroundColor: '#4267B2', color: 'white', border: 'none', borderRadius: '50%', width: 40, height: 40, cursor: 'pointer' }}
+                                            onClick={() => shareTo('facebook')}
+                                        >
+                                            <FacebookFilled style={{ fontSize: '20px' }} />
+                                        </button>
+
+                                        <button
+                                            style={{ backgroundColor: '#25D366', color: 'white', border: 'none', borderRadius: '50%', width: 40, height: 40, cursor: 'pointer' }}
+                                            onClick={() => shareTo('whatsapp')}
+                                        >
+                                            <WhatsAppOutlined style={{ fontSize: '20px' }} />
+                                        </button>
+
+                                        <button
+                                            style={{ backgroundColor: '#000', color: 'white', border: 'none', borderRadius: '50%', width: 40, height: 40, cursor: 'pointer' }}
+                                            onClick={() => shareTo('twitter')}
+                                        >
+                                            <XOutlined style={{ fontSize: '20px' }} />
+                                        </button>
+                                    </div>
+                                )}
                                 <span>مشاركة</span>
                             </div>
                         </div>

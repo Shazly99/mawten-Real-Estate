@@ -29,8 +29,8 @@ const Projects = () => {
                     description: sector.description?.trim() || '',
                     investment: sector.investments ? `${sector.investments} مليون` : 'غير متوفر',
                     projectsCount: sector.projects?.length?.toString() || '0',
-                    image1: img.Projects1, // يمكن تخصيص الصورة لاحقاً حسب البيانات
-                    image2: img.Projects2,
+                    image1: sector.cover, // يمكن تخصيص الصورة لاحقاً حسب البيانات
+                    image2: sector.image,
                 }));
 
                 setTabItems(formatted);
