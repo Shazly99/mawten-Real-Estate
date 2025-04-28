@@ -1,68 +1,83 @@
 import CustomButton from "@components/common/CustomButton";
 import TitleH from "@components/common/TitleH";
-import img from "@constants/img";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/effect-fade";
-import { Navigation } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "./slider.scss";
+import { Button, Carousel } from "antd";
+import "antd/dist/reset.css"; // تأكد أنك مستورد CSS للـ Ant Design
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
+import "./slider.scss";
+import Icon from "@constants/icon";
 
 const HomeMediaCenter = ({ blog = [] }) => {
     const { t } = useTranslation();
+    const [activeSlide, setActiveSlide] = useState(0);
 
     return (
         <section className="media-center mt_main">
-            <div className="header">
+            <div className="header   ">
                 <TitleH title={t("Center")} highlight={t("Media")} />
             </div>
             <div className="container">
-                <Swiper
-                    modules={[Navigation]}
-                    spaceBetween={20}
-                    loop={true}
+                <Carousel
+                    autoplay={false}
+                    autoplaySpeed={1500}
                     speed={800}
-                    navigation
-                    breakpoints={{
-                        320: { slidesPerView: 1 },
-                        480: { slidesPerView: 1.2 },
-                        768: { slidesPerView: 2 },
-                        1024: { slidesPerView: 2.5 },
-                        1280: { slidesPerView: 2.5 },
-                    }}
-                    className="custom-swiper"
+                    infinite
+                    dots={false}
+                    beforeChange={(current, next) => setActiveSlide(next)}
+                    slidesToShow={3}
+                    responsive={[
+                        {
+                            breakpoint: 1280,
+                            settings: { slidesToShow: 2 }
+                        },
+                        {
+                            breakpoint: 1024,
+                            settings: { slidesToShow: 3 }
+                        },
+                        {
+                            breakpoint: 768,
+                            settings: { slidesToShow: 2 }
+                        },
+                        {
+                            breakpoint: 480,
+                            settings: { slidesToShow: 1.2 }
+                        },
+                        {
+                            breakpoint: 320,
+                            settings: { slidesToShow: 1 }
+                        }
+                    ]}
+
                 >
-                    {blog.map((item) => (
-                        <SwiperSlide key={item.id}>
-                            {({ isActive }) => (
-                                <div className={`news-card ${isActive ? "active" : "inactive"}`}>
-                                    <img
-                                        src={item.image}
-                                        alt={item.title}
-                                        className={`news-image ${isActive ? "active_image" : "inactive_image"}`}
-                                    />
-                                    <div className="news-content">
-                                        <h3 className="news-title">
-                                            {item.title.split(" ").slice(0, 5).join(" ")}
-                                        </h3>
-                                        {isActive && (
-                                            <p className="news-description">
-                                                {item.short_description.split(" ").slice(0, 15).join(" ")}
-                                            </p>
-                                        )}
-                                        {isActive && (
-                                            <Link to={`/media-center/${item.key_word_ar}`}>
-                                                <CustomButton />
-                                            </Link>
-                                        )}
+                    {blog.map((blog, index) => (
+                        <div key={index} className="px-3 py-4" >
+                            <div className="blog-card shadow-2 pb-4 ">
+                                <div className="card-header">
+                                    <div className="card_blog_image">
+                                        <img src={blog.image} alt={`Image ${blog.id}`} />
+                                        <div className="overlay">
+                                            <Button shape='round' iconPosition='end' icon={<Icon.DATE />} type='primary'>
+                                                {new Date(blog.date).toLocaleDateString('ar-EG', { year: 'numeric', month: 'long', day: 'numeric' })}
+                                            </Button>
+                                            <Icon.blog />
+                                        </div>
+                                    </div>
+
+                                    <div className="card-info">
+                                        <h3 className="title">{blog.short_title.split(" ").slice(0, 5).join(" ")}</h3>
+                                        <p className="description">{blog.short_description.split(" ").slice(0, 15).join(" ")}</p>
                                     </div>
                                 </div>
-                            )}
-                        </SwiperSlide>
+                                <Link dir="rtl" to={`/media-center/${blog.key_word_ar}`} className='block   mx-3'>
+                                    <Button type="primary" shape='round' className="read-more-btn">
+                                        {t('more')}
+                                    </Button>
+                                </Link>
+                            </div>
+                        </div>
                     ))}
-                </Swiper>
+                </Carousel>
             </div>
         </section>
     );

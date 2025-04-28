@@ -25,37 +25,37 @@ const Footer = () => {
         <div className="container">
           <Row gutter={[32, 32]}>
             <Col lg={6} xl={6} xxl={6} xs={24} sm={24} md={12} className=" footer__logo">
-              <img src={img.logo_dark} alt="موطن" className="footer__logo-img" />
-              <Title level={5}>{t("company")}</Title>
-              <Title level={5} className="mb-4">{t("location")}</Title>
+              <img src={img.logo_dark} alt="موطن" className="footer__logo-img  " />
+              <p className="text-center" >{t("company")}</p>
+              <p className="mb-4  text-center">{t("location")}</p>
 
             </Col>
 
 
-            <Col lg={5} xs={24} sm={12} md={8}   className="mt-5">
+            <Col lg={5} xs={24} sm={12} md={8} className="mt-5">
               <div className="app_link  ">
-                <Link to="/"> <Title level={5}>{t("home")}</Title> </Link>
-                <Link to="/about"> <Title level={5}>{t("about_company")}</Title> </Link>
-                <Link to="/projects"> <Title level={5}>{t("project")}</Title> </Link>
-                <Link to="/about"> <Title level={5}>{t("investors")}</Title> </Link>
-                <Link to="/about"> <Title level={5}>{t("التوظيف")}</Title> </Link>
+                <Link to="/">  {t("home")} </Link>
+                <Link to="/about">  {t("about_company")} </Link>
+                <Link to="/projects">  {t("project")} </Link>
+                <Link to="/about">  {t("investors")} </Link>
+                <Link to="/about">  {t("التوظيف")} </Link>
               </div>
             </Col>
 
-            <Col lg={5} xs={24} sm={12} md={8}   className="mt-5">
+            <Col lg={5} xs={24} sm={12} md={8} className="mt-5">
               <div className="app_link  ">
-                <Link to="/media-center"> <Title level={5}>{t("الاخبار")}</Title> </Link>
-                <Link to="/media-center"> <Title level={5}>{t("المدونة")}</Title> </Link>
-                <Link to="/contact"> <Title level={5}>{t("nav_contact")}</Title> </Link>
-                <Link to="/"> <Title level={5}>{t("سياسة الخصوصية")}</Title> </Link>
-                <Link to="/"> <Title level={5}>{t("الشروط والاحكام")}</Title> </Link>
+                <Link to="/media-center">  {t("الاخبار")} </Link>
+                <Link to="/media-center">  {t("المدونة")} </Link>
+                <Link to="/contact">  {t("nav_contact")} </Link>
+                <Link to="/">  {t("سياسة الخصوصية")} </Link>
+                <Link to="/">  {t("الشروط والاحكام")} </Link>
               </div>
             </Col>
-            <Col lg={2}  className="mt-5"></Col>
-            <Col lg={6} xs={24} sm={12} md={8}  className="mt-5">
-              <div className="app_link gap-0"> 
-                <strong  className="flex gap-1" ><PhoneOutlined /> <a dir="ltr" className="mt-1" href="tel:+966920000598">{t("phone")}</a></strong>
-                <strong className=" mail flex flex-row gap-2 align-items-center "><MailOutlined />  <a href="mailto:Info@mawten.com.sa" target="_blank" className="mt-2" >{t("email")}</a></strong>
+            <Col lg={2} className="mt-5"></Col>
+            <Col lg={6} xs={24} sm={12} md={8} className="mt-5">
+              <div className="app_link gap-0">
+                <span className="flex gap-1" ><PhoneOutlined /> <a dir="ltr" className="mt-1" href="tel:+966920000598">{t("phone")}</a></span>
+                <span className=" mail flex flex-row gap-2 align-items-center "><MailOutlined />  <a href="mailto:Info@mawten.com.sa" target="_blank" className="mt-2" >{t("email")}</a></span>
 
                 <span className="mt-3" >الموقع تحت الإطلاق التجريبي</span>
                 <div className="mt-5 social_title">

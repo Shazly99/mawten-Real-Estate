@@ -16,9 +16,31 @@ const contactData = [
 const WorkingHoursSection = () => {
     return (
         <div className="working-hours-section">
-            <div className="section-header">
-                <TitleH highlight={'ساعات العمل'} />
+       
+            <div className="emails ">
+                <div className="email-row flex justify-content-center align-items-center">
+                    <span className="red-dot mt-0 " />
+                    <div className="flex justify-content-between aline-items-center  w-full">
+
+                        <span className="email-title flex justify-content-center align-items-center">اتصل بنا</span>
+                        <a href="tel:+966920000598" className="contact">
+                            <Button className="phone-box" dir="ltr" >+966 9200 00598</Button>
+                        </a> 
+                    </div>
+                </div>
+                {contactData.map((item, idx) => (
+                    <div className="email-row mt-5" key={idx}>
+                        <span className="red-dot" />
+                        <div className="email-info">
+                            <span className="label_">{item.label}</span>
+                            <a className="email" href={`mailto:${item.email}`} >{item.email}</a> 
+                        </div>
+                    </div>
+                ))}
             </div>
+            <div className="section-header mt-6">
+                <TitleH highlight={'ساعات العمل'} />
+            </div> 
             <div className="range flex justify-content-between align-items-center">
                 <div className="days-range">
                     <span className="day">الاحد</span>
@@ -38,29 +60,6 @@ const WorkingHoursSection = () => {
                     <span className="time">06:00</span>
                     <span className="tag red">مساءً</span>
                 </div>
-            </div>
-
-
-            <div className="emails ">
-                <div className="email-row flex justify-content-center align-items-center">
-                    <span className="red-dot mt-0 " />
-                    <div className="flex justify-content-between aline-items-center  w-full">
-
-                        <span className="email-title flex justify-content-center align-items-center">اتصل بنا</span>
-                        <a href="tel:+966920000598" className="contact">
-                            <Button className="phone-box" dir="ltr" >+966 9200 00598</Button>
-                        </a> 
-                    </div>
-                </div>
-                {contactData.map((item, idx) => (
-                    <div className="email-row" key={idx}>
-                        <span className="red-dot" />
-                        <div className="email-info">
-                            <span className="label_">{item.label}</span>
-                            <a className="email" href={`mailto:${item.email}`} >{item.email}</a> 
-                        </div>
-                    </div>
-                ))}
             </div>
         </div>
     );

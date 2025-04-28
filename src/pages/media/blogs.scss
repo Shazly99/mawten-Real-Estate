@@ -125,7 +125,8 @@
 
 .card-header img {
     width: 100%;
-    height: 520px;
+    height: 420px;
+    object-fit: cover;
 }
 
 .card-info {
@@ -141,6 +142,13 @@
 
 :lang(en) .card-info .description {
     text-align: left;
+}
+:lang(ar) .card-info .title {
+    text-align: right;
+}
+
+:lang(ar) .card-info .description {
+    text-align: right;
 }
 
 .title {
@@ -261,7 +269,7 @@
     }
 
     .btn {
-        @include flex()
+        @include flex(); 
     }
 }
 

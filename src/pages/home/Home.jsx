@@ -1,5 +1,7 @@
-import { useEffect, useState } from "react";
+import img from "@constants/img";
 import { Modal } from "antd"; // ✅ إضافة الـ Modal
+import axios from "axios";
+import { useEffect, useState } from "react";
 import GalleryTitle from "./GalleryTitle";
 import "./home.scss";
 import HomeMediaCenter from "./HomeMediaCenter";
@@ -8,8 +10,6 @@ import ImportantProject from "./ImportantProject";
 import NumberCompany from "./NumberCompany";
 import SliderHome from "./SliderHome";
 import TitleSection from "./TitleSection";
-import axios from "axios";
-import bg from './bg.jpeg'
 const Home = () => {
   const [tabItems, setTabItems] = useState([]);
   const [data, setData] = useState([]);
@@ -53,7 +53,7 @@ const Home = () => {
         centered
       > 
         <a href="https://docs.google.com/forms/d/e/1FAIpQLScX_GoMk05p0EU2ORGhDGlE5D6WHCBZapfHnR19Co7-BMUgCA/viewform" target="_blank" rel="noopener noreferrer"  >
-          <img src={bg} alt="" className="w-full h-full" srcset="" />
+          <img src={img.Ads} alt="" className="w-full h-full" srcset="" />
         </a>
       </Modal>
 

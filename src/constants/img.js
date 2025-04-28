@@ -4,7 +4,9 @@ import contentLeft from "@assets/images/contentLeft.png";
 import slider from "@assets/images/Projects/slider.mp4";
 import logo_dark from "@assets/images/logo2.png";
  import CompanyOverview from "@assets/images/home/CompanyOverview.png";
+ import about from "@assets/images/home/about.png";
 import projectBg from "@assets/images/home/projectBg.png";
+import projectBg2 from "@assets/images/Projects/projectBg.png";
 import mawten_bg2 from "@assets/images/home/mawten_bg2.png";
  import aboutCover from "@assets/images/about/cover.png";
 import map from "@assets/images/home/map.png"; 
@@ -49,8 +51,10 @@ import emp12 from "@assets/images/emp/12.png";
 import emp13 from "@assets/images/emp/13.png";
 import emp14 from "@assets/images/emp/14.png";
 import emp15 from "@assets/images/emp/15.png";
+import Ads from "@assets/images/ads.jpg";
 
 const img = {
+    Ads,
     mawten_bg2,
     emp7,
     emp8,
@@ -98,6 +102,8 @@ const img = {
     clients10,
     clients11,
     slider,
+    about,
+    projectBg2,
     contentLeft
 }
 

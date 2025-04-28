@@ -1,38 +1,15 @@
 import TitleH from '@components/common/TitleH'
 import img from '@constants/img'
 import { Col, Row } from 'antd'
+import axios from 'axios'
+import { useEffect, useState } from 'react'
 import Marquee from 'react-fast-marquee'
 import { useTranslation } from 'react-i18next'
-import FeaturesMawten from './FeaturesMawten'
 import ImportantProjects from './ImportantProjects'
 import './project.scss'
 import ProjectsDep from './ProjectsDep'
-import { useEffect, useState } from 'react'
-import axios from 'axios'
+import SliderHome from '@pages/home/SliderHome'
 
-const projects = [
-    {
-        image: img.Projects1,
-        title: "برج موطن تاورز الرياض",
-    },
-    {
-        image: img.Projects2,
-        title: "هيلتون جاردن ان الرياض المركز المالي",
-    },
-    {
-        image: img.Projects3,
-        title: "مجمع توق الدار السكني",
-    },
-    {
-        image: img.ProjectsSlider,
-        title: "برج موطن تاورز الرياض",
-    },
-    {
-        image: img.Projects2,
-        title: "هيلتون جاردن ان الرياض المركز المالي",
-    },
-
-];
 const Projects = () => {
     let { t } = useTranslation()
     const [tabItems, setTabItems] = useState([]);
@@ -65,7 +42,8 @@ const Projects = () => {
 
     return (
         <div className='app_project' >
-            <img src={img.ProjectsSlider} className='w-full app_project_image' alt="" />
+            {/* <img src={img.ProjectsSlider} className='w-full app_project_image' alt="" /> */}
+            <SliderHome/>
             <div className="app_project_master">
                 <Row gutter={[50, 50]} >
                     <Col xl={11} lg={11} md={11} sm={24} xs={24} className='mt-8  ' >
@@ -78,10 +56,13 @@ const Projects = () => {
 
                     <Col xl={13} lg={13} md={13} sm={24} xs={24}>
                         <div className="projects_images overflow-hidden" dir="ltr">
-                            <img src={img.ProjectsBg} className="w-full projects_images_o_0" alt="" />
+                            <img src={img.projectBg2} className="w-full projects_images_o_0" alt="" />
                             <div className="overlay" dir="ltr">
                                 <div className="overlay_img">
-                                    <img src={img.Projects4} className="w-full" alt="" />
+                                    <img src={img.projectBg2} className="w-full h-full" alt="" />
+                                    <div className="overlay">
+
+                                    </div>
                                 </div>
 
                                 <div className="project-slider" dir="ltr">
@@ -91,7 +72,7 @@ const Projects = () => {
                                                 <img
                                                     src={item.image}
                                                     alt={item.title}
-                                                    style={{ width: '200px', height: '150px', border: '1px solid #000' }}
+                                                    style={{ width: '200px', height: '150px', border: '2px solid #fff' }}
                                                 />
                                             </div>
                                         ))}

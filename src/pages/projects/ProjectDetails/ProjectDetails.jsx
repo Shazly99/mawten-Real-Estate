@@ -62,7 +62,7 @@ const ProjectDetails = () => {
     if (!projectData) return <p>لم يتم العثور على بيانات المشروع.</p>;
 
     return (
-        <>
+        <div className='app_details_projects_page'>
             <OverlayHeader img={projectData.image} header={projectData.title} breadcrumbItems={breadcrumbItems} />
             <div className="app__project_destails mb-4">
                 <Row>
@@ -287,7 +287,7 @@ const ProjectDetails = () => {
                     </Row>
                 </div>
             </div>
-        </>
+        </div>
     );
 };
 

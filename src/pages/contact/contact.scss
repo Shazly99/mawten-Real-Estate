@@ -219,7 +219,7 @@
 
     iframe {
         width: 100%;
-        height: 300px;
+        height: 350px;
         border-radius: 20px;
 
         @media screen and (width < 900px) {
@@ -250,6 +250,7 @@
         display: flex;
         align-items: center;
         gap: 0.5rem;
+        margin-bottom: -20px;
 
 
         .title-container {
@@ -258,7 +259,7 @@
             span {
                 color: #181820;
                 font-family: TheSansArabic;
-                font-size: 35px;
+                font-size: 25px !important;
                 font-style: normal;
                 font-weight: 600;
                 line-height: normal;
@@ -267,7 +268,7 @@
             }
 
             svg {
-                width: 20px;
+                width: 15px;
                 margin-bottom: 10px;
 
                 @media screen and (width < 900px) {
@@ -369,12 +370,12 @@
                     direction: ltr;
                     color: #181820;
                 }
-                
+
                 .label_ {
                     font-size: 0.9rem;
                     font-weight: bold;
                     color: #444;
-                    
+
                 }
             }
         }
@@ -384,6 +385,10 @@
 .form_containers {
     width: 80%;
     margin: auto;
+
+    .section-header {
+        @include flex();
+    }
 
     @media screen and (width < 767px) {
         width: 100%;
@@ -400,10 +405,46 @@
         }
     }
 
-    .contact-form{
+    .contact-form {
         background-color: #fff;
         padding: 20px;
         border-radius: 10px;
         margin-bottom: 50px;
     }
+}
+
+.form_containers {
+
+    .section-header {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-bottom: -20px;
+
+
+        .title-container { 
+@include flex();
+
+            span {
+                color: #181820;
+                font-family: TheSansArabic;
+                font-size: 25px !important;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+                user-select: none;
+
+            }
+
+            svg {
+                width: 15px;
+                margin-bottom: 10px;
+
+                @media screen and (width < 900px) {
+                    width: 15px;
+                }
+            }
+        }
+    }
+
 }

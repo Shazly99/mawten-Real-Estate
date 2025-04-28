@@ -26,7 +26,7 @@ const Blogs = () => {
 
     return (
         <div className="app_media blogs-container">
-            <header className="mt-8 pt-2">
+            <header  >
                 <img src={img.blogsCover} alt="Cover" className="cover-img" />
                 <div className="content">
                     <TitleH title={t('Center')} highlight={t('Media')} />

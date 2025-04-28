@@ -114,18 +114,20 @@
 
   img {
     border-radius: 8px; // زوايا دائرية أنيقة
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); // ظل خفيف
+    box-shadow: 0px 3px 39.1px 0px rgba(166, 21, 23, 0.17);
     object-fit: cover;
     transition: transform 0.3s ease-in-out;
     width: 100%;
-    height: 600px !important;
+    height: 550px !important;
 
     @media screen and (width < 900px) {
       height: 100% !important;
     }
 
     &:hover {
-      transform: scale(1.05); // تكبير عند تمرير الماوس
+      transform: scale(1.05);
+      z-index: 9999 !important;
+      position: relative;
     }
   }
 }
@@ -682,7 +684,7 @@
   background-image: url('../../assets/images/contactBg.png');
   background-size: contain;
   background-position: center center;
-  background-repeat: no-repeat; 
+  background-repeat: no-repeat;
 
   .home-contact {
     display: flex;
@@ -710,8 +712,8 @@
   .content_contact-us {
     width: 100%;
     margin-top: 90px;
-   
-  
+
+
 
     @media screen and (width < 900px) {
       margin-top: 0;
@@ -780,6 +782,7 @@
     font-weight: 530;
     font-size: 100px;
     text-align: right;
+
     &:lang(en) {
       left: 0;
     }
@@ -851,6 +854,7 @@
     }
   }
 }
+
 .swiper-navigation {
   position: absolute;
   top: 50%;
@@ -877,10 +881,12 @@
 .custom-arrow:hover {
   background: #333;
 }
+
 .ant-modal-content {
-  .ant-modal-body{
+  .ant-modal-body {
     display: flex;
   }
+
   padding: 0 !important;
   overflow: hidden;
 }

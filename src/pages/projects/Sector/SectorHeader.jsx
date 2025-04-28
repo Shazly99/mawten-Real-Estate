@@ -1,52 +1,12 @@
 import { useEffect, useState } from "react";
 
-import img from "@constants/img";
 import { Col, Row } from "antd";
 
 const tabs = [
     { id: 0, label: "القطاع السكني" },
     { id: 1, label: "قطاع الضيافة" },
-    { id: 2, label: "القطاع الصناعي واللوجستي" },
-    { id: 3, label: "القطاع التجاري" },
-];
-const projects = [
-    {
-        image: img.Projects1,
-        title: "برج موطن تاورز الرياض",
-    },
-    {
-        image: img.Projects2,
-        title: "هيلتون جاردن ان الرياض المركز المالي",
-    },
-    {
-        image: img.Projects3,
-        title: "مجمع توق الدار السكني",
-    },
-    {
-        image: img.Projects1,
-        title: "برج موطن تاورز الرياض",
-    },
-    {
-        image: img.Projects2,
-        title: "هيلتون جاردن ان الرياض المركز المالي",
-    },
-    {
-        image: img.Projects3,
-        title: "مجمع توق الدار السكني",
-    },
-    {
-        image: img.Projects1,
-        title: "برج موطن تاورز الرياض",
-    },
-    {
-        image: img.Projects2,
-        title: "هيلتون جاردن ان الرياض المركز المالي",
-    },
-    {
-        image: img.Projects3,
-        title: "مجمع توق الدار السكني",
-    },
-];
+    { id: 2, label: "القطاع الصناعي واللوجستي" }, 
+]; 
 const SectorHeader = ({ data }) => {
     const [activeTab, setActiveTab] = useState(0);
     const [timerKey, setTimerKey] = useState(0); // مفتاح لإعادة تشغيل الـ Timer
@@ -95,19 +55,7 @@ const SectorHeader = ({ data }) => {
                         </div>
 
                     </Col>
-                    <Col xl={12} lg={12} className="wrapper_details" >
-
-           {/*              <div className="stats-container">
-                            <div className="stat">
-                                <h2>{data?.projects.length || 0}</h2>
-                                <p>المشاريع</p>
-                            </div>
-                            <div className="divider"></div>
-                            <div className="stat">
-                                <h2>{data?.investments} مليار</h2>
-                                <p>الاستثمارات</p>
-                            </div>
-                        </div> */}
+                    <Col xl={12} lg={12} className="wrapper_details" > 
                     </Col>
                     <Col xl={24} lg={24} className="wrapper_details mt-8 " >
                         <p className="description">{data?.description}</p>

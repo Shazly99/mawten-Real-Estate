@@ -303,8 +303,8 @@
 
 .navbar-main-scroll,
 .fixed-navbar {
-    // position: fixed;
-    position: absolute;
+    position: fixed;
+    // position: absolute;
 
     top: 0;
     left: 0;
@@ -316,7 +316,9 @@
         width: 100px !important;
     }
 }
-
+.fixed-navbar{
+    background-color: #000 !important;
+}
 .language-switcher {
     display: flex;
     align-items: center;
