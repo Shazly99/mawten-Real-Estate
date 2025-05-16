@@ -230,6 +230,17 @@ strong,
     }
 }
 
+.bg_dark {
+    .navbar-main {
+
+        background-color: #000 !important;
+
+        @media screen and (width < 900px) {
+            background-color: #181818 !important;
+        }
+    }
+}
+
 .header_overlay {
     position: relative;
     height: 548px;
@@ -245,7 +256,7 @@ strong,
         inset: 0;
 
         // background: rgba(0, 0, 0, 0.3);
-        
+
         @media screen and (width < 900px) {
             background: rgba(0, 0, 0, 0.3);
         }
@@ -307,7 +318,7 @@ strong,
         z-index: 998;
         top: 45vh;
         right: -5px;
-        transform: rotate(180deg); 
+        transform: rotate(180deg);
         border-radius: 0 0 10px 10px;
 
         span {
@@ -327,13 +338,14 @@ strong,
 
 }
 
-.app_details_projects_page{
+.app_details_projects_page {
     .overlay {
         position: absolute;
         inset: 0;
 
         background: rgba(0, 0, 0, 0.4);
     }
+
     .overlay button {
         border: 1px solid #fff;
         background-color: transparent;

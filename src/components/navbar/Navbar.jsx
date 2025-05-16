@@ -98,9 +98,6 @@ const Navbar = () => {
     };
     return (
         <div className={`navbar-container ${i18n.language === 'ar' ? 'rtl' : 'ltr'}`}>
-
-
-
             <motion.div
                 className={`navbar-main ${isScrolled ? 'fixed-navbar' : 'navbar-main-scroll'}`}
                 initial={{ backgroundColor: "rgba(0, 0, 0, 0.58)" }}
@@ -220,7 +217,7 @@ const Navbar = () => {
                 open={isModalOpen}
                 onOk={handleOk}
                 footer={null}
-                onCancel={handleCancel} 
+                onCancel={handleCancel}
             >
                 <div className="p-8 flex flex-column justify-content-center align-items-center gap-4">
 

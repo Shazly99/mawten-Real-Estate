@@ -4,20 +4,20 @@ import 'antd/dist/reset.css';
 import img from '@constants/img';
 
 const images = [
-    img.projectSlider1, 
-    img.projectSlider2, 
-    img.projectSlider3,  
+    img.projectSlider1,
+    img.projectSlider2,
+    img.projectSlider3,
 ];
 
 const titles = [
     "قطــاع الضيافة",
-    "القطاع السكني", 
+    "القطاع السكني",
     "القطاع الصناعي",
 ];
 
 const SliderProject = () => (
     <div style={{ width: '100%' }}>
-        <Carousel autoplay>
+        <Carousel autoplay  speed={1000} easing="cubic-bezier(0.4, 0, 0.2, 1)" fade>
             {images.map((src, idx) => (
                 <div key={idx}>
                     <div style={{

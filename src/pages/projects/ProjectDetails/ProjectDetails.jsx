@@ -11,6 +11,7 @@ import { useTranslation } from 'react-i18next';
 import { Link, useParams } from 'react-router-dom';
 import GalleryProjects from './GalleryProjects';
 import './ProjectDetails.scss';
+import ProjectDetailsHeader from './ProjectDetailsHeader';
 
 const ProjectDetails = () => {
     const { t } = useTranslation();
@@ -78,72 +79,10 @@ const ProjectDetails = () => {
 
     return (
         <div className='app_details_projects_page'>
-            <OverlayHeader img={projectData.image} header={projectData.title} breadcrumbItems={breadcrumbItems} />
+            {/* <OverlayHeader img={projectData.image} header={projectData.title} breadcrumbItems={breadcrumbItems} /> */}
+            <ProjectDetailsHeader imgs={projectData.image}  data={projectData}  />
             <div className="app__project_destails mb-4">
-                <Row>
-                    <Col xl={14} xs={24}>
-                        <div className="project_summery">
-                            <h1>{projectData.title}</h1>
-                            <div className="points flex gap-4">
-                                <div className="item flex align-items-center gap-2">
-                                    <Icon.location2 />
-                                    <span>{projectData.location}</span>
-                                </div>
-                                <div className="item flex align-items-center gap-2">
-                                    <Icon.type2 />
-                                    <span>{projectData.key_word}</span>
-                                </div>
-                            </div>
-                        </div>
-                    </Col>
-                    <Col xl={10} xs={24}>
-                        <div className="item_share_btn flex gap-4 align-items-center">
-                            <Link to={'/contact'} >
-                                <Button size='large' iconPosition='left' className="custom-btn" icon={<Icon.share />} type="primary">
-                                    {t('سجل اهتمامك')}
-                                </Button>
-                            </Link>
-                            <div className="item_share flex flex-column cursor-pointer">
-
-                                {/* زر الصورة */}
-                                <img
-                                    src={img.share}
-                                    width={50}
-                                    alt="مشاركة"
-                                    style={{ cursor: 'pointer' }}
-                                    onClick={() => setShowOptions(!showOptions)}
-                                />
-
-                                {/* قائمة الأزرار تظهر فوق الصورة */}
-                                {showOptions && (
-                                    <div className='app_image_social' style={{ position: 'absolute', bottom: 120, left: 5, display: 'flex', flexDirection: 'column', gap: '10px', alignItems: 'center' }}>
-                                        <button
-                                            style={{ backgroundColor: '#4267B2', color: 'white', border: 'none', borderRadius: '50%', width: 40, height: 40, cursor: 'pointer' }}
-                                            onClick={() => shareTo('facebook')}
-                                        >
-                                            <FacebookFilled style={{ fontSize: '20px' }} />
-                                        </button>
-
-                                        <button
-                                            style={{ backgroundColor: '#25D366', color: 'white', border: 'none', borderRadius: '50%', width: 40, height: 40, cursor: 'pointer' }}
-                                            onClick={() => shareTo('whatsapp')}
-                                        >
-                                            <WhatsAppOutlined style={{ fontSize: '20px' }} />
-                                        </button>
-
-                                        <button
-                                            style={{ backgroundColor: '#000', color: 'white', border: 'none', borderRadius: '50%', width: 40, height: 40, cursor: 'pointer' }}
-                                            onClick={() => shareTo('twitter')}
-                                        >
-                                            <XOutlined style={{ fontSize: '20px' }} />
-                                        </button>
-                                    </div>
-                                )}
-                                <span>مشاركة</span>
-                            </div>
-                        </div>
-                    </Col>
-                </Row>
+             
 
                 <div className="details">
                     <Row gutter={[20, 20]}>

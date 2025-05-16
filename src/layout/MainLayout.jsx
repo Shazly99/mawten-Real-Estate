@@ -23,8 +23,13 @@ const MainLayout = () => {
   return (
     <div className='overflow-hidden'>
       <div className={
-        (location.pathname == '/services' || location.pathname == '/contact' || location.pathname.includes('about')  || location.pathname.includes('project/') || location.pathname == '/about/mission' ) ? isScrolled ? '' : 'other' :
-          (  location.pathname.includes('projects') || location.pathname == '/contact') ? 'blogs_navbar' : ''}>
+        (location.pathname == '/services' ||
+          location.pathname.includes('projects') ||
+          location.pathname == '/contact' ||
+          location.pathname.includes('about') ||
+          location.pathname == '/about/mission') ? isScrolled ? '' : 'other' :
+          (location.pathname.includes('projects') ||
+            location.pathname == '/contact') ? 'blogs_navbar'  :  (location.pathname.includes('/project/') ? 'bg_dark' : '') }       >
         <Navbar />
       </div>
       <Outlet />
