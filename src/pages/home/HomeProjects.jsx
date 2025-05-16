@@ -34,7 +34,17 @@ const HomeProjects = ({ data }) => {
     }, [data]); // ❗️ نضيف data علشان نضمن إنها موجودة
 
     return (
-        <div className="app_projects">
+        <div
+            className="app_projects"
+            style={{
+                backgroundImage: data[activeTab]?.cover
+                    ? `url(${data[activeTab].cover})`
+                    : undefined,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
+            }}
+        >
             <div className="tabs tabs_web_page ">
                 {data.map((tab, index) => (
                     <div

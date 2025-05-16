@@ -3,17 +3,17 @@ import contact from "@assets/images/contact.png";
 import contentLeft from "@assets/images/contentLeft.png";
 import slider from "@assets/images/Projects/slider.mp4";
 import logo_dark from "@assets/images/logo2.png";
- import CompanyOverview from "@assets/images/home/CompanyOverview.png";
- import about from "@assets/images/home/about.png";
+import CompanyOverview from "@assets/images/home/CompanyOverview.png";
+import about from "@assets/images/home/about.png";
 import projectBg from "@assets/images/home/projectBg.png";
 import projectBg2 from "@assets/images/Projects/projectBg.png";
 import mawten_bg2 from "@assets/images/home/mawten_bg2.png";
- import aboutCover from "@assets/images/about/cover.png";
-import map from "@assets/images/home/map.png"; 
-import blogsCover from "@assets/images/blogs/1.png"; 
-import ProjectsV from "@assets/images/Projects/v.png"; 
+import aboutCover from "@assets/images/about/cover.png";
+import map from "@assets/images/home/map.png";
+import blogsCover from "@assets/images/blogs/1.png";
+import ProjectsV from "@assets/images/Projects/v.png";
 import ProjectsSlider from "@assets/images/Projects/slider.png";
-import share from "@assets/gif/share.gif"; 
+import share from "@assets/gif/share.gif";
 import clients1 from "@assets/images/clients/1.png";
 import clients2 from "@assets/images/clients/2.jpg";
 import clients3 from "@assets/images/clients/3.jpg";
@@ -25,6 +25,9 @@ import clients8 from "@assets/images/clients/8.png";
 import clients9 from "@assets/images/clients/9.png";
 import clients10 from "@assets/images/clients/10.png";
 import clients11 from "@assets/images/clients/11.png";
+import projectSlider1 from "@assets/images/slider/1.png";
+import projectSlider2 from "@assets/images/slider/2.png";
+import projectSlider3 from "@assets/images/slider/3.png";
 
 import left from "@assets/images/services/left.png";
 import right from "@assets/images/services/right.png";
@@ -34,7 +37,7 @@ import services3 from "@assets/images/services/3.png";
 import services4 from "@assets/images/services/4.png";
 import headerImg from "@assets/images/services/headerImg.png";
 
-import mission2017 from "@assets/images/about/mission.png"; 
+import mission2017 from "@assets/images/about/mission.png";
 import emp1 from "@assets/images/emp/1.png";
 import emp2 from "@assets/images/emp/2.png";
 import emp3 from "@assets/images/emp/3.png";
@@ -64,20 +67,20 @@ const img = {
     emp12,
     emp13,
     emp14,
-    emp15, 
+    emp15,
     emp2,
     emp3,
     emp4,
     emp5,
     emp6,
     emp1,
-    mission2017, 
-    headerImg, 
+    mission2017,
+    headerImg,
     aboutCover,
-    logo,  
+    logo,
     CompanyOverview,
-    projectBg, 
-    map, 
+    projectBg,
+    map,
     logo_dark,
     left,
     right,
@@ -85,11 +88,11 @@ const img = {
     services2,
     services3,
     services4,
-    blogsCover,  
+    blogsCover,
     contact,
-    ProjectsSlider,  
+    ProjectsSlider,
     share,
-    ProjectsV,  
+    ProjectsV,
     clients1,
     clients2,
     clients3,
@@ -104,6 +107,9 @@ const img = {
     slider,
     about,
     projectBg2,
+    projectSlider1,
+    projectSlider2,
+    projectSlider3,
     contentLeft
 }
 

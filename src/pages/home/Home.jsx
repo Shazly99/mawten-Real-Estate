@@ -57,11 +57,11 @@ const Home = () => {
         </a>
       </Modal>
 
+      <NumberCompany />
       <SliderHome />
       <TitleSection />
       <GalleryTitle data={data} />
       {/* <CompanyOverview /> */}
-      <NumberCompany />
       <ImportantProject data={data} />
       <HomeProjects data={tabItems} />
       {/* <InvestorRelations /> */}

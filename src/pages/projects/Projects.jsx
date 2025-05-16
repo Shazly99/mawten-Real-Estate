@@ -9,6 +9,7 @@ import ImportantProjects from './ImportantProjects'
 import './project.scss'
 import ProjectsDep from './ProjectsDep'
 import SliderHome from '@pages/home/SliderHome'
+import SliderProject from './SliderProject'
 
 const Projects = () => {
     let { t } = useTranslation()
@@ -41,9 +42,10 @@ const Projects = () => {
     }, []);
 
     return (
+        <>
+            <SliderProject/>
         <div className='app_project' >
             {/* <img src={img.ProjectsSlider} className='w-full app_project_image' alt="" /> */}
-            <SliderHome/>
             <div className="app_project_master">
                 <Row gutter={[50, 50]} >
                     <Col xl={11} lg={11} md={11} sm={24} xs={24} className='mt-8  ' >
@@ -88,6 +90,8 @@ const Projects = () => {
             {/* <OurProjects /> */}
             {/* <FeaturesMawten /> */}
         </div>
+        </>
+
     )
 }
 
