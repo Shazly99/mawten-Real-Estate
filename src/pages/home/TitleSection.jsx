@@ -1,9 +1,8 @@
 import TitleH from "@components/common/TitleH";
-import Icon from '@constants/icon';
 import { Col, Row } from "antd";
 import { useTranslation } from 'react-i18next';
-import CustomButton from './../../components/common/CustomButton';
 import { Link } from "react-router-dom";
+import CustomButton from './../../components/common/CustomButton';
 
 const TitleSection = () => {
     let { t } = useTranslation()

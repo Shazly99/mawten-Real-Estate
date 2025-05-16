@@ -31,8 +31,9 @@ const Footer = () => {
 
             </Col>
 
+            <Col lg={1} className="mt-5"></Col>
 
-            <Col lg={5} xs={24} sm={12} md={8} className="mt-5">
+            <Col lg={4} xs={24} sm={12} md={8} className="mt-5">
               <div className="app_link  ">
                 <Link to="/">  {t("home")} </Link>
                 <Link to="/about">  {t("about_company")} </Link>
@@ -51,7 +52,7 @@ const Footer = () => {
                 <Link to="/">  {t("الشروط والاحكام")} </Link>
               </div>
             </Col>
-            <Col lg={2} className="mt-5"></Col>
+            
             <Col lg={6} xs={24} sm={12} md={8} className="mt-5">
               <div className="app_link gap-0">
                 <span className="flex gap-1" ><PhoneOutlined /> <a dir="ltr" className="mt-1" href="tel:+966920000598">{t("phone")}</a></span>

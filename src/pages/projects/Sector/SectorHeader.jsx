@@ -5,8 +5,8 @@ import { Col, Row } from "antd";
 const tabs = [
     { id: 0, label: "القطاع السكني" },
     { id: 1, label: "قطاع الضيافة" },
-    { id: 2, label: "القطاع الصناعي واللوجستي" }, 
-]; 
+    { id: 2, label: "القطاع الصناعي واللوجستي" },
+];
 const SectorHeader = ({ data }) => {
     const [activeTab, setActiveTab] = useState(0);
     const [timerKey, setTimerKey] = useState(0); // مفتاح لإعادة تشغيل الـ Timer
@@ -40,7 +40,16 @@ const SectorHeader = ({ data }) => {
         return () => clearInterval(interval);
     }, []);
     return (
-        <div className="app_projects m-0">
+        <div className="app_projects m-0"
+            style={{
+                backgroundImage: data?.cover
+                    ? `url(${data.cover})`
+                    : undefined,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
+            }}
+        >
             <main className="main-content">
                 <Row
                     className="content-wrapper"
@@ -55,7 +64,7 @@ const SectorHeader = ({ data }) => {
                         </div>
 
                     </Col>
-                    <Col xl={12} lg={12} className="wrapper_details" > 
+                    <Col xl={12} lg={12} className="wrapper_details" >
                     </Col>
                     <Col xl={24} lg={24} className="wrapper_details mt-8 " >
                         <p className="description">{data?.description}</p>

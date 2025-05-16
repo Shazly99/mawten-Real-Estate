@@ -1,11 +1,12 @@
 @import '../../../style/varibale';
- 
+
 .sector_projects {
     margin-top: 114px;
     background-color: rgba(237, 237, 237, 0.4);
     padding-top: 100px;
     padding-bottom: 170px;
     margin-bottom: -120px;
+    background-image: none !important;
 
     .title-container {
         @include flex();

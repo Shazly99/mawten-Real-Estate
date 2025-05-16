@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import CustomButton from '@components/common/CustomButton';
 import OverlayHeader from '@components/common/OverlayHeader';
-import img from '@constants/img';
 import axios from 'axios';
-import { useParams } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { Link, useParams } from 'react-router-dom';
 import './blogs.scss';
 
 const BlogDetails = () => {
@@ -24,9 +24,11 @@ const BlogDetails = () => {
   return (
     <div>
       <OverlayHeader img={blog.image} />
-
-      <div className="blog-details-content">
-        <h1 className="blog-title">{blog.title}</h1>
+      <div className="blog-details-content mt0">
+        <Link to={'/media-center'} >
+          <CustomButton title={'المركز الاعلامي'} />
+        </Link>
+        <h1 className="blog-title mt-4">{blog.title}</h1>
         <div className="blog-meta">
           <span className="date" dir='rtl'>
             {new Date(blog.date).toLocaleDateString('ar-EG', { year: 'numeric', month: 'long', day: 'numeric' })}
@@ -38,7 +40,7 @@ const BlogDetails = () => {
         <div className="mt-5">
           <hr />
         </div>
-      </div> 
+      </div>
     </div>
   );
 };

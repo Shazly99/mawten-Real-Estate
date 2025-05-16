@@ -45,7 +45,7 @@ const Home = () => {
 
   return (
     <> 
-      <Modal
+      {/* <Modal
         visible={isModalVisible}
         onOk={handleOk}
         onCancel={handleCancel}
@@ -55,13 +55,13 @@ const Home = () => {
         <a href="https://docs.google.com/forms/d/e/1FAIpQLScX_GoMk05p0EU2ORGhDGlE5D6WHCBZapfHnR19Co7-BMUgCA/viewform" target="_blank" rel="noopener noreferrer"  >
           <img src={img.Ads} alt="" className="w-full h-full" srcset="" />
         </a>
-      </Modal>
+      </Modal> */}
 
-      <NumberCompany />
       <SliderHome />
       <TitleSection />
       <GalleryTitle data={data} />
       {/* <CompanyOverview /> */}
+      <NumberCompany />
       <ImportantProject data={data} />
       <HomeProjects data={tabItems} />
       {/* <InvestorRelations /> */}
