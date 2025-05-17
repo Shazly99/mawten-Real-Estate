@@ -138,7 +138,7 @@ const Mission = () => {
                             className='flex justify-content-end align-items-end'
                         >
                             <div className="timeline-image">
-                                <img src={img.mission2017} alt="Timeline" className="w-full rounded-lg shadow-lg" />
+                                <img src={img.H2010} alt="Timeline" className="w-full rounded-lg shadow-lg" />
                             </div>
                         </Col>
 
@@ -218,7 +218,7 @@ const Mission = () => {
                             className='flex justify-content-end align-items-end'
                         >
                             <div className="timeline-image">
-                                <img src={img.mission2017} alt="Timeline" className="w-full rounded-lg shadow-lg" />
+                                <img src={img.H2015} alt="Timeline" className="w-full rounded-lg shadow-lg" />
                             </div>
                         </Col>
 
@@ -249,52 +249,7 @@ const Mission = () => {
                             </div>
                         </Col>
                     </Row>
-                }
-
-                {
-                    selectedYearIndex == 3 &&
-                    <Row gutter={[50, 50]} className="timeline-section">
-                        {/* Right Column with Image */}
-                        <Col span={24} xs={24} sm={24} md={16} lg={12} xl={12}
-                            className='flex justify-content-end align-items-end'
-                        >
-                            <div className="timeline-image">
-                                <img src={img.mission2017} alt="Timeline" className="w-full rounded-lg shadow-lg" />
-                            </div>
-                        </Col>
-
-                        {/* Left Column with Text */}
-                        <Col span={24} xs={24} sm={24} md={16} lg={12} xl={12}>
-                            <div className="timeline-text">
-                                <Row className="timeline_year">
-                                    {/* Year 2008 */}
-                                    <Col>
-                                        <Text className="timeline-year">2015</Text>
-                                    </Col>
-
-                                    {/* Timeline line with circles */}
-                                    <Col className="timeline-line">
-                                        <div className="circle  circle1" />
-                                        <div className="line" />
-                                        <div className="circle circle2" />
-                                    </Col>
-
-                                    {/* Year 2007 */}
-                                    <Col>
-                                        <Text className="timeline-year">2013</Text>
-                                    </Col>
-                                </Row>
-                                <div className="list_misson">
-                                    <ul>
-                                        <li>2015 اكتمال تطوير مشروع فندق موطن لمار في مكة المكرمة يتكون من 614 غرفة وجناح فندقي بالقرب من الحرم المكي الشريف</li>
-                                        <li>2015 تدشين المقر الرئيسي الجديد لشركة موطن العقارية بمدينة الرياض</li>
-                                    </ul>
-                                </div>
-
-                            </div>
-                        </Col>
-                    </Row>
-                }
+                } 
 
                 {
                     selectedYearIndex == 4 &&
@@ -304,7 +259,7 @@ const Mission = () => {
                             className='flex justify-content-end align-items-end'
                         >
                             <div className="timeline-image">
-                                <img src={img.mission2017} alt="Timeline" className="w-full rounded-lg shadow-lg" />
+                                <img src={img.H2016} alt="Timeline" className="w-full rounded-lg shadow-lg" />
                             </div>
                         </Col>
 
@@ -350,7 +305,7 @@ const Mission = () => {
                             className='flex justify-content-end align-items-end'
                         >
                             <div className="timeline-image">
-                                <img src={img.mission2017} alt="Timeline" className="w-full rounded-lg shadow-lg" />
+                                <img src={img.H2017} alt="Timeline" className="w-full rounded-lg shadow-lg" />
                             </div>
                         </Col>
 
@@ -396,7 +351,7 @@ const Mission = () => {
                             className='flex justify-content-end align-items-end'
                         >
                             <div className="timeline-image">
-                                <img src={img.mission2017} alt="Timeline" className="w-full rounded-lg shadow-lg" />
+                                <img src={img.H2018} alt="Timeline" className="w-full rounded-lg shadow-lg" />
                             </div>
                         </Col>
 
@@ -437,7 +392,7 @@ const Mission = () => {
                             className='flex justify-content-end align-items-end'
                         >
                             <div className="timeline-image">
-                                <img src={img.mission2017} alt="Timeline" className="w-full rounded-lg shadow-lg" />
+                                <img src={img.H2020} alt="Timeline" className="w-full rounded-lg shadow-lg" />
                             </div>
                         </Col>
 
@@ -477,7 +432,7 @@ const Mission = () => {
                             className='flex justify-content-end align-items-end'
                         >
                             <div className="timeline-image">
-                                <img src={img.mission2017} alt="Timeline" className="w-full rounded-lg shadow-lg" />
+                                <img src={img.H2021} alt="Timeline" className="w-full rounded-lg shadow-lg" />
                             </div>
                         </Col>
 
@@ -518,7 +473,7 @@ const Mission = () => {
                             className='flex justify-content-end align-items-end'
                         >
                             <div className="timeline-image">
-                                <img src={img.mission2017} alt="Timeline" className="w-full rounded-lg shadow-lg" />
+                                <img src={img.H2022} alt="Timeline" className="w-full rounded-lg shadow-lg" />
                             </div>
                         </Col>
 
@@ -558,7 +513,7 @@ const Mission = () => {
                             className='flex justify-content-end align-items-end'
                         >
                             <div className="timeline-image">
-                                <img src={img.mission2017} alt="Timeline" className="w-full rounded-lg shadow-lg" />
+                                <img src={img.H2023} alt="Timeline" className="w-full rounded-lg shadow-lg" />
                             </div>
                         </Col>
 

@@ -29,6 +29,16 @@ import projectSlider1 from "@assets/images/slider/1.png";
 import projectSlider2 from "@assets/images/slider/2.png";
 import projectSlider3 from "@assets/images/slider/3.png";
 
+import H2010 from "@assets/images/history/2010.png";
+import H2015 from "@assets/images/history/2015.png";
+import H2016 from "@assets/images/history/2016.png";
+import H2017 from "@assets/images/history/2017.png";
+import H2018 from "@assets/images/history/2018.png";
+import H2020 from "@assets/images/history/2020.png";
+import H2021 from "@assets/images/history/2021.png";
+import H2022 from "@assets/images/history/2022.png";
+import H2023 from "@assets/images/history/2023.png";
+
 import left from "@assets/images/services/left.png";
 import right from "@assets/images/services/right.png";
 import services1 from "@assets/images/services/1.png";
@@ -110,7 +120,16 @@ const img = {
     projectSlider1,
     projectSlider2,
     projectSlider3,
-    contentLeft
+    contentLeft,
+    H2010,
+    H2015,
+    H2016,
+    H2017,
+    H2018,
+    H2020,
+    H2022,
+    H2021,
+    H2023
 }
 
 export default img;
