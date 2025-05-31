@@ -1,14 +1,13 @@
-import { CopyOutlined, FacebookFilled, ShareAltOutlined, XOutlined, WhatsAppOutlined } from '@ant-design/icons';
+import { CopyOutlined } from '@ant-design/icons';
 import CustomTitle from '@components/common/CustomTitle';
-import OverlayHeader from '@components/common/OverlayHeader';
 import TitleH from '@components/common/TitleH';
 import Icon from '@constants/icon';
 import img from '@constants/img';
-import { Button, Col, FloatButton, Row } from 'antd';
+import { Button, Col, Row } from 'antd';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import GalleryProjects from './GalleryProjects';
 import './ProjectDetails.scss';
 import ProjectDetailsHeader from './ProjectDetailsHeader';
@@ -59,8 +58,6 @@ const ProjectDetails = () => {
         setIsPlaying(true);
     };
 
-    const [showOptions, setShowOptions] = useState(false);
-
     const currentUrl = window.location.href;
 
     const shareTo = (platform) => {
@@ -79,10 +76,9 @@ const ProjectDetails = () => {
 
     return (
         <div className='app_details_projects_page'>
-            {/* <OverlayHeader img={projectData.image} header={projectData.title} breadcrumbItems={breadcrumbItems} /> */}
-            <ProjectDetailsHeader imgs={projectData.image}  data={projectData}  />
+            <ProjectDetailsHeader imgs={projectData.image} data={projectData} />
             <div className="app__project_destails mb-4">
-             
+
 
                 <div className="details">
                     <Row gutter={[20, 20]}>

@@ -15,7 +15,7 @@ const HomeMediaCenter = ({ blog = [] }) => {
     return (
         <section className="media-center mt_main">
             <div className="header   ">
-                <TitleH title={t("Center")} highlight={t("Media")} />
+                <TitleH  highlight={t("blgos")} />
             </div>
             <div className="container">
                 <Carousel
@@ -53,7 +53,7 @@ const HomeMediaCenter = ({ blog = [] }) => {
                     {blog.map((blog, index) => (
                         <div key={index} className="px-3 py-4" >
                             <div className="blog-card shadow-2 pb-4 ">
-                                <div className="card-header">
+                                <Link  to={`/media-center/${blog.key_word_ar}`}  className="card-header">
                                     <div className="card_blog_image">
                                         <img src={blog.image} alt={`Image ${blog.id}`} />
                                         <div className="overlay">
@@ -66,14 +66,14 @@ const HomeMediaCenter = ({ blog = [] }) => {
 
                                     <div className="card-info">
                                         <h3 className="title">{blog.short_title.split(" ").slice(0, 5).join(" ")}</h3>
-                                        <p className="description">{blog.short_description.split(" ").slice(0, 15).join(" ")}</p>
+                                        {/* <p className="description">{blog.short_description.split(" ").slice(0, 15).join(" ")}</p> */}
                                     </div>
-                                </div>
-                                <Link dir="rtl" to={`/media-center/${blog.key_word_ar}`} className='block   mx-3'>
+                                </Link>
+                             {/*    <Link dir="rtl" to={`/media-center/${blog.key_word_ar}`} className='block   mx-3'>
                                     <Button type="primary" shape='round' className="read-more-btn">
                                         {t('more')}
                                     </Button>
-                                </Link>
+                                </Link> */}
                             </div>
                         </div>
                     ))}

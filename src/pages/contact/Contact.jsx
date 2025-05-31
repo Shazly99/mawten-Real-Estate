@@ -1,19 +1,18 @@
-import OverlayHeader from '@components/common/OverlayHeader';
-import img from '@constants/img';
-import { useTranslation } from 'react-i18next';
-import './contact.scss';
-
 import {
-    XOutlined,
+    CopyOutlined,
     FacebookFilled,
     InstagramOutlined,
     LinkedinFilled,
-    CopyOutlined,
+    XOutlined,
 } from '@ant-design/icons';
-import { Button, Col, Form, Input, Row } from 'antd';
-import WorkingHoursSection from './WorkingHoursSection';
 import CustomTitle from '@components/common/CustomTitle';
+import OverlayHeader from '@components/common/OverlayHeader';
 import TitleH from '@components/common/TitleH';
+import img from '@constants/img';
+import { Button, Col, Form, Input, Row } from 'antd';
+import { useTranslation } from 'react-i18next';
+import './contact.scss';
+import WorkingHoursSection from './WorkingHoursSection';
 
 const Contact = () => {
     const { t } = useTranslation();
@@ -44,12 +43,9 @@ const Contact = () => {
                 <header>
                     <div className="contact-section">
 
-                        <div className="contact-content">
-                            {/*     <h2>
-                                نحن هنا لمساعدتك. <span className="highlight">تواصل معنا!</span>
-                            </h2> */}
+                        <div className="contact-content"> 
                             <div className="socials">
-                                <p>نسعد بتواصلكم واستسفساراتكم عبر القنوات التالية</p>
+                                <p>نسعد بتواصلكم و خدمتكم      </p>
                                 {/* <Button className="follow-btn">تابعونا على</Button> */}
                                 <div className="icons">
                                     <a href="https://x.com/Mawtenksa" target="_blank" rel="noopener noreferrer">
@@ -93,8 +89,7 @@ const Contact = () => {
                     <hr />
                 </div>
                 <div className="section-header mt-4 mb-4">
-                    <TitleH highlight={'  تواصل معنا'} />
-                    
+                    <TitleH highlight={'  تواصل معنا'} /> 
                 </div>
 
                 <Form
@@ -156,7 +151,7 @@ const Contact = () => {
                         <Input.TextArea rows={4} />
                     </Form.Item>
 
-                    <div className='flex justify-content-center mt-5'>
+                    <div className='flex    mt-5'>
                         <Form.Item>
                             <Button size='large' type="primary" htmlType="submit" className="submit-btn">
                                 {t('form.submit')}

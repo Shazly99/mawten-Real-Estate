@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import TitleH from '@components/common/TitleH';
 import Icon from '@constants/icon';
 import img from '@constants/img';
-import { Button, Col, Row } from 'antd';
+import { Button, Col, Pagination, Row } from 'antd';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
@@ -11,7 +11,8 @@ import './blogs.scss';
 const Blogs = () => {
     const { t } = useTranslation();
     const [blogs, setBlogs] = useState([]);
-
+    const [currentPage, setCurrentPage] = useState(1);
+    const pageSize = 4;
     useEffect(() => {
         axios.get(`https://mawtan.rightclicksa.com/api/home/blogs`)
             .then(res => {
@@ -23,6 +24,10 @@ const Blogs = () => {
                 console.error('Error fetching blogs:', err);
             });
     }, []);
+    const data = blogs.slice(
+        (currentPage - 1) * pageSize,
+        currentPage * pageSize
+    );
 
     return (
         <div className="app_media blogs-container">
@@ -33,9 +38,9 @@ const Blogs = () => {
                 </div>
             </header>
 
-            <main className="blogs-main">
+            <main className="blogs-main m-0">
                 <Row gutter={[30, 30]} className="h-full mt-8">
-                    {blogs.map((blog) => (
+                    {data.map((blog) => (
                         <Col key={blog.id} xs={24} sm={12} md={12} lg={12} xl={12} xxl={8} className='h_services mt-5'>
                             <div className="blog-card shadow-2 pb-4 ">
                                 <div className="card-header">
@@ -63,6 +68,15 @@ const Blogs = () => {
                         </Col>
                     ))}
                 </Row>
+                {/* ✅ Pagination   */}
+                <div className="pagination-container mt-6 text-center" dir='ltr'>
+                    <Pagination
+                        current={currentPage}
+                        pageSize={pageSize}
+                        total={blogs?.length}
+                        onChange={(page) => setCurrentPage(page)}
+                    />
+                </div>
             </main>
         </div>
     );

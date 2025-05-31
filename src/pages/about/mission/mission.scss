@@ -348,7 +348,7 @@
             text-align: justify;
             font-family: TheSansArabic;
             font-size: 18px;
-            font-style: normal; 
+            font-style: normal;
             line-height: normal;
             text-transform: capitalize;
 
@@ -373,4 +373,10 @@
             }
         }
     }
+}
+
+
+.slider_timer {
+    position: relative;
+    width: 100%; 
 }

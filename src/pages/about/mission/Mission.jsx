@@ -5,42 +5,83 @@ import { useEffect, useRef, useState } from 'react';
 import './mission.scss';
 import MissionHeader from './MissionHeader';
 const { Text } = Typography;
-const Mission = () => { 
+const Mission = () => {
     const years = ['2007', '2010', '2012', '2015', '2016', '2017', '2018', '2020', '2021', '2022', '2023'];
     const [selectedYearIndex, setSelectedYearIndex] = useState(0);
     const [isAutoSliding, setIsAutoSliding] = useState(true);
-    const intervalRef = useRef(null);
 
-    const handleSliderChange = (value) => {
-        setSelectedYearIndex(value);
-        setIsAutoSliding(false); // Stop auto sliding when user interacts
-    };
 
     const handleNextYear = () => {
-        const nextIndex = (selectedYearIndex + 1) % years.length;
-        setSelectedYearIndex(nextIndex);
-        setIsAutoSliding(false); // Stop auto sliding
+        const nextIndex = Math.min(selectedYearIndex + 1, years.length - 1);
+        animateProgressTo(nextIndex);
+        setIsAutoSliding(false);
     };
 
     const handlePrevYear = () => {
-        const prevIndex = (selectedYearIndex - 1 + years.length) % years.length;
-        setSelectedYearIndex(prevIndex);
-        setIsAutoSliding(false); // Stop auto sliding
+        const prevIndex = Math.max(selectedYearIndex - 1, 0);
+        animateProgressTo(prevIndex);
+        setIsAutoSliding(false);
     };
+
+    const animateProgressTo = (targetIndex) => {
+        const duration = 3000;
+        const fps = 60;
+        const totalSteps = (duration / 1000) * fps;
+        const stepSize = (targetIndex - progressValue) / totalSteps;
+
+        let step = 0;
+        const interval = setInterval(() => {
+            setProgressValue((prev) => {
+                const next = prev + stepSize;
+                step++;
+
+                if (step >= totalSteps || Math.abs(next - targetIndex) < 0.01) {
+                    clearInterval(interval);
+                    setProgressValue(targetIndex);
+                    setSelectedYearIndex(targetIndex);
+                    return targetIndex;
+                }
+
+                setSelectedYearIndex(Math.floor(next));
+                return next;
+            });
+        }, 1000 / fps);
+    };
+
+    const [progressValue, setProgressValue] = useState(0);
 
     // Auto slide logic
     useEffect(() => {
         if (isAutoSliding) {
-            intervalRef.current = setInterval(() => {
-                setSelectedYearIndex(prevIndex => {
-                    const nextIndex = (prevIndex + 1) % years.length;
-                    return nextIndex;
-                });
-            }, 3000); // Change every 3 seconds
-        }
+            const duration = 3000; // 3 ثواني
+            const fps = 60;
+            const totalSteps = (duration / 1000) * fps;
+            const stepSize = 1 / totalSteps;
 
-        return () => clearInterval(intervalRef.current); // Cleanup
-    }, [isAutoSliding]);
+            let step = 0;
+            const interval = setInterval(() => {
+                setProgressValue((prev) => {
+                    let next = prev + stepSize;
+
+                    if (next >= years.length - 1) {
+                        next = 0; // 🟢 نرجع للبداية
+                        setSelectedYearIndex(0);
+                    } else {
+                        setSelectedYearIndex(Math.floor(next));
+                    }
+
+                    return next;
+                });
+
+                step++;
+                if (step >= totalSteps) step = 0;
+            }, 1000 / fps);
+
+            return () => clearInterval(interval);
+        }
+    }, [isAutoSliding, years.length]);
+
+
 
     return (
         <div className="mission_bg">
@@ -62,18 +103,24 @@ const Mission = () => {
                                     />
                                 </div>
 
+
                                 <Slider
                                     min={0}
                                     max={years.length - 1}
-                                    value={selectedYearIndex}
-                                    onChange={handleSliderChange}
+                                    value={progressValue}
+                                    onChange={(value) => {
+                                        setProgressValue(value);
+                                        setSelectedYearIndex(Math.round(value));
+                                        setIsAutoSliding(false);
+                                    }}
                                     marks={years.reduce((acc, year, index) => {
                                         acc[index] = year;
                                         return acc;
                                     }, {})}
-                                    step={1}
+                                    step={0.01}
                                     tooltipVisible
                                 />
+
                                 <div className="timeline_prev_btn">
                                     <Button
                                         icon={<Icon.arrowLightL />}
@@ -249,7 +296,7 @@ const Mission = () => {
                             </div>
                         </Col>
                     </Row>
-                } 
+                }
 
                 {
                     selectedYearIndex == 4 &&

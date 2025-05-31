@@ -9,15 +9,13 @@
 
   .ant-row {
     @media screen and (width < 900px) {
-      gap: 0 !important;
-
+      gap: 0 !important; 
     }
   }
 
   .container {
     width: 90%;
-    margin: 0 auto;
-    // padding: 0 15px;
+    margin: 0 auto; 
   }
 
   .ant-typography {
@@ -70,7 +68,7 @@
   .footer__logo {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     flex-direction: column;
 
     img {

@@ -9,7 +9,7 @@ const { Title, Paragraph } = Typography;
 const HomeContactUs = ({ language = "ar" }) => {
     let { t, i18n } = useTranslation()
     return (
-        <div className={`app_contact_us mb-4 ${language === "en" ? "ltr" : "rtl"}`} dir={language === "en" ? "ltr" : "rtl"}>
+        <div className={`app_contact_us ${language === "en" ? "ltr" : "rtl"}`} dir={language === "en" ? "ltr" : "rtl"}>
             <Row className="home-contact"  >
                 <Col xs={24} sm={12} md={6} className="icons_contact-us  ">
                 

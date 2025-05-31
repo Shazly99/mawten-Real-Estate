@@ -21,10 +21,9 @@ const WorkingHoursSection = () => {
                 <div className="email-row flex justify-content-center align-items-center">
                     <span className="red-dot mt-0 " />
                     <div className="flex justify-content-between aline-items-center  w-full">
-
                         <span className="email-title flex justify-content-center align-items-center">اتصل بنا</span>
                         <a href="tel:+966920000598" className="contact">
-                            <Button className="phone-box" dir="ltr" >+966 9200 00598</Button>
+                            <Button type="text"  dir="ltr" >+966 9200 00598</Button>
                         </a> 
                     </div>
                 </div>

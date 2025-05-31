@@ -9,17 +9,13 @@ const TitleSection = () => {
     return (
         <div className="home-container bg-gray-100  ">
             {/* Top Section */}
-            <div className="title_container">
-                <Row gutter={[20, 20]} className="top-section flex  justify-content-center align-items-center ">
-                    <Col span={24} >
-                        <div className="flex justify-content-start align-items-center">
-                            <TitleH title={t('mawten')} className="text-4xl font-bold text-gray-900" />
-                        </div>
-                    </Col>
-                </Row>
+            <div className="title_container"> 
                 <Row gutter={[20, 20]} className="top-section flex   ">
                     <Col xl={10} md={12} xs={24} sm={24}>
                         {/* Content Section */}
+                        <div className="flex justify-content-start align-items-center">
+                            <TitleH title={t('mawten')} className="text-4xl font-bold text-gray-900" />
+                        </div>
                         <div className="content  mt-4">
                             <h2 className="title  font-bold " >نُطَوِّرْ لِيَنْموْ الْوَطَنْ
                             </h2>

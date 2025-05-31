@@ -69,16 +69,16 @@ const Board = () => {
                     )}
                 </header>
 
-                <main className="board-members mt-5">
+                <main className="board-members mt-5  ">
                     {location.pathname === '/about/board' ? (
-                        <Row gutter={[30, 30]} dir='ltr' >
+                        <Row gutter={[40, 40]} dir='ltr' >
                             {members.map((member, index) => (
                                 <Col key={index} xl={8} lg={8} md={12} sm={24} xs={24}>
                                     <div className="member-card">
                                         <div className="svg-icon">
                                             <Icon.IconEmp />
                                         </div>
-                                        <img src={member.img} alt="member-photo" />
+                                        <img src={member.img} alt="member-photo " className=' mt-8' />
                                     </div>
                                     <div className="conetnt" dir='rtl' >
                                         <h4>{member.name}</h4>

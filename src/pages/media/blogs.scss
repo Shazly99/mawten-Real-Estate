@@ -90,29 +90,34 @@
 .card-header {
     display: flex;
     flex-direction: column;
-    .card_blog_image{
+
+    .card_blog_image {
         position: relative;
 
-        .overlay{
+        .overlay {
             position: absolute;
-            inset: 0; 
+            inset: 0;
             display: flex;
             align-items: flex-end;
-            svg{
+
+            svg {
                 margin-bottom: 10px;
                 transform: rotate(0);
             }
-            button{
+
+            button {
                 position: absolute;
                 top: 20px;
                 left: 20px;
                 box-shadow: none;
                 @include flex();
                 background-color: $mainColor;
-                span{
+
+                span {
                     margin-top: 5px;
                 }
-                svg{
+
+                svg {
                     margin: auto !important;
                     transform: rotate(0);
                     margin-top: -5px !important;
@@ -131,7 +136,8 @@
 
 .card-info {
     padding: 1rem;
-    h3{
+
+    h3 {
         font-weight: 600;
     }
 }
@@ -143,6 +149,7 @@
 :lang(en) .card-info .description {
     text-align: left;
 }
+
 :lang(ar) .card-info .title {
     text-align: right;
 }
@@ -269,7 +276,7 @@
     }
 
     .btn {
-        @include flex(); 
+        @include flex();
     }
 }
 
@@ -336,4 +343,73 @@
     }
 
 
+}
+
+.blog-share {
+
+    .share-title {
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+        color: #222;
+        display: block;
+        margin-bottom: 15px !important;
+    }
+
+    .share-buttons {
+        display: flex;
+        gap: 16px;
+    }
+
+    .share-btn {
+        width: 30px;
+        height: 30px;
+        border-radius: 8px;
+        font-size: 20px;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+        text-decoration: none;
+
+        &:hover {
+            transform: scale(1.1);
+            opacity: 0.85;
+        }
+
+        svg {
+            padding: 2px;
+        }
+
+        &.whatsapp {
+            background-color: #25D366;
+
+        }
+
+        &.facebook {
+            background-color: #1877f2;
+        }
+
+        &.twitter {
+            background-color: #000; // X logo = black now
+        }
+    }
+}
+
+.share-btn.telegram {
+    background-color: #0088cc;
+
+    svg {
+        transform: rotate(-40deg);
+        margin-top: -4px;
+    }
+}
+
+.share-btn.linkedin {
+    background-color: #0077b5;
+}
+
+.share-btn.copy {
+    background-color: #666;
+    cursor: pointer;
 }

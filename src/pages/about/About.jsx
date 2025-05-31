@@ -11,21 +11,7 @@ import axios from 'axios'
 import { Col, Row } from 'antd'
 
 const About = () => {
-    const { t } = useTranslation();
-    // const categories = [
-    //     {
-    //         label: "السكني ومتعدد الاستخدام",
-    //         className: "residential",
-    //     },
-    //     {
-    //         label: "الصناعي واللوجستي",
-    //         className: "industrial",
-    //     },
-    //     {
-    //         label: "الضيافة",
-    //         className: "hospitality",
-    //     },
-    // ];
+    const { t } = useTranslation(); 
     const breadcrumbItems = [
         {
             label: t('nav_about'),

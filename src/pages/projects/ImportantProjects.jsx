@@ -1,7 +1,6 @@
 import { LeftOutlined, RightOutlined } from '@ant-design/icons';
 import CustomTitle from '@components/common/CustomTitle';
 import Icon from '@constants/icon';
-import img from '@constants/img'; // استبدل بالمسار الفعلي للصور
 import { Button, Carousel, Col, Row } from 'antd';
 import { useRef } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -82,17 +81,20 @@ const ImportantProjects = ({ data }) => {
 
                             </div>
                             <Row gutter={[16, 16]} className="project-title">
-                                <Col span={9} className="flex justify-content-start align-items-start">
-                                    <Link to={`/project/${item.id}`} >
+                                <Col span={9} className="flex justify-content-start align-items-start mt-4">
+                                    <Link to={`/project/${item.id}`} > 
                                         <Icon.arrowFill />
                                     </Link>
                                 </Col>
-                                <Col span={15} className='flex justify-content-center flex-column'>
+                                <Col span={15} className='flex justify-content-center flex-column mt-4'>
                                     <h3>{item.title}</h3>
-                                </Col>
-                                <Col span={24} className='flex justify-content-start'>
-                                    <p className='title_desc'>{item.description.split(" ").slice(0, 30).join(" ")}</p>
-                                </Col>
+                                    <div className="project_summery"> 
+                                        <div className="item flex align-items-center gap-2 w-full mt-2 " dir='rtl' >
+                                            <Icon.location2 />
+                                            <span >مكة المكرمة</span>
+                                        </div>
+                                    </div>
+                                </Col> 
                             </Row>
                         </div>
                     </div>

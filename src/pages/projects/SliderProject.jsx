@@ -17,7 +17,7 @@ const titles = [
 
 const SliderProject = () => (
     <div style={{ width: '100%' }}>
-        <Carousel autoplay  speed={1000} easing="cubic-bezier(0.4, 0, 0.2, 1)" fade>
+        <Carousel autoplay speed={1000} easing="cubic-bezier(0.4, 0, 0.2, 1)" fade>
             {images.map((src, idx) => (
                 <div key={idx}>
                     <div style={{
@@ -53,13 +53,27 @@ const SliderProject = () => (
                             left: '50%',
                             transform: 'translate(-50%, -50%)',
                             color: '#fff',
-                            fontSize: '2.5rem',
+                            fontSize: '3rem', // Increased font size
                             fontWeight: 'bold',
+                            textAlign: 'center',
+                            zIndex: 1,
+                            textShadow: '0 2px 8px rgba(0,0,0,0.7)',
+                            fontFamily: 'Arial, sans-serif' // Added font family
+                        }}>
+                            مشاريعنـــا
+                        </div>
+                        <div style={{
+                            position: 'absolute',
+                            top: '57%',
+                            left: '50%',
+                            transform: 'translate(-50%, -50%)',
+                            color: '#fff',
+                            fontSize: '2rem', 
                             textAlign: 'center',
                             zIndex: 1,
                             textShadow: '0 2px 8px rgba(0,0,0,0.7)'
                         }}>
-                            {titles[idx]}
+                            نطــور لاجل الوطن
                         </div>
                     </div>
                 </div>
