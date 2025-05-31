@@ -50,7 +50,7 @@ const Projects = () => {
                     <Row gutter={[50, 50]} >
                         <Col xl={11} lg={11} md={11} sm={24} xs={24} className='mt-8  ' >
                             <div className="content">
-                                <TitleH title={t('mawten')} highlight={t('RealEstate')} className="text-4xl font-bold text-gray-900" />
+                                <TitleH title={t('mawten')} highlight={t('RealEstate')}  />
                                 <h1>الريادة في صناعة الحلول العقارية المبتكرة </h1>
                                 <p>اكتشف مشاريع موطن العقارية النوعية، حيث العقارات السكنية، والتجارية، والصناعية واللوجستية، والضيافة التي تنفرد بنوعيتها وموقعها الاستراتيجية وجودتها العالية في التصميم والتنفيذ لتلبى احتياجات وتطلعات العملاء المستهدفين وتثري السوق العقارية في المملكة العربية السعودية.</p>
                             </div>
