@@ -54,8 +54,7 @@ const Sector = () => {
                         <h2>{project.title}</h2>
                       </div>
                       <Link to={`/project/${project.id}`} className="more flex justify-content-center align-items-center gap-4">
-                        <span>{t('more')}</span>
-                        {/* SVG هنا */}
+                        <span>{t('more')}</span> 
                       </Link>
                     </div>
                     <p className='mt-3'>
