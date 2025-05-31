@@ -64,14 +64,13 @@ const SliderProject = () => (
                         </div>
                         <div style={{
                             position: 'absolute',
-                            top: '57%',
+                            top: '59%',
                             left: '50%',
                             transform: 'translate(-50%, -50%)',
                             color: '#fff',
-                            fontSize: '2rem', 
+                            fontSize: '1.9rem', 
                             textAlign: 'center',
-                            zIndex: 1,
-                            textShadow: '0 2px 8px rgba(0,0,0,0.7)'
+                            zIndex: 1, 
                         }}>
                             نطــور لاجل الوطن
                         </div>
