@@ -1,48 +1,57 @@
-import General from '@context/General';
-import AppRouter from '@routes/AppRouter';
-import { ConfigProvider, Slider } from 'antd';
-import { useEffect } from 'react';
+import React, { useRef, useState } from 'react';
 import './style/App.scss';
-
+import baseImage from '/copy.jpg'; // تأكد من المسار الصحيح
 
 function App() {
+  const canvasRef = useRef(null);
+  const [employeeName, setEmployeeName] = useState('');
 
-  const theme = {
-    token: {
-      colorPrimary: '#0A1220',
-      colorActiveText: 'red'
-    },
-    components: {
-      Slider: {
-        colorPrimary: '#A61517',
-        colorActiveText: '#A61517'
-      }
-    },
+  const handleDownload = () => {
+    const canvas = canvasRef.current;
+    const ctx = canvas.getContext('2d');
+
+    const img = new Image();
+    img.src = baseImage;
+    img.onload = () => {
+      canvas.width = img.width;
+      canvas.height = img.height;
+
+      ctx.drawImage(img, 0, 0);
+
+      // إعدادات النص
+      ctx.font = '80px "Bahij", sans-serif'; // اسم الخط المزخرف بعد تثبيته
+      ctx.fillStyle = '#f11d23';
+      ctx.textAlign = 'center';
+
+      ctx.shadowColor = 'rgba(0,0,0,0.4)';
+      ctx.shadowOffsetX = 2;
+      ctx.shadowOffsetY = 2;
+      ctx.shadowBlur = 4;
+
+      ctx.fillText(employeeName, canvas.width / 2, canvas.height - 110);
+
+      const link = document.createElement('a');
+      link.download = `${employeeName}.jpg`;
+      link.href = canvas.toDataURL('image/jpeg');
+      link.click();
+    };
   };
-  useEffect(() => {
-    const scrollStep = -window.pageYOffset / 50;
-    const scrollInterval = setInterval(() => {
-      if (window.pageYOffset !== 0) {
-        window.scrollBy(0, scrollStep);
-      } else {
-        clearInterval(scrollInterval);
-      }
-    }, 10);
 
-    return () => clearInterval(scrollInterval); 
-  }, []);
   return (
-    <div className='trial__version'>
-      <div className="trial__version__text">
-        <span>  إطلاق تجريبي</span>
+    <div className="background-container">
+      <div className="input-wrapper">
+        <input
+          type="text"
+          placeholder="الرجاء إدخال الاسم"
+          value={employeeName}
+          onChange={(e) => setEmployeeName(e.target.value)}
+        />
+        <button onClick={handleDownload}>احصل على بطاقتك</button>
       </div>
-      <ConfigProvider theme={theme} >
-        <General>
-          <AppRouter />
-        </General>
-      </ConfigProvider>
+
+      <canvas ref={canvasRef} style={{ display: 'none' }} />
     </div>
-  )
+  );
 }
 
-export default App 
+export default App;
