@@ -393,6 +393,10 @@ strong,
     outline: none;
     width: 337px;
     text-align: right;
+
+    @media screen and (width < 767px) {
+        width: 150px;
+    }
 }
 
 .input-wrapper button {
@@ -404,4 +408,5 @@ strong,
     cursor: pointer;
     border-radius: 0 999px 999px 0;
     white-space: nowrap;
+    
 }
