@@ -45,17 +45,17 @@ const Sector = () => {
             {paginatedProjects.map(project => (
               <Col xl={12} md={12} xs={24} sm={24} key={project.id}>
                 <div className="card">
-                  <div className="card_image">
+                  <Link to={`/project/${project.id}`} className="card_image">
                     <img src={project.image} alt={project.title} />
-                  </div>
+                  </Link>
                   <div className="card_content">
                     <div className="flex justify-content-between">
                       <div className="header">
                         <h2>{project.title}</h2>
                       </div>
-                      <Link to={`/project/${project.id}`} className="more flex justify-content-center align-items-center gap-4">
+                {/*       <Link to={`/project/${project.id}`} className="more flex justify-content-center align-items-center gap-4">
                         <span>{t('more')}</span> 
-                      </Link>
+                      </Link> */}
                     </div>
                     <p className='mt-3'>
                       {project.description.split(" ").slice(0, 30).join(" ")}...

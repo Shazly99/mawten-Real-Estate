@@ -207,7 +207,7 @@
         font-size: 14px;
         margin-top: 10px;
         transition: background 0.3s;
-        width: 147px;
+        width: fit-content;
         height: 48px;
         margin-top: 60px;
         @include flex();

@@ -55,8 +55,7 @@ const Footer = () => {
               <div className="app_link gap-0">
                 <span className="flex gap-1" ><PhoneOutlined /> <a dir="ltr" className="mt-1" href="tel:+966920000598">{t("phone")}</a></span>
                 <span className=" mail flex flex-row gap-2 align-items-center "><MailOutlined />  <a href="mailto:Info@mawten.com.sa" target="_blank" className="mt-2" >{t("email")}</a></span>
-
-                <span className="mt-3" >الموقع تحت الإطلاق التجريبي</span>
+ 
                 <div className="mt-5 social_title">
                   <strong>{t("follow_us")}</strong>
                 </div>

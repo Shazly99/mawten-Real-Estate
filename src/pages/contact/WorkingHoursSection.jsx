@@ -6,11 +6,12 @@ import TitleH from "@components/common/TitleH";
 import { Button } from "antd";
 
 const contactData = [
-    { label: "التسويق", email: "Markting@Mawten.Com.Sa" },
     { label: "المبيعات", email: "Sales@Mawten.Com.Sa" },
     { label: "التأجير", email: "Leasing@Mawten.Com.Sa" },
-    { label: "علاقات المستثمرين", email: "IR@Mawten.Com.Sa" },
-    { label: "التوظيف", email: "Recruitment@Mawten.Com.Sa" },
+    { label: "التسويق", email: "Markting@Mawten.Com.Sa" },
+    { label: "العنايه بالعملاء", email: "care@Mawten.Com.Sa" },
+    // { label: "علاقات المستثمرين", email: "IR@Mawten.Com.Sa" },
+    // { label: "التوظيف", email: "Recruitment@Mawten.Com.Sa" },
 ];
 
 const WorkingHoursSection = () => {

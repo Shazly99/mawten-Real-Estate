@@ -37,7 +37,7 @@ const Navbar = () => {
             {sectors.map((sector) => (
                 <Menu.Item key={sector.id}>
                     <NavLink to={`/projects/sector/${sector.id}`}>
-                        {sector.title}
+                        {sector.title} {sector.sub_title && `${sector.sub_title}`}
                     </NavLink>
                 </Menu.Item>
             ))}

@@ -6,11 +6,11 @@ const GalleryTitle = ({ data }) => {
         <div className="image-gallery">
             <Carousel
                 autoplay
-                autoplaySpeed={1800}
+                autoplaySpeed={2500}
                 speed={1800}
                 dots={false} 
                 pauseOnHover={false}
-                slidesToShow={2}
+                slidesToShow={2.5}
                 responsive={[
                     { breakpoint: 1200, settings: { slidesToShow: 4 } },
                     { breakpoint: 992, settings: { slidesToShow: 3 } },

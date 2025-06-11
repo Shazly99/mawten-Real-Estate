@@ -65,7 +65,7 @@ const Services = () => {
                 <Row gutter={[16, 16]} className='h-full  mb-8'>
                     <Col xl={11} offset={1} lg={11} xxl={11} md={24} xs={24} sm={24} className='h_services_2' >
                         <div className="services_content">
-                            <TitleH title={'حلول التسويق '} highlight={'والمبيعات'} />
+                            <TitleH title={' التسويق '} highlight={'والمبيعات'} />
                             <p>تحظى موطن العقارية بكفاءات بشرية في مجال التسويق والمبيعات تتمتع بقدرات تسويقية وبيعية عالية عبر فريق عمل تنفيذي ذو خبرة عميقة في المجال العقاري وتطوير الخطط الاستراتيجية التسويقية لمشاريع الشركة أو مشاريع الغير</p>
                         </div>
                     </Col>

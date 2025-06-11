@@ -41,7 +41,7 @@ const Blogs = () => {
             <main className="blogs-main m-0">
                 <Row gutter={[30, 30]} className="h-full mt-8">
                     {data.map((blog) => (
-                        <Col key={blog.id} xs={24} sm={12} md={12} lg={12} xl={12} xxl={8} className='h_services mt-5'>
+                        <Col key={blog.id} xs={24} sm={8} md={8} lg={8} xl={8} xxl={8} className='h_services mt-5'>
                             <div className="blog-card shadow-2 pb-4 ">
                                 <div className="card-header">
                                     <div className="card_blog_image">

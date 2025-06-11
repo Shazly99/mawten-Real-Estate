@@ -21,7 +21,7 @@ const MissionHeader = () => {
         <div>
             <div className="app__mission">
 
-                <OverlayHeader img={img.aboutCover} header={t('AboutMawten')} breadcrumbItems={breadcrumbItems} />
+                <OverlayHeader img={img.aboutCover} header={t('تاريخ من الإنجازات')} breadcrumbItems={breadcrumbItems} />
 
                 <header className="flex justify-center align-items-center">
                     <TitleH title={t('history')} highlight={t('')} />

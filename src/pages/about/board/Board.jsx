@@ -45,7 +45,7 @@ const Board = () => {
         
         { name: 'عبد الله بن سعود الرشود', position: 'عضو مجلس الإدارة', img: img.emp7 },
         { name: 'عبد العزيز بن حمد بن سعيدان', position: 'عضو مجلس الإدارة', img: img.emp14 },
-        { name: 'سليمان الحربي', position: 'عضو مجلس الإدارة', img: img.emp11 },
+        { name: 'سليمان سليم الحربي', position: 'عضو مجلس الإدارة', img: img.emp11 },
         
         { name: 'سعود بن محمد السليماني', position: 'عضو مجلس الإدارة', img: img.emp13 },
         { name: 'أحمد بن إبراهيم بن سعيدان', position: 'عضو مجلس الإدارة', img: img.emp15 },
@@ -57,7 +57,7 @@ const Board = () => {
         <div className="mb-8 pb-8">
             <OverlayHeader
                 img={img.aboutCover}
-                header={t('AboutMawten')}
+                header={t('القيادة')}
                 breadcrumbItems={location.pathname === '/about/board' ? breadcrumbItems : breadcrumbItems2}
             />
             <div className="app_board">

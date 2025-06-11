@@ -180,8 +180,7 @@ const Contact = () => {
                                 type="primary"
                                 className="copy-button"
                                 onClick={copyToClipboard}
-                                icon={<CopyOutlined />}
-                            >{t('address.copyButton')}</Button>
+                                icon={<CopyOutlined />} />
                         </Col>
                         {/* Google Map Embed */}
                         <Col xs={24} md={14}>
