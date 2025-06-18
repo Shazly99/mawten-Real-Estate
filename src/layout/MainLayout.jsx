@@ -1,8 +1,8 @@
 import CustomFooter from '@components/footer/CustomFooter';
 import Navbar from '@components/navbar/Navbar';
+import { useEffect, useState } from 'react';
 import { Outlet, useLocation } from 'react-router-dom';
 import '../components/style.scss';
-import { useEffect, useState } from 'react';
 
 
 const MainLayout = () => {
@@ -29,7 +29,7 @@ const MainLayout = () => {
           location.pathname.includes('about') ||
           location.pathname == '/about/mission') ? isScrolled ? '' : 'other' :
           (location.pathname.includes('projects') ||
-            location.pathname == '/contact') ? 'blogs_navbar'  :  (location.pathname.includes('/project/') ? 'bg_dark' : '') }       >
+            location.pathname == '/contact') ? 'blogs_navbar'  :  (location.pathname.includes('/project/') ? '' : 'bg_dark') }       >
         <Navbar />
       </div>
       <Outlet />

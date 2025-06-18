@@ -2,9 +2,7 @@
 
 .app__project_destails {
     width: 85%;
-    margin: auto;
-    margin-top: 100px;
-
+    margin: auto; 
 
 }
 
@@ -92,7 +90,7 @@
     }
 
     .gallery_ {
-
+        margin-top: 50px;
         .title-container {
             justify-content: center;
 
@@ -343,3 +341,35 @@
             transform: rotate(0deg) !important;
         }
     }
+
+    .services-row {
+  display: flex;
+  flex-wrap: wrap;
+  direction: rtl;
+  text-align: center;
+}
+
+.service-col {
+  width: 20%; /* 100 / 5 = 20% */
+  padding: 16px 0;
+}
+
+.icon-container {
+  background: #f9f9f9;
+  border-radius: 50%;
+  padding: 16px;
+  display: inline-block;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+}
+
+.service-col img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 12px;
+}
+
+.service-label {
+  font-size: 16px;
+  color: #222;
+  margin: 0;
+}

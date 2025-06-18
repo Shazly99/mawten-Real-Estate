@@ -17,8 +17,7 @@ const TitleSection = () => {
                             <TitleH title={t('mawten')} className="text-4xl font-bold text-gray-900" />
                         </div>
                         <div className="content  mt-4">
-                            <h2 className="title  font-bold " >نُطَوِّرْ لِيَنْموْ الْوَطَنْ
-                            </h2>
+                            <h2 className="title  font-bold " >نُطَوِّرْ لِيَنْموْ الْوَطَنْ</h2>
                         </div>
 
                     </Col>
@@ -33,7 +32,7 @@ const TitleSection = () => {
                     </Col>
                 </Row>
                 <Link to={'/about'} >
-                    <CustomButton />
+                    <CustomButton title={'ملف تعريفي'} />
                 </Link>
 
             </div>

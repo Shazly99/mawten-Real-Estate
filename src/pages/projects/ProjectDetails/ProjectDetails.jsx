@@ -1,16 +1,15 @@
-import { CopyOutlined } from '@ant-design/icons';
-import CustomTitle from '@components/common/CustomTitle';
-import TitleH from '@components/common/TitleH';
+import OverlayHeader from '@components/common/OverlayHeader';
 import Icon from '@constants/icon';
 import img from '@constants/img';
 import { Button, Col, Row } from 'antd';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import GalleryProjects from './GalleryProjects';
 import './ProjectDetails.scss';
 import ProjectDetailsHeader from './ProjectDetailsHeader';
+import UnitModels from './UnitModels';
 
 const ProjectDetails = () => {
     const { t } = useTranslation();
@@ -71,207 +70,125 @@ const ProjectDetails = () => {
         }
         window.open(shareUrl, '_blank', 'noopener,noreferrer');
     };
+
+    const services = [
+        { icon: Icon.kids, label: 'حضانة أطفال' },
+        { icon: Icon.gymWomen, label: 'نادي رياضي نساء' },
+        { icon: Icon.gymMen, label: 'نادي رياضي رجال' },
+        { icon: Icon.lobby, label: 'مناطق استقبال وجلسات' },
+        { icon: Icon.parking, label: 'مواقف سيارات' },
+        { icon: Icon.warranty, label: 'ضمانات الإنشاء والتركيبات' },
+        { icon: Icon.mosque, label: 'مصلى' },
+        { icon: Icon.restaurant, label: 'مطاعم' },
+        { icon: Icon.cafe, label: 'مقاهي' },
+        { icon: Icon.supermarket, label: 'سوبر ماركت' },
+    ];
+
     if (loading) return <p>جاري تحميل البيانات...</p>;
     if (!projectData) return <p>لم يتم العثور على بيانات المشروع.</p>;
 
     return (
-        <div className='app_details_projects_page'>
-            <ProjectDetailsHeader imgs={projectData.image} data={projectData} />
-            <div className="app__project_destails mb-4">
-
-
-                <div className="details">
-                    <Row gutter={[20, 20]}>
-                        <Col xl={24} className='title flex flex-column gap-2'>
-                            <TitleH highlight={'تفاصيل المشروع'} />
-                            <p>{projectData.description}</p>
-                        </Col>
-                        <Col xl={24}>
-                            <div className="project-container">
-                                <Row gutter={[16, 16]}>
-                                    {
-                                        projectData?.type1 &&
-                                        <Col lg={8} xs={24}>
-                                            <div className="section">
-                                                <div className="icon-text">
-                                                    <div className="content flex flex-row gap-3 align-items-center justify-content-center">
-                                                        <p className="label1">عدد الاراضي</p>
-                                                        <div className="icon flex flex-row gap-3">
-                                                            <Icon.HotelUnit />
-                                                            <p className="value">{projectData.type1}</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </Col>
-                                    }
-
-                                    {
-                                        projectData?.type2 &&
-                                        <Col lg={8} xs={24}>
-                                            <div className="section">
-                                                <div className="icon-text">
-                                                    <div className="content flex flex-row gap-3 align-items-center justify-content-center">
-                                                        <p className="label1">عدد المصانع</p>
-                                                        <div className="icon flex flex-row gap-3">
-                                                            <Icon.HotelUnit />
-                                                            <p className="value">{projectData.type2}</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </Col>
-                                    }
-                                    {
-                                        projectData?.type3 &&
-                                        <Col lg={8} xs={24}>
-                                            <div className="section">
-                                                <div className="icon-text">
-                                                    <div className="content flex flex-row gap-3 align-items-center justify-content-center">
-                                                        <p className="label1">عدد الطوابق</p>
-                                                        <div className="icon flex flex-row gap-3">
-                                                            <Icon.HotelUnit />
-                                                            <p className="value">{projectData.type3}</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </Col>
-                                    }
-                                    {
-                                        projectData?.floors &&
-                                        <Col lg={8} xs={24}>
-                                            <div className="section">
-                                                <div className="icon-text">
-                                                    <div className="content flex flex-row gap-3 align-items-center justify-content-center">
-                                                        <p className="label1">عدد الطوابق</p>
-                                                        <div className="icon flex flex-row gap-3">
-                                                            <Icon.HotelUnit />
-                                                            <p className="value">{projectData.floors}</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </Col>
-                                    }
-                                    {
-                                        projectData?.area &&
-                                        <Col lg={8} xs={24}>
-                                            <div className="section">
-                                                <div className="icon-text">
-                                                    <div className="content flex flex-row gap-3 align-items-center justify-content-center">
-                                                        <p className="label1">المساحة</p>
-                                                        <div className="icon flex flex-row gap-3">
-                                                            <Icon.size />
-                                                            <p className="value">{projectData.area}</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </Col>
-                                    }
-                                    {
-                                        projectData?.units &&
-                                        <Col lg={8} xs={24}>
-                                            <div className="section">
-                                                <div className="icon-text">
-                                                    <div className="content flex flex-row gap-3 align-items-center justify-content-center">
-                                                        <p className="label1">الوحدات السكنية</p>
-                                                        <div className="icon flex flex-row gap-3">
-                                                            <Icon.projects />
-                                                            <p className="value">{projectData.units}</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </Col>
-                                    }
-                                </Row>
-                            </div>
-                        </Col>
-                    </Row>
-                </div>
-
-                <div className="details-list">
-                    <ul>
-                        {projectData.scopes?.map((feature, index) => (
-                            <li key={index}>{feature.scope_ar}</li>
-                        ))}
-                    </ul>
-                </div>
-
-                <div className="mt-5 video_project">
-                    {
-                        projectData?.video &&
-                        <>
-                            <Col xl={24} className='title flex flex-column gap-2'>
-                                <div className="flex justify-content-center">
-                                    <TitleH highlight={'فيديو توضيحي للمشروع'} />
-                                </div>
+        <>
+            <OverlayHeader img={img.aboutCover} header={projectData?.title} breadcrumbItems={breadcrumbItems} />
+            <div className='app_details_projects_page'>
+                <ProjectDetailsHeader imgs={projectData.image} data={projectData} />
+                <div className="app__project_destails mb-4">
+                    <div className="project-section">
+                        {/* الكتلة الثانية */}
+                        <Row gutter={[50, 50]} align="middle" style={{ marginTop: '64px' }}>
+                            <Col xs={24} md={12}>
+                                <h3 className="project-title">طيب الجوار والاستثمار قرب المسجد الحرام</h3>
+                                <p className="project-description">
+                                    يرتفع موطن مسار تاورز الفاخر حتى 27 طابقاً على مساحة تبلغ 6,580 متر مربع وبمسطحات بناء حوالي 114 ألف متر مربع في منطقة الرصيفة، وتضم وحدات سكنية راقية بعدد 948 وحدة سكنية بنماذج متعددة (ستوديو – غرفة – غرفتين - ثلاث غرف)، تنفرد بتصاميم عصرية فاخرة ومساحات متنوعة تتراوح بين 47 إلى 128م2، بالإضافة إلى ثلاث طوابق مخصصة لمحلات التجزئة. مع ضمانات شاملة.
+                                </p>
                             </Col>
-                            <div className="w-full mt-3">
-                                {isPlaying ? (
-                                    <video
-                                        className="w-full"
-                                        src={projectData.video}
-                                        controls
-                                        autoPlay
-                                    />
-                                ) : (
-                                    <img
-                                        src={img.ProjectsV}
-                                        className="w-full cursor-pointer"
-                                        alt="Click to play"
-                                        onClick={handlePlay}
-                                    />
-                                )}
-                            </div>
-                        </>
-                    }
-                    <p className='text-center'>{projectData.description}</p>
-                </div>
-            </div>
+                            <Col xs={24} md={12}>
+                                <img src={img.H2010} alt="مشروع 2" className="project-image" />
+                            </Col>
+                        </Row>
+                        {/* الكتلة الأولى */}
+                        <Row gutter={[50, 50]} align="middle" style={{ marginTop: '64px' }}>
+                            <Col xs={24} md={12} order={2}>
+                                <h3 className="project-title">طيب الجوار والاستثمار قرب المسجد الحرام</h3>
+                                <p className="project-description">
+                                    احظى بجودة حياة فريدة في موطن مسار تاورز، حيث سهولة الوصول الى الحرم المكي الشريف، والاستمتاع بالخدمات والتجارب المتكاملة في المناطق المحيطة، إضافة إلى مرافق وخدمات المتكاملة في موطن مسار تاورز تشمل مواقف سيارات في عدة طوابق، مساحات تجارية تخدم السكان، صالات الاستقبال والجلوس، نادي رياضي للرجال وآخر للسيدات، سوبر ماركت، كافتيريا، مطاعم، مصلى. فضلاً عن خدمات الصيانة الدورية                                    </p>
+                            </Col>
+                            <Col xs={24} md={12} order={1}>
+                                <img src={img.H2010} alt="مشروع 1" className="project-image" />
+                            </Col>
+                        </Row>
 
-            {
-                projectData?.images?.length > 0 &&
-                <GalleryProjects data={projectData?.images} />
-            }
-
-
-            <div className="address-section mt-8">
-                <div className='container'>
-                    <Row gutter={[16, 16]} align="middle">
-                        <Col xs={24} md={12} className="address-content">
-                            <div className="title">
-                                <CustomTitle title={t('address.title')} />
-                            </div>
-                            <p>
-                                {t('address.line1')}
-                                <br />
-                                {t('address.line2')}
-                            </p>
-
-                            <Button
-                                type="primary"
-                                className="copy-button"
-                                onClick={copyToClipboard}
-                                icon={<CopyOutlined />}
-                            >
-                                {t('address.copyButton')}
+                    </div>
+                    <div className="item_share_btn flex justify-content-center"  >
+                        <Link to={'/contact'} >
+                            <Button size='large' iconPosition='left' className="custom-btn" type="primary">
+                                {t('سجل اهتمامك')}
                             </Button>
-                        </Col>
-                        <Col xs={24} md={12}>
-                            <iframe
-                                src={googleMapsLink}
-                                allowFullScreen=""
-                                loading="lazy"
-                                referrerPolicy="no-referrer-when-downgrade"
-                            ></iframe>
-                        </Col>
+                        </Link>
+                    </div>
+                    <div className="mt-5 video_project">
+                        {
+                            projectData?.video &&
+                            <>
+
+                                <div className="w-full mt-3">
+                                    {isPlaying ? (
+                                        <video
+                                            className="w-full"
+                                            src={projectData.video}
+                                            controls
+                                            autoPlay
+                                        />
+                                    ) : (
+                                        <img
+                                            src={img.ProjectsV}
+                                            className="w-full cursor-pointer"
+                                            alt="Click to play"
+                                            onClick={handlePlay}
+                                        />
+                                    )}
+                                </div>
+                            </>
+                        }
+                        <p className='text-center'>{projectData.description}</p>
+                    </div>
+
+                    <Row className="services-row" gutter={[0, 32]} justify="start">
+                        {services.map((service, index) => (
+                            <div className="service-col" key={index}>
+                                <div className="icon-container">
+                                    <img src={service.icon} alt={service.label} />
+                                </div>
+                                <p className="service-label">{service.label}</p>
+                            </div>
+                        ))}
                     </Row>
                 </div>
+
+                {
+                    projectData?.images?.length > 0 &&
+                    <GalleryProjects data={projectData?.images} />
+                }
+
+                <UnitModels />
+                <div className="address-section mt-8">
+                    <div className='container'>
+                        <Row gutter={[16, 16]} align="middle">
+
+                            <Col xs={24} md={24}>
+                                <iframe
+                                    src={googleMapsLink}
+                                    allowFullScreen=""
+                                    loading="lazy"
+                                    referrerPolicy="no-referrer-when-downgrade"
+                                    className='w-full h-[400px] rounded-lg'
+                                ></iframe>
+                            </Col>
+                        </Row>
+                    </div>
+                </div>
             </div>
-        </div>
+        </>
     );
 };
 

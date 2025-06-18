@@ -1,11 +1,10 @@
-import { Row, Col, Button } from 'antd';
-import React from 'react';
-import './ProjectDetailsHeader.css';
-import Icon from '@constants/icon';
-import { Link } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
-import img from '@constants/img';
 import CustomButton from '@components/common/CustomButton';
+import Icon from '@constants/icon';
+import img from '@constants/img';
+import { Col, Row } from 'antd';
+import React from 'react';
+import { useTranslation } from 'react-i18next';
+import './ProjectDetailsHeader.css';
 const ProjectDetailsHeader = ({ imgs, data }) => {
     const { t } = useTranslation();
     const [showOptions, setShowOptions] = React.useState(false);
@@ -18,39 +17,26 @@ const ProjectDetailsHeader = ({ imgs, data }) => {
                             <div className="project_summery">
                                 <CustomButton title={'صفحة المشاريع'} />
                                 <h1 className='mt-3' >{data.title}</h1>
-                                <div className="points m-0 flex gap-4">
-                                    <div className="item flex align-items-center gap-2">
-                                        <Icon.location2 />
-                                        <span>{data.location}</span>
+                                <div className="flex flex-row gap-4">
+                                    <div className="points m-0 flex gap-4">
+                                        <div className="item flex align-items-center gap-2">
+                                            <Icon.location2 />
+                                            <span>{data.location}</span>
+                                        </div>
+                                        <div className="item flex align-items-center gap-2">
+                                            <Icon.type2 />
+                                            <span>{data.key_word}</span>
+                                        </div>
                                     </div>
-                                    <div className="item flex align-items-center gap-2">
-                                        <Icon.type2 />
-                                        <span>{data.key_word}</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </Col>
-                        <Col xl={24} xs={24}>
-                            {
-                                data?.sector != "قطاع الضيافة\r\n" &&
-                                <div className="item_share_btn"  >
-                                    <Link to={'/contact'} >
-                                        <Button size='large' iconPosition='left' className="custom-btn" icon={<Icon.share />} type="primary">
-                                            {t('سجل اهتمامك')}
-                                        </Button>
-                                    </Link>
-                                    <div className="item_share flex flex-column cursor-pointer">
 
-                                        {/* زر الصورة */}
+                                    <div className="item_share flex flex-row align-items-center gap-2 cursor-pointer">
                                         <img
                                             src={img.share}
-                                            width={50}
+                                            width={40}
                                             alt="مشاركة"
                                             style={{ cursor: 'pointer' }}
                                             onClick={() => setShowOptions(!showOptions)}
                                         />
-
-                                        {/* قائمة الأزرار تظهر فوق الصورة */}
                                         {showOptions && (
                                             <div className='app_image_social' style={{ position: 'absolute', bottom: 120, left: 5, display: 'flex', flexDirection: 'column', gap: '10px', alignItems: 'center' }}>
                                                 <button
@@ -77,20 +63,30 @@ const ProjectDetailsHeader = ({ imgs, data }) => {
                                         )}
                                         <span>مشاركة</span>
                                     </div>
-                                </div>
-                            }
 
+                                </div>
+                                <div className="summary-box">
+                                    <div className="summary-item">
+                                        <div className="summary-number">938</div>
+                                        <div className="summary-label">وحدة سكنية</div>
+                                    </div>
+                                    <div className="divider-vertical" />
+                                    <div className="summary-item">
+                                        <div className="summary-number">27</div>
+                                        <div className="summary-label">عدد الطوابق</div>
+                                    </div>
+                                </div>
+                            </div>
                         </Col>
+
                     </Row>
                 </Col>
                 <Col xs={24} md={12}>
-                    <div className="image-container">
-                        <img
-                            src={imgs}
-                            alt="Project"
-                            className="project-image w-full"
-                        />
-                        <div className="overlay-square "></div>
+                    <div className="app_project_content">
+                        <h1>طيب الجوار والاستثمار قرب المسجد الحرام</h1>
+                        <p>
+                            موطن مسار تاورز مشروع يتفرد بموقعه الاستراتيجي في قلب مكة المكرمة ملاصقاً لمشروع وجهة مسار – الوجهة الحضرية التنموية غير المسبوقة في أطهر الديار، ويبعد عن الحرم المكي الشريف قرابة 3,600 متر. ويتميز بإطلالة كاملة على الدائري الثالث وبجوار محطة قطار الحرمين، والقرب من مكونات وجهة مسار مثل البوليفارد والمول والمستشفى وغيرها من المكونات، والاستفادة من خدمات الحافلات الترددية والمترو للوصول إلى الحرم المكي الشريف في وقت قياسي، إضافة إلى مسارات المشاة المباشرة للوصول الى الحرم المكي الشريف بكل يسر وآمان.
+                        </p>
                     </div>
                 </Col>
             </Row>

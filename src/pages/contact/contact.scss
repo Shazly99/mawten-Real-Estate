@@ -123,8 +123,7 @@
     background-color: $mainColor;
 }
 
-.address-section {
-    background: #181820;
+.address-section { 
     padding: 70px 20px 190px 20px;
     color: white;
     text-align: right;
@@ -336,6 +335,7 @@
             padding: 0;
             font-weight: 900;
             font-size: 16px;
+            font-size: 20px;
         }
 
         .phone-box {
@@ -364,6 +364,7 @@
             }
 
             .email-title {
+                font-size: 20px;
                 font-weight: bold;
             }
 

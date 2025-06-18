@@ -3,7 +3,7 @@ import {
     FacebookFilled,
     InstagramOutlined,
     LinkedinFilled,
-    XOutlined,
+    XOutlined
 } from '@ant-design/icons';
 import CustomTitle from '@components/common/CustomTitle';
 import OverlayHeader from '@components/common/OverlayHeader';

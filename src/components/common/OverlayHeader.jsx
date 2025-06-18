@@ -1,5 +1,4 @@
-import React from 'react';
-import { Breadcrumb, Button } from 'antd';
+import { Breadcrumb } from 'antd';
 import { Link, useLocation } from 'react-router-dom';
 
 const OverlayHeader = ({ breadcrumbItems, header, img }) => {
@@ -14,12 +13,7 @@ const OverlayHeader = ({ breadcrumbItems, header, img }) => {
             <img src={img} alt="Cover" className="w-full" />
             <div className="overlay">
                 <div className="content">
-                    {
-                        location.pathname.includes('/project/') &&
-                        <Link to={'/projects'} >
-                            <Button size='large' type='primary' >المشاريع</Button>
-                        </Link>
-                    }
+                
                     <h3>{header}</h3>
                     {
                         breadcrumbItems &&
