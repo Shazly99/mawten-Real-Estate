@@ -10,7 +10,7 @@ import GalleryProjects from './GalleryProjects';
 import './ProjectDetails.scss';
 import ProjectDetailsHeader from './ProjectDetailsHeader';
 import UnitModels from './UnitModels';
-
+import './projectdetails.css';
 const ProjectDetails = () => {
     const { t } = useTranslation();
     const [projectData, setProjectData] = useState(null);
@@ -97,24 +97,24 @@ const ProjectDetails = () => {
                         {/* الكتلة الثانية */}
                         <Row gutter={[50, 50]} align="middle" style={{ marginTop: '64px' }}>
                             <Col xs={24} md={12}>
-                                <h3 className="project-title">طيب الجوار والاستثمار قرب المسجد الحرام</h3>
+                                <h3 className="project-details-title">طيب الجوار والاستثمار قرب المسجد الحرام</h3>
                                 <p className="project-description">
                                     يرتفع موطن مسار تاورز الفاخر حتى 27 طابقاً على مساحة تبلغ 6,580 متر مربع وبمسطحات بناء حوالي 114 ألف متر مربع في منطقة الرصيفة، وتضم وحدات سكنية راقية بعدد 948 وحدة سكنية بنماذج متعددة (ستوديو – غرفة – غرفتين - ثلاث غرف)، تنفرد بتصاميم عصرية فاخرة ومساحات متنوعة تتراوح بين 47 إلى 128م2، بالإضافة إلى ثلاث طوابق مخصصة لمحلات التجزئة. مع ضمانات شاملة.
                                 </p>
                             </Col>
                             <Col xs={24} md={12}>
-                                <img src={img.H2010} alt="مشروع 2" className="project-image" />
+                                <img src={img.H2010} alt="مشروع 2" className="project-details-image" />
                             </Col>
                         </Row>
                         {/* الكتلة الأولى */}
                         <Row gutter={[50, 50]} align="middle" style={{ marginTop: '64px' }}>
                             <Col xs={24} md={12} order={2}>
-                                <h3 className="project-title">طيب الجوار والاستثمار قرب المسجد الحرام</h3>
+                                <h3 className="project-details-title">طيب الجوار والاستثمار قرب المسجد الحرام</h3>
                                 <p className="project-description">
                                     احظى بجودة حياة فريدة في موطن مسار تاورز، حيث سهولة الوصول الى الحرم المكي الشريف، والاستمتاع بالخدمات والتجارب المتكاملة في المناطق المحيطة، إضافة إلى مرافق وخدمات المتكاملة في موطن مسار تاورز تشمل مواقف سيارات في عدة طوابق، مساحات تجارية تخدم السكان، صالات الاستقبال والجلوس، نادي رياضي للرجال وآخر للسيدات، سوبر ماركت، كافتيريا، مطاعم، مصلى. فضلاً عن خدمات الصيانة الدورية                                    </p>
                             </Col>
                             <Col xs={24} md={12} order={1}>
-                                <img src={img.H2010} alt="مشروع 1" className="project-image" />
+                                <img src={img.H2010} alt="مشروع 1" className="project-details-image" />
                             </Col>
                         </Row>
 
