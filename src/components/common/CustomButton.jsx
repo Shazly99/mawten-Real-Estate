@@ -1,8 +1,7 @@
-import React from "react";
-import { Button } from "antd";
-import "./style.scss";
 import Icon from "@constants/icon";
+import { Button } from "antd";
 import { useTranslation } from "react-i18next";
+import "./style.scss";
 
 const CustomButton = ({ title }) => {
     let { t } = useTranslation()
