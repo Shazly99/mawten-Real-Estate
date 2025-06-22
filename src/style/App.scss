@@ -359,4 +359,18 @@ strong,
     justify-content: center;
     align-items: center;
 }
- 
+
+
+.header_svg {
+    svg {
+        margin-top: -10px;
+        width: 15px !important;
+    }
+
+    strong,
+    .highlight {
+        font-size: 30px !important;
+        font-weight: 500 !important;
+    }
+
+}

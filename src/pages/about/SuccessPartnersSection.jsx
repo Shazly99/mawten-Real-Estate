@@ -22,7 +22,7 @@ const SuccessPartnersSection = () => {
     return (
         <div className="partners-section">
             <div className="container">
-                <div className="section-title">
+                <div className="section-title  ">
                     <TitleH
                         title=""
                         highlight={t('شركاء النجاح واثر الاستدامة')}
