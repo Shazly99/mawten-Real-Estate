@@ -1,7 +1,6 @@
 import TitleH from "@components/common/TitleH";
 import { Col, Row } from "antd";
 import { useTranslation } from 'react-i18next';
-import { Link } from "react-router-dom";
 import CustomButton from './../../components/common/CustomButton';
 
 const TitleSection = () => {
@@ -9,7 +8,7 @@ const TitleSection = () => {
     return (
         <div className="home-container bg-gray-100  ">
             {/* Top Section */}
-            <div className="title_container"> 
+            <div className="title_container">
                 <Row gutter={[20, 20]} className="top-section flex   ">
                     <Col xl={10} md={12} xs={24} sm={24}>
                         {/* Content Section */}
@@ -31,9 +30,9 @@ const TitleSection = () => {
                         </p>
                     </Col>
                 </Row>
-                <Link to={'/about'} >
+                <a href="https://www.mawten-sa.com/Mawten%20Profile_Arb.pdf" target="_blank" rel="noopener noreferrer">
                     <CustomButton title={'ملف تعريفي'} />
-                </Link>
+                </a>
 
             </div>
         </div>)
