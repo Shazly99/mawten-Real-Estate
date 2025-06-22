@@ -22,7 +22,7 @@
             strong {
                 color: #A61517;
                 font-family: TheSansArabic;
-                font-size: 54px;
+                font-size: 40px;
                 font-style: normal;
                 font-weight: 530;
                 line-height: normal;
@@ -37,9 +37,9 @@
             span {
                 color: #181820;
                 font-family: TheSansArabic;
-                font-size: 54px;
+                font-size: 44px;
                 font-style: normal;
-                font-weight: 300;
+                font-weight: 600;
                 line-height: normal;
                 text-transform: capitalize;
 
@@ -47,6 +47,10 @@
                     font-size: 40px;
 
                 }
+            }
+
+            svg{
+                margin-bottom: 20px;
             }
         }
     }

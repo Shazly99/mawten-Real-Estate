@@ -1,12 +1,12 @@
+import { CopyOutlined, FacebookFilled, LinkedinFilled, SendOutlined, WhatsAppOutlined, XOutlined } from '@ant-design/icons';
 import CustomButton from '@components/common/CustomButton';
 import OverlayHeader from '@components/common/OverlayHeader';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import { FacebookFilled, TwitterOutlined, XOutlined, WhatsAppOutlined, SendOutlined, LinkedinOutlined, LinkedinFilled, CopyOutlined } from '@ant-design/icons';
 
-import './blogs.scss';
 import { message } from 'antd';
+import './blogs.scss';
 
 const BlogDetails = () => {
   const { id } = useParams(); // assuming route is like /blogs/:id
@@ -34,11 +34,11 @@ const BlogDetails = () => {
   if (!blog) return <div className="loading">...جاري التحميل</div>;
 
   return (
-    <div>
+    <div className='app_blogs_details'>
       <OverlayHeader img={blog.image} />
       <div className="blog-details-content mt0">
         <Link to={'/media-center'} >
-          <CustomButton title={'المركز الاعلامي'} />
+          <CustomButton title={'الاخبـــار'} />
         </Link>
         <h1 className="blog-title mt-4">{blog.title}</h1>
         <div className="blog-meta">

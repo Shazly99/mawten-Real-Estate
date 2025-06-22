@@ -90,7 +90,7 @@ const ImportantProjects = ({ data }) => {
                                     <h3>{item.title}</h3>
                                     <div className="project_summery"> 
                                         <div className="item flex align-items-center gap-2 w-full mt-2 " dir='rtl' >
-                                            <Icon.location2 />
+                                            {/* <Icon.location2 /> */}
                                             <span >مكة المكرمة</span>
                                         </div>
                                     </div>

@@ -26,7 +26,7 @@ export default function UnitModels() {
                         {modelImages.map((m) => (
                             <Button
                                 key={m.id}
-                                className={`model-button ${m.id === selected ? "active" : ""}`}
+                                className={`model-button ${m.id === selected ? "active" : ""} px-6  `}
                             >
                                 {m.id}
                             </Button>

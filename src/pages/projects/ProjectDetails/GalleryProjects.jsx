@@ -14,7 +14,7 @@ const GalleryProjects = ({ data }) => {
                         modules={[Autoplay]}
                         autoplay={{ delay: 1500 }}
                         loop={true}
-                        slidesPerView={2.5} // عرض صورة واحدة في كل مرة
+                        slidesPerView={3} // عرض صورة واحدة في كل مرة
                         spaceBetween={40} // المسافة بين الصور
                         speed={1000} // سرعة الانتقال
                         breakpoints={{

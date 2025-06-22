@@ -1,12 +1,11 @@
-import { useEffect, useState } from 'react';
-import axios from 'axios';
 import TitleH from '@components/common/TitleH';
-import { Col, Row } from 'antd';
+import { Col, Pagination, Row } from 'antd';
+import axios from 'axios';
+import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link, useParams } from 'react-router-dom';
 import './sector.scss';
 import SectorHeader from './SectorHeader';
-import { Pagination } from 'antd';
 
 const Sector = () => {
   const { t } = useTranslation();
@@ -14,7 +13,7 @@ const Sector = () => {
   const [sectorData, setSectorData] = useState(null);
   const [projects, setProjects] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const pageSize = 4; 
+  const pageSize = 4;
 
   useEffect(() => {
     axios.get(`https://mawtan.rightclicksa.com/api/home/sectors/${id}`)
@@ -52,9 +51,10 @@ const Sector = () => {
                     <div className="flex justify-content-between">
                       <div className="header">
                         <h2>{project.title}</h2>
+                        <span>مكة المكرمة</span>
                       </div>
-                {/*       <Link to={`/project/${project.id}`} className="more flex justify-content-center align-items-center gap-4">
-                        <span>{t('more')}</span> 
+              {/*         <Link to={`/project/${project.id}`} className="more flex justify-content-center align-items-center gap-4">
+                        <span>{t('more')}</span>
                       </Link> */}
                     </div>
                     <p className='mt-3'>

@@ -1,18 +1,17 @@
-import CustomButton from "@components/common/CustomButton";
 import TitleH from "@components/common/TitleH";
 import img from "@constants/img";
 import { Col, Row } from "antd";
-import { useLocation } from "react-router-dom"
-import './about.scss'
+import { useLocation } from "react-router-dom";
+import './about.scss';
 const AboutCompanyOverview = () => {
     let lang = useLocation()
     return (
         <div className="company-overview company-overview_about ">
             <div className="container_main_90">
-                <header>
-                    <TitleH highlight={'خبرتنا وتفانينا في العمل تمكّننا من كسب ثقة عملائنا وحلفاءنا والمساهمين'} />
-                    <p>استطاعت شركة موطن العقارية كسب ثقة عملائها ومساهميها وحلفائها بفضل تميزها في اقتناص الفرص الاستثمارية وخبرتها في تطوير وإدارة المشاريع ، مما مكنها من تعزيز تعاونها مع المؤسسات المالية والاستثمارية. ولضمان استدامة أعمالها تستمر شركة موطن العقارية بشكل حثيث ومستمر في تطوير وتحديث خططها الطموحة والتوسع في كسب ثقة السوق والاستمرار في تزويد السوق بالمشاريع والمنتجات العقارية النوعية وتقديم الخدمات العقارية بمهنية واحترافية عالية والتركيز على قطاعات التطوير والاستثمار العقاري التي تتواكب مع رؤية وخطط الدولة، وفي ذات الوقت تحقق التوازن ما بين تقليص المخاطر وتحقيق النمو والعوائد المجزية للمساهمين</p>
-                </header>
+                <header className="header_section" >
+                    <TitleH highlight={'خبرتنا وتفانينا في العمل'} />
+                    <p>تمكّننا من كسب ثقة عملائنا وحلفاءنا ومساهمينا</p>
+                 </header>
                 <Row className="app_overview__about_us" >
                     <Col xl={12} md={12} className="image-container h-full">
                         <img src={img.CompanyOverview} alt="City in Hand" />

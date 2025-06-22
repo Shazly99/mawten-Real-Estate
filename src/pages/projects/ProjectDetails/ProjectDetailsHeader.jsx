@@ -1,3 +1,4 @@
+import { FacebookFilled, WhatsAppOutlined, XOutlined } from '@ant-design/icons';
 import CustomButton from '@components/common/CustomButton';
 import Icon from '@constants/icon';
 import img from '@constants/img';
@@ -23,10 +24,10 @@ const ProjectDetailsHeader = ({ imgs, data }) => {
                                             <Icon.location2 />
                                             <span>{data.location}</span>
                                         </div>
-                                        <div className="item flex align-items-center gap-2">
+                                        {/*           <div className="item flex align-items-center gap-2">
                                             <Icon.type2 />
                                             <span>{data.key_word}</span>
-                                        </div>
+                                        </div> */}
                                     </div>
 
                                     <div className="item_share flex flex-row align-items-center gap-2 cursor-pointer">
@@ -38,23 +39,23 @@ const ProjectDetailsHeader = ({ imgs, data }) => {
                                             onClick={() => setShowOptions(!showOptions)}
                                         />
                                         {showOptions && (
-                                            <div className='app_image_social' style={{ position: 'absolute', bottom: 120, left: 5, display: 'flex', flexDirection: 'column', gap: '10px', alignItems: 'center' }}>
+                                            <div className='app_image_social' style={{ position: 'absolute', bottom: 140, left: '71%', display: 'flex', flexDirection: 'column', gap: '10px', alignItems: 'center' }}>
                                                 <button
-                                                    style={{ backgroundColor: '#4267B2', color: 'white', border: 'none', borderRadius: '50%', width: 40, height: 40, cursor: 'pointer' }}
+                                                    style={{ backgroundColor: '#4267B2', color: 'white', border: 'none', borderRadius: '50%', width: 30, height: 30, cursor: 'pointer' }}
                                                     onClick={() => shareTo('facebook')}
                                                 >
                                                     <FacebookFilled style={{ fontSize: '20px' }} />
                                                 </button>
 
                                                 <button
-                                                    style={{ backgroundColor: '#25D366', color: 'white', border: 'none', borderRadius: '50%', width: 40, height: 40, cursor: 'pointer' }}
+                                                    style={{ backgroundColor: '#25D366', color: 'white', border: 'none', borderRadius: '50%', width: 30, height: 30, cursor: 'pointer' }}
                                                     onClick={() => shareTo('whatsapp')}
                                                 >
                                                     <WhatsAppOutlined style={{ fontSize: '20px' }} />
                                                 </button>
 
                                                 <button
-                                                    style={{ backgroundColor: '#000', color: 'white', border: 'none', borderRadius: '50%', width: 40, height: 40, cursor: 'pointer' }}
+                                                    style={{ backgroundColor: '#000', color: 'white', border: 'none', borderRadius: '50%', width: 30, height: 30, cursor: 'pointer' }}
                                                     onClick={() => shareTo('twitter')}
                                                 >
                                                     <XOutlined style={{ fontSize: '20px' }} />
@@ -76,6 +77,12 @@ const ProjectDetailsHeader = ({ imgs, data }) => {
                                         <div className="summary-label">عدد الطوابق</div>
                                     </div>
                                 </div>
+                                <div className="button-card-group" dir="rtl">
+                                    <div className="button-card">الكتب</div>
+                                    <div className="button-card">سجل اهتماماتك</div>
+                                    <div className="button-card">تحديثات البناء</div>
+                                </div>
+
                             </div>
                         </Col>
 

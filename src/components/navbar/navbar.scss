@@ -347,13 +347,12 @@
     gap: 8px;
     position: relative;
     user-select: none;
-
     ::after {
         content: '';
         position: absolute;
         bottom: -2px;
         left: -2.5px;
-        background-color: #fff;
+        // background-color: #fff;
         width: 105%;
         height: 0.2px;
     }

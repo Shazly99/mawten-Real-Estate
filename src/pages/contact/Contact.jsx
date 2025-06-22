@@ -43,9 +43,11 @@ const Contact = () => {
                 <header>
                     <div className="contact-section">
 
-                        <div className="contact-content"> 
+                        <div className="contact-content">
                             <div className="socials">
-                                <p>نسعد بتواصلكم و خدمتكم      </p>
+                                <p>نسعد بتواصلكم
+                                    وخدمتكم عبر
+                                    القنوات التالية:</p>
                                 {/* <Button className="follow-btn">تابعونا على</Button> */}
                                 <div className="icons">
                                     <a href="https://x.com/Mawtenksa" target="_blank" rel="noopener noreferrer">
@@ -89,7 +91,7 @@ const Contact = () => {
                     <hr />
                 </div>
                 <div className="section-header mt-4 mb-4">
-                    <TitleH highlight={'  تواصل معنا'} /> 
+                    <TitleH highlight={'  تواصل معنا'} />
                 </div>
 
                 <Form

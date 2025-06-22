@@ -1,4 +1,3 @@
-import CustomButton from "@components/common/CustomButton";
 import TitleH from "@components/common/TitleH";
 import { Button, Carousel } from "antd";
 import "antd/dist/reset.css"; // تأكد أنك مستورد CSS للـ Ant Design
@@ -6,7 +5,6 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import "./slider.scss";
-import Icon from "@constants/icon";
 
 const HomeMediaCenter = ({ blog = [] }) => {
     const { t } = useTranslation();
@@ -15,7 +13,7 @@ const HomeMediaCenter = ({ blog = [] }) => {
     return (
         <section className="media-center mt_main">
             <div className="header   ">
-                <TitleH  highlight={t("blgos")} />
+                <TitleH highlight={t("blgos")} />
             </div>
             <div className="container">
                 <Carousel
@@ -53,15 +51,15 @@ const HomeMediaCenter = ({ blog = [] }) => {
                     {blog.map((blog, index) => (
                         <div key={index} className="px-3 py-4" >
                             <div className="blog-card shadow-2 pb-4 ">
-                                <Link  to={`/media-center/${blog.key_word_ar}`}  className="card-header">
+                                <Link to={`/media-center/${blog.key_word_ar}`} className="card-header">
                                     <div className="card_blog_image">
                                         <img src={blog.image} alt={`Image ${blog.id}`} />
-                                        <div className="overlay">
+                                        {/*     <div className="overlay">
                                             <Button shape='round' iconPosition='end' icon={<Icon.DATE />} type='primary'>
                                                 {new Date(blog.date).toLocaleDateString('ar-EG', { year: 'numeric', month: 'long', day: 'numeric' })}
                                             </Button>
                                             <Icon.blog />
-                                        </div>
+                                        </div> */}
                                     </div>
 
                                     <div className="card-info">
@@ -69,7 +67,7 @@ const HomeMediaCenter = ({ blog = [] }) => {
                                         {/* <p className="description">{blog.short_description.split(" ").slice(0, 15).join(" ")}</p> */}
                                     </div>
                                 </Link>
-                             {/*    <Link dir="rtl" to={`/media-center/${blog.key_word_ar}`} className='block   mx-3'>
+                    {/*             <Link dir="rtl" to={`/media-center/${blog.key_word_ar}`} className='block   mx-3'>
                                     <Button type="primary" shape='round' className="read-more-btn">
                                         {t('more')}
                                     </Button>
@@ -78,6 +76,9 @@ const HomeMediaCenter = ({ blog = [] }) => {
                         </div>
                     ))}
                 </Carousel>
+            </div>
+            <div className="flex justify-content-center mt-4 w-full">
+                <Button type="primary" size="large" className="px-5 shadow-none" >المركز الاعلامي</Button>
             </div>
         </section>
     );

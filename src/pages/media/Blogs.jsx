@@ -1,11 +1,11 @@
-import { useEffect, useState } from 'react';
 import TitleH from '@components/common/TitleH';
-import Icon from '@constants/icon';
+// import Icon from '@constants/icon';
 import img from '@constants/img';
 import { Button, Col, Pagination, Row } from 'antd';
+import axios from 'axios';
+import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
-import axios from 'axios';
 import './blogs.scss';
 
 const Blogs = () => {
@@ -46,22 +46,23 @@ const Blogs = () => {
                                 <div className="card-header">
                                     <div className="card_blog_image">
                                         <img src={blog.image} alt={`Image ${blog.id}`} />
-                                        <div className="overlay">
+                                        {/*        <div className="overlay">
                                             <Button shape='round' iconPosition='end' icon={<Icon.DATE />} type='primary'>
                                                 {new Date(blog.date).toLocaleDateString('ar-EG', { year: 'numeric', month: 'long', day: 'numeric' })}
                                             </Button>
                                             <Icon.blog />
-                                        </div>
+                                        </div> */}
                                     </div>
 
                                     <div className="card-info">
-                                        <h3 className="title">{blog.short_title}</h3>
-                                        <p className="description">{blog.short_description}</p>
+                                        <h3 className="title">{blog.short_title.split(" ").slice(0, 5).join(" ")}</h3>
+                                        <span>{new Date(blog.date).toLocaleDateString('ar-EG', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+                                        <p className="description">{blog.short_description.split(" ").slice(0, 15).join(" ")}</p>
                                     </div>
                                 </div>
                                 <Link to={`/media-center/${blog.key_word_ar}`} className='btn mx-2'>
                                     <Button type="primary" shape='round' className="read-more-btn">
-                                        {t('more')}
+                                        {t('إقــرأ الـمــزيـد')}
                                     </Button>
                                 </Link>
                             </div>

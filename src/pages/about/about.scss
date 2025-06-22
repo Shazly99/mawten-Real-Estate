@@ -34,7 +34,7 @@
 }
 
 
-.app_value { 
+.app_value {
     header {
 
 
@@ -294,4 +294,27 @@
     text-align: justify;
     color: #3C3C3B;
     margin-top: 10px;
+}
+
+.header_section {
+    svg {
+        margin-top: -10px;
+        width: 15px !important;
+    }
+    .highlight{
+        background-color: $mainColor;
+        color: #fff !important;
+        font-size: 24px !important;
+    }
+
+    p {
+        margin-top: -10px !important;
+        color: #181820;
+        text-align: right;
+        font-family: $fontBase;
+        font-size: 20px !important;
+        font-style: normal;
+        font-weight: 500 !important;
+        line-height: normal;
+    }
 }

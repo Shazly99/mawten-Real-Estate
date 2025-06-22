@@ -1,14 +1,14 @@
-import { CaretDownFilled, HomeOutlined, InfoCircleOutlined, MenuOutlined, PhoneOutlined, SettingOutlined, ShoppingOutlined } from '@ant-design/icons';
+import { CaretDownFilled, HomeOutlined, InfoCircleOutlined, MenuOutlined, SettingOutlined, ShoppingOutlined } from '@ant-design/icons';
 import Icon from '@constants/icon';
 import Logo from '@constants/Logo';
 import { GeneralData } from '@context/General';
 import { Button, Dropdown, Menu, Modal } from 'antd';
+import axios from "axios";
 import { motion } from 'framer-motion';
 import { useContext, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link, NavLink } from 'react-router-dom';
 import './navbar.scss';
-import axios from "axios";
 
 const Navbar = () => {
     const [sectors, setSectors] = useState([]);
@@ -153,27 +153,8 @@ const Navbar = () => {
                         <ShoppingOutlined className='icon_res_sm' />
                         <div className="drop_icon flex justify-content-center align-items-center gap-2 ">
                             {t('nav_contact')}
-                            {/* <PhoneOutlined size={'small'} style={{ fontSize: '12px', marginTop: '2px', color: '#fff' }} /> */}
-                        </div>
-                    </NavLink>
-                    {/*           <div className="path_sm">
-                        <NavLink to='/contact'>
-                            <PhoneOutlined className='icon_res_sm' />
-                            {t('nav_contact')}
-                        </NavLink>
-                    </div> */}
-
-                    {/* <NavLink to='/contact' className=" contact_us_dot flex justify-content-center align-items-center gap-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 11 11" fill="none">
-                            <circle cx="5.5" cy="5.5" r="5.5" fill="white" fill-opacity="0.25" />
-                            <circle cx="5.5" cy="5.5" r="2.5" fill="white" />
-                        </svg>
-                        <NavLink to='/contact'>
-                            <PhoneOutlined className='icon_res_sm' />
-                            {t('nav_contact')}
-                        </NavLink>
-                    </NavLink> */}
-
+                         </div>
+                    </NavLink> 
 
                     <div className="language-switcher sm_lang">
                         {
@@ -193,10 +174,13 @@ const Navbar = () => {
 
 
                 <div className="language-switcher lg_lang">
+                    <div className="circle-icon">
+                        <Icon.langC />
+                    </div>
                     {/*   {
                         i18n.language == "ar" ? */}
                     <div className="text-container " onClick={showModal}>
-                        <span className="language-text">English</span>
+                        <span className="language-text">En</span>
                         <Icon.lang />
                     </div>
                     {/*                      :
@@ -205,9 +189,6 @@ const Navbar = () => {
                         <Icon.lang />
                     </div>
                     } */}
-                    <div className="circle-icon">
-                        <Icon.langC />
-                    </div>
                 </div>
             </motion.div>
 

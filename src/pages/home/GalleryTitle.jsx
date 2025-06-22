@@ -1,5 +1,5 @@
 import { Carousel } from "antd";
-import "./home.scss"; // لو فيه ستايل خاص بيك
+import "./home.scss";
 
 const GalleryTitle = ({ data }) => {
     return (
@@ -10,7 +10,7 @@ const GalleryTitle = ({ data }) => {
                 speed={1800}
                 dots={false} 
                 pauseOnHover={false}
-                slidesToShow={2.5}
+                slidesToShow={3}
                 responsive={[
                     { breakpoint: 1200, settings: { slidesToShow: 4 } },
                     { breakpoint: 992, settings: { slidesToShow: 3 } },
