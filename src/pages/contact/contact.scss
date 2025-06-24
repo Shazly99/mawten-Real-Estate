@@ -123,7 +123,7 @@
     background-color: $mainColor;
 }
 
-.address-section { 
+.address-section {
     padding: 70px 20px 190px 20px;
     color: white;
     text-align: right;
@@ -152,7 +152,7 @@
 
             .custom-title .title-main .title-gray {
                 color: #FFF;
-                font-family: TheSansArabic;
+                font-family: $fontBase;
                 font-size: 48px;
                 font-style: normal;
                 font-weight: 530;
@@ -170,7 +170,7 @@
 
     h2 {
         color: #FFF;
-        font-family: TheSansArabic;
+        font-family: $fontBase;
         font-size: 48px;
         font-style: normal;
         font-weight: 530;
@@ -182,7 +182,7 @@
     p {
         color: #FFF;
         text-align: right;
-        font-family: TheSansArabic;
+        font-family: $fontBase;
         font-size: 24px;
         font-style: normal;
         font-weight: 530;
@@ -242,7 +242,7 @@
 .working-hours-section {
     direction: rtl;
     padding: 2rem;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: $fontBase;
     background-color: #fff;
 
     .section-header {
@@ -258,7 +258,7 @@
 
             span {
                 color: #181820;
-                font-family: TheSansArabic;
+                font-family: $fontBase;
                 font-size: 25px !important;
                 font-style: normal;
                 font-weight: 600;
@@ -438,7 +438,7 @@
 
             span {
                 color: #181820;
-                font-family: TheSansArabic;
+                font-family: $fontBase;
                 font-size: 25px !important;
                 font-style: normal;
                 font-weight: 600;

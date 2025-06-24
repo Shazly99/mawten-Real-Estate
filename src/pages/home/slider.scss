@@ -21,7 +21,7 @@
             align-items: center;
             strong {
                 color: #A61517;
-                font-family: TheSansArabic;
+                font-family: $fontBase;
                 font-size: 40px;
                 font-style: normal;
                 font-weight: 530;
@@ -36,7 +36,7 @@
 
             span {
                 color: #181820;
-                font-family: TheSansArabic;
+                font-family: $fontBase;
                 font-size: 44px;
                 font-style: normal;
                 font-weight: 600;

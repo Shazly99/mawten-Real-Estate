@@ -60,7 +60,7 @@
             p {
                 color: #FFF;
                 text-align: center;
-                font-family: TheSansArabic;
+                font-family: $fontBase;
                 font-size: 20px;
                 font-style: normal;
                 font-weight: 300;
@@ -114,7 +114,7 @@
 
             span {
                 color: #181820;
-                font-family: TheSansArabic;
+                font-family: $fontBase;
                 font-size: 40px;
                 font-style: normal;
                 font-weight: 300;
@@ -124,7 +124,7 @@
             strong {
                 color: #A61517;
                 text-align: right;
-                font-family: TheSansArabic;
+                font-family: $fontBase;
                 font-size: 40px;
                 font-style: normal;
                 font-weight: 530;
@@ -140,7 +140,7 @@
         p {
             color: #181820;
             text-align: justify;
-            font-family: TheSansArabic;
+            font-family: $fontBase;
             font-size: 16px;
             font-style: normal;
             font-weight: 300;

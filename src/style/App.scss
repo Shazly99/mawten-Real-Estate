@@ -86,7 +86,7 @@
         text-wrap: unset;
         color: #A61517;
         text-align: right;
-        font-family: TheSansArabic;
+        font-family: $fontBase;
         font-size: 40px;
         font-style: normal;
         font-weight: 530;
@@ -99,7 +99,7 @@
 
     .highlight {
         color: #3C3C3B;
-        font-family: TheSansArabic;
+        font-family: $fontBase;
         font-size: 40px;
         font-style: normal;
         font-weight: 300;
@@ -267,7 +267,7 @@ strong,
 
         h3 {
             color: #FFF;
-            font-family: TheSansArabic;
+            font-family: $fontBase;
             font-size: 56px;
             font-style: normal;
             font-weight: 530;

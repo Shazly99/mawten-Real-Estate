@@ -76,7 +76,7 @@
 
             .stat-number {
                 color: #181820;
-                font-family: TheSansArabic;
+                font-family: $fontBase;
                 font-size: 25px;
                 font-style: normal;
                 font-weight: 600;
@@ -97,7 +97,7 @@
                 width: 50%;
                 text-align: right;
                 color: #181820;
-                font-family: TheSansArabic;
+                font-family: $fontBase;
                 font-size: 16px;
                 font-style: normal;
                 font-weight: 300;

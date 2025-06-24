@@ -13,7 +13,7 @@
 
             strong {
                 text-align: right;
-                font-family: TheSansArabic;
+                font-family: $fontBase;
                 font-size: 45px;
                 font-style: normal;
                 font-weight: 300;
@@ -24,7 +24,7 @@
             
             span {
                 color: #181820;
-                font-family: TheSansArabic;
+                font-family: $fontBase;
                 font-size: 45px;
                 font-style: normal;
                 font-weight: 530;
@@ -55,7 +55,7 @@
         .conetnt {
             h4 {
                 color: #3C3C3B; 
-                font-family: TheSansArabic;
+                font-family: $fontBase;
                 font-size: 20px;
                 font-style: normal;
                 font-weight: 300;
@@ -66,7 +66,7 @@
 
             p {
                 color: #A61517;
-                font-family: TheSansArabic;
+                font-family: $fontBase;
                 font-size: 16px;
                 font-style: normal;
                 font-weight: 100;

@@ -5,7 +5,7 @@
     color: $mainColor;
 
     .ant-dropdown-trigger {
-        font-family: Plus Jakarta Sans;
+        font-family: $fontBase;
         font-size: 12px;
         font-weight: 400;
         line-height: 26px;
@@ -83,7 +83,7 @@
                 text-decoration: none;
                 font-size: 16px !important;
                 opacity: 0.7;
-                font-family: TheSansArabic;
+                font-family: $fontBase;
                 font-size: 18px;
                 font-style: normal;
                 font-weight: 100;
@@ -380,7 +380,7 @@
 
     a {
         color: #FFF !important;
-        font-family: TheSansArabic;
+        font-family: $fontBase;
         font-size: 14px !important;
         font-style: normal;
         font-weight: 300;
@@ -461,7 +461,7 @@
 .ant-dropdown .ant-dropdown-menu .ant-dropdown-menu-title-content>a,
 .ant-dropdown-menu-submenu .ant-dropdown-menu .ant-dropdown-menu-title-content>a {
     color: #FFF;
-    font-family: TheSansArabic;
+    font-family: $fontBase;
     font-size: 14px;
     font-style: normal;
     line-height: normal;

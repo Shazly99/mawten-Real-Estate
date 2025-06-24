@@ -1,13 +1,14 @@
 @font-face {
-    font-family: 'Bahij TheSansArabic Plain';
-    src: url('../assets/TheSansArabic/Bahij_TheSansArabic-Plain.ttf') format('truetype');
+    font-family: '29LT Zarid Serif Regular';
+    src: url('../../assets/fonts/29LTLight.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
+$fontBase: '29LT Zarid Serif Regular'; 
 
-
-$fontBase: "Bahij TheSansArabic Plain";
 $mainColor: #A61517;
-$secondColor: #A61517; 
+$secondColor: #A61517;
 $textColor : rgba(68, 83, 117, 1);
 
 $textBg: -webkit-linear-gradient(90.93deg, #F13737 27.65%, #5EC8E4 45.8%, #55B9D3 61.33%, #F13737 81.04%);
@@ -32,9 +33,9 @@ $fontSize-22: 22px;
 $fontSize-23: 23px;
 $fontSize-24: 24px;
 $fontSize-25: 25px;
-$fontPlus: "Bahij TheSansArabic Plain";
-$fontArabic: "Bahij TheSansArabic Plain";
-$fontBase: "Bahij TheSansArabic Plain"; 
+$fontPlus: "29LT Zarid Serif Regular";
+$fontArabic: "29LT Zarid Serif Regular";
+$fontBase: "29LT Zarid Serif Regular";
 
 
 // Responsive Variables
@@ -62,7 +63,7 @@ $radius-lg: 10px;
 @mixin flex() {
     display: flex;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
 }
 
 @mixin size($w, $h) {

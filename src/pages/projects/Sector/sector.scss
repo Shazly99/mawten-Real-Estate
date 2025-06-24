@@ -65,7 +65,7 @@
                     strong {
                         color: #A61517;
                         text-align: right;
-                        font-family: TheSansArabic;
+                        font-family: $fontBase;
                         font-size: 20px;
                         font-style: normal;
                         font-weight: 600; 
@@ -79,7 +79,7 @@
                     h2 {
                         color: #181820;
                         text-align: right;
-                        font-family: TheSansArabic;
+                        font-family: $fontBase;
                         font-size: 25px;
                         font-style: normal;
                         font-weight: 900; 
@@ -92,7 +92,7 @@
                     span { 
                         color: #A61517;
                         text-align: right;
-                        font-family: TheSansArabic;
+                        font-family: $fontBase;
                         font-size: 16px;
                         font-style: normal;
                         font-weight: 300; 
@@ -103,7 +103,7 @@
                 p {
                     color: #181820c7;
                     text-align: justify;
-                    font-family: TheSansArabic;
+                    font-family: $fontBase;
                     font-size: 16px;
                     font-style: normal;
                     font-weight: lighter;
@@ -123,7 +123,7 @@
                 span {
                     color: #000;
                     text-align: justify;
-                    font-family: TheSansArabic;
+                    font-family: $fontBase;
                     font-size: 16px;
                     font-style: normal;
                     font-weight: 300;

@@ -44,7 +44,7 @@
             h1 {
                 color: #FFF;
                 text-align: right;
-                font-family: TheSansArabic;
+                font-family: $fontBase;
                 font-size: 60px;
                 font-style: normal;
                 font-weight: 530;
@@ -106,7 +106,7 @@
             .stat h2 {
                 color: #FFF;
                 text-align: center;
-                font-family: TheSansArabic;
+                font-family: $fontBase;
                 font-size: 40px;
                 font-style: normal;
                 font-weight: 900;
@@ -115,7 +115,7 @@
             .stat p {
                 color: #FFF;
                 text-align: center;
-                font-family: TheSansArabic;
+                font-family: $fontBase;
                 font-size: 20px;
                 font-style: normal;
                 font-weight: 300 !important;
@@ -137,7 +137,7 @@
             .description {
                 color: #FFF;
                 text-align: justify;
-                font-family: TheSansArabic;
+                font-family: $fontBase;
                 font-size: 20px;
                 font-style: normal;
                 font-weight: 100 !important;
@@ -208,7 +208,7 @@
             backdrop-filter: blur(5.75px);
             color: #FFF;
             text-align: center;
-            font-family: TheSansArabic;
+            font-family: $fontBase;
             font-size: 16px;
             font-style: normal;
             font-weight: 530;
@@ -271,7 +271,7 @@
         color: #ffffffd1;
         object-fit: 0.5 !important;
         text-align: center;
-        font-family: TheSansArabic;
+        font-family: $fontBase;
         font-size: 20px;
         font-style: normal;
         font-weight: 300;
@@ -282,7 +282,7 @@
         span {
             color: #FFF;
             text-align: right;
-            font-family: TheSansArabic;
+            font-family: $fontBase;
             font-size: 20px;
             font-style: normal;
             font-weight: 600;

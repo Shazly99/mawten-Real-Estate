@@ -44,7 +44,7 @@
 
         .content {
             strong {
-                font-family: Plus Jakarta Sans;
+                font-family: $fontBase;
                 font-size: 16px;
                 font-weight: 600;
                 line-height: 26px;
@@ -82,7 +82,7 @@
         gap: 8px;
 
         span {
-            font-family: Plus Jakarta Sans;
+            font-family: $fontBase;
             font-size: 16px;
             font-weight: 600;
             line-height: 16px;
@@ -275,7 +275,7 @@
     text-align: center;
 
     span {
-        font-family: TheSansArabic;
+        font-family: $fontBase;
         font-size: 16px;
         font-style: normal;
         font-weight: 300;
@@ -312,7 +312,7 @@
         text-align: center;
         -webkit-text-stroke-width: 1;
         -webkit-text-stroke-color: rgba(255, 255, 255, 0.30);
-        font-family: "TheSansArabic-Bold", Helvetica;
+        font-family: $fontBase;
         font-size: 400px;
         font-style: normal;
         font-weight: 530;
@@ -339,7 +339,7 @@
         .title-gray {
             color: #3C3C3B;
             text-align: right;
-            font-family: TheSansArabic;
+            font-family: $fontBase;
             font-size: 36px;
             font-style: normal;
             font-weight: 300;
@@ -367,7 +367,7 @@
 
     .title-black {
         color: #3C3C3B;
-        font-family: TheSansArabic;
+        font-family: $fontBase;
         font-size: 36px;
         font-style: normal;
         font-weight: 600;

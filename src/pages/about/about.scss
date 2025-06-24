@@ -16,7 +16,7 @@
         margin-top: -50px;
 
         .highlight {
-            font-family: TheSansArabic;
+            font-family: $fontBase;
             font-weight: 600;
             font-size: 30px;
             line-height: 100%;
@@ -39,7 +39,7 @@
         strong {
             color: #3C3C3B;
             text-align: center;
-            font-family: TheSansArabic;
+            font-family: $fontBase;
             font-size: 36px;
             font-weight: 530;
         }
@@ -77,7 +77,7 @@
 
         .value-title {
             color: #000;
-            font-family: TheSansArabic;
+            font-family: $fontBase;
             font-size: 24px;
             font-style: normal;
             font-weight: 600;
@@ -92,7 +92,7 @@
         .value-description {
             color: #000;
             text-align: justify;
-            font-family: TheSansArabic;
+            font-family: $fontBase;
             font-size: 16px;
             font-style: normal;
             font-weight: 300;
@@ -116,7 +116,7 @@
     .title_ {
         h2 {
             color: #3C3C3B;
-            font-family: TheSansArabic;
+            font-family: $fontBase;
             font-size: 32px;
             font-style: normal;
             font-weight: 400;
@@ -135,7 +135,7 @@
 
         p {
             color: #3C3C3B;
-            font-family: TheSansArabic;
+            font-family: $fontBase;
             font-size: 16px;
             font-style: normal;
             font-weight: 900 !important;
@@ -259,7 +259,7 @@
 }
 
 .app_category_ {
-    font-family: TheSansArabic;
+    font-family: $fontBase;
     font-weight: 300;
     font-size: 18px;
     line-height: 35px;
@@ -270,7 +270,7 @@
 }
 
 .sub_title {
-    font-family: TheSansArabic;
+    font-family: $fontBase;
     font-weight: 900 !important;
     font-size: 24px;
     line-height: 100%;
@@ -280,7 +280,7 @@
 }
 
 .last_title {
-    font-family: TheSansArabic;
+    font-family: $fontBase;
     font-weight: 300;
     font-size: 17px !important;
     line-height: 35px;

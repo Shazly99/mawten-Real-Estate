@@ -9,18 +9,22 @@
 body {
   background-color: $light;
   color: #000;
+  font-family: $fontBase;
+
 }
 
 [lang="ar"] body {
-  font-family: 'Cairo', sans-serif;
+  font-family: $fontBase;
 }
 
 [lang="en"] body {
   font-family: $fontBase;
 }
-a{
+
+a {
   text-decoration: none;
 }
+
 ::selection {
   background: rgba($color: $secondColor, $alpha: 0.3);
 }
@@ -45,7 +49,7 @@ a{
 
 ::-webkit-scrollbar-corner {
   background-color: transparent;
-} 
+}
 
 .rtl p,
 .rtl h1,
@@ -54,7 +58,6 @@ a{
 .rtl h4,
 .rtl span,
 .rtl strong {
-  font-family: 'Cairo', sans-serif !important;
+  font-family: $fontBase !important;
   direction: rtl;
 }
-

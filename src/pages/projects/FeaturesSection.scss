@@ -47,7 +47,7 @@
                 font-family: $fontBase;
                 -webkit-text-stroke-width: 1px;
                 -webkit-text-stroke-color: rgba(0, 0, 0, 0.30);
-                font-family: TheSansArabic;
+                font-family: $fontBase;
                 font-size: 100px;
                 font-style: normal;
                 font-weight: 100;
@@ -72,7 +72,7 @@
                 h3 {
                     color: #181820;
 
-                    font-family: TheSansArabic;
+                    font-family: $fontBase;
                     font-size: 38px;
                     font-style: normal;
                     font-weight: 300;
@@ -91,7 +91,7 @@
                 .feature-description {
                     color: #181820;
                     text-align: justify;
-                    font-family: TheSansArabic;
+                    font-family: $fontBase;
                     font-size: 17px;
                     font-style: normal;
                     font-weight: lighter;

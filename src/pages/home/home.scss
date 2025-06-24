@@ -54,7 +54,7 @@
   .content {
     .title {
       color: #3C3C3B;
-      font-family: TheSansArabic;
+      font-family: $fontBase;
       font-size: 35px !important;
       font-style: normal;
       font-weight: 500 !important;
@@ -141,7 +141,7 @@
     margin-bottom: 50px;
 
     .highlight {
-      font-family: TheSansArabic;
+      font-family: $fontBase;
       font-weight: 600;
       font-size: 30px;
       line-height: 100%;
@@ -151,7 +151,7 @@
     }
 
     p {
-      font-family: TheSansArabic;
+      font-family: $fontBase;
       font-weight: 300;
       font-size: 18px;
       line-height: 35px;
@@ -550,7 +550,7 @@
 
         color: #FFF;
 
-        font-family: TheSansArabic;
+        font-family: $fontBase;
         font-size: 25px;
         font-style: normal;
         font-weight: 600;
@@ -593,7 +593,7 @@
   .title-container {
     span {
       color: #A61517;
-      font-family: TheSansArabic;
+      font-family: $fontBase;
       font-size: 48px;
       font-style: normal;
       font-weight: 530;
@@ -609,7 +609,7 @@
 
     strong {
       color: #181820;
-      font-family: TheSansArabic;
+      font-family: $fontBase;
       font-size: 48px;
       font-style: normal;
       font-weight: 300;
@@ -626,7 +626,7 @@
   .description {
     color: #3C3C3B;
     text-align: justify;
-    font-family: TheSansArabic;
+    font-family: $fontBase;
     font-size: 20px;
     font-style: normal;
     font-weight: 300;
@@ -724,7 +724,7 @@
   .home-contact__title,
   .home-contact__subtitle {
     margin-top: 20px;
-    font-family: TheSansArabic;
+    font-family: $fontBase;
     font-weight: 530;
     font-size: 50px;
     line-height: 100%;
@@ -742,7 +742,7 @@
 
   .home-contact__title {
     color: #FFF;
-    font-family: TheSansArabic;
+    font-family: $fontBase;
   }
 
   .home-contact__subtitle {
@@ -778,7 +778,7 @@
     transform: translateY(-50%);
     -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
     color: rgba(255, 255, 255, 0.06);
-    font-family: TheSansArabic;
+    font-family: $fontBase;
     font-weight: 530;
     font-size: 100px;
     text-align: right;
