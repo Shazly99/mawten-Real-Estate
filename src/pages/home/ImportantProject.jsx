@@ -9,7 +9,7 @@ const ImportantProject = ({data}) => {
     let { t } = useTranslation()
 
     return (
-        <div className="important-projects container_main_80">
+        <div className="important-projects container_main_85">
             {/* Section Title */}
             <div className="section-header">
                 <CustomTitle title={t('Major')} title2={t('Projects')} />
