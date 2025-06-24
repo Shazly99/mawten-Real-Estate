@@ -1,12 +1,24 @@
 @font-face {
     font-family: '29LT Zarid Serif Regular';
-    src: url('../../assets/fonts/29LTLight.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+    src: url('../../assets/fonts/29LTLight.ttf') format('truetype'); 
 }
 
-$fontBase: '29LT Zarid Serif Regular'; 
+$fontBase: '29LT Zarid Serif Regular';
+$fontPlus: "29LT Zarid Serif Regular";
+$fontArabic: "29LT Zarid Serif Regular";
+$fontBase: "29LT Zarid Serif Regular";
 
+// @font-face {
+//     font-family: '29LT Kaff Light';
+//     src: url('../../assets/fonts/29LTLight.ttf') format('truetype');
+//     font-weight: normal;
+//     font-style: normal;
+// }
+
+// $fontBase: '29LT Kaff Light'; 
+// $fontPlus: "29LT Kaff Light";
+// $fontArabic: "29LT Kaff Light";
+// $fontBase: "29LT Kaff Light";
 $mainColor: #A61517;
 $secondColor: #A61517;
 $textColor : rgba(68, 83, 117, 1);
@@ -33,9 +45,7 @@ $fontSize-22: 22px;
 $fontSize-23: 23px;
 $fontSize-24: 24px;
 $fontSize-25: 25px;
-$fontPlus: "29LT Zarid Serif Regular";
-$fontArabic: "29LT Zarid Serif Regular";
-$fontBase: "29LT Zarid Serif Regular";
+
 
 
 // Responsive Variables
