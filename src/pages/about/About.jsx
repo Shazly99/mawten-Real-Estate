@@ -2,13 +2,13 @@ import OverlayHeader from '@components/common/OverlayHeader'
 import TitleH from '@components/common/TitleH'
 import img from '@constants/img'
 import GalleryTitle from '@pages/home/GalleryTitle'
+import { Col, Row } from 'antd'
+import axios from 'axios'
+import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import AboutCompanyOverview from './AboutCompanyOverview'
-import Value from './Value'
 import SuccessPartnersSection from './SuccessPartnersSection'
-import { useEffect, useState } from 'react'
-import axios from 'axios'
-import { Col, Row } from 'antd'
+import Value from './Value'
 
 const About = () => {
     const { t } = useTranslation(); 
@@ -46,10 +46,10 @@ const About = () => {
             <div className="home-container">
                 {/* Top Section */}
                 <Row justify={'center'} align={'middle'} >
-                    <Col xl={12} lg={12} md={24} xs={24}>
+                    <Col xl={12} lg={12} md={24} xs={24} className='header_section' >
                         <TitleH title={t('mawten')} highlight={t('')} className="text-4xl font-bold text-gray-900" />
-                        <h2 className='mt-4' >نُطَوِّرْ لِيَنْموْ الْوَطَنْ</h2>
-                        <div className="title_ mt-2">
+                        <h2 className='mt-3' >نُطَوِّرْ لِيَنْموْ الْوَطَنْ</h2>
+                        <div className="title_ mt-3">
                             {/* Description */}
                             <p className="mt-3">
                                 روّاد في التطوير العقاري بالمملكة العربية السعودية، بدأنا بمبادرة من غرفة التجارة والصناعة بالرياض في عام 2007م كشركة مساهمة مقفلة برأس مال مدفوع يبلغ 1,1 مليار ريال سعودي عبر نخبة من المستثمرين والأسماء العقارية العريقة

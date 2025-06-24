@@ -34,7 +34,7 @@ const values = [
 const Value = () => {
     return (
         <div className='app_value container_main_90  mt-8 mb-5'>
-            <header className='header_svg' >
+            <header className='header_section' >
                 <TitleH title={'قــيمنا'} />
             </header>
 

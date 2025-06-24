@@ -36,16 +36,17 @@
 
         }
 
- 
+
         .content {
+     
 
             .title-container {
                 @include flex;
 
-                strong { 
-                    color: #fff !important; 
+                strong {
+                    color: #fff !important;
                 }
-                
+
                 svg path {
                     fill: #fff;
                 }
@@ -151,14 +152,14 @@
 }
 
 .h_services {
-   
+
     display: flex;
     justify-content: center;
     align-items: center;
 
     @media screen and (width < 900px) {
         height: auto;
-        order: 0; 
+        order: 0;
     }
 
 }

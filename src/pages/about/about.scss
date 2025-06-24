@@ -14,7 +14,7 @@
 
     .section_last_about {
         margin-top: -50px;
-
+      
         .highlight {
             font-family: $fontBase;
             font-weight: 600;
@@ -35,7 +35,7 @@
 
 
 .app_value {
-    header { 
+    header {
         strong {
             color: #3C3C3B;
             text-align: center;
@@ -43,8 +43,13 @@
             font-size: 36px;
             font-weight: 530;
         }
+
+
+        svg {
+            margin-bottom: 10px;
+        }
     }
- 
+
 
     .value-card {
         border-radius: 22px;
@@ -180,10 +185,20 @@
         .custom-title {
             font-size: 2.25rem !important; // يعادل text-4xl
             font-weight: bold !important;
-            color: #1f2937; 
+            color: #1f2937;
         }
-        svg{
+
+        svg {
             margin-top: -15px;
+        }
+    }
+
+    .header_section {
+        span {
+            background-color: transparent;
+            color: #000 !important;
+            font-size: 36px !important;
+            font-weight: 600;
         }
     }
 
@@ -295,7 +310,8 @@
         margin-top: -10px;
         width: 15px !important;
     }
-    .highlight{
+
+    .highlight {
         background-color: $mainColor;
         color: #fff !important;
         font-size: 24px !important;
@@ -312,4 +328,3 @@
         line-height: normal;
     }
 }
-
