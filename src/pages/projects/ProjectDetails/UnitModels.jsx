@@ -9,6 +9,7 @@ const modelImages = [
     { id: "B", src: img.modelB },
     { id: "C", src: img.modelC },
     { id: "D", src: img.modelD },
+    { id: "E", src: img.modelD },
 ];
 
 export default function UnitModels() {

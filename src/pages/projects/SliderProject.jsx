@@ -1,7 +1,6 @@
-import React from 'react';
+import img from '@constants/img';
 import { Carousel } from 'antd';
 import 'antd/dist/reset.css';
-import img from '@constants/img';
 
 const images = [
     img.projectSlider1,
@@ -71,8 +70,8 @@ const SliderProject = () => (
                             fontSize: '1.9rem', 
                             textAlign: 'center',
                             zIndex: 1, 
-                        }}>
-                            نطــور لاجل الوطن
+                        }}>نطور لينمو الوطن
+                            
                         </div>
                     </div>
                 </div>

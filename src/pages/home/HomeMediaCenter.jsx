@@ -49,7 +49,7 @@ const HomeMediaCenter = ({ blog = [] }) => {
 
                 >
                     {blog.map((blog, index) => (
-                        <div key={index} className="px-3 py-4" >
+                        <div key={index} className="px-2 py-4" >
                             <div className="blog-card shadow-2 pb-4 ">
                                 <Link to={`/media-center/${blog.key_word_ar}`} className="card-header">
                                     <div className="card_blog_image">

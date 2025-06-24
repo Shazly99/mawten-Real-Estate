@@ -21,7 +21,7 @@ const GalleryTitle = ({ data }) => {
                 infinite
             >
                 {data.map((item, index) => (
-                    <div key={index} className="p-4">
+                    <div key={index} className="p-2">
                         <img src={item.image} alt="City View" style={{ width: "100%", objectFit: "cover" }} />
                     </div>
                 ))}

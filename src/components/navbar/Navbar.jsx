@@ -175,7 +175,7 @@ const Navbar = () => {
 
                 <div className="language-switcher lg_lang">
                     <div className="circle-icon">
-                        <Icon.langC />
+                        {/* <Icon.langC /> */}
                     </div>
                     {/*   {
                         i18n.language == "ar" ? */}

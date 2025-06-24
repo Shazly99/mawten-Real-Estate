@@ -15,10 +15,10 @@ const GalleryProjects = ({ data }) => {
                         autoplay={{ delay: 1500 }}
                         loop={true}
                         slidesPerView={3} // عرض صورة واحدة في كل مرة
-                        spaceBetween={40} // المسافة بين الصور
+                        spaceBetween={20} // المسافة بين الصور
                         speed={1000} // سرعة الانتقال
                         breakpoints={{
-                            1500: { slidesPerView: 2.5 },
+                            1500: { slidesPerView: 3 },
                             320: { slidesPerView: 2 }, // شاشت صغيرة - عرض صورتين
                             768: { slidesPerView: 2 }, // شاشات متوسطة فما فوق - صورة واحدة
                         }}
