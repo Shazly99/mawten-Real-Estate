@@ -1,25 +1,9 @@
 import CustomButton from "@components/common/CustomButton";
 import CustomTitle from "@components/common/CustomTitle";
 import Icon from "@constants/icon";
-import img from "@constants/img"; 
 import { Col, Row } from "antd";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-
-// const projects = [
-//     {
-//         id: 2,
-//         title: "هيلتون جاردن ان الرياض المركز المالي",
-//         sector: " القطاع التجاري ",
-//         image: img.Projects2, // Replace with actual image path
-//     },
-//     {
-//         id: 1,
-//         title: "برج موطن تاورز الرياض",
-//         sector: " القطاع السكني ",
-//         image: img.Projects1, // Replace with actual image path
-//     },
-// ];
 
 const ImportantProject = ({data}) => {
     let { t } = useTranslation()
@@ -36,7 +20,7 @@ const ImportantProject = ({data}) => {
 
             {/* Project Cards */}
             <Row gutter={[24, 24]} justify="center" className="mb-8" >
-                {data.filter((_, index) => index === 2 || index === 9) .map((project) => (
+                {data.filter((_, index) => index === 0 || index === 9) .map((project) => (
                     <Col xs={24} sm={12} key={project.id}>
                         <div className="project-card" >
                             <img alt={project.title} src={project.image}  />
