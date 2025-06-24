@@ -12,7 +12,7 @@ const TitleSection = () => {
                 <Row gutter={[20, 20]} className="top-section flex   ">
                     <Col xl={10} md={12} xs={24} sm={24}>
                         {/* Content Section */}
-                        <div className="flex justify-content-start align-items-center">
+                        <div className=" header_section">
                             <TitleH title={t('mawten')} className="text-4xl font-bold text-gray-900" />
                         </div>
                         <div className="content  mt-4">

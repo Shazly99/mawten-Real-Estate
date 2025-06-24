@@ -180,14 +180,6 @@
         display: none;
       }
 
-      @media screen and (width < 900px) {
-
-        .title-container {
-          display: flex;
-          justify-content: flex-start !important;
-          align-items: flex-start !important;
-        }
-      }
 
       .title span {
         color: #3C3C3B;
@@ -200,18 +192,6 @@
 
         @media screen and (width < 900px) {
           font-size: 30px;
-        }
-      }
-
-      .title-container svg {
-        width: 20.461px;
-        height: 39.12px;
-        flex-shrink: 0;
-
-        @media screen and (width < 900px) {
-          width: 18px;
-          height: 39px;
-          margin-top: -5px;
         }
       }
 
@@ -297,9 +277,6 @@
     margin: 50px auto !important;
   }
 
-  .title-container {
-    justify-content: center;
-  }
 
   .text-section {
 
@@ -355,39 +332,7 @@
     background-image: url('../../assets/svg/comBg.svg');
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: center center;
-
-    .title-container {
-      span {
-        color: #3C3C3B;
-        font-family: $fontBase;
-        font-size: 50px;
-        font-weight: 100 !important;
-
-        @media screen and (width < 900px) {
-          font-size: 40px;
-        }
-      }
-
-      strong {
-        color: #A61517;
-
-        font-family: $fontBase;
-        font-size: 50px;
-        font-style: normal;
-        font-weight: 530;
-        line-height: normal;
-
-        @media screen and (width < 900px) {
-          font-size: 40px;
-        }
-      }
-
-      svg {
-        width: 26px;
-      }
-    }
-
+    background-position: right center;
   }
 
 
@@ -680,7 +625,7 @@
   justify-content: center;
   align-items: center;
   height: 390px;
-  position: relative; 
+  position: relative;
   background-image: url('../../assets/images/contactBg.png');
   background-size: cover;
   background-position: center center;
@@ -889,4 +834,13 @@
 
   padding: 0 !important;
   overflow: hidden;
+}
+
+.header_section_icon {
+  .header_section {
+    svg {
+      margin-top: -10px;
+      width: 17px !important;
+    }
+  }
 }

@@ -44,7 +44,7 @@ const Home = () => {
   };
 
   return (
-    <> 
+    <div className="header_section_icon"> 
       <Modal
         visible={isModalVisible}
         onOk={handleOk}
@@ -66,7 +66,7 @@ const Home = () => {
       <HomeProjects data={tabItems} />
       {/* <InvestorRelations /> */}
       <HomeMediaCenter blog={blog} />
-    </>
+    </div>
   );
 };
 

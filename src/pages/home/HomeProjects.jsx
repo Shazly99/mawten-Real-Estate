@@ -1,12 +1,12 @@
-import React, { useState, useEffect, useRef } from "react";
-import { motion } from "framer-motion";
-import "./homeProjects.scss";
-import { Col, Row } from "antd";
-import Marquee from "react-fast-marquee";
-import Icon from "@constants/icon";
 import TitleH from "@components/common/TitleH";
+import Icon from "@constants/icon";
+import { Col, Row } from "antd";
+import { motion } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
+import Marquee from "react-fast-marquee";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
+import "./homeProjects.scss";
 
 const HomeProjects = ({ data }) => {
     const { t } = useTranslation();
@@ -107,7 +107,7 @@ const HomeProjects = ({ data }) => {
                     </Col>
 
                     <Col span={24}>
-                        <div className="project-slider" dir="ltr">
+                        <div className="project-slider header_section" dir="ltr">
                             {
                                 data[activeTab]?.projects?.length > 0 &&
                                 <TitleH title={t("مشاريع")} highlight={t("")} />

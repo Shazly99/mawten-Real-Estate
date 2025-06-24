@@ -1,12 +1,10 @@
-import img from '@constants/img'
-import React from 'react'
-import { Row, Col } from "antd";
 import CustomButton from '@components/common/CustomButton';
 import TitleH from '@components/common/TitleH';
-import { useTranslation } from 'react-i18next';
-import { Link } from 'react-router-dom';
+import { Col, Row } from "antd";
 import CountUp from 'react-countup';
+import { useTranslation } from 'react-i18next';
 import { useInView } from 'react-intersection-observer'; // ✅
+import { Link } from 'react-router-dom';
 
 const NumberCompany = () => {
     const { t } = useTranslation();
@@ -18,7 +16,7 @@ const NumberCompany = () => {
 
             <div className="dnumber-company container_main_85 mt_main">
                 <Row gutter={[32, 32]} align="middle" justify="space-between">
-                    <Col xs={24} lg={12} className="image-section flex justify-content-center align-items-center">
+                    <Col xs={24} lg={12} className="header_section image-section flex justify-content-center align-items-center">
                         <TitleH title={t('Projects')} />
                     </Col>
                     <Col xs={24} lg={12} className="text-section">
