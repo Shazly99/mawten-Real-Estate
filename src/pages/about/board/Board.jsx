@@ -38,7 +38,18 @@ const Board = () => {
     useEffect(() => {
         console.log(location.pathname);
     }, []);
+    useEffect(() => {
+        const scrollStep = -window.pageYOffset / 50; // سرعة التمرير
+        const scrollInterval = setInterval(() => {
+            if (window.pageYOffset !== 0) {
+                window.scrollBy(0, scrollStep);
+            } else {
+                clearInterval(scrollInterval);
+            }
+        }, 10); // التحكم في السلاسة
 
+        return () => clearInterval(scrollInterval); // تنظيف التايمر
+    }, []);
     const members2 = [
         {
             name: 'حسين المختار', position: 'رئيس  الاستثمار', img: img.emp6, description: 'هو الشخص المسؤول عن التخطيط والتنظيم والتوجيه والرقابة على فريق العمل لتحقيق أهداف المؤسسة. تشمل مهامه ومسؤولياته المدرجة بناء على نوع الإدارة التي يشغلها (مثل: مدير مشروع، مدير منتج، مدير مالي، ...). بشكل عام، تشمل وضع الخطط الاستراتيجية، توزيع المهام، متابعة الأداء، اتخاذ القرارات، حل المشكلات، والتواصل مع الأطراف المختلفة، لضمان سير العمل بكفاءة وفعالية.'

@@ -1,7 +1,7 @@
 import Icon from '@constants/icon';
 import img from '@constants/img'; // Path to your images if needed
 import { Button, Col, Row, Slider, Typography } from 'antd';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import './mission.scss';
 import MissionHeader from './MissionHeader';
 const { Text } = Typography;
@@ -80,7 +80,18 @@ const Mission = () => {
             return () => clearInterval(interval);
         }
     }, [isAutoSliding, years.length]);
+    useEffect(() => {
+        const scrollStep = -window.pageYOffset / 50; // سرعة التمرير
+        const scrollInterval = setInterval(() => {
+            if (window.pageYOffset !== 0) {
+                window.scrollBy(0, scrollStep);
+            } else {
+                clearInterval(scrollInterval);
+            }
+        }, 10); // التحكم في السلاسة
 
+        return () => clearInterval(scrollInterval); // تنظيف التايمر
+    }, []);
 
 
     return (

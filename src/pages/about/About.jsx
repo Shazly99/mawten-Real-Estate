@@ -11,7 +11,7 @@ import SuccessPartnersSection from './SuccessPartnersSection'
 import Value from './Value'
 
 const About = () => {
-    const { t } = useTranslation(); 
+    const { t } = useTranslation();
     const breadcrumbItems = [
         {
             label: t('nav_about'),
@@ -37,7 +37,18 @@ const About = () => {
                 console.error('فشل جلب بيانات القطاعات:', err);
             });
     }, []);
+    useEffect(() => {
+        const scrollStep = -window.pageYOffset / 50; // سرعة التمرير
+        const scrollInterval = setInterval(() => {
+            if (window.pageYOffset !== 0) {
+                window.scrollBy(0, scrollStep);
+            } else {
+                clearInterval(scrollInterval);
+            }
+        }, 10); // التحكم في السلاسة
 
+        return () => clearInterval(scrollInterval); // تنظيف التايمر
+    }, []);
     return (
         <div className='app__about' >
 
@@ -59,7 +70,7 @@ const About = () => {
                     <Col xl={12} lg={12} md={24} xs={24}>
                         <img src={img.about} alt="" className='w-full p-2' />
                     </Col>
-                </Row> 
+                </Row>
                 <p className='app_category_ bg-red' >ركزت موطن العقارية على تطوير المشاريع العقارية المتخصصة ورفد السوق بمنتجات عقارية نوعية ذات جودة عالية في مختلف القطاعات، كتطوير المشاريع العقارية الصناعية واللوجستية وإنشاء المصانع الجاهزة لاحتضان الصناعات الناشئة وتطوير البيئات المناسبة للخدمات اللوجستية المتخصصة. بالإضافة إلى تطوير المشاريع متعددة الاستخدامات والمشاريع السكنية النوعية المناسبة التي تتلاءم مع احتياجات وتطلعات السوق والعملاء وتبلور مفهوم المجمعات السكنية المتكاملة المخدومة، فضلاً عن الاستثمار في تطوير المشاريع الفندقية ذات الجودة العالية وتشغيلها بواسطة مشغلين عالميين</p>
             </div>
             <GalleryTitle data={data} />

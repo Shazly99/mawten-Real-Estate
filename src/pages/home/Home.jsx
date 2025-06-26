@@ -43,19 +43,32 @@ const Home = () => {
     setIsModalVisible(false);
   };
 
+  useEffect(() => {
+    const scrollStep = -window.pageYOffset / 50; // سرعة التمرير
+    const scrollInterval = setInterval(() => {
+      if (window.pageYOffset !== 0) {
+        window.scrollBy(0, scrollStep);
+      } else {
+        clearInterval(scrollInterval);
+      }
+    }, 10); // التحكم في السلاسة
+
+    return () => clearInterval(scrollInterval); // تنظيف التايمر
+  }, []);
+
   return (
-    <div className="header_section_icon"> 
+    <div className="header_section_icon">
       <Modal
         visible={isModalVisible}
         onOk={handleOk}
         onCancel={handleCancel}
         footer={null}
         centered
-      > 
+      >
         <a href="https://docs.google.com/forms/d/e/1FAIpQLScX_GoMk05p0EU2ORGhDGlE5D6WHCBZapfHnR19Co7-BMUgCA/viewform" target="_blank" rel="noopener noreferrer"  >
           <img src={img.Ads} alt="" className="w-full h-full" srcset="" />
         </a>
-      </Modal>  
+      </Modal>
 
       <SliderHome />
       <TitleSection />
