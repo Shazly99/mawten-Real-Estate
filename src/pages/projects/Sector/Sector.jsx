@@ -40,7 +40,7 @@ const Sector = () => {
       <div className="sector_projects m-0">
         <TitleH title={'الـمشــاريـــع'} highlight={''} />
         <div className="projects">
-          <Row gutter={[50, 50]}>
+          <Row gutter={[20, 20]}>
             {paginatedProjects.map(project => (
               <Col xl={12} md={12} xs={24} sm={24} key={project.id}>
                 <div className="card">

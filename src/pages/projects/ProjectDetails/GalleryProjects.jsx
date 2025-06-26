@@ -14,14 +14,15 @@ const GalleryProjects = ({ data }) => {
                         modules={[Autoplay]}
                         autoplay={{ delay: 1500 }}
                         loop={true}
-                        slidesPerView={3} // عرض صورة واحدة في كل مرة
-                        spaceBetween={20} // المسافة بين الصور
+                        slidesPerView={4} // عرض صورة واحدة في كل مرة
+                        spaceBetween={10} // المسافة بين الصور
                         speed={1000} // سرعة الانتقال
-                        breakpoints={{
-                            1500: { slidesPerView: 3 },
-                            320: { slidesPerView: 2 }, // شاشت صغيرة - عرض صورتين
-                            768: { slidesPerView: 2 }, // شاشات متوسطة فما فوق - صورة واحدة
-                        }}
+                        responsive={[
+                            { breakpoint: 1200, settings: { slidesToShow: 4 } },
+                            { breakpoint: 992, settings: { slidesToShow: 3 } },
+                            { breakpoint: 768, settings: { slidesToShow: 2 } },
+                            { breakpoint: 480, settings: { slidesToShow: 1 } },
+                        ]}
                         dir="ltr"
                     >
                         {
