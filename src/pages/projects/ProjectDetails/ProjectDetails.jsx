@@ -84,6 +84,19 @@ const ProjectDetails = () => {
         { icon: Icon.supermarket, label: 'سوبر ماركت' },
     ];
 
+    useEffect(() => {
+        const scrollStep = -window.pageYOffset / 50; // سرعة التمرير
+        const scrollInterval = setInterval(() => {
+            if (window.pageYOffset !== 0) {
+                window.scrollBy(0, scrollStep);
+            } else {
+                clearInterval(scrollInterval);
+            }
+        }, 10); // التحكم في السلاسة
+
+        return () => clearInterval(scrollInterval); // تنظيف التايمر
+    }, []);
+
     if (loading) return <p>جاري تحميل البيانات...</p>;
     if (!projectData) return <p>لم يتم العثور على بيانات المشروع.</p>;
 

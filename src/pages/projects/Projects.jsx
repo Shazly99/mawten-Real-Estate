@@ -8,7 +8,6 @@ import { useTranslation } from 'react-i18next'
 import ImportantProjects from './ImportantProjects'
 import './project.scss'
 import ProjectsDep from './ProjectsDep'
-import SliderHome from '@pages/home/SliderHome'
 import SliderProject from './SliderProject'
 
 const Projects = () => {
@@ -40,6 +39,18 @@ const Projects = () => {
                 console.error('فشل جلب بيانات القطاعات:', err);
             });
     }, []);
+    useEffect(() => {
+        const scrollStep = -window.pageYOffset / 50; // سرعة التمرير
+        const scrollInterval = setInterval(() => {
+            if (window.pageYOffset !== 0) {
+                window.scrollBy(0, scrollStep);
+            } else {
+                clearInterval(scrollInterval);
+            }
+        }, 10); // التحكم في السلاسة
+
+        return () => clearInterval(scrollInterval); // تنظيف التايمر
+    }, []);
 
     return (
         <>
@@ -50,7 +61,7 @@ const Projects = () => {
                     <Row gutter={[50, 50]} >
                         <Col xl={11} lg={11} md={11} sm={24} xs={24} className='mt-8  ' >
                             <div className="content">
-                                <TitleH title={t('mawten')} highlight={t('RealEstate')}  />
+                                <TitleH title={t('mawten')} highlight={t('RealEstate')} />
                                 <h1>الريادة في صناعة الحلول العقارية المبتكرة </h1>
                                 <p>اكتشف مشاريع موطن العقارية النوعية، حيث العقارات السكنية، والتجارية، والصناعية واللوجستية، والضيافة التي تنفرد بنوعيتها وموقعها الاستراتيجية وجودتها العالية في التصميم والتنفيذ لتلبى احتياجات وتطلعات العملاء المستهدفين وتثري السوق العقارية في المملكة العربية السعودية.</p>
                             </div>

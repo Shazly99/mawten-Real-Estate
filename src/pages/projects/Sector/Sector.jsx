@@ -30,6 +30,18 @@ const Sector = () => {
     (currentPage - 1) * pageSize,
     currentPage * pageSize
   );
+  useEffect(() => {
+    const scrollStep = -window.pageYOffset / 50; // سرعة التمرير
+    const scrollInterval = setInterval(() => {
+      if (window.pageYOffset !== 0) {
+        window.scrollBy(0, scrollStep);
+      } else {
+        clearInterval(scrollInterval);
+      }
+    }, 10); // التحكم في السلاسة
+
+    return () => clearInterval(scrollInterval); // تنظيف التايمر
+  }, []);
 
   return (
     <>

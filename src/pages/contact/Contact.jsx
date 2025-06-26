@@ -10,6 +10,7 @@ import OverlayHeader from '@components/common/OverlayHeader';
 import TitleH from '@components/common/TitleH';
 import img from '@constants/img';
 import { Button, Col, Form, Input, Row } from 'antd';
+import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import './contact.scss';
 import WorkingHoursSection from './WorkingHoursSection';
@@ -35,6 +36,20 @@ const Contact = () => {
         navigator.clipboard.writeText(googleMapsLink);
         alert("تم نسخ الرابط بنجاح!");
     };
+
+    useEffect(() => {
+        const scrollStep = -window.pageYOffset / 50; // سرعة التمرير
+        const scrollInterval = setInterval(() => {
+            if (window.pageYOffset !== 0) {
+                window.scrollBy(0, scrollStep);
+            } else {
+                clearInterval(scrollInterval);
+            }
+        }, 10); // التحكم في السلاسة
+
+        return () => clearInterval(scrollInterval); // تنظيف التايمر
+    }, []);
+
     return (
         <div className="app_contact">
             <OverlayHeader img={img.aboutCover} header={t('nav_contact')} breadcrumbItems={breadcrumbItems} />

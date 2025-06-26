@@ -1,12 +1,26 @@
-import React from 'react'
-import './services.scss'
 import TitleH from '@components/common/TitleH'
-import { useTranslation } from 'react-i18next'
 import img from '@constants/img'
 import { Col, Row } from 'antd'
+import { useEffect } from 'react'
+import { useTranslation } from 'react-i18next'
+import './services.scss'
 
 const Services = () => {
     let { t } = useTranslation()
+
+    useEffect(() => {
+        const scrollStep = -window.pageYOffset / 50; // سرعة التمرير
+        const scrollInterval = setInterval(() => {
+            if (window.pageYOffset !== 0) {
+                window.scrollBy(0, scrollStep);
+            } else {
+                clearInterval(scrollInterval);
+            }
+        }, 10); // التحكم في السلاسة
+
+        return () => clearInterval(scrollInterval); // تنظيف التايمر
+    }, []);
+
     return (
         <div className='app_services'>
             <header>
@@ -14,12 +28,12 @@ const Services = () => {
                     <TitleH title={t('nav_service')} />
                     <p>تتمتع شركة موطن العقارية بخبرات عميقة وكفاءات بشرية مؤهلة في مختلف المجالات في القطاع العقاري ما يمكنها من تقديم خدماتها التالية</p>
                 </div>
-                <img src={img.headerImg} className='headerImg' alt=""  />
+                <img src={img.headerImg} className='headerImg' alt="" />
                 <div className="left">
-                    <img src={img.left} alt=""  />
+                    <img src={img.left} alt="" />
                 </div>
                 <div className="right">
-                    <img src={img.right} alt=""  />
+                    <img src={img.right} alt="" />
                 </div>
             </header>
 
@@ -27,7 +41,7 @@ const Services = () => {
             <main className='mb-8'>
                 <Row gutter={[16, 16]} className='h-full mt-8'>
                     <Col xl={12} lg={12} xxl={12} md={24} xs={24} sm={24} className='h_services' >
-                        <img src={img.services1} className='w-full p-6' alt=""  />
+                        <img src={img.services1} className='w-full p-6' alt="" />
                     </Col>
                     <Col xl={11} offset={1} lg={11} xxl={11} md={24} xs={24} sm={24} className='h_services' >
                         <div className="services_content">
@@ -46,13 +60,13 @@ const Services = () => {
                         </div>
                     </Col>
                     <Col xl={12} lg={12} xxl={12} md={24} xs={24} sm={24} className='h_services' >
-                        <img src={img.services2} className='w-full p-5' alt=""  />
+                        <img src={img.services2} className='w-full p-5' alt="" />
                     </Col>
                 </Row>
 
                 <Row gutter={[16, 16]} className='h-full mt-8'>
                     <Col xl={12} lg={12} xxl={12} md={24} xs={24} sm={24} className='h_services_2 mt-8' >
-                        <img src={img.services3} className='w-full' alt=""  />
+                        <img src={img.services3} className='w-full' alt="" />
                     </Col>
                     <Col xl={11} offset={1} lg={11} xxl={11} md={24} xs={24} sm={24} className='h_services' >
                         <div className="services_content">
@@ -70,7 +84,7 @@ const Services = () => {
                         </div>
                     </Col>
                     <Col xl={12} lg={12} xxl={12} md={24} xs={24} sm={24} className='h_services_2' >
-                        <img src={img.services4} className='w-full' alt=""  />
+                        <img src={img.services4} className='w-full' alt="" />
                     </Col>
                 </Row>
             </main>

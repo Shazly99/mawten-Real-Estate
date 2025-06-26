@@ -13,6 +13,8 @@ const Blogs = () => {
     const [blogs, setBlogs] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
     const pageSize = 4;
+ 
+
     useEffect(() => {
         axios.get(`https://mawtan.rightclicksa.com/api/home/blogs`)
             .then(res => {
