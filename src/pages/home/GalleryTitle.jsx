@@ -10,7 +10,7 @@ const GalleryTitle = ({ data }) => {
                 speed={1800}
                 dots={false} 
                 pauseOnHover={false}
-                slidesToShow={3}
+                slidesToShow={4}
                 responsive={[
                     { breakpoint: 1200, settings: { slidesToShow: 4 } },
                     { breakpoint: 992, settings: { slidesToShow: 3 } },
@@ -21,7 +21,7 @@ const GalleryTitle = ({ data }) => {
                 infinite
             >
                 {data.map((item, index) => (
-                    <div key={index} className="p-2">
+                    <div key={index} className="p-1">
                         <img src={item.image} alt="City View" style={{ width: "100%", objectFit: "cover" }} />
                     </div>
                 ))}
