@@ -27,7 +27,7 @@ export default function UnitModels() {
                         {modelImages.map((m) => (
                             <Button
                                 key={m.id}
-                                className={`model-button ${m.id === selected ? "active" : ""} px-6  `}
+                                className={`model-button ${m.id === selected ? "active" : ""}    `}
                             >
                                 {m.id}
                             </Button>
@@ -63,7 +63,7 @@ export default function UnitModels() {
                     />
 
                     {/* صور مصغرة */}
-                    <div className="thumbnails">
+                    <div className="thumbnails ">
                         {modelImages.map((img) => (
                             <img
                                 key={img.id}
