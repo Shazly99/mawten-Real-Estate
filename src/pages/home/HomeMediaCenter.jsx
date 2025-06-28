@@ -49,8 +49,8 @@ const HomeMediaCenter = ({ blog = [] }) => {
 
                 >
                     {blog.map((blog, index) => (
-                        <div key={index} className="px-2 py-4" >
-                            <div className="blog-card shadow-2 pb-4 ">
+                        <div key={index} className=" py-4  px-15 " >
+                            <div className="blog-card shadow-1 pb-4 "> 
                                 <Link to={`/media-center/${blog.key_word_ar}`} className="card-header">
                                     <div className="card_blog_image">
                                         <img src={blog.image} alt={`Image ${blog.id}`} />
@@ -67,7 +67,7 @@ const HomeMediaCenter = ({ blog = [] }) => {
                                         {/* <p className="description">{blog.short_description.split(" ").slice(0, 15).join(" ")}</p> */}
                                     </div>
                                 </Link>
-                    {/*             <Link dir="rtl" to={`/media-center/${blog.key_word_ar}`} className='block   mx-3'>
+                                {/*             <Link dir="rtl" to={`/media-center/${blog.key_word_ar}`} className='block   mx-3'>
                                     <Button type="primary" shape='round' className="read-more-btn">
                                         {t('more')}
                                     </Button>
