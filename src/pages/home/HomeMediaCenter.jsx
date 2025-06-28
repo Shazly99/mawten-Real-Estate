@@ -77,9 +77,9 @@ const HomeMediaCenter = ({ blog = [] }) => {
                     ))}
                 </Carousel>
             </div>
-            <div className="flex justify-content-center mt-4 w-full">
+            <Link to={'/media-center'} className="flex justify-content-center mt-4 w-full">
                 <Button type="primary" size="large" className="px-5 shadow-none" >المركز الاعلامي</Button>
-            </div>
+            </Link>
         </section>
     );
 };
