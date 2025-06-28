@@ -5,7 +5,7 @@ import { Col, Row } from "antd";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 
-const ImportantProject = ({data}) => {
+const ImportantProject = ({ data }) => {
     let { t } = useTranslation()
 
     return (
@@ -20,27 +20,28 @@ const ImportantProject = ({data}) => {
 
             {/* Project Cards */}
             <Row gutter={[24, 24]} justify="center" className="mb-8" >
-                {data.filter((_, index) => index === 0 || index === 9) .map((project) => (
+                {data.filter((_, index) => index === 0 || index === 9).map((project) => (
                     <Col xs={24} sm={12} key={project.id}>
-                        <div className="project-card" >
-                            <img alt={project.title} src={project.image}  />
-                            <Row className="overlay flex justify-content-between">
-                                <Col xl={12} >
-                                    <h3 className="title">{project.title}</h3>
-                                </Col>
-                                <Col xl={12} >
-                                    <div className="left flex flex-column justify-content-end align-items-end gap-2">
-                                        <span className="sector">({project.sector})</span>
-                                        <Icon.arrowLight />
-                                    </div>
-                                </Col>
-
-                            </Row>
-                        </div>
+                        <Link to={`/project/${project.id}`} >
+                            <div className="project-card" >
+                                <img alt={project.title} src={project.image} />
+                                <Row className="overlay flex justify-content-between">
+                                    <Col xl={12} >
+                                        <h3 className="title">{project.title}</h3>
+                                    </Col>
+                                    <Col xl={12} >
+                                        <div className="left flex flex-column justify-content-end align-items-end gap-2">
+                                            <span className="sector">({project.sector})</span>
+                                            <Icon.arrowLight />
+                                        </div>
+                                    </Col>
+                                </Row>
+                            </div>
+                        </Link>
                     </Col>
                 ))}
             </Row>
-        </div>
+        </div >
     );
 };
 
