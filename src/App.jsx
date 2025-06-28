@@ -1,6 +1,6 @@
 import General from '@context/General';
 import AppRouter from '@routes/AppRouter';
-import { ConfigProvider, Slider } from 'antd';
+import { ConfigProvider } from 'antd';
 import { useEffect } from 'react';
 import './style/App.scss';
 
@@ -34,7 +34,7 @@ function App() {
   return (
     <div className='trial__version'>
       <div className="trial__version__text">
-        <span>  إطلاق تجريبي</span>
+        <span>  إطــلاق تجريبــي</span>
       </div>
       <ConfigProvider theme={theme} >
         <General>

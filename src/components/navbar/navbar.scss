@@ -11,20 +11,7 @@
         font-weight: 400;
         line-height: 26px;
         text-align: left;
-    }
-
-
-    .navbar-top {
-        padding: 5px 80px;
-
-        @media screen and (width <767px) {
-            padding: 5px 20px !important;
-
-            .social-icons {
-                display: none !important;
-            }
-        }
-    }
+    } 
 
     .navbar-main {
         padding: 5px 80px;
@@ -32,36 +19,7 @@
         @media screen and (width <767px) {
             padding: 5px 40px;
         }
-    }
-
-    .navbar-top {
-        display: flex;
-        justify-content: space-between;
-        padding: 10px 80px; 
-        background-color: #f8f9fa; 
-
-        .language-social {
-            display: flex;
-            align-items: center;
-
-            select {
-                margin-right: 15px;
-                padding: 5px;
-
-            }
-
-            .social-icons {
-                display: flex;
-                gap: 15px;
-
-                a {
-                    color: $mainColor;
-                    font-size: 15px;
-
-                }
-            }
-        }
-    }
+    } 
 
     .navbar-main {
         display: flex;
@@ -170,11 +128,7 @@
         color: #FFF !important;
         opacity: 1 !important;
     }
-}
-
-.path_sm {
-    display: none;
-}
+} 
 
 @media (max-width: 768px) {
     .navbar-main {
@@ -208,11 +162,7 @@
         .quote-button {
             display: none;
         }
-    }
-
-    .path_sm {
-        display: inline-block;
-    }
+    } 
 }
 
 .hamburger-menu {
@@ -269,10 +219,6 @@
     position: relative;
 }
 
-.navbar-top {
-    transition: transform 0.6s ease, opacity 0.6s ease;
-    will-change: transform, opacity;
-}
 
 .hidden {
     transform: translateY(-100%);
@@ -370,45 +316,7 @@
     font-weight: 300;
     line-height: normal;
     text-transform: capitalize;
-}
-
-.contact_us_dot {
-    min-width: 110px;
-    height: 40px;
-    background-color: $mainColor;
-    border-radius: 74px;
-    opacity: 1 !important;
-
-    a {
-        color: #FFF !important;
-        font-family: $fontBase;
-        font-size: 14px !important;
-        font-style: normal;
-        font-weight: 300;
-        line-height: normal;
-        text-transform: capitalize;
-        opacity: 1 !important;
-
-    }
-
-}
-
-:lang(en) .contact_us_dot {
-    min-width: 140px;
-    height: 43px;
-
-    @media screen and (width < 900px) {
-        display: none !important;
-    }
-}
-
-:lang(ar) .contact_us_dot,
-:lang(en) .contact_us_dot {
-
-    @media screen and (width < 900px) {
-        display: none !important;
-    }
-}
+} 
 
 .sm_lang {
     display: none;

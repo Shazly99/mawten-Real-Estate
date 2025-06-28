@@ -2,7 +2,6 @@ import CustomFooter from '@components/footer/CustomFooter';
 import Navbar from '@components/navbar/Navbar';
 import { useEffect, useState } from 'react';
 import { Outlet, useLocation } from 'react-router-dom';
-import '../components/style.scss';
 
 
 const MainLayout = () => {

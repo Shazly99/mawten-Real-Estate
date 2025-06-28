@@ -26,10 +26,10 @@ const ImportantProject = ({ data }) => {
                             <div className="project-card" >
                                 <img alt={project.title} src={project.image} />
                                 <Row className="overlay flex justify-content-between">
-                                    <Col xl={12} >
+                                    <Col xl={12} xs={24} sm={24} >
                                         <h3 className="title">{project.title}</h3>
                                     </Col>
-                                    <Col xl={12} >
+                                    <Col xl={12} xs={24} sm={24}>
                                         <div className="left flex flex-column justify-content-end align-items-end gap-2">
                                             <span className="sector">({project.sector})</span>
                                             <Icon.arrowLight />

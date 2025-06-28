@@ -11,11 +11,9 @@ const NumberCompany = () => {
     const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.3 }); // ✅
 
     return (
-        <div>
-            {/* <img src={img.mawten_bg2} alt="mawten bg" className="w-full mt-5" /> */}
-
+        <div> 
             <div className="dnumber-company container_main_85 mt_main">
-                <Row gutter={[32, 32]} align="middle" justify="space-between">
+                <Row gutter={[0, 0]} align="middle" justify="space-between">
                     <Col xs={24} lg={12} className="header_section image-section flex justify-content-center align-items-center">
                         <TitleH title={t('Projects')} />
                     </Col>
@@ -31,11 +29,10 @@ const NumberCompany = () => {
                         </Link>
                     </Col>
                 </Row>
-            </div>
-
-            {/* ✅ Animated Statistics Section */}
+            </div> 
+            
             <div className="statistics-section" ref={ref}>
-                <Row gutter={[32, 32]} justify="center">
+                <Row gutter={[0, 0]} justify="center">
                     <Col xs={12} sm={12} md={6} className="stat-item">
                         <h3>
                             {inView ? <CountUp end={10} duration={5} /> : '0'} <span>+ مليار</span>

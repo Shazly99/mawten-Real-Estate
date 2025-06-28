@@ -14,7 +14,7 @@
 
     .section_last_about {
         margin-top: -50px;
-      
+
         .highlight {
             font-family: $fontBase;
             font-weight: 600;
@@ -177,6 +177,10 @@
 
     .title-container {
         justify-content: center;
+
+        @media screen and (width < 767px) {
+            justify-content: flex-start !important;
+        }
     }
 
     .section-title {
@@ -235,40 +239,6 @@
                 max-width: 100%;
                 object-fit: contain;
             }
-        }
-    }
-}
-
-.category-buttons {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 12px;
-    max-width: 600px;
-    width: 100%;
-
-    .category-box {
-        width: 100%;
-        margin-top: 20px;
-        padding: 8px 16px;
-
-        font-weight: bold;
-        font-size: 1.2rem;
-        color: #333;
-
-        &.residential {
-            background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(243, 243, 243, 0.365385) 0.01%, #DEDEDE 200%);
-
-        }
-
-        &.industrial {
-            background: linear-gradient(90.01deg, rgba(255, 255, 255, 0) 0.01%, #A61517 350.16%);
-
-        }
-
-        &.hospitality {
-            background: linear-gradient(90.01deg, rgba(255, 255, 255, 0) 0.01%, #A61517 350.16%);
-
         }
     }
 }

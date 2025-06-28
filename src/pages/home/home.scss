@@ -1,847 +1,859 @@
  @use '../../style/varibale' as *;
 
 
-.app__slider {
-  video {
-    width: 100%;
-    height: 100vh;
-    object-fit: cover;
-
-    @media screen and (width < 900px) {
-      height: auto;
-      object-fit: contain;
-      margin-top: 100px;
-    }
-  }
-}
-
-.navbar-main {
-  @media screen and (width < 900px) {
-    background-color: #181818 !important;
-  }
-}
-
-.home-container {
-  width: 100%;
-  margin: auto;
-  padding: 50px 0;
-  color: #333;
-
-  .top-section {
-    margin-bottom: 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    .vector {
-      svg {
-        width: 100%;
-        margin-right: -40px;
-        margin-top: 10px;
-      }
-    }
-
-    p {
-      color: #3C3C3B;
-      text-align: justify;
-      font-family: $fontBase;
-      font-size: 20px;
-      font-style: normal;
-      font-weight: 300;
-      line-height: 35px;
-    }
-  }
-
-  .content {
-    .title {
-      color: #3C3C3B;
-      font-family: $fontBase;
-      font-size: 35px !important;
-      font-style: normal;
-      font-weight: 500 !important;
-      line-height: normal;
-      text-align: start;
-      width: 80%;
-    }
-
-  }
-
-  .title_container {
-    width: 90%;
-    margin: auto;
-
-    .content .title {
-      color: #3C3C3B;
-
-      font-family: $fontBase;
-      font-size: 43px;
-      font-style: normal;
-      font-weight: 530;
-      line-height: normal;
-
-      @media screen and (width < 767px) {
-        font-size: 28px !important;
-      }
-    }
-
-    p {
-      color: #3C3C3B;
-      text-align: justify;
-      font-family: $fontBase;
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 300;
-      line-height: 35px;
-
-      @media screen and (width < 767px) {
-        font-size: 15px;
-
-      }
-    }
-
-    .sm_none {
-      @media screen and (width < 900px) {
-        display: none;
-      }
-    }
-  }
-}
-
-
-.image-gallery {
-  width: 95%;
-  margin: auto;
-  overflow: hidden;
-
-  img {
-    border-radius: 8px; // زوايا دائرية أنيقة
-    // box-shadow: 0px 3px 39.1px 0px rgba(166, 21, 23, 0.17);
-    object-fit: cover;
-    transition: transform 0.3s ease-in-out;
-    width: 100%;
-    height: 470px !important;
-    border-radius: 0;
-
-    @media screen and (width < 900px) {
-      height: 100% !important;
-    }
-
-    &:hover {
-      // transform: scale(1.05);
-      z-index: 9999 !important;
-      position: relative;
-    }
-  }
-}
-
-.company-overview {
-  margin-top: 100px;
-
-  header {
-    margin-top: 50px;
-    margin-bottom: 50px;
-
-    .highlight {
-      font-family: $fontBase;
-      font-weight: 600;
-      font-size: 30px;
-      line-height: 100%;
-      text-align: right;
-      color: #181820;
-
-    }
-
-    p {
-      font-family: $fontBase;
-      font-weight: 300;
-      font-size: 18px;
-      line-height: 35px;
-      letter-spacing: 0%;
-      text-align: justify;
-      color: #3C3C3B;
-      margin-top: 20px;
-
-    }
-  }
-
-  @media screen and (width < 900px) {
-    margin-top: 0;
-  }
-
-  .content {
-
-    @media screen and (width < 900px) {
-      margin-top: 100px;
-    }
-
-    .section {
-      margin-bottom: 2rem;
-
-      &::after {
-        display: none;
-      }
-
-
-      .title span {
-        color: #3C3C3B;
-        font-family: $fontBase;
-        font-size: 36px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: normal;
-        user-select: none;
-
-        @media screen and (width < 900px) {
-          font-size: 30px;
-        }
-      }
-
-      h2 {
-        font-size: 1.8rem;
-        font-weight: bold;
-        display: flex;
-        align-items: center;
-        color: #333;
-
-
-        img {
-          margin-left: 10px;
-          width: 20px;
-          height: 20px;
-
-        }
-      }
-
-      p {
-        color: #3C3C3B;
-        text-align: justify;
-        font-family: $fontBase;
-        font-size: 18px;
-        font-style: normal;
-        font-weight: 300;
-        line-height: 35px;
-
-        @media screen and (width < 900px) {
-          font-size: 16px;
-          margin-top: 8px;
-        }
-      }
-    }
-  }
-
-  .image-container {
-
-
-    @media screen and (width < 900px) {
-      order: 1;
-    }
-
-    img {
-      width: 80%;
-
-
-      &:lang(en) {
-        margin-left: -80px;
-        transform: scaleX(-1) !important;
-      }
-    }
-  }
-
-
-}
-
-// جعل الصفحة متجاوبة مع الأجهزة الصغيرة
-@media (max-width: 1024px) {
-  .company-overview {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-
-    .content {
-      max-width: 100%;
-    }
-
-    .image-container {
-      max-width: 100%;
-      margin-top: 2rem;
-    }
-  }
-}
-
-//  Start design Number Company
-.dnumber-company {
-
-  background: #fff;
-
-  @media screen and (width < 900px) {
-
-    margin: 50px auto !important;
-  }
-
-
-  .text-section {
-
-    .title {
-      color: #3C3C3B;
-
-      font-family: $fontBase;
-      font-size: 35px;
-      font-style: normal;
-      font-weight: 530;
-      line-height: normal;
-
-      @media screen and (width < 900px) {
-        font-size: 25px;
-
-      }
-    }
-
-    .description {
-      color: #3C3C3B;
-      text-align: justify;
-      font-family: $fontBase;
-      font-size: 18px;
-      font-style: normal;
-      font-weight: 300;
-      line-height: normal;
-      margin-top: 20px;
-
-      @media screen and (width < 900px) {
-        font-size: 16px;
-      }
-    }
-
-    .custom-button {
-      margin-top: 20px;
-      border: 1px solid #a00;
-      color: #a00;
-      font-size: 16px;
-      padding: 10px 20px;
-      border-radius: 6px;
-      transition: all 0.3s ease;
-
-      &:hover {
-        background: #a00;
-        color: #fff;
-      }
-    }
-  }
-
-  .image-section {
-    width: 300px;
-    height: 250px;
-    background-image: url('../../assets/svg/comBg.svg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: right center;
-  }
-
-
-}
-
-// hr {
-//   display: none;
-// }
-
-//  End design Number Company 
-
-
-//  Start Statistics Number Company 
-.statistics-section {
-  margin-top: 70px;
-  padding: 30px 0;
-  background-color: #f8f8f8;
-  text-align: center;
-  border-top: .1px solid #000;
-
-  .stat-item {
-    text-align: center;
-    padding: 20px;
-    border-right: 1px solid #ddd;
-
-    &:last-child {
-      border-right: none;
-    }
-
-    h3 {
-      color: #181818;
-      font-family: $fontBase;
-      font-size: 30px;
-      font-style: normal;
-      font-weight: 900;
-      line-height: normal;
-
-      @media screen and (width < 900px) {
-        font-size: 28px;
-      }
-    }
-
-    p {
-      color: #000;
-      font-family: $fontBase;
-      font-size: 14px;
-      font-style: normal;
-      font-weight: 100;
-      line-height: normal;
-      margin-top: 10px;
-
-      @media screen and (width < 900px) {
-        font-size: 12px;
-
-      }
-    }
-  }
-}
-
-//  End Statistics Number Company 
-
-//  Start Important Project Company 
-.important-projects {
-  margin-top: 50px !important;
-
-  .section-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 30px;
-
-    .title-black,
-    .title-gray {
-      @media screen and (width < 900px) {
-        font-size: 30px;
-      }
-    }
-
-    h2 {
-      font-size: 28px;
-      font-weight: bold;
-      color: #333;
-
-
-
-
-      .highlight {
-        color: #a00;
-      }
-    }
-
-    .custom-button {
-      border: 1px solid #a00;
-      color: #a00;
-      padding: 8px 16px;
-      border-radius: 6px;
-      font-size: 16px;
-      transition: all 0.3s ease;
-
-      @media screen and (width < 900px) {
-        display: none;
-      }
-
-      &:hover {
-        background: #a00;
-        color: #fff;
-      }
-    }
-  }
-
-  .project-card {
-    overflow: hidden;
-
-    img {
-      width: 100%;
-      object-fit: cover;
-      height: 490px;
-
-      @media screen and (width < 900px) {
-        height: auto;
-      }
-
-      transition: transform 0.3s ease-in-out;
-    }
-
-    &:hover img {
-      transform: scale(1.1);
-    }
-
-    .overlay {
-      position: relative;
-      width: 85%;
-      margin: auto;
-      height: 140px;
-      padding: 12px 30px;
-      background: rgba(166, 21, 23, 0.56) !important;
-      color: white;
-
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-top: -130px;
-      z-index: 5;
-
-      @media screen and (width < 900px) {
-        width: 90%;
-        height: 130px;
-        padding: 10px 20px;
-
-        svg {
-          display: none;
-        }
-      }
-
-      :lang(en) svg {
-        transform: scale(-1);
-      }
-
-      .title {
-
-        color: #FFF;
-
-        font-family: $fontBase;
-        font-size: 25px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: normal;
-        text-transform: capitalize;
-
-        @media screen and (width < 900px) {
-          font-size: 18px;
-        }
-      }
-
-
-    }
-
-
-  }
-}
-
-//  End Important Project Company 
-
-
-// start Investor Relations
-
-.investor-relations {
-  .ant-row {
-    @media screen and (width < 900px) {
-      gap: 0 !important;
-    }
-  }
-
-  .text-section {
-    width: 80%;
-    margin: auto;
-
-    @media screen and (width < 990px) {
-      width: 90%
-    }
-  }
-
-  .title-container {
-    span {
-      color: #A61517;
-      font-family: $fontBase;
-      font-size: 48px;
-      font-style: normal;
-      font-weight: 530;
-      line-height: normal;
-      text-transform: capitalize;
-      user-select: none;
-
-      @media screen and (width < 990px) {
-        font-size: 30px;
-
-      }
-    }
-
-    strong {
-      color: #181820;
-      font-family: $fontBase;
-      font-size: 48px;
-      font-style: normal;
-      font-weight: 300;
-      line-height: normal;
-      text-transform: capitalize;
-      user-select: none;
-
-      @media screen and (width < 990px) {
-        font-size: 30px;
-      }
-    }
-  }
-
-  .description {
-    color: #3C3C3B;
-    text-align: justify;
-    font-family: $fontBase;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: normal;
-    margin-top: 20px;
-
-    @media screen and (width < 990px) {
-      font-size: 16px;
-    }
-  }
-
-  button {
-    margin-top: 53px;
-    background-color: $mainColor;
-    color: #fff;
-    width: 190px;
-
-    svg path {
-      fill: #fff;
-    }
-
-    &:hover {
-      background-color: #fff !important;
-      color: $mainColor !important;
-
-      svg path {
-        fill: $mainColor !important;
-      }
-    }
-  }
-
-  .decorative-section {
-    user-select: none;
-
-    @media screen and (width < 990px) {
-      order: 1;
-    }
-
-    :lang(en) svg {
-      transform: scale(-1);
-    }
-
-    svg {
-      width: 100%;
-    }
-  }
-}
-
-.app_contact_us {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 390px;
-  position: relative;
-  background-image: url('../../assets/images/contactBg.png');
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-
-  .home-contact {
-    display: flex;
-    align-items: center;
-
-    width: 100%;
-    position: relative;
-    flex-wrap: wrap;
-
-  }
-
-
-  .icons_contact-us {
-    svg {
-      width: 100%;
-      transform: scale(1.2);
-      margin-right: -20px;
-
-      @media screen and (width < 900px) {
-        margin-bottom: 20px;
-      }
-    }
-  }
-
-  .content_contact-us {
-    width: 100%;
-    margin-top: 90px;
-
-
-
-    @media screen and (width < 900px) {
-      margin-top: 0;
-      text-align: center;
-    }
-  }
-
-  .home-contact__title,
-  .home-contact__subtitle {
-    margin-top: 20px;
-    font-family: $fontBase;
-    font-weight: 530;
-    font-size: 50px;
-    line-height: 100%;
-    letter-spacing: 0%;
-    text-align: right;
-
-    @media screen and (width < 900px) {
-      font-size: 24px !important;
-    }
-
-    &:lang(en) {
-      text-align: left;
-    }
-  }
-
-  .home-contact__title {
-    color: #FFF;
-    font-family: $fontBase;
-  }
-
-  .home-contact__subtitle {
-    color: #FFF;
-    font-weight: 530;
-  }
-
-  .home-contact__image {
-    position: absolute;
-    left: 120px;
-    bottom: -109px;
-    width: 30%;
-    max-width: 350px;
-    object-fit: contain;
-    z-index: 99999 !important;
-
-
-
-    img {
-      width: 100%;
-      height: auto;
-      object-fit: contain;
-
-      @media screen and (width < 900px) {
-        display: none;
-      }
-    }
-  }
-
-  .home-contact__decoration {
-    position: absolute;
-    top: 0%;
-    transform: translateY(-50%);
-    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
-    color: rgba(255, 255, 255, 0.06);
-    font-family: $fontBase;
-    font-weight: 530;
-    font-size: 100px;
-    text-align: right;
-
-    &:lang(en) {
-      left: 0;
-    }
-  }
-
-  /* تعديل عند استخدام اللغة الإنجليزية */
-  &.ltr {
-
-    .home-contact__title,
-    .home-contact__subtitle {
-      text-align: left;
-    }
-
-    .home-contact__decoration {
-      left: 10px;
-      right: auto;
-    }
-
-    .home-contact__image {
-      left: auto;
-      right: 120px;
-    }
-  }
-
-  /* جعل التصميم متجاوبًا */
-  @media (max-width: 768px) {
-    .home-contact {
-      flex-direction: column;
-      text-align: center;
-    }
-
-    .home-contact__title {
-      font-size: 22px;
-    }
-
-    .home-contact__subtitle {
-      font-size: 18px;
-    }
-
-    .home-contact__image {
-      width: 70%;
-    }
-
-    .home-contact__decoration {
-      font-size: 40px;
-    }
-  }
-
-  @media (max-width: 480px) {
-    .home-contact {
-      flex-direction: column;
-      text-align: center;
-    }
-
-    .home-contact__title {
-      font-size: 18px;
-    }
-
-    .home-contact__subtitle {
-      font-size: 16px;
-    }
-
-    .home-contact__image {
-      width: 90%;
-    }
-
-    .home-contact__decoration {
-      font-size: 30px;
-    }
-  }
-}
-
-.swiper-navigation {
-  position: absolute;
-  top: 50%;
-  width: 100%;
-  z-index: 20;
-  display: flex;
-  justify-content: space-between;
-  transform: translateY(-50%);
-  pointer-events: none;
-}
-
-.custom-arrow {
-  pointer-events: all;
-  cursor: pointer;
-  font-size: 2rem;
-  color: #fff;
-  background: #000;
-  padding: 0.4rem 0.8rem;
-  border-radius: 50%;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-  transition: all 0.3s ease;
-}
-
-.custom-arrow:hover {
-  background: #333;
-}
-
-.ant-modal-content {
-  .ant-modal-body {
-    display: flex;
-  }
-
-  padding: 0 !important;
-  overflow: hidden;
-}
-
-.header_section_icon {
-  .header_section {
-    svg {
-      margin-top: -10px;
-      width: 17px !important;
-    }
-  }
-}
+ .app__slider {
+   video {
+     width: 100%;
+     height: 100vh;
+     object-fit: cover;
+
+     @media screen and (width < 900px) {
+       height: auto;
+       object-fit: contain;
+       margin-top: 100px;
+     }
+   }
+ }
+
+ .navbar-main {
+   @media screen and (width < 900px) {
+     background-color: #181818 !important;
+   }
+ }
+
+ .home-container {
+   width: 100%;
+   margin: auto;
+   padding: 50px 0;
+   color: #333;
+
+   .top-section {
+     margin-bottom: 30px;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+
+     .vector {
+       svg {
+         width: 100%;
+         margin-right: -40px;
+         margin-top: 10px;
+       }
+     }
+
+     p {
+       color: #3C3C3B;
+       text-align: justify;
+       font-family: $fontBase;
+       font-size: 20px;
+       font-style: normal;
+       font-weight: 300;
+       line-height: 35px;
+     }
+   }
+
+   .content {
+     .title {
+       color: #3C3C3B;
+       font-family: $fontBase;
+       font-size: 35px !important;
+       font-style: normal;
+       font-weight: 500 !important;
+       line-height: normal;
+       text-align: start;
+       width: 80%;
+     }
+
+   }
+
+   .title_container {
+     width: 90%;
+     margin: auto;
+
+     .content .title {
+       color: #3C3C3B;
+
+       font-family: $fontBase;
+       font-size: 43px;
+       font-style: normal;
+       font-weight: 530;
+       line-height: normal;
+
+       @media screen and (width < 767px) {
+         font-size: 28px !important;
+       }
+     }
+
+     p {
+       color: #3C3C3B;
+       text-align: justify;
+       font-family: $fontBase;
+       font-size: 16px;
+       font-style: normal;
+       font-weight: 300;
+       line-height: 35px;
+
+       @media screen and (width < 767px) {
+         font-size: 15px;
+
+       }
+     }
+
+     .sm_none {
+       @media screen and (width < 900px) {
+         display: none;
+       }
+     }
+   }
+ }
+
+
+ .image-gallery {
+   width: 95%;
+   margin: auto;
+   overflow: hidden;
+
+   img {
+     border-radius: 8px; // زوايا دائرية أنيقة
+     // box-shadow: 0px 3px 39.1px 0px rgba(166, 21, 23, 0.17);
+     object-fit: cover;
+     transition: transform 0.3s ease-in-out;
+     width: 100%;
+     height: 470px !important;
+     border-radius: 0;
+
+     @media screen and (width < 900px) {
+       height: 300px !important;
+     }
+
+     &:hover {
+       // transform: scale(1.05);
+       z-index: 9999 !important;
+       position: relative;
+     }
+   }
+ }
+
+ .company-overview {
+   margin-top: 100px;
+
+   header {
+     margin-top: 50px;
+     margin-bottom: 50px;
+
+     .highlight {
+       font-family: $fontBase;
+       font-weight: 600;
+       font-size: 30px;
+       line-height: 100%;
+       text-align: right;
+       color: #181820;
+
+     }
+
+     p {
+       font-family: $fontBase;
+       font-weight: 300;
+       font-size: 18px;
+       line-height: 35px;
+       letter-spacing: 0%;
+       text-align: justify;
+       color: #3C3C3B;
+       margin-top: 20px;
+
+     }
+   }
+
+   @media screen and (width < 900px) {
+     margin-top: 0;
+   }
+
+   .content {
+
+     @media screen and (width < 900px) {
+       margin-top: 100px;
+     }
+
+     .section {
+       margin-bottom: 2rem;
+
+       &::after {
+         display: none;
+       }
+
+
+       .title span {
+         color: #3C3C3B;
+         font-family: $fontBase;
+         font-size: 36px;
+         font-style: normal;
+         font-weight: 500;
+         line-height: normal;
+         user-select: none;
+
+         @media screen and (width < 900px) {
+           font-size: 30px;
+         }
+       }
+
+       h2 {
+         font-size: 1.8rem;
+         font-weight: bold;
+         display: flex;
+         align-items: center;
+         color: #333;
+
+
+         img {
+           margin-left: 10px;
+           width: 20px;
+           height: 20px;
+
+         }
+       }
+
+       p {
+         color: #3C3C3B;
+         text-align: justify;
+         font-family: $fontBase;
+         font-size: 18px;
+         font-style: normal;
+         font-weight: 300;
+         line-height: 35px;
+
+         @media screen and (width < 900px) {
+           font-size: 16px;
+           margin-top: 8px;
+         }
+       }
+     }
+   }
+
+   .image-container {
+
+
+     @media screen and (width < 900px) {
+       order: 1;
+     }
+
+     img {
+       width: 80%;
+
+
+       &:lang(en) {
+         margin-left: -80px;
+         transform: scaleX(-1) !important;
+       }
+     }
+   }
+
+
+ }
+
+ // جعل الصفحة متجاوبة مع الأجهزة الصغيرة
+ @media (max-width: 1024px) {
+   .company-overview {
+     flex-direction: column;
+     align-items: center;
+     text-align: center;
+
+     .content {
+       max-width: 100%;
+     }
+
+     .image-container {
+       max-width: 100%;
+       margin-top: 2rem;
+     }
+   }
+ }
+
+ //  Start design Number Company
+ .dnumber-company {
+
+   background: #fff;
+
+   @media screen and (width < 900px) {
+
+     margin: 50px auto !important;
+   }
+
+
+   .text-section {
+
+     @media screen and (width < 900px) {
+       width: fit-content;
+       height: fit-content;
+       background-image: none;
+     }
+
+     .title {
+       color: #3C3C3B;
+
+       font-family: $fontBase;
+       font-size: 35px;
+       font-style: normal;
+       font-weight: 600;
+       line-height: normal;
+
+       @media screen and (width < 900px) {
+         font-size: 20px;
+       }
+     }
+
+     .description {
+       color: #3C3C3B;
+       text-align: justify;
+       font-family: $fontBase;
+       font-size: 18px;
+       font-style: normal;
+       font-weight: 300;
+       line-height: normal;
+       margin-top: 20px;
+
+       @media screen and (width < 900px) {
+         font-size: 16px;
+       }
+     }
+
+     .custom-button {
+       margin-top: 20px;
+       border: 1px solid #a00;
+       color: #a00;
+       font-size: 16px;
+       padding: 10px 20px;
+       border-radius: 6px;
+       transition: all 0.3s ease;
+
+       &:hover {
+         background: #a00;
+         color: #fff;
+       }
+     }
+   }
+
+   .image-section {
+     width: 300px;
+     height: 250px;
+     background-image: url('../../assets/svg/comBg.svg');
+     background-size: contain;
+     background-repeat: no-repeat;
+     background-position: right center;
+
+     @media screen and (width < 900px) {
+       width: fit-content;
+       height: fit-content;
+       background-image: none;
+     }
+   }
+
+
+ }
+
+ //  End design Number Company 
+
+
+ //  Start Statistics Number Company 
+ .statistics-section {
+   margin-top: 70px;
+   padding: 30px 0;
+   background-color: #f8f8f8;
+   text-align: center;
+   border-top: .1px solid #000;
+
+   @media screen and (width < 900px) {
+     margin-top: 0px;
+   }
+
+   .stat-item {
+     text-align: center;
+     padding: 20px;
+     border-right: 1px solid #ddd;
+
+     &:last-child {
+       border-right: none;
+     }
+
+     h3 {
+       color: #181818;
+       font-family: $fontBase;
+       font-size: 30px;
+       font-style: normal;
+       font-weight: 900;
+       line-height: normal;
+
+       @media screen and (width < 900px) {
+         font-size: 25px;
+       }
+     }
+
+     p {
+       color: #000;
+       font-family: $fontBase;
+       font-size: 14px;
+       font-style: normal;
+       font-weight: 100;
+       line-height: normal;
+       margin-top: 10px;
+
+       @media screen and (width < 900px) {
+         font-size: 12px;
+
+       }
+     }
+   }
+ }
+
+ //  End Statistics Number Company 
+
+ //  Start Important Project Company 
+ .important-projects {
+   margin-top: 50px !important;
+
+   .section-header {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     margin-bottom: 30px;
+
+     .title-black,
+     .title-gray {
+       @media screen and (width < 900px) {
+         font-size: 24px !important;
+       }
+     }
+
+     h2 {
+       font-size: 28px;
+       font-weight: bold;
+       color: #333;
+
+       .highlight {
+         color: #a00;
+       }
+     }
+
+     .custom-button {
+       border: 1px solid #a00;
+       color: #a00;
+       padding: 8px 16px;
+       border-radius: 6px;
+       font-size: 16px;
+       transition: all 0.3s ease;
+
+       @media screen and (width < 900px) {
+         display: none;
+       }
+
+       &:hover {
+         background: #a00;
+         color: #fff;
+       }
+     }
+   }
+
+   .project-card {
+     overflow: hidden;
+
+     img {
+       width: 100%;
+       object-fit: cover;
+       height: 490px;
+
+       @media screen and (width < 900px) {
+         height: auto;
+       }
+
+       transition: transform 0.3s ease-in-out;
+     }
+
+     &:hover img {
+       transform: scale(1.1);
+     }
+
+     .overlay {
+       position: relative;
+       width: 85%;
+       margin: auto;
+       height: 140px;
+       padding: 12px 30px;
+       background: rgba(166, 21, 23, 0.56) !important;
+       color: white;
+
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       margin-top: -130px;
+       z-index: 5;
+
+       @media screen and (width < 900px) {
+         width: 90%;
+         height: 130px; 
+         svg {
+           display: none;
+         }
+       }
+
+       :lang(en) svg {
+         transform: scale(-1);
+       }
+
+       .title {
+
+         color: #FFF;
+
+         font-family: $fontBase;
+         font-size: 25px;
+         font-style: normal;
+         font-weight: 600;
+         line-height: normal;
+         text-transform: capitalize;
+
+         @media screen and (width < 900px) {
+           font-size: 18px;
+         }
+       }
+
+
+     }
+
+
+   }
+ }
+
+ //  End Important Project Company 
+
+
+ // start Investor Relations
+
+ .investor-relations {
+   .ant-row {
+     @media screen and (width < 900px) {
+       gap: 0 !important;
+     }
+   }
+
+   .text-section {
+     width: 80%;
+     margin: auto;
+
+     @media screen and (width < 990px) {
+       width: 90%
+     }
+   }
+
+   .title-container {
+     span {
+       color: #A61517;
+       font-family: $fontBase;
+       font-size: 48px;
+       font-style: normal;
+       font-weight: 530;
+       line-height: normal;
+       text-transform: capitalize;
+       user-select: none;
+
+       @media screen and (width < 990px) {
+         font-size: 30px;
+
+       }
+     }
+
+     strong {
+       color: #181820;
+       font-family: $fontBase;
+       font-size: 48px;
+       font-style: normal;
+       font-weight: 300;
+       line-height: normal;
+       text-transform: capitalize;
+       user-select: none;
+
+       @media screen and (width < 990px) {
+         font-size: 30px;
+       }
+     }
+   }
+
+   .description {
+     color: #3C3C3B;
+     text-align: justify;
+     font-family: $fontBase;
+     font-size: 20px;
+     font-style: normal;
+     font-weight: 300;
+     line-height: normal;
+     margin-top: 20px;
+
+     @media screen and (width < 990px) {
+       font-size: 16px;
+     }
+   }
+
+   button {
+     margin-top: 53px;
+     background-color: $mainColor;
+     color: #fff;
+     width: 190px;
+
+     svg path {
+       fill: #fff;
+     }
+
+     &:hover {
+       background-color: #fff !important;
+       color: $mainColor !important;
+
+       svg path {
+         fill: $mainColor !important;
+       }
+     }
+   }
+
+   .decorative-section {
+     user-select: none;
+
+     @media screen and (width < 990px) {
+       order: 1;
+     }
+
+     :lang(en) svg {
+       transform: scale(-1);
+     }
+
+     svg {
+       width: 100%;
+     }
+   }
+ }
+
+ .app_contact_us {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 390px;
+
+   @media screen and (width < 767px) {
+     height: 120px;
+
+   }
+
+   position: relative;
+   background-image: url('../../assets/images/contactBg.png');
+   background-size: cover;
+   background-position: center center;
+   background-repeat: no-repeat;
+
+   .home-contact {
+     display: flex;
+     align-items: center;
+
+     width: 100%;
+     position: relative;
+     flex-wrap: wrap;
+
+   }
+
+
+   .icons_contact-us {
+     svg {
+       width: 100%;
+       transform: scale(1.2);
+       margin-right: -20px;
+
+       @media screen and (width < 900px) {
+         margin-bottom: 20px;
+       }
+     }
+   }
+
+   .content_contact-us {
+     width: 100%;
+     margin-top: 90px;
+
+
+     @media screen and (width < 900px) {
+       margin-top: 0;
+       text-align: center;
+       padding: 0 30px;
+     }
+   }
+
+   .home-contact__title,
+   .home-contact__subtitle {
+     margin-top: 20px;
+     font-family: $fontBase;
+     font-weight: 530;
+     font-size: 50px;
+     line-height: 100%;
+     letter-spacing: 0%;
+     text-align: right;
+
+     @media screen and (width < 900px) {
+       font-size: 24px !important;
+     }
+
+     &:lang(en) {
+       text-align: left;
+     }
+   }
+
+   .home-contact__title {
+     color: #FFF;
+     font-family: $fontBase;
+   }
+
+   .home-contact__subtitle {
+     color: #FFF;
+     font-weight: 530;
+   }
+
+   .home-contact__image {
+     position: absolute;
+     left: 120px;
+     bottom: -109px;
+     width: 30%;
+     max-width: 350px;
+     object-fit: contain;
+     z-index: 99999 !important;
+
+
+
+     img {
+       width: 100%;
+       height: auto;
+       object-fit: contain;
+
+       @media screen and (width < 900px) {
+         display: none;
+       }
+     }
+   }
+
+   .home-contact__decoration {
+     position: absolute;
+     top: 0%;
+     transform: translateY(-50%);
+     -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
+     color: rgba(255, 255, 255, 0.06);
+     font-family: $fontBase;
+     font-weight: 530;
+     font-size: 100px;
+     text-align: right;
+
+     &:lang(en) {
+       left: 0;
+     }
+   }
+
+   /* تعديل عند استخدام اللغة الإنجليزية */
+   &.ltr {
+
+     .home-contact__title,
+     .home-contact__subtitle {
+       text-align: left;
+     }
+
+     .home-contact__decoration {
+       left: 10px;
+       right: auto;
+     }
+
+     .home-contact__image {
+       left: auto;
+       right: 120px;
+     }
+   }
+
+   /* جعل التصميم متجاوبًا */
+   @media (max-width: 768px) {
+     .home-contact {
+       flex-direction: column;
+       text-align: center;
+     }
+
+     .home-contact__title {
+       font-size: 22px;
+     }
+
+     .home-contact__subtitle {
+       font-size: 18px;
+     }
+
+     .home-contact__image {
+       width: 70%;
+     }
+
+     .home-contact__decoration {
+       font-size: 40px;
+     }
+   }
+
+   @media (max-width: 480px) {
+     .home-contact {
+       flex-direction: column;
+       text-align: center;
+     }
+
+     .home-contact__title {
+       font-size: 18px;
+     }
+
+     .home-contact__subtitle {
+       font-size: 16px;
+     }
+
+     .home-contact__image {
+       width: 90%;
+     }
+
+     .home-contact__decoration {
+       font-size: 30px;
+     }
+   }
+ }
+
+ .swiper-navigation {
+   position: absolute;
+   top: 50%;
+   width: 100%;
+   z-index: 20;
+   display: flex;
+   justify-content: space-between;
+   transform: translateY(-50%);
+   pointer-events: none;
+ }
+
+ .custom-arrow {
+   pointer-events: all;
+   cursor: pointer;
+   font-size: 2rem;
+   color: #fff;
+   background: #000;
+   padding: 0.4rem 0.8rem;
+   border-radius: 50%;
+   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+   transition: all 0.3s ease;
+ }
+
+ .custom-arrow:hover {
+   background: #333;
+ }
+
+ .ant-modal-content {
+   .ant-modal-body {
+     display: flex;
+   }
+
+   padding: 0 !important;
+   overflow: hidden;
+ }
+
+ .header_section_icon {
+   .header_section {
+     svg {
+       margin-top: -10px;
+       width: 17px !important;
+     }
+   }
+ }

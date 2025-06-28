@@ -9,7 +9,7 @@ const TitleSection = () => {
         <div className="home-container bg-gray-100  ">
             {/* Top Section */}
             <div className="title_container">
-                <Row gutter={[20, 20]} className="top-section flex   ">
+                <Row gutter={[20, 20]} className="top-section flex">
                     <Col xl={10} md={12} xs={24} sm={24}>
                         {/* Content Section */}
                         <div className=" header_section">
@@ -24,8 +24,7 @@ const TitleSection = () => {
                         <Col xl={2} md={24} xs={24} sm={24}></Col>
                     </div>
 
-                    <Col xl={11} md={12} xs={24} sm={24}  >
-                        {/* Description */}
+                    <Col xl={11} md={12} xs={24} sm={24}> 
                         <p>روّاد في التطوير العقاري بالمملكة العربية السعودية، بدأنا بمبادرة من غرفة التجارة والصناعة بالرياض في عام 2007م كشركة مساهمة مقفلة برأس مال مدفوع يبلغ 1,1 مليار ريال سعودي عبر نخبة من المستثمرين والأسماء العقارية العريقة
                         </p>
                     </Col>

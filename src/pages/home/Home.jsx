@@ -14,13 +14,11 @@ const Home = () => {
   const [tabItems, setTabItems] = useState([]);
   const [data, setData] = useState([]);
   const [blog, setBlog] = useState([]);
-  const [isModalVisible, setIsModalVisible] = useState(false); // ✅ State للتحكم في المودال
+  const [isModalVisible, setIsModalVisible] = useState(false);
 
   useEffect(() => {
-    // إظهار المودال عند أول تحميل
     setIsModalVisible(true);
 
-    // جلب البيانات
     axios.get(`https://mawtan.rightclicksa.com/api/home`)
       .then(response => {
         const sectors = response.data?.data?.sectors?.data || [];
@@ -44,16 +42,16 @@ const Home = () => {
   };
 
   useEffect(() => {
-    const scrollStep = -window.pageYOffset / 50; // سرعة التمرير
+    const scrollStep = -window.pageYOffset / 50;
     const scrollInterval = setInterval(() => {
       if (window.pageYOffset !== 0) {
         window.scrollBy(0, scrollStep);
       } else {
         clearInterval(scrollInterval);
       }
-    }, 10); // التحكم في السلاسة
+    }, 10);
 
-    return () => clearInterval(scrollInterval); // تنظيف التايمر
+    return () => clearInterval(scrollInterval);
   }, []);
 
   return (
@@ -73,12 +71,13 @@ const Home = () => {
       <SliderHome />
       <TitleSection />
       <GalleryTitle data={data} />
-      {/* <CompanyOverview /> */}
       <NumberCompany />
       <ImportantProject data={data} />
       <HomeProjects data={tabItems} />
-      {/* <InvestorRelations /> */}
       <HomeMediaCenter blog={blog} />
+
+      {/* <CompanyOverview /> */}
+      {/* <InvestorRelations /> */}
     </div>
   );
 };

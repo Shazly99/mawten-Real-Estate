@@ -1,4 +1,4 @@
-import { CaretDownFilled, HomeOutlined, InfoCircleOutlined, MenuOutlined, SettingOutlined, ShoppingOutlined } from '@ant-design/icons';
+import { CameraOutlined, CaretDownFilled, HomeOutlined, InfoCircleOutlined, MenuOutlined, PhoneOutlined, ProjectOutlined, SettingOutlined } from '@ant-design/icons';
 import Icon from '@constants/icon';
 import Logo from '@constants/Logo';
 import { GeneralData } from '@context/General';
@@ -11,8 +11,12 @@ import { Link, NavLink } from 'react-router-dom';
 import './navbar.scss';
 
 const Navbar = () => {
-    const [sectors, setSectors] = useState([]);
     const { i18n, t } = useTranslation();
+    const { isLang, setIsLang } = useContext(GeneralData);
+    const [placement, setPlacement] = useState('left');
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isScrolled, setIsScrolled] = useState(false);
+    const [sectors, setSectors] = useState([]);
     const menu = (
         <Menu>
             <Menu.Item key="1">
@@ -43,10 +47,7 @@ const Navbar = () => {
             ))}
         </Menu>
     );
-    const { isLang, setIsLang } = useContext(GeneralData);
-    const [placement, setPlacement] = useState('left');
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const [isScrolled, setIsScrolled] = useState(false);
+
 
     useEffect(() => {
         const handleScroll = () => {
@@ -87,15 +88,9 @@ const Navbar = () => {
     }, []);
 
     const [isModalOpen, setIsModalOpen] = useState(false);
-    const showModal = () => {
-        setIsModalOpen(true);
-    };
-    const handleOk = () => {
-        setIsModalOpen(false);
-    };
-    const handleCancel = () => {
-        setIsModalOpen(false);
-    };
+    const showModal = () => setIsModalOpen(true);
+    const handleOk = () => setIsModalOpen(false);
+    const handleCancel = () => setIsModalOpen(false);
     return (
         <div className={`navbar-container ${i18n.language === 'ar' ? 'rtl' : 'ltr'}`}>
             <motion.div
@@ -114,7 +109,7 @@ const Navbar = () => {
                 </div>
                 <nav className={`navbar-links ${isMenuOpen ? 'show-links' : 'd-none'}`}>
                     <NavLink to='/'>
-                        <HomeOutlined className='icon_res_sm' />
+                        <HomeOutlined  className='icon_res_sm' />
                         {t('nav_home')}
                     </NavLink>
                     <Dropdown overlay={menu} placement={i18n.language == 'en' ? 'topLeft' : 'topRight'} trigger={['hover']} className='dropdown_link' >
@@ -129,7 +124,7 @@ const Navbar = () => {
 
                     <Dropdown overlay={menuProjects} placement={i18n.language == 'en' ? 'topLeft' : 'topRight'} trigger={['hover']} className='dropdown_link' >
                         <NavLink to='/projects' className={'dropdown_trigger'}>
-                            <InfoCircleOutlined className='icon_res_sm' />
+                            <ProjectOutlined  className='icon_res_sm' />
                             <div className="drop_icon flex justify-content-center align-items-center gap-2 ">
                                 {t('nav_Projects')}
                                 <CaretDownFilled size={'small'} style={{ fontSize: '12px', marginTop: '2px', color: '#fff' }} /> {/* Make sure color is white */}
@@ -138,11 +133,11 @@ const Navbar = () => {
                     </Dropdown>
 
                     <NavLink to='/services'>
-                        <SettingOutlined className='icon_res_sm' />
+                        <SettingOutlined  className='icon_res_sm' />
                         {t('nav_service')}
                     </NavLink>
                     <NavLink to='/media-center'>
-                        <ShoppingOutlined className='icon_res_sm' />
+                        <CameraOutlined  className='icon_res_sm' />
                         <div className="drop_icon flex justify-content-center align-items-center gap-2 ">
                             {t('nav_Products')}
                             <CaretDownFilled size={'small'} style={{ fontSize: '12px', marginTop: '2px', color: '#fff' }} /> {/* Make sure color is white */}
@@ -150,11 +145,11 @@ const Navbar = () => {
                     </NavLink>
 
                     <NavLink to='/contact'>
-                        <ShoppingOutlined className='icon_res_sm' />
+                        <PhoneOutlined  className='icon_res_sm' />
                         <div className="drop_icon flex justify-content-center align-items-center gap-2 ">
                             {t('nav_contact')}
-                         </div>
-                    </NavLink> 
+                        </div>
+                    </NavLink>
 
                     <div className="language-switcher sm_lang">
                         {

@@ -1,195 +1,201 @@
  @use '../../style/varibale' as *;
 
 
-.footer {
-  background-color: #f8f8f8;
-  padding-top: 20px;
-  font-size: 14px;
-  color: #333;
+ .footer {
+   background-color: #f8f8f8;
+   padding-top: 20px;
+   font-size: 14px;
+   color: #333;
 
 
-  .ant-row {
-    @media screen and (width < 900px) {
-      gap: 0 !important; 
-    }
-  }
+   .ant-row {
+     @media screen and (width < 900px) {
+       gap: 0 !important;
+     }
+   }
 
-  .container {
-    width: 90%;
-    margin: 0 auto; 
-  }
+   .container {
+     width: 90%;
+     margin: 0 auto;
+   }
 
-  .ant-typography {
-    color: #333;
-  }
+   .ant-typography {
+     color: #333;
+   }
 
-  .footer__grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 20px;
+   .footer__grid {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: space-between;
+     gap: 20px;
 
-  }
+   }
 
-  .app_link {
-    display: flex;
-    flex-direction: column; 
-    gap: 13px;
-    margin-top: 20px !important;
+   .app_link {
+     display: flex;
+     flex-direction: column;
+     gap: 13px;
+     margin-top: 20px !important;
 
-    a {
-  /*     text-align: flex-start;
+     a {
+       /*     text-align: flex-start;
       margin: 0 20px; */
 
-      &:hover {
-        color: $mainColor !important;
-      }
-    }
-  }
+       &:hover {
+         color: $mainColor !important;
+       }
+     }
+   }
 
-  .mail {
-    color: $mainColor;
+   .mail {
+     color: $mainColor;
 
-    svg {
-      margin-top: 4px;
-    }
+     svg {
+       margin-top: 4px;
+     }
 
-    a {
-      color: $mainColor;
-      font-family: $fontBase;
-      font-size: 16px;
-      text-decoration: underline;
-      text-decoration-style: solid;
-      text-decoration-skip-ink: auto;
+     a {
+       color: $mainColor;
+       font-family: $fontBase;
+       font-size: 16px;
+       text-decoration: underline;
+       text-decoration-style: solid;
+       text-decoration-skip-ink: auto;
 
-    }
-  }
-
-
-  .footer__logo {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
-
-    img {
-      width: 100px;
-      height: 151px;
-      object-fit: contain;
-    }
-
-    p {
-      color: #3C3C3B;
-
-      font-family: $fontBase;
-      font-size: 14px;
-      font-style: normal;
-      font-weight: 100;
-      line-height: normal;
-      margin-top: 7px !important;
-    }
+     }
+   }
 
 
-  }
+   .footer__logo {
+     display: flex;
+     justify-content: center;
+     align-items: flex-start;
+     flex-direction: column;
 
-  h4 {
-    color: #3C3C3B;
-    font-family: $fontBase;
-    font-size: 17px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    text-transform: capitalize;
-  }
+     img {
+       width: 100px;
+       height: 151px;
+       object-fit: contain;
+     }
 
-  .footer__bottom {
-    text-align: center;
-    padding-top: 18px;
-    border-top: 1px solid #ddd;
-    font-size: 12px;
-    color: #666;
-    margin-top: 20px;
-  }
+     p {
+       color: #3C3C3B;
 
-  a {
-    display: block;
-    color: #333;
-    text-decoration: none;
-    margin-bottom: 5px;
-    transition: color 0.3s;
+       font-family: $fontBase;
+       font-size: 14px;
+       font-style: normal;
+       font-weight: 100;
+       line-height: normal;
+       margin-top: 7px !important;
+     }
 
-    &:hover {
-      color: #d32f2f;
-    }
-  }
 
-  p {
-    margin: 5px 0;
-  }
+   }
 
-  @media (max-width: 768px) {
-    .footer__grid {
-      flex-direction: column;
-      text-align: center;
-    }
+   h4 {
+     color: #3C3C3B;
+     font-family: $fontBase;
+     font-size: 17px;
+     font-style: normal;
+     font-weight: 600;
+     line-height: normal;
+     text-transform: capitalize;
+   }
 
-    .footer__logo {
-      margin: 0 auto;
-    }
-  }
-}
+   .footer__bottom {
+     text-align: center;
+     padding-top: 18px;
+     border-top: 1px solid #ddd;
+     font-size: 12px;
+     color: #666;
+     margin-top: 20px;
+   }
 
-.footer__social {
-  display: flex;
-  gap: 18px !important;
-  margin-top: 5px !important;
+   a {
+     display: block;
+     color: #333;
+     text-decoration: none;
+     margin-bottom: 5px;
+     transition: color 0.3s;
 
-  a {
-    width: 35px;
-    height: 35px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid #900; // لون الإطار
-    border-radius: 50%;
-    color: #900 !important; // لون الأيقونات
-    font-size: 14px !important;
-    transition: all 0.3s ease-in-out;
+     &:hover {
+       color: #d32f2f;
+     }
+   }
 
-    &:hover {
-      background: #900;
-      color: #fff !important;
-    }
-  }
-}
+   p {
+     margin: 5px 0;
+   }
 
-.social_title {
-  color: #3C3C3B;
-  font-family: $fontBase;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 530;
-  line-height: normal;
-  text-transform: capitalize;
-}
+   @media (max-width: 768px) {
+     .footer__grid {
+       flex-direction: column;
+       text-align: center;
+     }
 
-.footer__social {
-  display: flex;
-  gap: 10px;
-  margin-top: 10px;
+     .footer__logo {
+       margin: 0 auto;
+     }
+   }
+ }
 
-  a {
-    font-size: 18px;
-    color: #333;
-    transition: color 0.3s;
-    margin-top: 10px;
+ .footer__social {
+   display: flex;
+   gap: 18px !important;
+   margin-top: 5px !important;
 
-    &:hover {
-      color: #d32f2f;
-    }
+   a {
+     width: 35px;
+     height: 35px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     border: 1px solid #900; // لون الإطار
+     border-radius: 50%;
+     color: #900 !important; // لون الأيقونات
+     font-size: 14px !important;
+     transition: all 0.3s ease-in-out;
 
-    &:hover svg {
-      color: #fff !important;
-    }
-  }
-}
+     &:hover {
+       background: #900;
+       color: #fff !important;
+     }
+   }
+ }
+
+ .social_title {
+   color: #3C3C3B;
+   font-family: $fontBase;
+   font-size: 16px;
+   font-style: normal;
+   font-weight: 530;
+   line-height: normal;
+   text-transform: capitalize;
+ }
+
+ .footer__social {
+   display: flex;
+   gap: 10px;
+   margin-top: 10px;
+
+   a {
+     font-size: 18px;
+     color: #333;
+     transition: color 0.3s;
+     margin-top: 10px;
+
+     &:hover {
+       color: #d32f2f;
+     }
+
+     &:hover svg {
+       color: #fff !important;
+     }
+   }
+ }
+
+ .footer__logo-img {
+   @media screen and (width < 767px) {
+     width: 90px !important;
+   }
+ }
