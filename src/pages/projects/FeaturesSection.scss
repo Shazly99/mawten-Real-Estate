@@ -1,4 +1,5 @@
-@import '../../style/varibale';
+ @use '../../style/varibale' as *;
+
 
 .app_features {
     background-color: #fff;

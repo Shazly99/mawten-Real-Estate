@@ -1,4 +1,5 @@
-@import '../../../style/varibale';
+ @use '../../../style/varibale' as *;
+
 
 .unit-models-container {
     width: 80%;

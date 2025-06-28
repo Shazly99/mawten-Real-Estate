@@ -1,330 +1,263 @@
-@import '../../style/varibale';
-
-.company-overview_about {
-    margin-top: 20px;
-    margin-bottom: 0 !important;
-
-    .ant-col {
-        display: flex;
-        justify-content: center;
-        /* align-items: center; */
-        flex-direction: column;
-
-    }
-
-    .section_last_about {
-        margin-top: -50px;
-      
-        .highlight {
-            font-family: $fontBase;
-            font-weight: 600;
-            font-size: 30px;
-            line-height: 100%;
-
-            color: #181820;
-
-        }
-
-
-    }
-
-    .app_overview__about_us {
-        margin-bottom: 150px;
-    }
-}
-
-
-.app_value {
-    header {
-        strong {
-            color: #3C3C3B;
-            text-align: center;
-            font-family: $fontBase;
-            font-size: 36px;
-            font-weight: 530;
-        }
-
-
-        svg {
-            margin-bottom: 10px;
-        }
-    }
-
-
-    .value-card {
-        border-radius: 22px;
-        background: #EAEAEA;
-        box-shadow: 1px 4px 83px 0px rgba(0, 0, 0, 0.07);
-        transition: transform 0.3s ease;
-
-        margin: auto;
-        padding: 40px 50px !important;
-
-        @media screen and (width < 767px) {
-            padding: 10px 5px !important;
-        }
-
-        &:hover {
-            transform: translateY(-5px);
-        }
-
-        .icon-container {
-            margin-bottom: 15px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        img {
-            width: 80px;
-            height: 80px;
-        }
-
-        .value-title {
-            color: #000;
-            font-family: $fontBase;
-            font-size: 24px;
-            font-style: normal;
-            font-weight: 600;
-            line-height: normal;
-
-            @media screen and (width < 767px) {
-                padding: 10px 5px !important;
-                text-align: center;
-            }
-        }
-
-        .value-description {
-            color: #000;
-            text-align: justify;
-            font-family: $fontBase;
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 300;
-            line-height: normal;
-            margin-top: 17px;
-
-            @media screen and (width < 767px) {
-                padding: 10px 5px !important;
-                text-align: center;
-            }
-        }
-    }
-}
-
-.app__about {
-    .home-container {
-        width: 90%;
-        margin: auto;
-    }
-
-    .title_ {
-        h2 {
-            color: #3C3C3B;
-            font-family: $fontBase;
-            font-size: 32px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: normal;
-            margin-top: 20px;
-
-
-
-            @media screen and (width < 900px) {
-                font-size: 20px;
-                font-weight: 600;
-                margin-bottom: 15px;
-
-            }
-        }
-
-        p {
-            color: #3C3C3B;
-            font-family: $fontBase;
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 900 !important;
-            line-height: 35px;
-            text-align: justify;
-            // margin-top: 15px;
-
-        }
-
-        width: 100% !important;
-    }
-}
-
-
-.partners-section {
-    background-color: #f9fafb; // نفس لون bg-gray-50
-    padding: 3rem 0;
-
-    .container {
-        max-width: 1280px;
-        margin: 0 auto;
-        padding: 0 1rem;
-
-        @media (min-width: 640px) {
-            padding: 0 1.5rem;
-        }
-
-        @media (min-width: 1024px) {
-            padding: 0 2rem;
-        }
-
-        text-align: center;
-    }
-
-    .title-container {
-        justify-content: center;
-    }
-
-    .section-title {
-        margin-bottom: 2rem;
-
-        .custom-title {
-            font-size: 2.25rem !important; // يعادل text-4xl
-            font-weight: bold !important;
-            color: #1f2937;
-        }
-
-        svg {
-            margin-top: -15px;
-        }
-    }
-
-    .header_section {
-        span {
-            background-color: transparent;
-            color: #000 !important;
-            font-size: 36px !important;
-            font-weight: 600;
-        }
-    }
-
-    .partners-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1.5rem;
-        justify-items: center;
-
-        @media (min-width: 640px) {
-            grid-template-columns: repeat(3, 1fr);
-        }
-
-        @media (min-width: 768px) {
-            grid-template-columns: repeat(4, 1fr);
-        }
-
-        @media (min-width: 1024px) {
-            grid-template-columns: repeat(5, 1fr);
-        }
-
-        .partner-card {
-            background-color: #ffffff;
-            padding: 1.5rem;
-            border-radius: 0.5rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            .partner-logo {
-                max-height: 4rem;
-                max-width: 100%;
-                object-fit: contain;
-            }
-        }
-    }
-}
-
-.category-buttons {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 12px;
-    max-width: 600px;
-    width: 100%;
-
-    .category-box {
-        width: 100%;
-        margin-top: 20px;
-        padding: 8px 16px;
-
-        font-weight: bold;
-        font-size: 1.2rem;
-        color: #333;
-
-        &.residential {
-            background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(243, 243, 243, 0.365385) 0.01%, #DEDEDE 200%);
-
-        }
-
-        &.industrial {
-            background: linear-gradient(90.01deg, rgba(255, 255, 255, 0) 0.01%, #A61517 350.16%);
-
-        }
-
-        &.hospitality {
-            background: linear-gradient(90.01deg, rgba(255, 255, 255, 0) 0.01%, #A61517 350.16%);
-
-        }
-    }
-}
-
-.app_category_ {
-    font-family: $fontBase;
-    font-weight: 300;
-    font-size: 18px;
-    line-height: 35px;
-    margin-top: 50px;
-    text-align: justify;
-    color: #3C3C3B;
-
-}
-
-.sub_title {
-    font-family: $fontBase;
-    font-weight: 900 !important;
-    font-size: 24px;
-    line-height: 100%;
-    letter-spacing: 0%;
-    text-align: right;
-    margin-top: 20px !important;
-}
-
-.last_title {
-    font-family: $fontBase;
-    font-weight: 300;
-    font-size: 17px !important;
-    line-height: 35px;
-    letter-spacing: 0%;
-    text-align: justify;
-    color: #3C3C3B;
-    margin-top: 10px;
-}
-
-.header_section {
-    svg {
-        margin-top: -10px;
-        width: 15px !important;
-    }
-
-    .highlight {
-        background-color: $mainColor;
-        color: #fff !important;
-        font-size: 24px !important;
-    }
-
-    p {
-        margin-top: -10px !important;
-        color: #181820;
-        text-align: right;
-        font-family: $fontBase;
-        font-size: 20px !important;
-        font-style: normal;
-        font-weight: 500 !important;
-        line-height: normal;
-    }
-}
+ @use '../../style/varibale' as *;
+
+
+ .company-overview_about {
+     margin-top: 20px;
+     margin-bottom: 0 !important;
+
+     .ant-col {
+         display: flex;
+         justify-content: center;
+         /* align-items: center; */
+         flex-direction: column;
+
+     }
+
+     .section_last_about {
+         margin-top: -50px;
+
+         .highlight {
+             font-family: $fontBase;
+             font-weight: 600;
+             font-size: 30px;
+             line-height: 100%;
+
+             color: #181820;
+
+         }
+
+
+     }
+
+     .app_overview__about_us {
+         margin-bottom: 150px;
+     }
+ }
+
+
+ .app_value {
+     header {
+         strong {
+             color: #3C3C3B;
+             text-align: center;
+             font-family: $fontBase;
+             font-size: 36px;
+             font-weight: 530;
+         }
+
+
+         svg {
+             margin-bottom: 10px;
+         }
+     }
+
+
+     .value-card {
+         border-radius: 22px;
+         background: #EAEAEA;
+         box-shadow: 1px 4px 83px 0px rgba(0, 0, 0, 0.07);
+         transition: transform 0.3s ease;
+
+         margin: auto;
+         padding: 40px 50px !important;
+
+         @media screen and (width < 767px) {
+             padding: 10px 5px !important;
+         }
+
+         &:hover {
+             transform: translateY(-5px);
+         }
+
+         .icon-container {
+             margin-bottom: 15px;
+             display: flex;
+             justify-content: center;
+             align-items: center;
+         }
+
+         img {
+             width: 80px;
+             height: 80px;
+         }
+
+         .value-title {
+             color: #000;
+             font-family: $fontBase;
+             font-size: 24px;
+             font-style: normal;
+             font-weight: 600;
+             line-height: normal;
+
+             @media screen and (width < 767px) {
+                 padding: 10px 5px !important;
+                 text-align: center;
+             }
+         }
+
+         .value-description {
+             color: #000;
+             text-align: justify;
+             font-family: $fontBase;
+             font-size: 16px;
+             font-style: normal;
+             font-weight: 300;
+             line-height: normal;
+             margin-top: 17px;
+
+             @media screen and (width < 767px) {
+                 padding: 10px 5px !important;
+                 text-align: center;
+             }
+         }
+     }
+ }
+
+ .app__about {
+     .home-container {
+         width: 90%;
+         margin: auto;
+     }
+
+     .title_ {
+         h2 {
+             color: #3C3C3B;
+             font-family: $fontBase;
+             font-size: 32px;
+             font-style: normal;
+             font-weight: 400;
+             line-height: normal;
+             margin-top: 20px;
+
+             @media screen and (width < 900px) {
+                 font-size: 20px;
+                 font-weight: 600;
+                 margin-bottom: 15px;
+             }
+         }
+
+         p {
+             color: #3C3C3B;
+             font-family: $fontBase;
+             font-size: 16px;
+             font-style: normal;
+             font-weight: 900 !important;
+             line-height: 35px;
+             text-align: justify;
+         }
+
+         width: 100% !important;
+     }
+ }
+
+
+ .partners-section {
+     background-color: #f9fafb;
+     padding: 3rem 0;
+
+     .container {
+         max-width: 1280px;
+         margin: 0 auto;
+         text-align: center;
+         padding: 0 1rem;
+
+         @media (min-width: 640px) {
+             padding: 0 1.5rem;
+         }
+
+         @media (min-width: 1024px) {
+             padding: 0 2rem;
+         }
+     }
+ }
+
+
+ .category-buttons {
+     display: flex;
+     flex-direction: column;
+     align-items: flex-end;
+     gap: 12px;
+     max-width: 600px;
+     width: 100%;
+
+     .category-box {
+         width: 100%;
+         margin-top: 20px;
+         padding: 8px 16px;
+
+         font-weight: bold;
+         font-size: 1.2rem;
+         color: #333;
+
+         &.residential {
+             background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(243, 243, 243, 0.365385) 0.01%, #DEDEDE 200%);
+
+         }
+
+         &.industrial {
+             background: linear-gradient(90.01deg, rgba(255, 255, 255, 0) 0.01%, #A61517 350.16%);
+
+         }
+
+         &.hospitality {
+             background: linear-gradient(90.01deg, rgba(255, 255, 255, 0) 0.01%, #A61517 350.16%);
+
+         }
+     }
+ }
+
+ .app_category_ {
+     font-family: $fontBase;
+     font-weight: 300;
+     font-size: 18px;
+     line-height: 35px;
+     margin-top: 50px;
+     text-align: justify;
+     color: #3C3C3B;
+
+ }
+
+ .sub_title {
+     font-family: $fontBase;
+     font-weight: 900 !important;
+     font-size: 24px;
+     line-height: 100%;
+     letter-spacing: 0%;
+     text-align: right;
+     margin-top: 20px !important;
+ }
+
+ .last_title {
+     font-family: $fontBase;
+     font-weight: 300;
+     font-size: 17px !important;
+     line-height: 35px;
+     letter-spacing: 0%;
+     text-align: justify;
+     color: #3C3C3B;
+     margin-top: 10px;
+ }
+
+ .header_section {
+     svg {
+         margin-top: -10px;
+         width: 15px !important;
+     }
+
+     .highlight {
+         background-color: $mainColor;
+         color: #fff !important;
+         font-size: 24px !important;
+     }
+
+     p {
+         margin-top: -10px !important;
+         color: #181820;
+         text-align: right;
+         font-family: $fontBase;
+         font-size: 20px !important;
+         font-style: normal;
+         font-weight: 500 !important;
+         line-height: normal;
+     }
+ }

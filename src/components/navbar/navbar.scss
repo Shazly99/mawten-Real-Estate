@@ -1,4 +1,5 @@
-@import '../../style/varibale';
+ @use '../../style/varibale' as *;
+
 
 .navbar-container {
     background-color: #fff;
