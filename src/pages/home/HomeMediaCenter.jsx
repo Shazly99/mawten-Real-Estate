@@ -17,7 +17,7 @@ const HomeMediaCenter = ({ blog = [] }) => {
             </div>
             <div className="container">
                 <Carousel
-                    autoplay={false}
+                    autoplay={true}
                     autoplaySpeed={1500}
                     speed={800}
                     infinite
