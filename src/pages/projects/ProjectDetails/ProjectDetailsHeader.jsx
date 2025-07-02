@@ -68,12 +68,12 @@ const ProjectDetailsHeader = ({ imgs, data }) => {
                                 </div>
                                 <div className="summary-box">
                                     <div className="summary-item">
-                                        <div className="summary-number">938</div>
+                                        <div className="summary-number">{data?.units}</div>
                                         <div className="summary-label">وحدة سكنية</div>
                                     </div>
                                     <div className="divider-vertical" />
                                     <div className="summary-item">
-                                        <div className="summary-number">27</div>
+                                        <div className="summary-number">{data?.floors}</div>
                                         <div className="summary-label">عدد الطوابق</div>
                                     </div>
                                 </div>
