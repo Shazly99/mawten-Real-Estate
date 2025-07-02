@@ -118,7 +118,7 @@ const ProjectDetails = () => {
                                 </p>
                             </Col>
                             <Col xs={24} md={12}>
-                                <img src={img.H2010} alt="مشروع 2" className="project-details-image" />
+                                <img src={projectData?.image} alt="مشروع 2" className="project-details-image" />
                             </Col>
                         </Row>
                         {/* الكتلة الأولى */}
@@ -132,7 +132,7 @@ const ProjectDetails = () => {
                                 </p>
                             </Col>
                             <Col xs={24} md={12} order={1}>
-                                <img src={img.H2010} alt="مشروع 1" className="project-details-image" />
+                                <img src={projectData?.image} alt="مشروع 1" className="project-details-image" />
                             </Col>
                         </Row>
 
