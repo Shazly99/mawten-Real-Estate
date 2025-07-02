@@ -129,7 +129,8 @@ const ProjectDetails = () => {
                                 </h3>
                                 <p className="project-description">
                                     {projectData?.type3}
-                                </p>                            </Col>
+                                </p>
+                            </Col>
                             <Col xs={24} md={12} order={1}>
                                 <img src={img.H2010} alt="مشروع 1" className="project-details-image" />
                             </Col>
