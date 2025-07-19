@@ -94,7 +94,12 @@
 
     .card_blog_image {
         position: relative;
-
+        img{
+            @media screen and (width < 767px) {
+                height: 300px;
+                object-fit: cover;
+            }
+        }
         .overlay {
             position: absolute;
             inset: 0;

@@ -35,11 +35,11 @@ const HomeMediaCenter = ({ blog = [] }) => {
                         },
                         {
                             breakpoint: 768,
-                            settings: { slidesToShow: 2 }
+                            settings: { slidesToShow: 1 }
                         },
                         {
                             breakpoint: 480,
-                            settings: { slidesToShow: 1.2 }
+                            settings: { slidesToShow: 1 }
                         },
                         {
                             breakpoint: 320,
@@ -50,7 +50,7 @@ const HomeMediaCenter = ({ blog = [] }) => {
                 >
                     {blog.map((blog, index) => (
                         <div key={index} className=" py-4  px-15 " >
-                            <div className="blog-card shadow-1 pb-4 "> 
+                            <div className="blog-card shadow-1 pb-4 ">
                                 <Link to={`/media-center/${blog.key_word_ar}`} className="card-header">
                                     <div className="card_blog_image">
                                         <img src={blog.image} alt={`Image ${blog.id}`} />
